@@ -1,0 +1,2 @@
+selected_model,n_test_rows,accuracy,roc_auc,baseline_accuracy,baseline_roc_auc,accuracy_lift,roc_auc_lift,notes
+xgboost,1698,0.8457008244994111,0.9209228992716292,0.6283863368669023,0.659702406066797,0.2173144876325088,0.2612204932048321,"Predicts player 1 when ATP_RANK_DIFF is negative, otherwise player 2. Excluded 0 rows with missing or tied ATP_RANK_DIFF."

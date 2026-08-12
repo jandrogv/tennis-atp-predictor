@@ -1,0 +1,2 @@
+baseline_name,accuracy,precision,recall,f1,roc_auc,n_test_rows,notes,selected_model,model_accuracy,model_roc_auc,accuracy_lift,roc_auc_lift
+Higher ATP ranked player,0.6283863368669023,0.6345933562428407,0.6397228637413395,0.6371477860839563,0.659702406066797,1698,"Predicts player 1 when ATP_RANK_DIFF is negative, otherwise player 2. Excluded 0 rows with missing or tied ATP_RANK_DIFF.",xgboost,0.8457008244994111,0.9209228992716292,0.2173144876325088,0.2612204932048321

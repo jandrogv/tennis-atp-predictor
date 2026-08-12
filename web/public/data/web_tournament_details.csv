@@ -1,0 +1,47 @@
+tournament_id,tournament_slug,tournament_name,year,surface,tournament_date,start_date,end_date,location,country,draw_size,prize_money,last_winner,has_completed_matches,has_predictions,completed_matches_count,predictions_count
+2026-9900,united-cup-2026-hard,United Cup,2026,Hard,2026-01-02,2026-01-02,2026-01-11,"Perth-Sydney, Australia",,18.0,"$5,903,345",Hubert Hurkacz,True,False,25,0
+2026-0339,brisbane-australia-2026-hard,Brisbane Australia,2026,Hard,2026-01-04,2026-01-04,2026-01-11,"Brisbane, Australia",,32.0,"$800,045",Daniil Medvedev,True,False,31,0
+2026-0336,hong-kong-hong-kong-2026-hard,Hong Kong Hong Kong,2026,Hard,2026-01-05,2026-01-05,2026-01-11,"Hong Kong, Hong Kong",,28.0,"$700,045",Alexander Bublik,True,False,27,0
+2026-8998,adelaide-australia-2026-hard,Adelaide Australia,2026,Hard,2026-01-12,2026-01-12,2026-01-17,"Adelaide, Australia",,28.0,"$700,045",Tomas Machac,True,False,27,0
+2026-0301,auckland-new-zealand-2026-hard,Auckland New Zealand,2026,Hard,2026-01-12,2026-01-12,2026-01-17,"Auckland, New Zealand",,28.0,"$700,045",Jakub Mensik,True,False,27,0
+2026-0580,australian-open-2026-hard,Australian Open,2026,Hard,2026-01-18,2026-01-18,2026-02-01,"Melbourne, Australia",,128.0,"A$49,171,000",Carlos Alcaraz,True,False,127,0
+2026-0375,montpellier-france-2026-hard,Montpellier France,2026,Hard,2026-02-02,2026-02-02,2026-02-08,"Montpellier, France",,28.0,"€612,620",Felix Auger Aliassime,True,False,27,0
+2026-8096,davis-cup-qualifiers-1st-rd-2026,Davis Cup Qualifiers 1st Rd,2026,,2026-02-05,2026-02-05,2026-02-08,,,,,,True,False,128,0
+2026-0506,buenos-aires-argentina-2026-clay,Buenos Aires Argentina,2026,Clay,2026-02-09,2026-02-09,2026-02-15,"Buenos Aires, Argentina",,28.0,"$675,310",Francisco Cerundolo,True,False,27,0
+2026-0424,dallas-united-states-2026-hard,Dallas United States,2026,Hard,2026-02-09,2026-02-09,2026-02-15,"Dallas, United States",,32.0,"$2,833,335",Ben Shelton,True,False,31,0
+2026-0407,rotterdam-netherlands-2026-hard,Rotterdam Netherlands,2026,Hard,2026-02-09,2026-02-09,2026-02-15,"Rotterdam, Netherlands",,32.0,"€2,462,660",Alex De Minaur,True,False,31,0
+2026-0499,delray-beach-united-states-2026-hard,Delray Beach United States,2026,Hard,2026-02-16,2026-02-16,2026-02-22,"Delray Beach, United States",,28.0,"$700,045",Sebastian Korda,True,False,27,0
+2026-0451,doha-qatar-2026-hard,Doha Qatar,2026,Hard,2026-02-16,2026-02-16,2026-02-21,"Doha, Qatar",,32.0,"$2,833,335",Carlos Alcaraz,True,False,31,0
+2026-6932,rio-de-janeiro-brazil-2026-clay,Rio de Janeiro Brazil,2026,Clay,2026-02-16,2026-02-16,2026-02-22,"Rio de Janeiro, Brazil",,32.0,"$2,469,450",Tomas Martin Etcheverry,True,False,31,0
+2026-0807,acapulco-mexico-2026-hard,Acapulco Mexico,2026,Hard,2026-02-23,2026-02-23,2026-02-28,"Acapulco, Mexico",,32.0,"$2,469,450",Flavio Cobolli,True,False,31,0
+2026-0495,dubai-united-arab-emirates-2026-hard,Dubai United Arab Emirates,2026,Hard,2026-02-23,2026-02-23,2026-02-28,"Dubai, United Arab Emirates",,32.0,"$3,311,005",Daniil Medvedev,True,False,31,0
+2026-8996,santiago-chile-2026-clay,Santiago Chile,2026,Clay,2026-02-23,2026-02-23,2026-03-01,"Santiago, Chile",,28.0,"$700,045",Luciano Darderi,True,False,27,0
+2026-0404,indian-wells-united-states-2026-hard,Indian Wells United States,2026,Hard,2026-03-04,2026-03-04,2026-03-15,"Indian Wells, United States",,96.0,"$9,415,725",Jannik Sinner,True,False,95,0
+2026-0403,miami-united-states-2026-hard,Miami United States,2026,Hard,2026-03-18,2026-03-18,2026-03-29,"Miami, United States",,96.0,"$9,415,725",Jannik Sinner,True,False,95,0
+2026-4462,bucharest-romania-2026-clay,Bucharest Romania,2026,Clay,2026-03-30,2026-03-30,2026-04-05,"Bucharest, Romania",,28.0,"€612,620",Mariano Navone,True,False,27,0
+2026-0717,houston-united-states-2026-clay,Houston United States,2026,Clay,2026-03-30,2026-03-30,2026-04-05,"Houston, United States",,28.0,"$700,045",Tommy Paul,True,False,27,0
+2026-0360,marrakech-morocco-2026-clay,Marrakech Morocco,2026,Clay,2026-03-30,2026-03-30,2026-04-05,"Marrakech, Morocco",,28.0,"€612,620",Rafael Jodar,True,False,27,0
+2026-0410,montecarlo-monaco-2026-clay,MonteCarlo Monaco,2026,Clay,2026-04-05,2026-04-05,2026-04-12,"Monte-Carlo, Monaco",,56.0,"€6,309,095",Jannik Sinner,True,False,55,0
+2026-0425,barcelona-spain-2026-clay,Barcelona Spain,2026,Clay,2026-04-13,2026-04-13,2026-04-19,"Barcelona, Spain",,32.0,"€2,950,310",Arthur Fils,True,False,31,0
+2026-0308,munich-germany-2026-clay,Munich Germany,2026,Clay,2026-04-13,2026-04-13,2026-04-19,"Munich, Germany",,32.0,"€2,561,110",Ben Shelton,True,False,31,0
+2026-1536,madrid-spain-2026-clay,Madrid Spain,2026,Clay,2026-04-22,2026-04-22,2026-05-03,"Madrid, Spain",,96.0,"€8,235,540",Jannik Sinner,True,False,95,0
+2026-0416,rome-italy-2026-clay,Rome Italy,2026,Clay,2026-05-06,2026-05-06,2026-05-17,"Rome, Italy",,96.0,"€8,235,540",Jannik Sinner,True,False,95,0
+2026-0322,geneva-switzerland-2026-clay,Geneva Switzerland,2026,Clay,2026-05-17,2026-05-17,2026-05-23,"Geneva, Switzerland",,28.0,"€612,620",Learner Tien,True,False,27,0
+2026-0414,hamburg-germany-2026-clay,Hamburg Germany,2026,Clay,2026-05-17,2026-05-17,2026-05-23,"Hamburg, Germany",,32.0,"€2,219,670",Ignacio Buse,True,False,31,0
+2026-0520,roland-garros-2026-clay,Roland Garros,2026,Clay,2026-05-24,2026-05-24,2026-06-07,"Paris, France",,128.0,"€28,900,000",Alexander Zverev,True,False,225,0
+2026-0321,stuttgart-germany-2026-grass,Stuttgart Germany,2026,Grass,2026-06-08,2026-06-08,2026-06-14,"Stuttgart, Germany",,28.0,"€768,220",Ben Shelton,True,False,39,0
+2026-0440,shertogenbosch-netherlands-2026-grass,sHertogenbosch Netherlands,2026,Grass,2026-06-08,2026-06-08,2026-06-14,"'s-Hertogenbosch, Netherlands",,28.0,"€723,435",Kamil Majchrzak,True,False,39,0
+2026-0500,halle-germany-2026-grass,Halle Germany,2026,Grass,2026-06-15,2026-06-15,2026-06-21,"Halle, Germany",,32.0,"€2,583,330",Frances Tiafoe,True,False,43,0
+2026-0311,london-great-britain-2026-grass,London Great Britain,2026,Grass,2026-06-15,2026-06-15,2026-06-21,"London, Great Britain",,32.0,"€2,583,330",Francisco Cerundolo,True,False,43,0
+2026-8994,mallorca-spain-2026-grass,Mallorca Spain,2026,Grass,2026-06-21,2026-06-21,2026-06-27,"Mallorca, Spain",,28.0,"€612,620",Alejandro Davidovich Fokina,True,False,39,0
+2026-0741,eastbourne-great-britain-2026-grass,Eastbourne Great Britain,2026,Grass,2026-06-22,2026-06-22,2026-06-27,"Eastbourne, Great Britain",,28.0,"€773,465",Zizou Bergs,True,False,39,0
+2026-0540,wimbledon-2026-grass,Wimbledon,2026,Grass,2026-06-29,2026-06-29,2026-07-12,"London, Great Britain",,128.0,"£30,060,000",Jannik Sinner,True,False,239,0
+2026-0316,bastad-sweden-2026-clay,Bastad Sweden,2026,Clay,2026-07-13,2026-07-13,2026-07-19,"Bastad, Sweden",,28.0,"€612,620",Luciano Darderi,True,False,37,0
+2026-0314,gstaad-switzerland-2026-clay,Gstaad Switzerland,2026,Clay,2026-07-13,2026-07-13,2026-07-19,"Gstaad, Switzerland",,28.0,"€612,620",Stefanos Tsitsipas,True,False,39,0
+2026-0439,umag-croatia-2026-clay,Umag Croatia,2026,Clay,2026-07-13,2026-07-13,2026-07-18,"Umag, Croatia",,28.0,"€612,620",Daniel Merida Aguilar,True,False,39,0
+2026-7290,estoril-portugal-2026-clay,Estoril Portugal,2026,Clay,2026-07-20,2026-07-20,2026-07-26,"Estoril, Portugal",,28.0,"€612,620",,True,False,38,0
+2026-0319,kitzbuhel-austria-2026-clay,Kitzbuhel Austria,2026,Clay,2026-07-20,2026-07-20,2026-07-25,"Kitzbuhel, Austria",,28.0,"€612,620",Quentin Halys,True,False,39,0
+2026-7480,los-cabos-mexico-2026-hard,Los Cabos Mexico,2026,Hard,2026-07-27,2026-07-27,2026-08-01,"Los Cabos, Mexico",,28.0,"$909,790",Denis Shapovalov,True,False,23,0
+2026-0418,washington-united-states-2026-hard,Washington United States,2026,Hard,2026-07-27,2026-07-27,2026-08-02,"Washington, United States",,32.0,"$2,469,450",Alex De Minaur,True,False,33,0
+2026-0421,montreal-canada-2026-hard,Montreal Canada,2026,Hard,2026-08-02,2026-08-02,2026-08-13,"Montreal, Canada",,96.0,"$9,415,724",Ben Shelton,True,True,103,5
+2026-0422,cincinnati-united-states-2026-hard,Cincinnati United States,2026,Hard,2026-08-13,2026-08-13,2026-08-23,"Cincinnati, United States",,96.0,"$9,415,725",Carlos Alcaraz,False,True,0,24

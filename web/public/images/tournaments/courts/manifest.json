@@ -1,0 +1,221 @@
+﻿{
+    "schemaVersion":  1,
+    "fallbacks":  {
+                      "Hard":  "/images/tournaments/courts/fallback-hard.webp",
+                      "Clay":  "/images/tournaments/courts/fallback-clay.webp",
+                      "Grass":  "/images/tournaments/courts/fallback-grass.webp",
+                      "Carpet":  "/images/tournaments/courts/fallback-carpet.webp"
+                  },
+    "tournaments":  {
+                        "2026-9900":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0339":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0336":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-8998":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0301":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0580":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0375":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-8096":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0506":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0424":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0407":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0499":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0451":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-6932":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0807":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0495":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-8996":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0404":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-0403":  {
+                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:hard"
+                                      },
+                        "2026-4462":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0717":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0360":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0410":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0425":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0308":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-1536":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0416":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0322":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0414":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0520":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0321":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-0440":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-0500":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-0311":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-8994":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-0741":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-0540":  {
+                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:grass"
+                                      },
+                        "2026-0316":  {
+                                          "image":  "/images/tournaments/courts/bastad-tennis-stadium.webp",
+                                          "isFallback":  false,
+                                          "sourceReference":  "wikimedia:bastad-tennis-stadium-2009"
+                                      },
+                        "2026-0314":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0439":  {
+                                          "image":  "/images/tournaments/courts/umag-goran-ivanisevic-stadium.webp",
+                                          "isFallback":  false,
+                                          "sourceReference":  "wikimedia:umag-goran-ivanisevic-stadium"
+                                      },
+                        "2026-7290":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      },
+                        "2026-0319":  {
+                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
+                                          "isFallback":  true,
+                                          "sourceReference":  "project-surface-fallback:clay"
+                                      }
+                    }
+}

@@ -1,0 +1,59 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Private implementation
+/src/
+/scripts/
+/docs_internal/
+/tests/
+/notebooks_originales/
+/scripts_originales/
+/prompt_info/
+/.codex/
+/.agents/
+AGENTS.md
+DESIGN.md
+*.ps1
+*.bat
+*.backup-before-*
+*.bak
+
+# Python and private artifacts
+.venv/
+venv/
+__pycache__/
+*.pyc
+/data/
+/data_private/
+/models/
+/outputs/
+/artifacts_private/
+*.joblib
+*.pkl
+*.keras
+
+# Logs and temporary files
+*.log
+temp/
+tmp/
+.pytest_cache/
+.codex_tmp/
+
+# Frontend
+node_modules/
+.next/
+*.tsbuildinfo
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

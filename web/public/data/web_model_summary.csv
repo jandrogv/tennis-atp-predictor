@@ -1,0 +1,2 @@
+selected_model,accuracy,precision,recall,f1,roc_auc,n_features,n_train_rows,n_test_rows,top_1_feature,top_2_feature,top_3_feature
+xgboost,0.8457008244994111,0.8511627906976744,0.8452655889145496,0.8482039397450754,0.9209228992716292,77,98022,1698,ELO_SURFACE_DIFF,ELO_DIFF,WIN_LAST_50_DIFF

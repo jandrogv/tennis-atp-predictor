@@ -1,0 +1,376 @@
+{
+  "version": 2,
+  "source": "web_tournament_matches.csv",
+  "label": "tournaments",
+  "latest": "acapulco-mexico-2026-hard",
+  "entries": [
+    {
+      "key": "acapulco-mexico-2026-hard",
+      "file": "acapulco-mexico-2026-hard.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-02-28",
+      "status": "frozen"
+    },
+    {
+      "key": "adelaide-australia-2026-hard",
+      "file": "adelaide-australia-2026-hard.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-01-17",
+      "status": "frozen"
+    },
+    {
+      "key": "auckland-new-zealand-2026-hard",
+      "file": "auckland-new-zealand-2026-hard.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-01-17",
+      "status": "frozen"
+    },
+    {
+      "key": "australian-open-2026-hard",
+      "file": "australian-open-2026-hard.csv",
+      "rows": 127,
+      "year": 2026,
+      "end_date": "2026-02-01",
+      "status": "frozen"
+    },
+    {
+      "key": "barcelona-spain-2026-clay",
+      "file": "barcelona-spain-2026-clay.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-04-19",
+      "status": "frozen"
+    },
+    {
+      "key": "bastad-sweden-2026-clay",
+      "file": "bastad-sweden-2026-clay.csv",
+      "rows": 37,
+      "year": 2026,
+      "end_date": "2026-07-19",
+      "status": "frozen"
+    },
+    {
+      "key": "brisbane-australia-2026-hard",
+      "file": "brisbane-australia-2026-hard.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-01-11",
+      "status": "frozen"
+    },
+    {
+      "key": "bucharest-romania-2026-clay",
+      "file": "bucharest-romania-2026-clay.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-04-05",
+      "status": "frozen"
+    },
+    {
+      "key": "buenos-aires-argentina-2026-clay",
+      "file": "buenos-aires-argentina-2026-clay.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-02-15",
+      "status": "frozen"
+    },
+    {
+      "key": "cincinnati-united-states-2026-hard",
+      "file": "cincinnati-united-states-2026-hard.csv",
+      "rows": 0,
+      "year": 2026,
+      "end_date": "2026-08-23",
+      "status": "upcoming"
+    },
+    {
+      "key": "dallas-united-states-2026-hard",
+      "file": "dallas-united-states-2026-hard.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-02-15",
+      "status": "frozen"
+    },
+    {
+      "key": "davis-cup-qualifiers-1st-rd-2026",
+      "file": "davis-cup-qualifiers-1st-rd-2026.csv",
+      "rows": 128,
+      "year": 2026,
+      "end_date": "2026-02-08",
+      "status": "frozen"
+    },
+    {
+      "key": "delray-beach-united-states-2026-hard",
+      "file": "delray-beach-united-states-2026-hard.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-02-22",
+      "status": "frozen"
+    },
+    {
+      "key": "doha-qatar-2026-hard",
+      "file": "doha-qatar-2026-hard.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-02-21",
+      "status": "frozen"
+    },
+    {
+      "key": "dubai-united-arab-emirates-2026-hard",
+      "file": "dubai-united-arab-emirates-2026-hard.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-02-28",
+      "status": "frozen"
+    },
+    {
+      "key": "eastbourne-great-britain-2026-grass",
+      "file": "eastbourne-great-britain-2026-grass.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-06-27",
+      "status": "frozen"
+    },
+    {
+      "key": "estoril-portugal-2026-clay",
+      "file": "estoril-portugal-2026-clay.csv",
+      "rows": 38,
+      "year": 2026,
+      "end_date": "2026-07-26",
+      "status": "frozen"
+    },
+    {
+      "key": "geneva-switzerland-2026-clay",
+      "file": "geneva-switzerland-2026-clay.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-05-23",
+      "status": "frozen"
+    },
+    {
+      "key": "gstaad-switzerland-2026-clay",
+      "file": "gstaad-switzerland-2026-clay.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-07-19",
+      "status": "frozen"
+    },
+    {
+      "key": "halle-germany-2026-grass",
+      "file": "halle-germany-2026-grass.csv",
+      "rows": 43,
+      "year": 2026,
+      "end_date": "2026-06-21",
+      "status": "frozen"
+    },
+    {
+      "key": "hamburg-germany-2026-clay",
+      "file": "hamburg-germany-2026-clay.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-05-23",
+      "status": "frozen"
+    },
+    {
+      "key": "hong-kong-hong-kong-2026-hard",
+      "file": "hong-kong-hong-kong-2026-hard.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-01-11",
+      "status": "frozen"
+    },
+    {
+      "key": "houston-united-states-2026-clay",
+      "file": "houston-united-states-2026-clay.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-04-05",
+      "status": "frozen"
+    },
+    {
+      "key": "indian-wells-united-states-2026-hard",
+      "file": "indian-wells-united-states-2026-hard.csv",
+      "rows": 95,
+      "year": 2026,
+      "end_date": "2026-03-15",
+      "status": "frozen"
+    },
+    {
+      "key": "kitzbuhel-austria-2026-clay",
+      "file": "kitzbuhel-austria-2026-clay.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-07-25",
+      "status": "frozen"
+    },
+    {
+      "key": "london-great-britain-2026-grass",
+      "file": "london-great-britain-2026-grass.csv",
+      "rows": 43,
+      "year": 2026,
+      "end_date": "2026-06-21",
+      "status": "frozen"
+    },
+    {
+      "key": "los-cabos-mexico-2026-hard",
+      "file": "los-cabos-mexico-2026-hard.csv",
+      "rows": 23,
+      "year": 2026,
+      "end_date": "2026-08-01",
+      "status": "frozen"
+    },
+    {
+      "key": "madrid-spain-2026-clay",
+      "file": "madrid-spain-2026-clay.csv",
+      "rows": 95,
+      "year": 2026,
+      "end_date": "2026-05-03",
+      "status": "frozen"
+    },
+    {
+      "key": "mallorca-spain-2026-grass",
+      "file": "mallorca-spain-2026-grass.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-06-27",
+      "status": "frozen"
+    },
+    {
+      "key": "marrakech-morocco-2026-clay",
+      "file": "marrakech-morocco-2026-clay.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-04-05",
+      "status": "frozen"
+    },
+    {
+      "key": "miami-united-states-2026-hard",
+      "file": "miami-united-states-2026-hard.csv",
+      "rows": 95,
+      "year": 2026,
+      "end_date": "2026-03-29",
+      "status": "frozen"
+    },
+    {
+      "key": "montecarlo-monaco-2026-clay",
+      "file": "montecarlo-monaco-2026-clay.csv",
+      "rows": 55,
+      "year": 2026,
+      "end_date": "2026-04-12",
+      "status": "frozen"
+    },
+    {
+      "key": "montpellier-france-2026-hard",
+      "file": "montpellier-france-2026-hard.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-02-08",
+      "status": "frozen"
+    },
+    {
+      "key": "montreal-canada-2026-hard",
+      "file": "montreal-canada-2026-hard.csv",
+      "rows": 103,
+      "year": 2026,
+      "end_date": "2026-08-13",
+      "status": "active"
+    },
+    {
+      "key": "munich-germany-2026-clay",
+      "file": "munich-germany-2026-clay.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-04-19",
+      "status": "frozen"
+    },
+    {
+      "key": "rio-de-janeiro-brazil-2026-clay",
+      "file": "rio-de-janeiro-brazil-2026-clay.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-02-22",
+      "status": "frozen"
+    },
+    {
+      "key": "roland-garros-2026-clay",
+      "file": "roland-garros-2026-clay.csv",
+      "rows": 225,
+      "year": 2026,
+      "end_date": "2026-06-07",
+      "status": "frozen"
+    },
+    {
+      "key": "rome-italy-2026-clay",
+      "file": "rome-italy-2026-clay.csv",
+      "rows": 95,
+      "year": 2026,
+      "end_date": "2026-05-17",
+      "status": "frozen"
+    },
+    {
+      "key": "rotterdam-netherlands-2026-hard",
+      "file": "rotterdam-netherlands-2026-hard.csv",
+      "rows": 31,
+      "year": 2026,
+      "end_date": "2026-02-15",
+      "status": "frozen"
+    },
+    {
+      "key": "santiago-chile-2026-clay",
+      "file": "santiago-chile-2026-clay.csv",
+      "rows": 27,
+      "year": 2026,
+      "end_date": "2026-03-01",
+      "status": "frozen"
+    },
+    {
+      "key": "shertogenbosch-netherlands-2026-grass",
+      "file": "shertogenbosch-netherlands-2026-grass.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-06-14",
+      "status": "frozen"
+    },
+    {
+      "key": "stuttgart-germany-2026-grass",
+      "file": "stuttgart-germany-2026-grass.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-06-14",
+      "status": "frozen"
+    },
+    {
+      "key": "umag-croatia-2026-clay",
+      "file": "umag-croatia-2026-clay.csv",
+      "rows": 39,
+      "year": 2026,
+      "end_date": "2026-07-18",
+      "status": "frozen"
+    },
+    {
+      "key": "united-cup-2026-hard",
+      "file": "united-cup-2026-hard.csv",
+      "rows": 25,
+      "year": 2026,
+      "end_date": "2026-01-11",
+      "status": "frozen"
+    },
+    {
+      "key": "washington-united-states-2026-hard",
+      "file": "washington-united-states-2026-hard.csv",
+      "rows": 33,
+      "year": 2026,
+      "end_date": "2026-08-02",
+      "status": "frozen"
+    },
+    {
+      "key": "wimbledon-2026-grass",
+      "file": "wimbledon-2026-grass.csv",
+      "rows": 239,
+      "year": 2026,
+      "end_date": "2026-07-12",
+      "status": "frozen"
+    }
+  ]
+}
