@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import {
+  AlertTriangle,
   ArrowRight,
-  BarChart3,
   BrainCircuit,
+  CheckCircle2,
   Database,
+  FileText,
   Gauge,
-  GitCompareArrows,
+  GitBranch,
   Globe2,
   Layers3,
   LineChart,
+  PanelsTopLeft,
   ShieldCheck,
-  Trophy
+  Sparkles
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -20,352 +23,553 @@ import { createPageMetadata, staticPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata(staticPageSeo["/about-project"]);
 
-type Capability = {
+type IconCard = {
   title: string;
   body: string;
   icon: LucideIcon;
 };
 
-const capabilities: Capability[] = [
+type PipelineStep = {
+  number: string;
+  title: string;
+  body: string;
+  detail: string;
+  output: string;
+};
+
+const overviewCards: IconCard[] = [
   {
-    title: "Data engineering",
-    body: "Historical matches, rankings, players and tournaments become a consistent chronological analytical layer.",
+    title: "Pipeline",
+    body: "An analytical workflow collects, cleans and prepares ATP tennis data before it reaches the web layer.",
     icon: Database
   },
   {
-    title: "Tennis intelligence",
-    body: "Ranking, Elo, surface strength, form, serve performance and matchup history describe each contest.",
-    icon: Trophy
-  },
-  {
-    title: "Probabilistic modeling",
-    body: "Candidate classifiers are compared with an understandable ranking baseline and assessed for probability quality.",
+    title: "Model",
+    body: "Precomputed tennis signals become match probabilities, model diagnostics and feature importance views.",
     icon: BrainCircuit
   },
   {
-    title: "Product delivery",
-    body: "Curated analytical outputs power a responsive Next.js experience built for exploration and interpretation.",
+    title: "Web product",
+    body: "A static Next.js app turns selected web-friendly CSVs into predictions, rankings and player exploration.",
     icon: Globe2
   }
 ];
 
-const pipeline = [
-  ["Data", "ATP match, player, ranking and tournament history"],
-  ["Cleaning", "Stable identities, dates, surfaces and numeric fields"],
-  ["Feature engineering", "Pre-match comparisons and rolling player state"],
-  ["Ratings", "General Elo and surface-specific Elo context"],
-  ["Machine learning", "Candidate models that estimate win probability"],
-  ["Evaluation", "Temporal holdout, baseline and calibration diagnostics"],
-  ["Predictions", "Interpretable probabilities for upcoming matches"],
-  ["Web product", "Players, rankings, tournaments and model transparency"]
+const pipelineSteps: PipelineStep[] = [
+  {
+    number: "01",
+    title: "Scraping ATP data",
+    body: "Tournament, ranking, match and player sources are collected and prepared.",
+    detail: "Data acquisition stays outside the deployed web app and provides only the records required by later stages.",
+    output: "Raw tournament, player, ranking and match files"
+  },
+  {
+    number: "02",
+    title: "Data cleaning & normalization",
+    body: "Player names, IDs, rankings and tournament metadata are standardized.",
+    detail: "The goal is to keep downstream feature engineering reproducible across runs.",
+    output: "Clean player, tournament, ranking and match layers"
+  },
+  {
+    number: "03",
+    title: "Preprocessing",
+    body: "Historical matches are separated from current test and upcoming prediction-only rows.",
+    detail: "Training, evaluation and prediction data keep different roles in the pipeline.",
+    output: "Train, test and prediction-ready match layers"
+  },
+  {
+    number: "04",
+    title: "Feature engineering",
+    body: "The pipeline creates Elo, surface Elo, ranking, H2H, recent-form and rolling match-stat signals.",
+    detail: "Feature contracts are saved so prediction uses the same columns expected by the model.",
+    output: "Model-ready feature tables"
+  },
+  {
+    number: "05",
+    title: "Model training & evaluation",
+    body: "Offline training compares model candidates and evaluates the selected result.",
+    detail: "Metrics are reviewed through the Model Performance page instead of hardcoded copy.",
+    output: "Metrics, selected model and feature importance"
+  },
+  {
+    number: "06",
+    title: "Prediction generation",
+    body: "Upcoming matches are scored with the selected model using prediction-only features.",
+    detail: "This stage does not train or evaluate; it only applies the existing model contract.",
+    output: "Win probabilities for upcoming ATP matches"
+  },
+  {
+    number: "07",
+    title: "Web-friendly data layer",
+    body: "Final outputs are consolidated into compact CSVs designed for frontend consumption.",
+    detail: "The web layer avoids raw datasets and reads only selected public CSV files.",
+    output: "Match cards, details, rankings, profiles and diagnostics"
+  },
+  {
+    number: "08",
+    title: "Interactive web application",
+    body: "Next.js renders the product surfaces from static CSVs served with the app.",
+    detail: "Vercel hosts the frontend; the analytical workflow remains separate from the deployed app.",
+    output: "Portfolio-ready ATP Insight web interface"
+  }
 ];
 
-const featureFamilies: Capability[] = [
+const featureFamilies: IconCard[] = [
   {
     title: "Ranking context",
-    body: "ATP position and points describe official strength at the time of the match.",
+    body: "ATP rank and points differences help represent official pre-match strength signals.",
     icon: Gauge
   },
   {
-    title: "Elo by surface",
-    body: "General and surface-specific ratings adapt player strength to tennis conditions.",
-    icon: Layers3
+    title: "Matchup history",
+    body: "Head-to-head and surface head-to-head fields add prior matchup context when available.",
+    icon: GitBranch
   },
   {
     title: "Recent form",
-    body: "Rolling results and serve-performance windows capture shorter-term evidence.",
+    body: "Rolling win-rate windows and recent match statistics capture short and medium-term momentum.",
     icon: LineChart
   },
   {
-    title: "Matchup history",
-    body: "Head-to-head and surface matchup records add opponent-specific context.",
-    icon: GitCompareArrows
+    title: "Elo signals",
+    body: "Overall Elo and surface Elo families describe tennis strength in a model-ready format.",
+    icon: Layers3
   }
 ];
 
-const productAreas = [
+const stackGroups = [
   {
-    title: "Match intelligence",
-    body: "Upcoming predictions and match detail combine probability, confidence context, Elo, rankings and head-to-head evidence.",
-    links: [
-      ["Predictions", "/predictions"],
-      ["Compare players", "/compare"]
-    ]
+    title: "Data pipeline",
+    items: ["Python", "Pandas", "Web scraping", "Cleaning", "Feature engineering", "CSV artifacts"]
   },
   {
-    title: "Player and ranking analytics",
-    body: "Searchable profiles, ATP standings and general or surface Elo views make player strength explorable over time.",
-    links: [
-      ["Players", "/players"],
-      ["Elo rankings", "/rankings/elo"]
-    ]
+    title: "Machine learning",
+    items: ["scikit-learn", "XGBoost", "TensorFlow available", "Calibration", "ROC AUC", "Feature importance"]
   },
   {
-    title: "Tournament context",
-    body: "Tournament pages connect editions, surfaces, draws, played matches and detailed results in one navigable view.",
-    links: [["Tournaments", "/tournaments"]]
+    title: "Web product",
+    items: ["Next.js", "React", "TypeScript", "Tailwind", "Static CSVs", "Vercel"]
   },
   {
-    title: "Model transparency",
-    body: "Performance, baselines, confusion matrix, calibration and feature importance expose how the current model behaves.",
-    links: [
-      ["Model performance", "/model"],
-      ["Feature importance", "/feature-importance"]
-    ]
+    title: "Ops / delivery",
+    items: ["Version control", "Reproducible updates", "Delivery workflow", "Vercel build", "Documentation", "No live database"]
   }
 ];
 
-const stack = [
-  ["Data & ML", "Python, pandas, NumPy, scikit-learn, XGBoost and TensorFlow experimentation"],
-  ["Frontend", "Next.js, React, TypeScript, Tailwind CSS, Radix UI primitives and Motion"],
-  ["Delivery", "Static web-ready data products, GitHub and Vercel"]
+const decisions: IconCard[] = [
+  {
+    title: "Static CSVs first",
+    body: "The current portfolio stage favors static web-friendly CSVs over a database or custom API.",
+    icon: FileText
+  },
+  {
+    title: "Raw data stays outside the public app",
+    body: "The deployed app receives selected public outputs, not raw or heavy internal datasets.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Product pages over notebooks",
+    body: "Predictions, rankings, players and diagnostics are presented as browsable product surfaces.",
+    icon: PanelsTopLeft
+  },
+  {
+    title: "Curated updates before deploy",
+    body: "Data preparation, model evaluation and consolidation are completed before selected CSVs are shipped with the web app.",
+    icon: CheckCircle2
+  }
 ];
 
-function CapabilityCard({ title, body, icon: Icon }: Capability) {
+const limitations = [
+  "Predictions are experimental and should not be interpreted as betting advice.",
+  "Model performance depends on data quality, feature availability and the selected training run.",
+  "Data acquisition can require maintenance if source page structures change.",
+  "Static CSV delivery is intentional now, but a database or API may become useful if the data layer grows.",
+  "Training remains separate from the deployed app and follows a reproducible offline process."
+];
+
+const futureItems: IconCard[] = [
+  {
+    title: "Simplify Home",
+    body: "Move detailed methodology out of the landing page and keep Home focused on routing and first impression.",
+    icon: Sparkles
+  },
+  {
+    title: "Review navigation",
+    body: "Decide where About Project belongs after the page exists and the topbar density can be judged.",
+    icon: PanelsTopLeft
+  },
+  {
+    title: "Improve explanation",
+    body: "Continue refining calibration, local explanation and confidence context around individual predictions.",
+    icon: BrainCircuit
+  },
+  {
+    title: "Automate carefully",
+    body: "Explore controlled automation later without rushing cloud scraping or heavy training into deployment.",
+    icon: Gauge
+  }
+];
+
+function SectionIntro({
+  label,
+  title,
+  children
+}: {
+  label?: string;
+  title: string;
+  children?: React.ReactNode;
+}) {
   return (
-    <Card className="h-full p-5 sm:p-6">
-      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-lime-100/70 text-lime-800">
-        <Icon className="h-5 w-5" aria-hidden="true" />
-      </span>
-      <h3 className="mt-5 text-lg font-semibold tracking-tight text-slate-950">{title}</h3>
-      <p className="mt-2 text-sm leading-7 text-slate-600">{body}</p>
+    <div className="max-w-3xl">
+      {label ? <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-700">{label}</p> : null}
+      <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">{title}</h2>
+      {children ? <div className="mt-3 text-sm leading-7 text-slate-600">{children}</div> : null}
+    </div>
+  );
+}
+
+function SmallIcon({ icon: Icon }: { icon: LucideIcon }) {
+  return (
+    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-lime-300/35 bg-lime-100/45 text-lime-800">
+      <Icon className="h-4 w-4" aria-hidden="true" />
+    </span>
+  );
+}
+
+function FeatureCard({ title, body, icon }: IconCard) {
+  return (
+    <Card className="p-5">
+      <SmallIcon icon={icon} />
+      <h3 className="mt-4 text-base font-semibold tracking-tight text-slate-950">{title}</h3>
+      <p className="mt-2 text-sm leading-6 text-slate-600">{body}</p>
     </Card>
+  );
+}
+
+function PipelineTimeline() {
+  return (
+    <div className="relative grid gap-4 lg:grid-cols-2">
+      <div className="pointer-events-none absolute left-6 top-4 hidden h-[calc(100%-2rem)] w-px bg-slate-950/[0.08] lg:block" />
+      {pipelineSteps.map((step) => (
+        <Card key={step.number} className="relative p-5">
+          <div className="flex gap-4">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-lime-300/45 bg-lime-100/55 text-xs font-bold text-lime-800">
+              {step.number}
+            </span>
+            <div>
+              <h3 className="text-base font-semibold tracking-tight text-slate-950">{step.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{step.body}</p>
+              <p className="mt-3 text-xs leading-5 text-slate-500">{step.detail}</p>
+              <div className="mt-4 rounded-lg border border-slate-950/[0.06] bg-white/55 p-3">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-slate-500">Output</p>
+                <p className="mt-1 text-sm font-semibold text-slate-800">{step.output}</p>
+              </div>
+            </div>
+          </div>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+function FlowDiagram() {
+  const items = ["Analytical workflow", "Curated outputs", "Public data layer", "Next.js", "Vercel"];
+
+  return (
+    <div className="atp-panel p-5 sm:p-6">
+      <div className="grid gap-3 sm:grid-cols-5">
+        {items.map((item, index) => (
+          <div key={item} className="relative">
+            <div className="flex min-h-20 items-center justify-center rounded-xl border border-slate-950/[0.06] bg-white/55 px-3 text-center text-sm font-semibold text-slate-800">
+              {item}
+            </div>
+            {index < items.length - 1 ? (
+              <ArrowRight
+                className="absolute -right-5 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-lime-700 sm:block"
+                aria-hidden="true"
+              />
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
 export default function AboutProjectPage() {
   return (
-    <article className="mx-auto max-w-6xl space-y-20 pb-12 sm:space-y-24">
-      <header className="grid gap-8 border-b border-slate-950/[0.06] pb-12 pt-2 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
-        <div>
-          <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl lg:text-6xl">
-            Tennis history, shaped into an analytical product.
-          </h1>
-          <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-            ATP Insight is a personal end-to-end portfolio project combining data engineering, tennis analytics,
-            rating systems, machine learning and an interactive web experience for professional men&apos;s tennis.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <LinkButton href="/predictions" size="lg">
-              Explore predictions <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-            </LinkButton>
-            <LinkButton href="/model" variant="secondary" size="lg">
-              Inspect the model
-            </LinkButton>
-          </div>
-        </div>
-
-        <aside className="atp-dark-panel overflow-hidden p-6 sm:p-7" aria-label="Project outcome">
-          <BarChart3 className="h-6 w-6 text-lime-300" aria-hidden="true" />
-          <p className="mt-8 text-2xl font-semibold tracking-tight text-white">More than a prediction model</p>
-          <p className="mt-3 text-sm leading-7 text-slate-300">
-            The result is a browsable data product where probabilities sit beside the player, surface, tournament and
-            model evidence needed to interpret them.
-          </p>
-          <div className="mt-7 grid grid-cols-3 gap-3 border-t border-white/10 pt-6 text-center">
-            <div>
-              <p className="text-xl font-semibold tabular-nums text-white">84.57%</p>
-              <p className="mt-1 text-[0.68rem] uppercase tracking-[0.12em] text-slate-400">Accuracy</p>
-            </div>
-            <div>
-              <p className="text-xl font-semibold tabular-nums text-white">0.9209</p>
-              <p className="mt-1 text-[0.68rem] uppercase tracking-[0.12em] text-slate-400">ROC AUC</p>
-            </div>
-            <div>
-              <p className="text-xl font-semibold tabular-nums text-white">0.1117</p>
-              <p className="mt-1 text-[0.68rem] uppercase tracking-[0.12em] text-slate-400">Brier</p>
-            </div>
-          </div>
-        </aside>
+    <div className="mx-auto max-w-6xl space-y-16 pb-12">
+      <header className="mx-auto max-w-3xl pt-4 text-center">
+        <h1 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">About Project</h1>
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+          A documented view of how ATP Insight turns tennis data into a usable prediction product.
+        </p>
       </header>
 
-      <section aria-labelledby="problem-title" className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-        <div className="lg:sticky lg:top-28">
-          <h2 id="problem-title" className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            The problem
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-600">
-            A ranking alone cannot explain a tennis matchup. Strength changes over time, varies by surface and depends
-            on the quality and recency of the evidence.
+      <section className="space-y-6">
+        <SectionIntro label="Project overview" title="A data science project shaped like a product">
+          <p>
+            ATP Insight is a personal data science and product project that turns ATP tennis data into match
+            probabilities, rankings, player views and model diagnostics. It combines a reproducible analytical workflow with a
+            static Next.js app so the result can be explored like a real product, not only a notebook.
           </p>
-        </div>
-        <div className="atp-panel p-6 sm:p-8">
-          <p className="max-w-3xl text-xl font-medium leading-9 tracking-tight text-slate-900 sm:text-2xl">
-            ATP Insight turns historical ATP records into an interpretable system for analysing players, ratings,
-            tournaments and matches &mdash; then estimates win probabilities without presenting them as guarantees.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {capabilities.map((capability) => (
-              <div key={capability.title} className="border-t border-slate-950/[0.08] pt-4">
-                <p className="font-semibold text-slate-950">{capability.title}</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{capability.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="pipeline-title">
-        <div className="max-w-3xl">
-          <h2 id="pipeline-title" className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            From source records to product decisions
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-600">
-            Each stage has a distinct analytical role. Sequential state is calculated chronologically, evaluation uses
-            later-season evidence, and only curated outputs cross into the public application.
-          </p>
-        </div>
-        <ol className="mt-8 overflow-hidden rounded-2xl bg-slate-950 text-white shadow-lift">
-          {pipeline.map(([title, body], index) => (
-            <li
-              key={title}
-              className="grid gap-3 border-b border-white/10 px-5 py-5 last:border-b-0 sm:grid-cols-[3rem_12rem_1fr] sm:items-center sm:px-7"
-            >
-              <span className="text-xs font-semibold tabular-nums text-lime-300">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="font-semibold text-white">{title}</h3>
-              <p className="text-sm leading-6 text-slate-300">{body}</p>
-            </li>
+        </SectionIntro>
+        <div className="grid gap-4 md:grid-cols-3">
+          {overviewCards.map((card) => (
+            <FeatureCard key={card.title} {...card} />
           ))}
-        </ol>
+        </div>
       </section>
 
-      <section aria-labelledby="signals-title">
-        <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-          <div>
-            <h2 id="signals-title" className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Tennis signals with temporal context
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Features compare two players using only the evidence intended to be available before the match. The full
-              methodology remains documented separately from this visual case study.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {featureFamilies.map((feature) => (
-              <CapabilityCard key={feature.title} {...feature} />
-            ))}
-          </div>
+      <section className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+        <div className="atp-dark-panel p-6 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-lime-300">The problem</p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            A prediction is only useful if the signals can be inspected.
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-slate-300">
+            Tennis context changes by surface, ranking, recent form and matchup history. ATP Insight treats the web
+            interface as part of the model output: users can inspect probabilities, compare players and review model
+            diagnostics instead of seeing a number in isolation.
+          </p>
         </div>
+        <Card className="p-6 sm:p-8">
+          <div className="grid gap-3 sm:grid-cols-2">
+            {["Surface context", "Elo signals", "ATP rankings", "Recent form", "Head-to-head", "Model output"].map(
+              (item) => (
+                <div key={item} className="atp-inset p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item}</p>
+                  <p className="mt-1 text-xs leading-5 text-slate-500">Visible context for understanding a match.</p>
+                </div>
+              )
+            )}
+          </div>
+        </Card>
+      </section>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
-          <Card className="p-6 sm:p-8">
-            <h3 className="text-2xl font-semibold tracking-tight text-slate-950">General and surface Elo</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Elo updates strength after each completed match. Parallel surface ratings represent how the same player
-              can perform differently on hard, clay and grass courts, giving the model context beyond official rank.
-            </p>
-            <LinkButton href="/rankings/elo" variant="ghost" size="sm" className="mt-5">
-              Explore Elo rankings <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-            </LinkButton>
+      <section className="space-y-6">
+        <SectionIntro label="The data" title="Curated data work, selected public outputs">
+          <p>
+            The public app is intentionally lightweight. Raw and generated training data remain outside the public repository; the deployed web
+            app receives only selected web-friendly CSVs.
+          </p>
+        </SectionIntro>
+        <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
+          <Card className="p-6">
+            <div className="flex items-center gap-3">
+              <SmallIcon icon={Database} />
+              <h3 className="text-lg font-semibold tracking-tight text-slate-950">Analytical source data</h3>
+            </div>
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+              <li>ATP tournament metadata and completed matches.</li>
+              <li>Ranking snapshots, player metadata and upcoming matches.</li>
+              <li>Training, evaluation, prediction and model artifacts kept outside the deployed frontend.</li>
+            </ul>
           </Card>
-          <Card className="p-6 sm:p-8">
-            <h3 className="text-2xl font-semibold tracking-tight text-slate-950">Probability, not certainty</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Models are compared under a later-season holdout against the higher-ranked-player baseline. Accuracy and
-              discrimination are assessed alongside Brier score, log loss and calibration error so probability quality
-              remains part of the decision.
-            </p>
-            <LinkButton href="/model" variant="ghost" size="sm" className="mt-5">
-              Review evaluation <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-            </LinkButton>
+          <Card className="p-6">
+            <div className="flex items-center gap-3">
+              <SmallIcon icon={ShieldCheck} />
+              <h3 className="text-lg font-semibold tracking-tight text-slate-950">Public web data</h3>
+            </div>
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+              <li>Compact CSVs for predictions, players, rankings, tournaments and diagnostics.</li>
+              <li>No raw datasets, full training tables or model files are required by React pages.</li>
+              <li>Next.js reads static files from the curated public data layer.</li>
+            </ul>
           </Card>
         </div>
       </section>
 
-      <section aria-labelledby="product-title">
-        <div className="max-w-3xl">
-          <h2 id="product-title" className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            The model becomes a product
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-600">
-            ATP Insight is designed for exploration rather than blind prediction. Product surfaces connect each output
-            to the context a visitor needs to understand it.
+      <section className="space-y-6">
+        <SectionIntro label="Full pipeline" title="From ATP sources to a web-ready prediction layer">
+          <p>
+            The complete workflow is deliberately explicit: each stage has a clear role, output and boundary between
+            analytical data science work and the public web product.
           </p>
+        </SectionIntro>
+        <PipelineTimeline />
+      </section>
+
+      <section className="space-y-6">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <SectionIntro label="Feature engineering" title="Signals the model can learn from">
+            <p>
+              The feature layer turns tennis context into structured model inputs. The exact feature contract is saved
+              with model artifacts, while the app exposes the main signal families users can understand.
+            </p>
+          </SectionIntro>
+          <LinkButton href="/feature-importance" variant="secondary" size="sm" className="w-fit">
+            View feature importance <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+          </LinkButton>
         </div>
-        <div className="mt-8 divide-y divide-slate-950/[0.07] border-y border-slate-950/[0.07]">
-          {productAreas.map((area) => (
-            <div key={area.title} className="grid gap-4 py-7 lg:grid-cols-[0.7fr_1.3fr_auto] lg:items-center">
-              <h3 className="text-xl font-semibold tracking-tight text-slate-950">{area.title}</h3>
-              <p className="max-w-2xl text-sm leading-7 text-slate-600">{area.body}</p>
-              <div className="flex flex-wrap gap-2 lg:justify-end">
-                {area.links.map(([label, href]) => (
-                  <LinkButton key={href} href={href} variant="secondary" size="sm">
-                    {label}
-                  </LinkButton>
-                ))}
-              </div>
-            </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {featureFamilies.map((family) => (
+            <FeatureCard key={family.title} {...family} />
           ))}
         </div>
       </section>
 
-      <section aria-labelledby="stack-title" className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-        <div>
-          <h2 id="stack-title" className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            One project, three disciplines
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-slate-600">
-            The stack supports a reproducible analytical workflow, a transparent evaluation story and a production
-            frontend without requiring live model inference in the browser.
-          </p>
-        </div>
-        <div className="space-y-3">
-          {stack.map(([title, technologies]) => (
-            <div key={title} className="atp-inset grid gap-2 p-5 sm:grid-cols-[9rem_1fr] sm:items-center">
-              <h3 className="font-semibold text-slate-950">{title}</h3>
-              <p className="text-sm leading-6 text-slate-600">{technologies}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="atp-dark-panel overflow-hidden p-6 sm:p-8 lg:p-10" aria-labelledby="limitations-title">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+      <section className="atp-dark-panel p-6 sm:p-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <ShieldCheck className="h-6 w-6 text-lime-300" aria-hidden="true" />
-            <h2 id="limitations-title" className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Transparent by design
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-lime-300">
+              Model training and evaluation
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              Metrics stay in the model dashboard, not hardcoded in marketing copy.
             </h2>
             <p className="mt-4 text-sm leading-7 text-slate-300">
-              Model limitations are part of the product story, not a footnote. The published results are portfolio
-              evidence from an offline evaluation, not production guarantees or betting advice.
+              Model comparison includes candidates such as XGBoost
+              and calibrated XGBoost under a consistent evaluation process. Evaluation artifacts track accuracy, precision, recall, F1, ROC AUC
+              and calibration diagnostics when available.
             </p>
+            <LinkButton href="/model" variant="subtle" size="sm" className="mt-5">
+              Inspect model performance <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+            </LinkButton>
           </div>
-          <div className="grid gap-x-6 gap-y-5 sm:grid-cols-2">
-            {[
-              "Coverage varies across seasons, surfaces and match-stat fields.",
-              "New or lower-ranked players have less historical evidence.",
-              "Injuries, fatigue, travel and late withdrawals are not fully observable.",
-              "Candidate selection and final reporting currently share the same holdout.",
-              "Every Elo-derived signal still needs stricter pre-match verification.",
-              "Performance may shift as players, conditions and tour patterns change."
-            ].map((item) => (
-              <p key={item} className="border-t border-white/10 pt-4 text-sm leading-6 text-slate-300">
-                {item}
-              </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {["Feature contract", "Candidate comparison", "Calibration views", "Diagnostics"].map((item) => (
+              <div key={item} className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+                <p className="text-sm font-semibold text-white">{item}</p>
+                <p className="mt-1 text-xs leading-5 text-slate-400">Generated by the training and evaluation flow.</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="atp-panel p-6 text-center sm:p-10">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-950">Explore ATP Insight</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-          Start with the product, inspect how the model behaves, or explore the player and tournament context behind
-          the predictions.
+      <section className="space-y-6">
+        <SectionIntro label="Prediction generation" title="Upcoming matches use the saved model contract">
+          <p>
+            Prediction is an application stage, not a training stage. The flow reads upcoming match features, applies
+            the selected model contract and writes the latest probability outputs.
+          </p>
+        </SectionIntro>
+        <div className="grid gap-4 md:grid-cols-3">
+          {[
+            ["Prediction features", "Upcoming match rows with the feature columns required by the selected model."],
+            ["Feature contract", "The feature contract that keeps prediction aligned with training."],
+            ["Latest predictions", "Generated player win probabilities for the current upcoming match set."]
+          ].map(([title, body]) => (
+            <Card key={title} className="p-5">
+              <p className="font-mono text-xs font-semibold text-lime-700">{title}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{body}</p>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <SectionIntro label="Web delivery" title="A static data-product app, hosted separately from the pipeline">
+          <p>
+            Vercel builds the frontend from the repository. The analytical workflow produces selected
+            public CSVs before deployment.
+          </p>
+        </SectionIntro>
+        <FlowDiagram />
+      </section>
+
+      <section className="space-y-6">
+        <SectionIntro label="Technical stack" title="A practical stack for reproducible data and frontend delivery" />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {stackGroups.map((group) => (
+            <Card key={group.title} className="p-5">
+              <h3 className="text-base font-semibold tracking-tight text-slate-950">{group.title}</h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span key={item} className="atp-chip px-2.5 py-1">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <SectionIntro label="Product decisions" title="Design and architecture choices behind the current version" />
+        <div className="grid gap-4 md:grid-cols-2">
+          {decisions.map((decision) => (
+            <FeatureCard key={decision.title} {...decision} />
+          ))}
+        </div>
+      </section>
+
+      <section className="atp-dark-panel p-6 sm:p-8">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-lime-300">Portfolio value</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              A complete example of data science becoming a usable product.
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-slate-300">
+              ATP Insight connects extraction, cleaning, feature engineering, model diagnostics, interpretation,
+              documentation, deployment strategy and frontend product design in one project.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {["End-to-end data lifecycle", "Production-style web experience", "Model diagnostics", "Operational docs"].map(
+              (item) => (
+                <div key={item} className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+                  <CheckCircle2 className="h-4 w-4 text-lime-300" aria-hidden="true" />
+                  <p className="mt-3 text-sm font-semibold text-white">{item}</p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <SectionIntro label="Limitations" title="Transparent constraints in the current version">
+          <p>
+            The project is designed as a professional portfolio product, but the prediction layer remains experimental
+            and tied to data quality, feature availability and controlled update flows.
+          </p>
+        </SectionIntro>
+        <Card className="p-6">
+          <div className="flex gap-3">
+            <SmallIcon icon={AlertTriangle} />
+            <div className="grid gap-3 text-sm leading-6 text-slate-600 md:grid-cols-2">
+              {limitations.map((item) => (
+                <p key={item}>{item}</p>
+              ))}
+            </div>
+          </div>
+        </Card>
+      </section>
+
+      <section className="space-y-6">
+        <SectionIntro label="Future improvements" title="What comes next" />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {futureItems.map((item) => (
+            <FeatureCard key={item.title} {...item} />
+          ))}
+        </div>
+      </section>
+
+      <section className="atp-panel p-6 text-center sm:p-8">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-950">Explore the product surfaces</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600">
+          The methodology lives here; the product pages show the current predictions, model diagnostics and player
+          context generated from the pipeline.
         </p>
-        <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <LinkButton href="/predictions">Open predictions</LinkButton>
-          <LinkButton href="/players" variant="secondary">
-            Browse players
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <LinkButton href="/predictions" variant="primary">
+            Open predictions
           </LinkButton>
-          <LinkButton href="/tournaments" variant="outline">
-            Explore tournaments
+          <LinkButton href="/model" variant="secondary">
+            Inspect model performance
+          </LinkButton>
+          <LinkButton href="/feature-importance" variant="outline">
+            View feature importance
+          </LinkButton>
+          <LinkButton href="/compare" variant="ghost">
+            Explore player comparison
           </LinkButton>
         </div>
       </section>
-    </article>
+    </div>
   );
 }
