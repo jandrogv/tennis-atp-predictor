@@ -2,8 +2,33 @@
   "version": 2,
   "source": "web_atp_rankings.csv",
   "label": "ranking snapshots",
-  "latest": "2026-08-03",
+  "latest": "2026-09-21",
   "entries": [
+    {
+      "key": "2026-09-21",
+      "file": "2026-09-21.csv",
+      "rows": 1394
+    },
+    {
+      "key": "2026-09-14",
+      "file": "2026-09-14.csv",
+      "rows": 1397
+    },
+    {
+      "key": "2026-08-31",
+      "file": "2026-08-31.csv",
+      "rows": 1390
+    },
+    {
+      "key": "2026-08-24",
+      "file": "2026-08-24.csv",
+      "rows": 1383
+    },
+    {
+      "key": "2026-08-10",
+      "file": "2026-08-10.csv",
+      "rows": 1405
+    },
     {
       "key": "2026-08-03",
       "file": "2026-08-03.csv",
