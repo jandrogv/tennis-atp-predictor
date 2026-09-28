@@ -52,9 +52,20 @@ registro de QA permanecen fuera del repositorio.
 
 ## Publicación y reversión
 
-Publicar solo después de estas validaciones y comprobar el estado Vercel del
-mismo commit. Después revisar las páginas publicadas, no solo el estado del build.
-La verificación de Vercel y la URL de la entrega se registrarán al finalizar.
+Publicada el 28/09/2026 mediante la [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
+Commit de integración: `0082572eba6f46e86221e02c42deb9d85394af88`.
+Vercel confirma éxito para ese commit en el
+[despliegue de producción](https://vercel.com/jandrogvs-projects/atpinsight/57F2B5xaHmxpAQaGcnmyre8VPhsR).
+
+La [web pública](https://atpinsight-two.vercel.app) supera las mismas comprobaciones
+de rutas e interacciones anteriores: 31 visitas, sin errores ni avisos de consola,
+cuadro modal por encima del pie y vistas móviles sin desbordamiento horizontal.
+La vista previa exigía iniciar sesión en Vercel; no se considera una prueba visual
+superada. La comprobación visual se realizó después sobre producción.
+
+La carpeta principal también se integra y compila con Next.js 16.3.6 mediante
+`npm ci` y `npm run build`. Se conservan los datos locales recientes; no se ejecuta
+ninguna recarga. El actualizador usa el mismo comando de compilación actualizado.
 
 Si aparece una regresión, restaurar el despliegue anterior o revertir los commits
 de esta entrega, ejecutar `npm ci` desde web y volver a compilar. No restaurar
