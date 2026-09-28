@@ -32,6 +32,27 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
   const bracket = useMemo(() => buildBracketData(matches), [matches]);
   const [selectedDepth, setSelectedDepth] = useState(() => Math.min(bracket.maxDepth, 3));
   const [expanded, setExpanded] = useState(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const collapsedHeight = useRef(0);
+  const positionedMatches = new Set(bracket.matchesByNode.values());
+  const otherRounds = new Map<string, TournamentMatch[]>();
+  for (const match of matches) {
+    if (positionedMatches.has(match)) continue;
+    const round = match.round_display || match.round || "Other matches";
+    if (!otherRounds.has(round)) otherRounds.set(round, []);
+    otherRounds.get(round)!.push(match);
+  }
+
+  useEffect(() => {
+    if (!expanded) return;
+    const dialog = dialogRef.current;
+    dialog?.showModal();
+    return () => {
+      dialog?.close();
+      requestAnimationFrame(() => containerRef.current?.querySelector<HTMLButtonElement>('[aria-label="Expand draw"]')?.focus({ preventScroll: true }));
+    };
+  }, [expanded]);
   const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
 
@@ -40,7 +61,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
     const previousOverflow = document.body.style.overflow;
     if (expanded) document.body.style.overflow = "hidden";
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key !== "Escape") return;
+      if (event.key !== "Escape" || expanded) return;
       if (selectedPlayerId) {
         setSelectedPlayerId(null);
       } else {
@@ -54,23 +75,12 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
     };
   }, [expanded, selectedPlayerId]);
 
-  if (bracket.matchesByNode.size === 0) {
-    return (
-      <div className="rounded-xl border border-dashed border-slate-950/[0.10] bg-white/40 px-6 py-10 text-center">
-        <p className="text-sm font-semibold text-slate-900">Draw positions are not available for this tournament.</p>
-        <p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-slate-500">
-          The results table remains available. A bracket is shown only when ATP draw identifiers can place matches reliably.
-        </p>
-      </div>
-    );
-  }
-
   const stages = bracket.stages;
   const selectedIndex = Math.max(0, stages.indexOf(selectedDepth));
   const previousStage = stages[selectedIndex - 1];
   const nextStage = stages[selectedIndex + 1];
   const visibleDepths = expanded ? stages : compactStageWindow(stages, selectedIndex);
-  const earliestVisibleDepth = Math.max(...visibleDepths);
+  const earliestVisibleDepth = Math.max(0, ...visibleDepths);
   const canvasWidth = visibleDepths.length * CARD_WIDTH + Math.max(0, visibleDepths.length - 1) * COLUMN_GAP + CANVAS_PADDING * 2;
   const canvasHeight = HEADER_HEIGHT + 2 ** earliestVisibleDepth * LEAF_STEP + CANVAS_PADDING;
   const expandedGutter = expanded ? 96 : 0;
@@ -80,11 +90,8 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
     <div
       className={cn(
         "relative border border-slate-950/[0.07] bg-[#f8faf4] shadow-[0_18px_54px_rgba(15,23,42,0.08)]",
-        expanded ? "fixed inset-x-0 bottom-0 top-16 z-[220] flex flex-col rounded-none" : "rounded-2xl"
+        expanded ? "flex h-full min-h-0 flex-col rounded-none" : "rounded-2xl"
       )}
-      role={expanded ? "dialog" : undefined}
-      aria-modal={expanded || undefined}
-      aria-label={expanded ? "Expanded tournament draw" : undefined}
     >
       <div className="relative z-20 rounded-t-[inherit] border-b border-slate-950/[0.07] bg-white/72 backdrop-blur">
         <div
@@ -96,10 +103,11 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
           <div>
             <p className="text-sm font-semibold text-slate-950">Tournament draw</p>
             <p className="mt-1 text-xs leading-5 text-slate-500">
-              Follow completed matches and the paths that feed each later round.
+              Explore the draw and results from each stage.
             </p>
           </div>
           <div className="flex flex-wrap items-end gap-2">
+            {stages.length > 0 ? <>
             <FilterMenu
               label="Stage"
               value={String(selectedDepth)}
@@ -122,7 +130,11 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
             >
               <ChevronRight className="h-4 w-4" aria-hidden="true" />
             </BracketIconButton>
-            <BracketIconButton label={expanded ? "Close expanded draw" : "Expand draw"} onClick={() => setExpanded((current) => !current)}>
+            </> : null}
+            <BracketIconButton label={expanded ? "Close expanded draw" : "Expand draw"} onClick={() => {
+              if (!expanded) collapsedHeight.current = containerRef.current?.getBoundingClientRect().height ?? 0;
+              setExpanded((current) => !current);
+            }}>
               {expanded ? <Minimize2 className="h-4 w-4" aria-hidden="true" /> : <Maximize2 className="h-4 w-4" aria-hidden="true" />}
             </BracketIconButton>
           </div>
@@ -130,6 +142,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
       </div>
 
       <div className={cn("relative z-0 min-h-0 overflow-auto rounded-b-[inherit]", expanded ? "flex-1" : "max-h-[44rem]")}>
+        {stages.length > 0 ? <>
         <div
           className="hidden min-w-full items-start justify-center md:flex"
           style={{ width: `max(100%, ${canvasWidth + expandedGutter}px)`, height: canvasHeight }}
@@ -160,11 +173,37 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
             />
           ))}
         </div>
+        </> : null}
+        {Array.from(otherRounds, ([round, roundMatches]) => (
+          <section key={round} aria-label={`${round} results`} className="border-t border-slate-950/[0.07] p-4 sm:p-6">
+            <h3 className="mb-4 text-sm font-semibold text-slate-950">{round} <span className="font-normal text-slate-500">· {roundMatches.length} matches</span></h3>
+            <div className="grid justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {roundMatches.map((match, index) => (
+                <BracketMatchCard key={match.match_id || `${round}-${index}`} node={1} match={match}
+                  potentialPlayers={[]} selectedPlayerId={selectedPlayerId} onSelectPlayer={setSelectedPlayerId} />
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </div>
   );
 
-  return content;
+  return (
+    <div ref={containerRef} style={expanded ? { height: collapsedHeight.current } : undefined}>
+      {expanded ? (
+        <dialog ref={dialogRef} aria-label="Expanded tournament draw" aria-modal="true"
+          className="fixed inset-0 m-0 h-[100dvh] max-h-none w-full max-w-none border-0 bg-[#f8faf4] p-0 backdrop:bg-slate-950/50"
+          onCancel={(event) => {
+            event.preventDefault();
+            if (selectedPlayerId) setSelectedPlayerId(null);
+            else setExpanded(false);
+          }}>
+          {content}
+        </dialog>
+      ) : content}
+    </div>
+  );
 }
 
 function BracketCanvas({
@@ -351,7 +390,7 @@ function BracketMatchCard({
           "hover:border-lime-300/80 hover:bg-white hover:shadow-[0_10px_28px_rgba(15,23,42,0.11)]",
           matchContainsSelectedPlayer && "border-lime-400/80 bg-lime-50/45 shadow-[0_10px_30px_rgba(101,163,13,0.12)]"
         )}
-        aria-label={`${stageLabel(Math.floor(Math.log2(node)))} match`}
+        aria-label={`${match?.round_display || match?.round || stageLabel(Math.floor(Math.log2(node)))} match`}
       >
         {players.map((player, index) => (
           <div
@@ -538,7 +577,7 @@ function buildBracketData(matches: TournamentMatch[]): BracketData {
   }
   const maxNode = Math.max(1, ...Array.from(matchesByNode.keys()));
   const maxDepth = Math.min(6, Math.floor(Math.log2(maxNode)));
-  const stages = Array.from({ length: maxDepth + 1 }, (_, index) => maxDepth - index);
+  const stages = Array.from({ length: matchesByNode.size ? maxDepth + 1 : 0 }, (_, index) => maxDepth - index);
   return { matchesByNode, maxDepth, stages };
 }
 

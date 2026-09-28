@@ -13,8 +13,9 @@ import { formatDate, formatNullable, formatPercent, toNumber } from "@/lib/forma
 import { getPlayerProfilePath, getPredictionDetailPath, normalizePlayerId } from "@/lib/routes";
 import { createPageMetadata, createUnavailableMetadata } from "@/lib/seo";
 
-export async function generateMetadata({ params }: { params: { matchId: string } }): Promise<Metadata> {
-  const decodedMatchId = decodeURIComponent(params.matchId);
+export async function generateMetadata({ params }: { params: Promise<{ matchId: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const decodedMatchId = decodeURIComponent(resolvedParams.matchId);
   const details = await getMatchDetails();
   const match = details.find((row) => row.match_id === decodedMatchId);
   if (!match?.player_1_name || !match.player_2_name) {
@@ -27,8 +28,9 @@ export async function generateMetadata({ params }: { params: { matchId: string }
     path: getPredictionDetailPath(decodedMatchId)
   });
 }
-export default async function PredictionDetailPage({ params }: { params: { matchId: string } }) {
-  const { matchId } = params;
+export default async function PredictionDetailPage({ params }: { params: Promise<{ matchId: string }> }) {
+  const resolvedParams = await params;
+  const { matchId } = resolvedParams;
   const decodedMatchId = decodeURIComponent(matchId);
   const [details, sanityCheck, playerRankings] = await Promise.all([
     getMatchDetails(),

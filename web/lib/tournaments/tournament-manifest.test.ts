@@ -6,7 +6,7 @@ import type { TournamentImageManifest } from "./tournament-presentation.ts";
 
 test("tournament image manifest uses existing local assets and complete fallbacks", () => {
   const manifestPath = resolve("public/images/tournaments/courts/manifest.json");
-  const manifest = JSON.parse(readFileSync(manifestPath, "utf8")) as TournamentImageManifest;
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8").replace(/^\uFEFF/, "")) as TournamentImageManifest;
 
   assert.equal(manifest.schemaVersion, 1);
   assert.deepEqual(Object.keys(manifest.fallbacks).sort(), ["Carpet", "Clay", "Grass", "Hard"]);

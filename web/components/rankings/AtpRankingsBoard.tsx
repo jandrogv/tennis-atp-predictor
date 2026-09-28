@@ -94,7 +94,7 @@ export function AtpRankingsBoard({
                   const topTen = (toNumber(player.atp_rank) ?? 99999) <= 10;
                   return (
                     <tr
-                      key={`${player.ranking_date}-${player.player_id}`}
+                      key={`${player.ranking_date}-${normalizePlayerId(player.player_id) || `${player.player_name}-${player.atp_rank}`}`}
                       className={`transition hover:bg-lime-50/35 ${topTen ? "bg-amber-50/45" : ""}`}
                     >
                       <td className="whitespace-nowrap px-4 py-3 text-center font-semibold text-slate-950">
