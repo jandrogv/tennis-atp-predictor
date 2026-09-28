@@ -142,7 +142,7 @@ export function PlayerProfileView({
 
       <EloEvolutionCharts eloHistory={eloHistory} surfaceEloHistory={surfaceEloHistory} />
 
-      <section className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
+      <section className="grid gap-6 [&>*]:min-w-0 xl:grid-cols-[1.15fr_0.85fr]">
         <Card>
           <CardHeader>
             <div>

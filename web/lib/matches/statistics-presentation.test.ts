@@ -41,3 +41,10 @@ test("model signal rows preserve signed values and favored side", () => {
   assert.equal(rows[1]?.favoredPlayer, "Player Two");
   assert.equal(rows[2]?.favoredPlayer, "Even");
 });
+
+
+test("ATP ranking advantage favors the lower ranking and keeps the signed difference", () => {
+  const rows = buildModelSignalRows({ atpRankDifference: -20 }, "Medvedev", "Nakashima");
+  assert.equal(rows[0]?.value, -20);
+  assert.equal(rows[0]?.favoredPlayer, "Medvedev");
+});

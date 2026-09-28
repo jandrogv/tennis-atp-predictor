@@ -8,14 +8,15 @@ import { createPageMetadata, createUnavailableMetadata } from "@/lib/seo";
 export async function generateMetadata({
   params
 }: {
-  params: { tournamentId: string; matchId: string };
+  params: Promise<{ tournamentId: string; matchId: string }>;
 }): Promise<Metadata> {
+  const resolvedParams = await params;
   const [tournaments, match] = await Promise.all([
     getTournamentDetails(),
-    getCurrentMatchStatisticsById(params.matchId)
+    getCurrentMatchStatisticsById(resolvedParams.matchId)
   ]);
   const tournament = tournaments.find(
-    (row) => row.tournament_slug === params.tournamentId || row.tournament_id === params.tournamentId
+    (row) => row.tournament_slug === resolvedParams.tournamentId || row.tournament_id === resolvedParams.tournamentId
   );
   const playerOne = match?.players.player1.name;
   const playerTwo = match?.players.player2.name;
@@ -39,11 +40,12 @@ export async function generateMetadata({
 export default async function TournamentMatchStatisticsPage({
   params
 }: {
-  params: { tournamentId: string; matchId: string };
+  params: Promise<{ tournamentId: string; matchId: string }>;
 }) {
+  const resolvedParams = await params;
   const tournaments = await getTournamentDetails();
   const tournament = tournaments.find(
-    (row) => row.tournament_slug === params.tournamentId || row.tournament_id === params.tournamentId
+    (row) => row.tournament_slug === resolvedParams.tournamentId || row.tournament_id === resolvedParams.tournamentId
   );
   if (!tournament) notFound();
 
@@ -51,7 +53,7 @@ export default async function TournamentMatchStatisticsPage({
     <TournamentMatchStatisticsDetail
       tournamentId={tournament.tournament_slug}
       tournamentName={tournament.tournament_name}
-      matchId={params.matchId}
+      matchId={resolvedParams.matchId}
     />
   );
 }

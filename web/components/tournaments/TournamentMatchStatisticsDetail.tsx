@@ -339,7 +339,7 @@ function ModelSignalsSection({ record }: { record: MatchStatisticsRecord }) {
   return (
     <Section
       title="Model signals"
-      description="Calculated pre-match feature differences. Positive values favor Player 1; negative values favor Player 2. They are not causal explanations."
+      description="Calculated pre-match feature differences. Differences are Player 1 minus Player 2. A lower ATP rank is better; higher values favor a player for the other signals. They are not causal explanations."
     >
       {signals.length === 0 ? <CompactEmpty text="Model signal context is not available for this match." /> : (
         <div className="space-y-5 rounded-2xl border border-slate-950/[0.07] bg-white/48 px-5 py-6 sm:px-7">
@@ -349,7 +349,7 @@ function ModelSignalsSection({ record }: { record: MatchStatisticsRecord }) {
           </div>
           {signals.map((signal) => {
             const width = `${(Math.abs(signal.value) / maxMagnitude) * 50}%`;
-            const positive = signal.value > 0;
+            const positive = signal.key === "atpRankDifference" ? signal.value < 0 : signal.value > 0;
             return (
               <div key={signal.key}>
                 <div className="flex flex-wrap items-baseline justify-between gap-2">

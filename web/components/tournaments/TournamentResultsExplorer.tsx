@@ -15,7 +15,7 @@ import { getPlayerProfilePath, getTournamentMatchDetailPath } from "@/lib/routes
 type ResultsView = "draw" | "table";
 
 export function TournamentResultsExplorer({ matches }: { matches: TournamentMatch[] }) {
-  const hasDraw = matches.some((match) => toNumber(match.draw_match_number) !== null && /^MS\d+$/i.test(match.id_num ?? ""));
+  const hasDraw = matches.length > 0;
   const [view, setView] = useState<ResultsView>(hasDraw ? "draw" : "table");
 
   if (matches.length === 0) {
@@ -31,7 +31,7 @@ export function TournamentResultsExplorer({ matches }: { matches: TournamentMatc
             Tournament progression
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-500">
-            Switch between the complete results table and the knockout draw.
+            Explore the draw, results by round, or the complete results table.
           </p>
         </div>
         <div className="inline-flex w-fit rounded-xl border border-slate-950/[0.08] bg-white/65 p-1 shadow-sm" role="tablist" aria-label="Tournament results view">

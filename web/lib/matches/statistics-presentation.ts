@@ -83,11 +83,12 @@ export function buildModelSignalRows(
   return MODEL_SIGNAL_CONFIG.flatMap(({ key, label }) => {
     const value = signals[key];
     if (value === undefined) return [];
+    const advantage = key === "atpRankDifference" ? -value : value;
     return [{
       key,
       label,
       value,
-      favoredPlayer: value > 0 ? player1Name : value < 0 ? player2Name : "Even"
+      favoredPlayer: advantage > 0 ? player1Name : advantage < 0 ? player2Name : "Even"
     }];
   });
 }

@@ -14,8 +14,9 @@ import {
 import { getPlayerProfilePath, normalizePlayerId } from "@/lib/routes";
 import { createPageMetadata, createUnavailableMetadata } from "@/lib/seo";
 
-export async function generateMetadata({ params }: { params: { playerId: string } }): Promise<Metadata> {
-  const playerId = normalizePlayerId(params.playerId);
+export async function generateMetadata({ params }: { params: Promise<{ playerId: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const playerId = normalizePlayerId(resolvedParams.playerId);
   const profiles = await getPlayerProfiles();
   const profile = profiles.find((player) => normalizePlayerId(player.player_id) === playerId);
   if (!profile?.player_name) {
@@ -28,8 +29,9 @@ export async function generateMetadata({ params }: { params: { playerId: string 
     path: getPlayerProfilePath(playerId)
   });
 }
-export default async function PlayerProfilePage({ params }: { params: { playerId: string } }) {
-  const playerId = normalizePlayerId(params.playerId);
+export default async function PlayerProfilePage({ params }: { params: Promise<{ playerId: string }> }) {
+  const resolvedParams = await params;
+  const playerId = normalizePlayerId(resolvedParams.playerId);
   const [profiles, rankings, matchCards, eloHistory, surfaceEloHistory, recentMatches, surfaceSummary] = await Promise.all([
     getPlayerProfiles(),
     getPlayerRankings(),

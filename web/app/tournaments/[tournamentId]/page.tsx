@@ -5,10 +5,11 @@ import { getTournamentDetails } from "@/lib/data/loaders";
 import { getTournamentDetailPath } from "@/lib/routes";
 import { createPageMetadata, createUnavailableMetadata } from "@/lib/seo";
 
-export async function generateMetadata({ params }: { params: { tournamentId: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ tournamentId: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
   const tournaments = await getTournamentDetails();
   const tournament = tournaments.find(
-    (row) => row.tournament_slug === params.tournamentId || row.tournament_id === params.tournamentId
+    (row) => row.tournament_slug === resolvedParams.tournamentId || row.tournament_id === resolvedParams.tournamentId
   );
   if (!tournament?.tournament_name || !tournament.tournament_slug) {
     return createUnavailableMetadata();
@@ -21,10 +22,11 @@ export async function generateMetadata({ params }: { params: { tournamentId: str
     path: getTournamentDetailPath(tournament.tournament_slug)
   });
 }
-export default async function TournamentDetailPage({ params }: { params: { tournamentId: string } }) {
+export default async function TournamentDetailPage({ params }: { params: Promise<{ tournamentId: string }> }) {
+  const resolvedParams = await params;
   const tournaments = await getTournamentDetails();
   const tournament = tournaments.find(
-    (row) => row.tournament_slug === params.tournamentId || row.tournament_id === params.tournamentId
+    (row) => row.tournament_slug === resolvedParams.tournamentId || row.tournament_id === resolvedParams.tournamentId
   );
 
   if (!tournament) {
