@@ -134,7 +134,7 @@ function FeatureImportanceOverview({
     <FeatureImportanceSection
       eyebrow="Feature importance overview"
       title="What this ranking is showing"
-      description="Feature importance is a global ranking of the pre-match signals used by the current model artifact. It helps inspect the model as a whole, not one individual prediction."
+      description="Feature importance ranks the inputs used by the current model artifact. It helps inspect the model as a whole, not one individual prediction."
     >
       <Card className="atp-card atp-card-interactive overflow-hidden">
         <CardContent className="space-y-5 p-5 sm:p-6">
@@ -505,6 +505,9 @@ function narrativeGroupLabel(group: SpecificFeatureGroup): string {
 }
 
 function narrativeInterpretation(group: SpecificFeatureGroup, feature: string): string {
+  if (feature === "ELO_DIFF" || feature === "ELO_SURFACE_DIFF") {
+    return `${feature} is a legacy post-match input that contains outcome information. It is excluded from the strict pre-match model contract.`;
+  }
   if (group === "elo") {
     return `${feature} describes pre-match player strength, including surface-adjusted strength when present.`;
   }

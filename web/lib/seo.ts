@@ -61,7 +61,7 @@ export const staticPageSeo: Record<string, PageSeoDefinition> = {
   "/feature-importance": {
     title: "Feature Importance",
     description:
-      "Explore the global ranking of pre-match signals used by the current ATP Insight model, grouped by tennis feature family.",
+      "Explore the global ranking of inputs used by the current ATP Insight model, grouped by tennis feature family.",
     path: "/feature-importance"
   },
   "/about-project": {

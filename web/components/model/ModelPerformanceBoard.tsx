@@ -101,10 +101,24 @@ export function ModelPerformanceBoard({
 
   const baselineRow = baseline[0] ?? null;
   const selectedModel = summary?.selected_model ?? diagnostics?.selected_model ?? baselineRow?.selected_model ?? metrics[0]?.model ?? "";
+  const includesPostMatchElo = [summary?.top_1_feature, summary?.top_2_feature, summary?.top_3_feature].some(
+    (feature) => feature === "ELO_DIFF" || feature === "ELO_SURFACE_DIFF"
+  );
 
   return (
     <div className="space-y-14">
       <ModelOverview summary={summary} selectedModel={selectedModel} />
+
+      {includesPostMatchElo ? (
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-slate-700" role="note">
+          <p className="font-semibold text-slate-950">Legacy evaluation — experimental results</p>
+          <p className="mt-1">
+            These scores include Elo inputs calculated after the match result. The same holdout was used for model
+            selection and reporting, so the scores can overstate independent pre-match performance. A replacement
+            with verified chronology has not yet been evaluated.
+          </p>
+        </div>
+      ) : null}
 
       <PerformanceAtGlance summary={summary} metrics={metrics} selectedModel={selectedModel} />
 
