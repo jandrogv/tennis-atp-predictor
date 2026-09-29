@@ -84,10 +84,10 @@ Los 26 Excel de torneo revisados tampoco aportan ese dato. La página de resulta
 de Brisbane contiene 49 partidos pero no fechas individuales en los campos revisados.
 No se deducen por ronda ni se vuelven a descargar torneos completos para esta auditoría.
 
-Hay cuatro correcciones trazables en `data/processed/match_date_corrections.csv`.
-Las dos añadidas proceden de las crónicas de la
-[final de Australian Open del 1 de febrero](https://www.atptour.com/en/news/alcaraz-djokovic-australian-open-2026-final)
-y la [final de Wimbledon del 12 de julio](https://www.atptour.com/en/news/wimbledon-2026-results).
+Hay 17 correcciones trazables en `data/processed/match_date_corrections.csv`.
+Además de las cuatro anteriores, se contrastaron doce finales y la semifinal
+Sinner–Medvedev de Roma, iniciada el 15 de mayo y concluida el 16 tras una suspensión.
+El [informe de fechas](auditoria-fechas-partidos-2026-09-30.md) detalla fuentes y fechas.
 Estas correcciones de presentación no rellenan las fechas de inicio, disponibilidad
 y contexto de toda la población de entrenamiento. No bastan para entrenar V2.
 
@@ -117,7 +117,7 @@ en Chrome a 1440×1000 y 390×844 confirmó el aviso, el filtro Elo y ausencia d
 de consola. Se usó Playwright porque no está disponible la skill Browser.
 La suite web pasa 63 pruebas; la compilación Next.js 16.3.6 es correcta.
 
-Se regeneraron 31 derivados y su copia pública local, incorporando las cuatro
+Se regeneraron 31 derivados y su copia pública local, incorporando las 17
 fechas y las 76 identidades contrastadas. La caché por fecha de ranking ahora
 compara su contenido con la fuente: propaga correcciones y conserva archivos
 inalterados. También se normalizan las etiquetas de ronda en perfiles.
