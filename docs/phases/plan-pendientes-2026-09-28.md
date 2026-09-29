@@ -1,7 +1,7 @@
 # Plan de acción de ATP Insight
 
-Fecha: 28/09/2026. Revisión: 29/09/2026. Estado: Next.js publicado; contrato temporal
-implementado y probado en local; identidades y fechas pendientes de verificación ATP.
+Fecha: 28/09/2026. Revisión: 30/09/2026. Estado: Next.js publicado; contrato temporal V2
+implementado y probado en local; revisión de 163 fichas ATP completada y alta de catálogo pendiente de permiso.
 Objetivo: completar los pendientes técnicos y de datos, una etapa cada vez, con
 resultados verificables. La app de escritorio está terminada y aceptada por el usuario.
 
@@ -130,10 +130,10 @@ exactamente la comprobación pendiente y solicitar solo el acceso necesario.
 | Etapa | Estado | Evidencia de cierre |
 | --- | --- | --- |
 | Next.js | Completada y publicada | Next.js 16.3.6, React 19.3.0, Node 24; 61 pruebas locales, 30 versionadas, build local y Vercel correctos; PR #1 |
-| Identidades | Catálogo revisado; verificación ATP pendiente | 163 casos: 132 sin coincidencia, 31 ambiguos; informe local; ATP bloqueó el contraste por país y nacimiento |
-| Fechas históricas | Cobertura auditada; corrección histórica pendiente | 2.952 filas anuales sin fecha real; 2 correcciones verificadas; nuevas descargas conservan fecha, verificación y fuente |
-| Validez temporal del modelo | Cierre de código local; transición pendiente de fechas | Contrato strict-pre-match-v1, Elo previo, historial causal, CV temporal, selección y prueba final separadas; 159 pruebas; modelo activo heredado |
-| Publicación y Vercel | Primer bloque completado; repetir tras los siguientes | Commit 0082572; 31 visitas de QA en producción, filtros, comparador, detalles y modal, sin errores de consola |
+| Identidades | Fichas verificadas; propuesta de catálogo pendiente de permiso | 163 fichas contrastadas; 74 identidades resueltas sin editar raw. Propuesta: 76 altas (214589–214664), nacimiento de ID 213983 y 12 casos no resolubles con certeza. Con la propuesta: 151 resueltos, 12 pendientes y ningún ID duplicado en 2.290 filas del ranking |
+| Fechas históricas | Cobertura auditada; cuatro fechas incorporadas a derivados locales | 2.952 filas anuales y 26 archivos sin fecha real; 4 correcciones contrastadas. Regenerados 31 derivados y su copia web, incluidos cuadros, estadísticas y perfiles. La cronología histórica completa sigue sin verificarse |
+| Validez temporal del modelo | Código V2 implementado y validado; datos históricos pendientes | Elo previo, disponibilidad individual de resultados nocturnos, metadatos de ranking/contexto, CV/calibración purgadas y prueba final separada; 168 pruebas Python. No se ha entrenado ni activado un modelo estricto |
+| Publicación y Vercel | Next y aviso de métricas publicados y verificados | Next: PR #1 y 31 visitas QA. Aviso heredado: commit 0498a20, Vercel success, `/model` y `/feature-importance` revisados en escritorio/móvil y filtro Elo sin errores |
 | Recarga mensual | Excluida: ejecutada por el usuario | Estado local success, finalizada el 28/09 a las 20:25; no relanzada por Codex |
 
 Referencias del diagnóstico: `docs/correcciones-auditoria-web.md`,
@@ -143,7 +143,15 @@ Evidencia del primer bloque: `docs/nextjs-16-migration.md` y
 [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
 Auditoría posterior: `docs/validacion-temporal-estricta.md`. El código Python y sus
 pruebas permanecen privados según `.gitignore`; solo se publica su documentación.
-Siguiente etapa de datos: contrastar los casos pendientes en ATP por país y
-nacimiento cuando sea accesible, completar fechas trazables y preparar una
+Siguiente etapa de datos: aprobar la propuesta concreta del catálogo, investigar
+los 12 casos ambiguos y completar fechas y procedencia trazables antes de la
 transición manual al contrato estricto. No se da por corregida la cronología
 histórica ni se presentan métricas nuevas a partir de pruebas simuladas.
+
+Revisión de cierre del 30/09: 168 pruebas Python, 63 pruebas web, verificador de
+datos y compilación correctos; 31 visitas locales con interacciones y móvil.
+La caché de snapshots de ranking se actualiza si cambia la fuente, conservando
+los archivos realmente inalterados. Modelo y catálogo raw mantienen sus huellas.
+Los datasets completos renovados permanecen locales; los commits públicos solo
+incluyen el aviso del modelo y documentación. Véase
+`docs/auditoria-identidades-atp-2026-09-30.md` para la propuesta de altas pendiente.

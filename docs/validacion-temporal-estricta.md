@@ -1,84 +1,109 @@
 # Auditoría temporal y transición del modelo
 
-Fecha de revisión: 29/09/2026. El código local está validado; el modelo activo
-continúa en `notebook_legacy`. No se ha ejecutado una recarga ni sustituido su
-artefacto durante esta auditoría.
+Revisión: 30/09/2026. El modelo activo sigue en `notebook_legacy`; no se ha
+entrenado ni sustituido durante esta auditoría. La mensual ejecutada por el usuario
+terminó el 28/09 a las 20:25.
 
-## Hallazgos comprobados
+## Hallazgos y correcciones
 
-- `ELO_DIFF` y `ELO_SURFACE_DIFF` se calculan después de aplicar el resultado.
-  El modo heredado los utiliza y excluye las seis variables Elo previas. Hay
-  fuga de información demostrada; sus métricas no acreditan rendimiento causal.
-- La selección heredada y la evaluación final comparten el periodo de prueba.
-- Al descartar `source_split` antes del cálculo, los partidos pendientes podían
-  actualizar Elo, H2H, forma y estadísticas como si ya hubiera un ganador.
-  Se conserva ahora ese campo y esos partidos solo leen el historial.
-- La fuente anual de 2026 tiene 2.952 filas y no contiene `match_date` ni
-  `match_date_verified`. La fecha de inicio del torneo no sirve como día del
-  partido. Hay dos correcciones verificadas en la tabla derivada existente.
+- `ELO_DIFF` y `ELO_SURFACE_DIFF` heredados incorporan el resultado del partido.
+  Es una fuga demostrada. Las seis entradas Elo previas se usan en modo estricto,
+  y las dos posteriores se excluyen.
+- El holdout heredado se usa para seleccionar candidatos y para informar métricas.
+  La implementación estricta separa selección y prueba final.
+- Los partidos pendientes podían actualizar el historial al perder `source_split`.
+  Ahora solo leen estado y carecen de objetivo observado en modo estricto.
+- Un resultado nocturno puede estar disponible al día siguiente de su inicio.
+  [ATP documenta Zverev–Sonego terminando a la 1:55 del miércoles](https://www.atptour.com/en/news/sonego-zverev-us-open-2026-r1).
+  La actualización del historial y los cortes de entrenamiento necesitan ambas fechas.
+- Si faltaba un ranking anterior al torneo, el cargador elegía el más antiguo aunque
+  fuera posterior. Ahora omite esa asignación y explica por qué.
+- La edad se calculaba al día de la recarga. El cargador usa ahora la fecha del
+  partido cuando existe; su alternativa heredada de inicio del torneo no se marca
+  como fecha verificada del partido.
 
-## Contrato opcional `strict-pre-match-v1`
+## Contrato opcional `strict-pre-match-v2`
 
-El modo `strict` requiere fechas ISO de partido y una verificación explícita en
-todas las filas. No convierte fechas del torneo en fechas de partido. Ordena
-por día y calcula primero todas las variables previas de ese día; después
-actualiza el historial con resultados terminados. Sin hora fiable, omitir los
-resultados de otros partidos del mismo día es una decisión conservadora.
+V2 sustituye al contrato inicial V1, que no representaba la disponibilidad de
+resultados nocturnos. Los artefactos V1 no se aceptan como V2. El actualizador
+mantiene su modo heredado; no se ha activado un reemplazo del modelo.
 
-Utiliza Elo previo y excluye las dos diferencias posteriores. Los partidos de
-predicción no tienen objetivo observado ni modifican el estado. La orientación
-de jugadores tiene semilla reproducible. Fecha, verificación, contrato y fuente
-de partición quedan fuera de las entradas numéricas del estimador.
+Entradas necesarias:
 
-El entrenamiento requiere archivos separados de entrenamiento y periodo
-posterior, con contratos iguales. Todas las fechas de entrenamiento deben
-preceder al periodo posterior. De este último, aproximadamente el primer 60 %
-de días se usa para seleccionar candidatos y el último 40 % para evaluación
-final; ningún día se divide entre ambos. No es un porcentaje garantizado de filas.
+| Campo | Significado |
+| --- | --- |
+| `match_date`, `match_date_verified` | Día ISO de inicio del partido, contrastado a nivel de partido |
+| `result_available_date`, `result_available_date_verified` | Día en que el resultado estuvo disponible; obligatorio para partidos observados, vacío para predicción |
+| `ranking_date`, `ranking_date_verified` | Snapshot contrastado del que proceden ranking y puntos |
+| `player_context_available_date`, `player_context_available_date_verified` | Disponibilidad contrastada del contexto de ambos jugadores, incluidos edad y altura |
+| `source_split` | Entrenamiento, periodo posterior o predicción; esta última nunca escribe historial |
 
-La búsqueda usa validación temporal expansiva por días. Calibración y validación
-interna reservan los últimos días del entrenamiento; no acceden a selección ni
-evaluación final. En modo estricto no se reutilizan parámetros de un registro
-anterior que pudiera haber consultado la prueba final.
+Los indicadores son declaraciones de verificación, no pruebas por sí solos.
+Hay que conservar las fuentes y contrastar los valores. El código no convierte
+fechas de torneo, datos actuales del catálogo o rankings sin procedencia en
+información histórica verificada.
 
-El manifiesto registra límites, recuentos y huella de las entradas, objetivos y
-fechas de la prueba final. La evaluación selecciona exactamente esas filas,
-rechaza modificaciones y solo permite el modelo elegido, sin `evaluate_all`.
-Predicción y evaluación rechazan artefactos con contrato incompatible.
-Esto evita mezclar accidentalmente periodos; no evita decisiones humanas
-posteriores basadas en resultados de una evaluación ya consultada.
+Con días y sin horas fiables, todos los partidos de un día leen antes de aplicar
+los resultados disponibles ese día. Un partido iniciado el lunes y terminado el
+martes afecta al historial a partir del miércoles. No se descarta ese partido ni
+se impone un retraso fijo a todos: se utiliza su disponibilidad individual.
+Rankings y contexto deben proceder de un día anterior. Incorporar publicaciones
+del mismo día requiere ampliar el contrato a timestamps contrastados.
 
-## Conservación de fechas y estado de los datos
+H2H, forma, estadísticas previas, partidos jugados, Elo y sus gradientes siguen
+los mismos eventos. Las predicciones nunca actualizan estado. La orientación
+tiene semilla reproducible. Los metadatos quedan fuera de las entradas numéricas.
 
-Las nuevas consultas de resultados ATP conservan `match_date`,
-`match_date_verified` y `match_date_source` cuando la página indica el día.
-Una respuesta sin fecha no borra una fecha verificada de la caché. Los datos
-antiguos no se marcan como verificados automáticamente y los torneos completos
-no se vuelven a descargar solo para esta auditoría.
+## Entrenamiento y evaluación separados
 
-El informe de identidades del ranking más reciente mantiene 163 nombres
-pendientes: 132 sin coincidencia y 31 ambiguos. Se revisó primero el catálogo.
-Las sugerencias por texto no se convierten en alias ni altas: falta contrastar
-país y nacimiento en ATP, que respondió con verificación de Cloudflare o 403.
+Se requieren archivos explícitos de entrenamiento y periodo posterior, con
+contratos y columnas iguales. Todas las fechas de inicio de entrenamiento
+preceden al periodo posterior. Se excluyen del ajuste las etiquetas cuyo resultado
+aún no estaba disponible al empezar dicho periodo.
 
-Informes locales, excluidos de GitHub:
+Aproximadamente el primer 60 % de días posteriores se reserva para selección y
+el último 40 % para evaluación final. No se divide un día entre ambos. Las etiquetas
+de selección que cruzan el inicio final se excluyen de la selección.
 
-- `data/processed/audit-2026-09-29/player_identity_review.json`.
-- `data/processed/audit-2026-09-29/match_date_coverage.json`.
+La validación cruzada es expansiva por días. Calibración y validación interna
+usan periodos posteriores dentro del entrenamiento y excluyen etiquetas aún no
+disponibles en sus límites. No se mezclan aleatoriamente periodos ni se reutilizan
+parámetros de un registro anterior que pudiera haber consultado el test final.
 
-No se ha editado manualmente `data/raw`. Para incorporar altas al catálogo hace
-falta permiso explícito sobre ese archivo y evidencia de identidad.
+El índice conserva inicio y disponibilidad juntos a través de todos los cortes.
+El manifiesto registra límites, filas excluidas y huella de variables, objetivos,
+inicios y disponibilidad de la prueba final. La evaluación rechaza cambios y solo
+admite el modelo seleccionado, sin `evaluate_all`. Predicción y evaluación exigen
+artefactos compatibles. Esto no impide decisiones humanas posteriores basadas en
+un test ya consultado.
 
-## Verificación y transición pendiente
+## Cobertura real y transición pendiente
 
-Resultado: 159 pruebas de `tests` correctas y compilación Python correcta.
-Las comprobaciones incluyen cambios contrafactuales de resultados del mismo día,
-partidos pendientes, cortes por día, exclusión de Elo posterior, contrato de
-artefactos y rechazo de modificaciones en la prueba final. La prueba de selección
-usa candidatos simulados; no equivale a entrenar XGBoost o TensorFlow reales.
-La lectura del anual real rechaza correctamente la falta de fechas verificadas.
+La fuente anual local de 2026 tiene 2.952 filas sin fecha individual verificada.
+Los 26 Excel de torneo revisados tampoco aportan ese dato. La página de resultados
+de Brisbane contiene 49 partidos pero no fechas individuales en los campos revisados.
+No se deducen por ronda ni se vuelven a descargar torneos completos para esta auditoría.
 
-Para repetir las comprobaciones desde PowerShell:
+Hay cuatro correcciones trazables en `data/processed/match_date_corrections.csv`.
+Las dos añadidas proceden de las crónicas de la
+[final de Australian Open del 1 de febrero](https://www.atptour.com/en/news/alcaraz-djokovic-australian-open-2026-final)
+y la [final de Wimbledon del 12 de julio](https://www.atptour.com/en/news/wimbledon-2026-results).
+Estas correcciones de presentación no rellenan las fechas de inicio, disponibilidad
+y contexto de toda la población de entrenamiento. No bastan para entrenar V2.
+
+Para la transición manual, preparar entradas verificadas y generar variables con
+`strict_temporal=True`. Usar directorios nuevos en `data/processed` y `models`,
+sin sobrescribir el modelo activo. `train --mode strict` requiere `--train-file`
+y `--test-file`; `evaluate` usa el manifiesto y el periodo posterior original para
+evaluar exclusivamente la partición final. Comparar resultados y contratos antes
+de activar un modelo nuevo. No se afirma una mejora sin evaluación real.
+
+## Validación y publicación
+
+La suite Python pasa 168 pruebas. Incluye contrafactuales del mismo día, resultados
+nocturnos, predicciones que no escriben estado, rankings/contexto posteriores,
+etiquetas tardías excluidas en cortes, huella final y homónimos. Los candidatos de
+la prueba de selección son simulados: no se ha entrenado XGBoost ni TensorFlow.
 
 ```powershell
 $env:PYTHONPATH = "src"
@@ -86,24 +111,30 @@ $env:PYTHONPATH = "src"
 .\.venv\Scripts\python.exe -m compileall -q src tests
 ```
 
-Antes de entrenar el modo estricto, preparar entradas con fechas de partido
-trazables y revisar cuándo estaban disponibles rankings y contexto. Generar
-variables con `strict_temporal=True`, conservando el contrato y las particiones.
-Usar directorios nuevos de `data/processed` y `models`; no sobrescribir el modelo
-activo. `train --mode strict` requiere `--train-file` y `--test-file` explícitos.
-Después, `evaluate` debe usar ese manifiesto y la misma fuente posterior para
-evaluar solo la partición final. Comparar resultados y contratos antes de activar
-el nuevo modelo. El actualizador de escritorio mantiene su modo actual.
+La web etiqueta las métricas heredadas y explica los Elo posteriores. El bloque
+`0498a20` está publicado en GitHub y Vercel. QA de `/model` y `/feature-importance`
+en Chrome a 1440×1000 y 390×844 confirmó el aviso, el filtro Elo y ausencia de errores
+de consola. Se usó Playwright porque no está disponible la skill Browser.
+La suite web pasa 63 pruebas; la compilación Next.js 16.3.6 es correcta.
 
-La mensual del usuario terminó el 28/09/2026 a las 20:25 según su estado local;
-no incorpora un nuevo entrenamiento estricto. Las métricas actuales siguen
-identificadas como heredadas. No se afirma que el código auditado mejore esas
-métricas antes de medirlo con datos verificados.
+Se regeneraron 31 derivados y su copia pública local, incorporando las cuatro
+fechas y las 74 identidades contrastadas. La caché por fecha de ranking ahora
+compara su contenido con la fuente: propaga correcciones y conserva archivos
+inalterados. También se normalizan las etiquetas de ronda en perfiles.
+QA local recorrió 31 rutas con filtros, comparador, detalles, modal y móvil sin
+errores de consola. El verificador pasó; mantiene cuatro avisos no críticos:
+un experimento histórico con enlaces fuera de las predicciones actuales y tres
+eventos de equipos sin campeón individual. El sitio desplegado recibió el aviso;
+los datasets completos regenerados permanecen locales y no se añaden a Git.
 
-Los módulos Python y sus pruebas son implementación privada según `.gitignore`.
-Permanecen locales; esta publicación solo incluye documentación y estado del plan.
-No contiene datos completos ni modelos. Para revertir este contrato en local,
-mantener el artefacto heredado y no activar `strict`; no reutilizar un artefacto
-estricto con variables heredadas.
+La exportación mensual local había copiado rutas personales del modelo a un CSV
+público. El exportador ahora admite solo columnas de métricas públicas y se limpió
+la copia generada. El modelo y las métricas privadas permanecen intactos.
+
+Código Python, exportadores y pruebas privados permanecen locales según las
+exclusiones Git. No se publican datasets completos, modelos ni evidencia detallada
+ATP. Los informes están en `data/processed/audit-2026-09-29`. `data/raw` sigue intacto.
+Para revertir, conservar el modelo heredado y no activar `strict`; el aviso web se
+puede revertir independientemente sin alterar datos ni modelos.
 
 Referencia metodológica: [validación temporal de scikit-learn](https://sklearn.org/stable/modules/cross_validation.html#time-series-split).
