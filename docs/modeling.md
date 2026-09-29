@@ -39,8 +39,12 @@ Classification accuracy alone does not establish trustworthy probabilities. Eval
 
 Candidates are compared on consistent metrics. The current selected model is uncalibrated XGBoost because it leads the published comparison on ROC AUC, accuracy, Brier score and log loss, while the sigmoid-calibrated candidate has slightly lower expected calibration error.
 
-There is not yet a separate untouched final lockbox after candidate selection. The later-season holdout supports comparison and reporting, so its figures may be optimistic relative to a fully independent final test. Establishing a locked final evaluation period is a roadmap priority.
+The published legacy evaluation has no separate untouched final lockbox after candidate selection. The same later-season holdout supports comparison and reporting, so its figures may be optimistic. The opt-in strict implementation now separates an earlier selection period from a later final test, but it has not been used to replace the operational model or produce new public metrics.
 
 ## Leakage posture
 
-Sequential features are designed to read historical state before applying the current result. Nevertheless, the public metrics come from a legacy-compatible feature configuration that allows two Elo-derived columns still awaiting strict pre-match proof. The model is therefore presented as experimental, and no claim of leakage-free performance is made.
+The 29 September audit confirmed that the legacy inputs `ELO_DIFF` and `ELO_SURFACE_DIFF` are calculated after applying the match result. This leaks outcome information into training. The operational model remains legacy-compatible, so its public scores are not evidence of leakage-free predictive performance.
+
+The opt-in `strict-pre-match-v1` contract excludes these columns, uses pre-match Elo and batches history updates after all matches of the same verified day have read their inputs. Pending matches cannot update history. Temporal cross-validation, internal calibration and final evaluation use separate chronological periods. The final data fingerprint rejects changes after selection.
+
+Strict mode requires verified match-level dates throughout the input. The local 2026 annual dataset currently lacks those dates, and only two derived date corrections are verified. Tests validate the code with synthetic inputs; no real strict training or performance improvement is claimed. Ranking and other source values still require their own availability-at-match-time review. See [the audit and transition procedure](validacion-temporal-estricta.md).

@@ -1,12 +1,13 @@
 # Plan de acción de ATP Insight
 
-Fecha: 28/09/2026. Estado: migración Next.js publicada y validada; etapas de datos y modelo pendientes.
+Fecha: 28/09/2026. Revisión: 29/09/2026. Estado: Next.js publicado; contrato temporal
+implementado y probado en local; identidades y fechas pendientes de verificación ATP.
 Objetivo: completar los pendientes técnicos y de datos, una etapa cada vez, con
 resultados verificables. La app de escritorio está terminada y aceptada por el usuario.
 
 ## Límites y forma de trabajo
 
-- La recarga mensual queda fuera: el usuario la ejecutará esta noche. No lanzarla
+- La recarga mensual queda fuera: el usuario la ejecuta manualmente. No lanzarla
   ni programarla, no sustituir modelos activos ni interrumpir descargas.
 - Antes de cada etapa comprobar si hay una recarga activa. Aislar la migración y
   sus dependencias; no cambiar el entorno que esté usando la carga. Integrar solo
@@ -129,17 +130,20 @@ exactamente la comprobación pendiente y solicitar solo el acceso necesario.
 | Etapa | Estado | Evidencia de cierre |
 | --- | --- | --- |
 | Next.js | Completada y publicada | Next.js 16.3.6, React 19.3.0, Node 24; 61 pruebas locales, 30 versionadas, build local y Vercel correctos; PR #1 |
-| Identidades | Pendiente | Por registrar |
-| Fechas históricas | Pendiente | Por registrar |
-| Validez temporal del modelo | Pendiente | Por registrar |
+| Identidades | Catálogo revisado; verificación ATP pendiente | 163 casos: 132 sin coincidencia, 31 ambiguos; informe local; ATP bloqueó el contraste por país y nacimiento |
+| Fechas históricas | Cobertura auditada; corrección histórica pendiente | 2.952 filas anuales sin fecha real; 2 correcciones verificadas; nuevas descargas conservan fecha, verificación y fuente |
+| Validez temporal del modelo | Cierre de código local; transición pendiente de fechas | Contrato strict-pre-match-v1, Elo previo, historial causal, CV temporal, selección y prueba final separadas; 159 pruebas; modelo activo heredado |
 | Publicación y Vercel | Primer bloque completado; repetir tras los siguientes | Commit 0082572; 31 visitas de QA en producción, filtros, comparador, detalles y modal, sin errores de consola |
-| Recarga mensual | Excluida: ejecución manual del usuario | No iniciar desde este goal |
+| Recarga mensual | Excluida: ejecutada por el usuario | Estado local success, finalizada el 28/09 a las 20:25; no relanzada por Codex |
 
 Referencias del diagnóstico: `docs/correcciones-auditoria-web.md`,
 `docs/recarga-app-escritorio.md`, `docs/limitations.md` y `docs/modeling.md`.
 
 Evidencia del primer bloque: `docs/nextjs-16-migration.md` y
 [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
-Siguiente etapa: recalcular las identidades pendientes y contrastarlas primero con
-el catálogo local, después con ATP por país y nacimiento. No se da por corregida
-la cronología histórica ni por auditado el entrenamiento con la migración web.
+Auditoría posterior: `docs/validacion-temporal-estricta.md`. El código Python y sus
+pruebas permanecen privados según `.gitignore`; solo se publica su documentación.
+Siguiente etapa de datos: contrastar los casos pendientes en ATP por país y
+nacimiento cuando sea accesible, completar fechas trazables y preparar una
+transición manual al contrato estricto. No se da por corregida la cronología
+histórica ni se presentan métricas nuevas a partir de pruebas simuladas.

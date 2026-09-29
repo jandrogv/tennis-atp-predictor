@@ -31,11 +31,11 @@ These factors can matter more than historical averages for a single match.
 
 ## Temporal and leakage risk
 
-Sequential features are intended to use only prior matches, but correctness depends on stable chronological ordering and pre-match source values. The current public metrics come from a legacy-compatible feature configuration that permits two Elo-derived signals whose strict pre-match timing has not yet been fully verified. Until that audit is closed, the published score may overstate generalization.
+The audit confirmed that the legacy model includes two post-match Elo differences (`ELO_DIFF`, `ELO_SURFACE_DIFF`). Its published scores may overstate generalization because those inputs contain outcome information. The opt-in strict implementation excludes them and makes sequential history causal by verified match day. It has not replaced the active model: historical dates are incomplete, and no real strict evaluation has been performed. A strict contract does not by itself prove that all ranking or contextual source values were available before a match.
 
 ## Evaluation design
 
-The later-season holdout is more realistic than a random split, but it is not a fully untouched final lockbox. Candidate comparison and final reporting currently use the same holdout. Repeated analytical decisions based on that period can gradually overfit the evaluation set.
+The published legacy evaluation uses the same later-season holdout for candidate comparison and final reporting. Repeated analytical decisions based on that period can gradually overfit it. Strict mode now reserves a later, fingerprinted final period for the selected model only; these safeguards are tested in code but have not produced replacement public metrics.
 
 Subgroup performance by surface, tournament level, ranking band and player-history depth is not yet reported comprehensively.
 
