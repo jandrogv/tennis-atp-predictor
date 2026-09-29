@@ -100,7 +100,7 @@ de activar un modelo nuevo. No se afirma una mejora sin evaluación real.
 
 ## Validación y publicación
 
-La suite Python pasa 168 pruebas. Incluye contrafactuales del mismo día, resultados
+La suite Python pasa 170 pruebas. Incluye contrafactuales del mismo día, resultados
 nocturnos, predicciones que no escriben estado, rankings/contexto posteriores,
 etiquetas tardías excluidas en cortes, huella final y homónimos. Los candidatos de
 la prueba de selección son simulados: no se ha entrenado XGBoost ni TensorFlow.
@@ -118,7 +118,7 @@ de consola. Se usó Playwright porque no está disponible la skill Browser.
 La suite web pasa 63 pruebas; la compilación Next.js 16.3.6 es correcta.
 
 Se regeneraron 31 derivados y su copia pública local, incorporando las cuatro
-fechas y las 74 identidades contrastadas. La caché por fecha de ranking ahora
+fechas y las 76 identidades contrastadas. La caché por fecha de ranking ahora
 compara su contenido con la fuente: propaga correcciones y conserva archivos
 inalterados. También se normalizan las etiquetas de ronda en perfiles.
 QA local recorrió 31 rutas con filtros, comparador, detalles, modal y móvil sin

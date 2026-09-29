@@ -7,19 +7,31 @@ pausas y cierres del navegador; no se descargaron nuevamente partidos ni torneos
 
 Cada ficha se contrastó con el catálogo por nombre, país IOC y nacimiento exacto.
 Las coincidencias solo por parecido o por país/nacimiento con un nombre ajeno
-quedan pendientes. Los hechos contrastados se guardan después de cada consulta,
+quedan pendientes salvo que ATP vincule ambos nombres con el mismo código de ficha.
+Los hechos contrastados se guardan después de cada consulta,
 sin HTML completo, cookies o credenciales.
 
 ## Resultado
 
-- 163 fichas verificadas; 74 identidades resueltas mediante alias e IDs existentes.
+- 163 fichas verificadas; 76 identidades resueltas mediante alias e IDs existentes.
 - 76 jugadores ausentes propuestos con IDs consecutivos 214589–214664.
 - Una actualización propuesta: nacimiento 20060313 del ID 213983, Maximilian
   Alessandro Erhardt. Las demás columnas de esa fila se conservan.
-- 12 casos siguen pendientes: ocho nombres con dos IDs y nacimiento vacío, y
-  cuatro variantes cuyos nombres no permiten confirmar la correspondencia.
-- La propuesta completa resuelve 151 de 163 casos. El ranking resultante tiene
-  2.290 filas, 12 IDs pendientes y ningún ID enlazado a dos filas del mismo snapshot.
+- 10 casos siguen pendientes: ocho nombres con dos IDs y nacimiento vacío, y
+  dos variantes cuyos nombres no permiten confirmar la correspondencia.
+- La propuesta completa resuelve 153 de 163 casos. El ranking resultante tiene
+  2.290 filas, 10 IDs pendientes y ningún ID enlazado a dos filas del mismo snapshot.
+
+Las dos correspondencias adicionales conservan IDs del catálogo: Pawel Juszczak
+se enlaza con Pawel Cias (109318, POL, 19940222), y Barkat Ullah con Barkat Khan
+(208397, PAK, 19980301). Además de país y nacimiento, ATP usa el mismo código
+CF60/K0EN en las URLs de ambos nombres. Véanse la
+[ficha bajo el nombre Cias](https://www.atptour.com/en/players/pawel-cias/cf60/overview),
+la [ficha Juszczak](https://www.atptour.com/en/players/pawel-juszczak/cf60/overview),
+la [ficha Khan](https://www.atptour.com/en/players/barkat-khan/k0en/overview) y
+la [ficha Ullah](https://www.atptour.com/en/players/barkat-ullah/k0en/overview).
+Se exige que el catálogo siga coincidiendo en país y nacimiento; el alias no
+permite aceptar datos incompatibles. Las pruebas cubren ambos cargadores de partidos.
 
 Un sufijo explícito como Julian Alonso Jr tiene una identidad verificada propia;
 no identifica automáticamente a Julian Alonso sin sufijo. Los cargadores de
@@ -33,6 +45,7 @@ eligen por orden del CSV.
 Archivos en `data/processed/audit-2026-09-29`, excluidos de Git:
 
 - `atp_profile_evidence.json`: país, nacimiento, ficha y momento de consulta.
+- `atp_name_bridge_evidence.json`: nombres antiguos/actuales, código ATP y fuentes.
 - `identity_catalogue_review.json`: candidatos y motivo de resolución o duda.
 - `atp_players_change_proposal.csv`: cambios concretos y fuente de cada uno.
 - `atp_players.proposed.csv`: catálogo completo propuesto, con las ocho columnas
