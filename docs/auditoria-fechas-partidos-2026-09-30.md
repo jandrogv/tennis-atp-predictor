@@ -66,4 +66,6 @@ Evidencia local, excluida de Git, en `data/processed/audit-2026-09-29`:
   y huellas de catálogo y modelo.
 
 Véase la [auditoría temporal](validacion-temporal-estricta.md) para la transición
-que todavía exige entradas verificadas antes de usar `strict-pre-match-v2`.
+que todavía exige entradas verificadas en una base UTC común antes de usar
+`strict-pre-match-v3`. Las fechas locales contrastadas en las crónicas no prueban
+por sí solas el día UTC de inicio o disponibilidad.

@@ -21,17 +21,22 @@ terminó el 28/09 a las 20:25.
 - La edad se calculaba al día de la recarga. El cargador usa ahora la fecha del
   partido cuando existe; su alternativa heredada de inicio del torneo no se marca
   como fecha verificada del partido.
+- Los días locales de torneos en zonas horarias diferentes no garantizan un orden
+  causal global. El contrato estricto exige ahora una base UTC común para inicio,
+  disponibilidad del resultado, ranking y contexto; no convierte fechas locales
+  sin información suficiente.
 
-## Contrato opcional `strict-pre-match-v2`
+## Contrato opcional `strict-pre-match-v3`
 
-V2 sustituye al contrato inicial V1, que no representaba la disponibilidad de
-resultados nocturnos. Los artefactos V1 no se aceptan como V2. El actualizador
+V3 añade la base UTC obligatoria al contrato V2, que incorporó la disponibilidad
+de resultados nocturnos ausente en V1. Los artefactos V1 y V2 no se aceptan como V3. El actualizador
 mantiene su modo heredado; no se ha activado un reemplazo del modelo.
 
 Entradas necesarias:
 
 | Campo | Significado |
 | --- | --- |
+| `temporal_date_basis` | Debe ser `UTC` en cada fila: las cuatro familias de fechas representan días UTC contrastados |
 | `match_date`, `match_date_verified` | Día ISO de inicio del partido, contrastado a nivel de partido |
 | `result_available_date`, `result_available_date_verified` | Día en que el resultado estuvo disponible; obligatorio para partidos observados, vacío para predicción |
 | `ranking_date`, `ranking_date_verified` | Snapshot contrastado del que proceden ranking y puntos |
@@ -41,9 +46,10 @@ Entradas necesarias:
 Los indicadores son declaraciones de verificación, no pruebas por sí solos.
 Hay que conservar las fuentes y contrastar los valores. El código no convierte
 fechas de torneo, datos actuales del catálogo o rankings sin procedencia en
-información histórica verificada.
+información histórica verificada. Tampoco basta añadir `UTC` a una fecha local:
+la declaración exige evidencia de su conversión o del día UTC original.
 
-Con días y sin horas fiables, todos los partidos de un día leen antes de aplicar
+Con días UTC y sin horas fiables, todos los partidos de un día leen antes de aplicar
 los resultados disponibles ese día. Un partido iniciado el lunes y terminado el
 martes afecta al historial a partir del miércoles. No se descarta ese partido ni
 se impone un retraso fijo a todos: se utiliza su disponibilidad individual.
@@ -71,7 +77,7 @@ disponibles en sus límites. No se mezclan aleatoriamente periodos ni se reutili
 parámetros de un registro anterior que pudiera haber consultado el test final.
 
 El índice conserva inicio y disponibilidad juntos a través de todos los cortes.
-El manifiesto registra límites, filas excluidas y huella de variables, objetivos,
+El manifiesto registra la base UTC, límites, filas excluidas y huella de variables, objetivos,
 inicios y disponibilidad de la prueba final. La evaluación rechaza cambios y solo
 admite el modelo seleccionado, sin `evaluate_all`. Predicción y evaluación exigen
 artefactos compatibles. Esto no impide decisiones humanas posteriores basadas en
@@ -89,7 +95,8 @@ Además de las cuatro anteriores, se contrastaron doce finales y la semifinal
 Sinner–Medvedev de Roma, iniciada el 15 de mayo y concluida el 16 tras una suspensión.
 El [informe de fechas](auditoria-fechas-partidos-2026-09-30.md) detalla fuentes y fechas.
 Estas correcciones de presentación no rellenan las fechas de inicio, disponibilidad
-y contexto de toda la población de entrenamiento. No bastan para entrenar V2.
+y contexto de toda la población de entrenamiento. Tampoco establecen por sí solas
+los días UTC necesarios para entrenar V3.
 
 Para la transición manual, preparar entradas verificadas y generar variables con
 `strict_temporal=True`. Usar directorios nuevos en `data/processed` y `models`,
@@ -100,7 +107,9 @@ de activar un modelo nuevo. No se afirma una mejora sin evaluación real.
 
 ## Validación y publicación
 
-La suite Python pasa 170 pruebas. Incluye contrafactuales del mismo día, resultados
+La suite Python pasa 175 pruebas. Incluye rechazos de bases horarias locales o
+ausentes, conservación de UTC al cargar CSV y exclusión de artefactos V2, además
+de contrafactuales del mismo día, resultados
 nocturnos, predicciones que no escriben estado, rankings/contexto posteriores,
 etiquetas tardías excluidas en cortes, huella final y homónimos. Los candidatos de
 la prueba de selección son simulados: no se ha entrenado XGBoost ni TensorFlow.
