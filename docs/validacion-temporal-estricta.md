@@ -107,7 +107,7 @@ de activar un modelo nuevo. No se afirma una mejora sin evaluación real.
 
 ## Validación y publicación
 
-La suite Python pasa 175 pruebas. Incluye rechazos de bases horarias locales o
+La suite Python pasa 177 pruebas. Incluye rechazos de bases horarias locales o
 ausentes, conservación de UTC al cargar CSV y exclusión de artefactos V2, además
 de contrafactuales del mismo día, resultados
 nocturnos, predicciones que no escriben estado, rankings/contexto posteriores,
@@ -142,7 +142,9 @@ la copia generada. El modelo y las métricas privadas permanecen intactos.
 
 Código Python, exportadores y pruebas privados permanecen locales según las
 exclusiones Git. No se publican datasets completos, modelos ni evidencia detallada
-ATP. Los informes están en `data/processed/audit-2026-09-29`. `data/raw` sigue intacto.
+ATP. Los informes están en `data/processed/audit-2026-09-29`. La única edición manual
+de raw fue la ampliación del catálogo expresamente autorizada: 76 altas y cuatro
+nacimientos, con respaldo íntegro. No se modificaron las fuentes históricas de partidos.
 Para revertir, conservar el modelo heredado y no activar `strict`; el aviso web se
 puede revertir independientemente sin alterar datos ni modelos.
 

@@ -1,7 +1,7 @@
 # Plan de acción de ATP Insight
 
 Fecha: 28/09/2026. Revisión: 30/09/2026. Estado: Next.js publicado; contrato temporal V3
-implementado y probado en local; revisión de 163 fichas ATP completada y alta de catálogo pendiente de permiso.
+implementado y probado en local; catálogo ampliado con autorización y siete identidades no verificables documentadas.
 Objetivo: completar los pendientes técnicos y de datos, una etapa cada vez, con
 resultados verificables. La app de escritorio está terminada y aceptada por el usuario.
 
@@ -130,9 +130,9 @@ exactamente la comprobación pendiente y solicitar solo el acceso necesario.
 | Etapa | Estado | Evidencia de cierre |
 | --- | --- | --- |
 | Next.js | Completada y publicada | Next.js 16.3.6, React 19.3.0, Node 24; 61 pruebas locales, 30 versionadas, build local y Vercel correctos; PR #1 |
-| Identidades | Fichas verificadas; propuesta de catálogo pendiente de permiso | 163 fichas contrastadas; 76 identidades resueltas sin editar raw. Propuesta: 76 altas (214589–214664), nacimiento de ID 213983 y 10 casos no resolubles con certeza. Con la propuesta: 153 resueltos, 10 pendientes y ningún ID duplicado en 2.290 filas del ranking |
+| Identidades | Cambios verificables aplicados con permiso; siete casos no verificables documentados | 163 fichas contrastadas; 76 altas (214589–214664) y nacimientos de IDs 213983, 213059, 212542 y 212770 aplicados. 156 casos resueltos, siete pendientes y ninguna colisión en 2.290 filas del ranking; backup del original y derivados regenerados |
 | Fechas históricas | Cobertura auditada; 17 fechas incorporadas a derivados locales | 2.952 filas anuales y 26 archivos sin fecha real; 17 correcciones contrastadas, incluidas doce finales adicionales y la semifinal de Roma iniciada el 15/05 y concluida el 16/05. Regenerados 31 derivados y su copia web, incluidos cuadros, estadísticas y perfiles. La cronología histórica completa sigue sin verificarse |
-| Validez temporal del modelo | Código V3 implementado y validado; datos históricos pendientes | Base UTC común obligatoria, Elo previo, disponibilidad individual de resultados nocturnos, metadatos de ranking/contexto, CV/calibración purgadas y prueba final separada; 175 pruebas Python. No se ha entrenado ni activado un modelo estricto |
+| Validez temporal del modelo | Código V3 implementado y validado; datos históricos pendientes | Base UTC común obligatoria, Elo previo, disponibilidad individual de resultados nocturnos, metadatos de ranking/contexto, CV/calibración purgadas y prueba final separada; 177 pruebas Python. No se ha entrenado ni activado un modelo estricto |
 | Publicación y Vercel | Next y aviso de métricas publicados y verificados | Next: PR #1 y 31 visitas QA. Aviso heredado: commit 0498a20, Vercel success, `/model` y `/feature-importance` revisados en escritorio/móvil y filtro Elo sin errores |
 | Recarga mensual | Excluida: ejecutada por el usuario | Estado local success, finalizada el 28/09 a las 20:25; no relanzada por Codex |
 
@@ -143,18 +143,19 @@ Evidencia del primer bloque: `docs/nextjs-16-migration.md` y
 [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
 Auditoría posterior: `docs/validacion-temporal-estricta.md`. El código Python y sus
 pruebas permanecen privados según `.gitignore`; solo se publica su documentación.
-Siguiente etapa de datos: aprobar la propuesta concreta del catálogo, investigar
-los 10 casos ambiguos y completar fechas y procedencia trazables antes de la
+Siguiente etapa de datos: obtener evidencia independiente de los siete casos aún
+ambiguos y completar fechas y procedencia trazables antes de la
 transición manual al contrato estricto. No se da por corregida la cronología
 histórica ni se presentan métricas nuevas a partir de pruebas simuladas.
 
-Revisión de cierre del 30/09: 175 pruebas Python, 63 pruebas web, verificador de
+Revisión de cierre del 30/09: 177 pruebas Python, 63 pruebas web, verificador de
 datos y compilación correctos; 31 visitas locales con interacciones y móvil.
 La caché de snapshots de ranking se actualiza si cambia la fuente, conservando
-los archivos realmente inalterados. Modelo y catálogo raw mantienen sus huellas.
+los archivos realmente inalterados. El modelo mantiene su huella; el catálogo raw
+se amplió únicamente con los 80 cambios expresamente autorizados, con copia previa.
 Los datasets completos renovados permanecen locales; los commits públicos solo
 incluyen el aviso del modelo y documentación. Véase
-`docs/auditoria-identidades-atp-2026-09-30.md` para la propuesta de altas pendiente.
+`docs/auditoria-identidades-atp-2026-09-30.md` para la aplicación del catálogo y su reversión local.
 
 El contrato V3 rechaza fechas con base local o ausente y artefactos V1/V2. Conserva
 la declaración UTC desde el CSV hasta la evaluación y la registra en el manifiesto
