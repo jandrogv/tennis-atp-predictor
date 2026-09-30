@@ -90,9 +90,11 @@ Los 26 Excel de torneo revisados tampoco aportan ese dato. La página de resulta
 de Brisbane contiene 49 partidos pero no fechas individuales en los campos revisados.
 No se deducen por ronda ni se vuelven a descargar torneos completos para esta auditoría.
 
-Hay 17 correcciones trazables en `data/processed/match_date_corrections.csv`.
-Además de las cuatro anteriores, se contrastaron doce finales y la semifinal
-Sinner–Medvedev de Roma, iniciada el 15 de mayo y concluida el 16 tras una suspensión.
+Hay 45 correcciones trazables en `data/processed/match_date_corrections.csv`.
+Se revisaron las 32 finales que quedaban en la lista prioritaria y se contrastaron
+28. Roma (semifinal) y Eastbourne (final) empezaron un día y concluyeron al siguiente;
+su evidencia separa inicio y disponibilidad. Cuatro finales siguen sin fecha
+certificada por walkover, fuentes contradictorias o falta de resultado fechado.
 El [informe de fechas](auditoria-fechas-partidos-2026-09-30.md) detalla fuentes y fechas.
 Estas correcciones de presentación no rellenan las fechas de inicio, disponibilidad
 y contexto de toda la población de entrenamiento. Tampoco establecen por sí solas
@@ -107,7 +109,8 @@ de activar un modelo nuevo. No se afirma una mejora sin evaluación real.
 
 ## Validación y publicación
 
-La suite Python pasa 177 pruebas. Incluye rechazos de bases horarias locales o
+La suite Python pasa 178 pruebas. Incluye conservación del marcador `n/a` al
+aplicar fechas a partidos sin estadísticas, rechazos de bases horarias locales o
 ausentes, conservación de UTC al cargar CSV y exclusión de artefactos V2, además
 de contrafactuales del mismo día, resultados
 nocturnos, predicciones que no escriben estado, rankings/contexto posteriores,
@@ -126,7 +129,7 @@ en Chrome a 1440×1000 y 390×844 confirmó el aviso, el filtro Elo y ausencia d
 de consola. Se usó Playwright porque no está disponible la skill Browser.
 La suite web pasa 63 pruebas; la compilación Next.js 16.3.6 es correcta.
 
-Se regeneraron 31 derivados y su copia pública local, incorporando las 17
+Se regeneraron 31 derivados y su copia pública local, incorporando las primeras 17
 fechas y las 76 identidades contrastadas. La caché por fecha de ranking ahora
 compara su contenido con la fuente: propaga correcciones y conserva archivos
 inalterados. También se normalizan las etiquetas de ronda en perfiles.
@@ -135,6 +138,12 @@ errores de consola. El verificador pasó; mantiene cuatro avisos no críticos:
 un experimento histórico con enlaces fuera de las predicciones actuales y tres
 eventos de equipos sin campeón individual. El sitio desplegado recibió el aviso;
 los datasets completos regenerados permanecen locales y no se añaden a Git.
+
+La ampliación posterior a 45 fechas regeneró cinco derivados de partidos y
+perfiles, su manifiesto y las particiones web afectadas. Se verificaron 51 visitas,
+seis en móvil, sin errores ni desbordamientos. Conserva balances, los 227 marcadores
+sin estadísticas, los 122 archivos raw y la huella del modelo. Los otros 2.907 días
+de partido siguen sin contrastar; esta cobertura parcial no habilita entrenamiento V3.
 
 La exportación mensual local había copiado rutas personales del modelo a un CSV
 público. El exportador ahora admite solo columnas de métricas públicas y se limpió

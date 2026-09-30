@@ -131,8 +131,8 @@ exactamente la comprobación pendiente y solicitar solo el acceso necesario.
 | --- | --- | --- |
 | Next.js | Completada y publicada | Next.js 16.3.6, React 19.3.0, Node 24; 61 pruebas locales, 30 versionadas, build local y Vercel correctos; PR #1 |
 | Identidades | Cambios verificables aplicados con permiso; siete casos no verificables documentados | 163 fichas contrastadas; 76 altas (214589–214664) y nacimientos de IDs 213983, 213059, 212542 y 212770 aplicados. 156 casos resueltos, siete pendientes y ninguna colisión en 2.290 filas del ranking; backup del original y derivados regenerados |
-| Fechas históricas | Cobertura auditada; 17 fechas incorporadas a derivados locales | 2.952 filas anuales y 26 archivos sin fecha real; 17 correcciones contrastadas, incluidas doce finales adicionales y la semifinal de Roma iniciada el 15/05 y concluida el 16/05. Regenerados 31 derivados y su copia web, incluidos cuadros, estadísticas y perfiles. La cronología histórica completa sigue sin verificarse |
-| Validez temporal del modelo | Código V3 implementado y validado; datos históricos pendientes | Base UTC común obligatoria, Elo previo, disponibilidad individual de resultados nocturnos, metadatos de ranking/contexto, CV/calibración purgadas y prueba final separada; 177 pruebas Python. No se ha entrenado ni activado un modelo estricto |
+| Fechas históricas | Auditoría y correcciones trazables verificadas; cobertura histórica parcial | 2.952 filas anuales y 26 archivos sin fecha real; 45 fechas contrastadas y 2.907 días pendientes. Revisadas las 32 finales prioritarias restantes: 28 contrastadas y cuatro pendientes con motivo documentado. Inicio y conclusión separados para Roma y Eastbourne. Cinco derivados y copia web ampliados, balances intactos y 51 visitas QA. La cronología completa sigue sin verificarse |
+| Validez temporal del modelo | Código V3 implementado y validado; datos históricos pendientes | Base UTC común obligatoria, Elo previo, disponibilidad individual de resultados nocturnos, metadatos de ranking/contexto, CV/calibración purgadas y prueba final separada; 178 pruebas Python. No se ha entrenado ni activado un modelo estricto |
 | Publicación y Vercel | Next y aviso de métricas publicados y verificados | Next: PR #1 y 31 visitas QA. Aviso heredado: commit 0498a20, Vercel success, `/model` y `/feature-importance` revisados en escritorio/móvil y filtro Elo sin errores |
 | Recarga mensual | Excluida: ejecutada por el usuario | Estado local success, finalizada el 28/09 a las 20:25; no relanzada por Codex |
 
@@ -148,7 +148,7 @@ ambiguos y completar fechas y procedencia trazables antes de la
 transición manual al contrato estricto. No se da por corregida la cronología
 histórica ni se presentan métricas nuevas a partir de pruebas simuladas.
 
-Revisión de cierre del 30/09: 177 pruebas Python, 63 pruebas web, verificador de
+Revisión de cierre del 30/09: 178 pruebas Python, 63 pruebas web, verificador de
 datos y compilación correctos; 31 visitas locales con interacciones y móvil.
 La caché de snapshots de ranking se actualiza si cambia la fuente, conservando
 los archivos realmente inalterados. El modelo mantiene su huella; el catálogo raw
@@ -161,3 +161,10 @@ El contrato V3 rechaza fechas con base local o ausente y artefactos V1/V2. Conse
 la declaración UTC desde el CSV hasta la evaluación y la registra en el manifiesto
 de entrenamiento. Las fechas ATP usadas en la presentación no se convierten en
 entradas UTC verificadas sin evidencia suficiente; el modelo operativo no cambia.
+
+Ampliación final del 30/09: corregida la lectura de `n/a` en la función compartida
+de fechas. Se reproducía y pasaba una fecha incorrecta en partidos sin estadísticas;
+la nueva prueba falla antes del arreglo y pasa después. Incorporadas 28 fechas ATP
+adicionales: 27 cambian de día y Roland Garros conserva su día ahora contrastado.
+La ampliación no se aplica a Elo, entrenamiento ni predicciones heredadas. Reversión
+local y fuentes en `docs/auditoria-fechas-partidos-2026-09-30.md`.
