@@ -1,9 +1,13 @@
 # Cuadros y grid de torneos
 
-La vista Draw permite revisar todos los resultados disponibles. Los partidos con
+La vista Draw permite revisar los resultados del cuadro principal. Los partidos con
 posición de eliminación directa se conectan en un cuadro. Las fases de grupos,
-las previas y los partidos sin posición fiable se muestran en tarjetas por ronda;
+los partidos sin posición fiable se muestran en tarjetas por ronda;
 no se inventan cruces para habilitar la vista.
+Las rondas Qualifying se conservan exclusivamente en Table. El filtro consulta
+las etiquetas de ronda, no el prefijo QS: las fases Round Robin de Davis Cup
+pueden usar ese prefijo y siguen disponibles en Draw. Si solo hay previas, se
+abre Table y Draw permanece deshabilitado.
 
 ## Correcciones de datos
 
@@ -34,6 +38,13 @@ Mantiene el teclado dentro, bloquea el desplazamiento de fondo y restaura el foc
 al cerrar. Conserva el espacio de la vista compacta para evitar saltos de página.
 Funciona con Escape y con el botón de cierre; si hay un jugador resaltado, Escape
 primero quita el resaltado, igual que antes.
+
+Desde el 30/09, la vista ampliada empieza en la ronda seleccionada y muestra hasta
+dos rondas posteriores. Quarter-Finals muestra cuartos, semifinales y final;
+Semi-Finals muestra semifinales y final; Final muestra solo la final. Las primeras
+rondas ya no determinan la altura de esas vistas. El selector y las flechas
+permiten volver a cualquier etapa. La vista compacta conserva sus tres rondas
+de contexto y la vista móvil muestra los partidos de la ronda elegida.
 
 ## Archivos modificados
 
@@ -78,3 +89,17 @@ navegadores no se han verificado. Los resultados o estadísticas ausentes en el
 origen siguen ausentes; la vista no fabrica partidos ni recupera datos de ATP.
 La validación descrita arriba fue local el 26/09. Los cambios de la web se
 integraron después en `main` mediante la [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
+
+## Validación del enfoque por ronda — 30/09/2026
+
+Las 65 pruebas web y la compilación Next.js 16.3.6 pasan. Dos regresiones cubren
+el filtro de clasificación y las ventanas de etapas, incluida la vista compacta.
+Chrome oculto con Playwright comprobó Wimbledon a 1280×720, 1440×900 y 390×844:
+los cuatro cuartos, dos semifinales y la final caben en sus vistas ampliadas.
+Table conserva los 239 partidos y las tres rondas de clasificación. Se comprobaron
+las flechas, el cambio desde Round of 128 con desplazamiento previo, Escape,
+el resaltado de jugadores y la restauración del foco y del scroll de fondo.
+Los 21 partidos de Davis Cup Qualifiers 2nd Rd y los siete de Laver Cup siguen
+en Draw. Once comprobaciones de estados terminaron sin errores de consola;
+capturas y script temporal permanecen fuera del repositorio. No se modificaron
+datasets, scraping ni modelos.

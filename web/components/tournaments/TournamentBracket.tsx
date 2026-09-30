@@ -8,6 +8,7 @@ import { cn } from "@/components/ui/utils";
 import type { TournamentMatch } from "@/lib/data/types";
 import { formatNullable, toNumber } from "@/lib/formatters";
 import { getPlayerProfilePath, getTournamentMatchDetailPath } from "@/lib/routes";
+import { getDrawStageWindow } from "@/lib/tournaments/tournament-presentation";
 
 const CARD_WIDTH = 264;
 const CARD_HEIGHT = 108;
@@ -79,7 +80,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
   const selectedIndex = Math.max(0, stages.indexOf(selectedDepth));
   const previousStage = stages[selectedIndex - 1];
   const nextStage = stages[selectedIndex + 1];
-  const visibleDepths = expanded ? stages : compactStageWindow(stages, selectedIndex);
+  const visibleDepths = getDrawStageWindow(stages, selectedIndex, expanded);
   const earliestVisibleDepth = Math.max(0, ...visibleDepths);
   const canvasWidth = visibleDepths.length * CARD_WIDTH + Math.max(0, visibleDepths.length - 1) * COLUMN_GAP + CANVAS_PADDING * 2;
   const canvasHeight = HEADER_HEIGHT + 2 ** earliestVisibleDepth * LEAF_STEP + CANVAS_PADDING;
@@ -103,7 +104,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
           <div>
             <p className="text-sm font-semibold text-slate-950">Tournament draw</p>
             <p className="mt-1 text-xs leading-5 text-slate-500">
-              Explore the draw and results from each stage.
+              {expanded ? "Explore the selected stage and the following rounds." : "Explore the draw and results from each stage."}
             </p>
           </div>
           <div className="flex flex-wrap items-end gap-2">
@@ -579,12 +580,6 @@ function buildBracketData(matches: TournamentMatch[]): BracketData {
   const maxDepth = Math.min(6, Math.floor(Math.log2(maxNode)));
   const stages = Array.from({ length: matchesByNode.size ? maxDepth + 1 : 0 }, (_, index) => maxDepth - index);
   return { matchesByNode, maxDepth, stages };
-}
-
-function compactStageWindow(stages: number[], selectedIndex: number): number[] {
-  if (stages.length <= 3) return stages;
-  const start = Math.max(0, Math.min(selectedIndex - 1, stages.length - 3));
-  return stages.slice(start, start + 3);
 }
 
 function potentialPlayers(node: number, matchesByNode: Map<number, TournamentMatch>): string[] {

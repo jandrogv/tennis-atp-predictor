@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { type KeyboardEvent, type MouseEvent, type ReactNode, useState } from "react";
+import { type KeyboardEvent, type MouseEvent, type ReactNode, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { GitBranch, Table2 } from "lucide-react";
 import { EmptyState } from "@/components/EmptyState";
@@ -11,11 +11,13 @@ import { cn } from "@/components/ui/utils";
 import type { TournamentMatch } from "@/lib/data/types";
 import { formatDate, formatNullable, formatNumber, toNumber } from "@/lib/formatters";
 import { getPlayerProfilePath, getTournamentMatchDetailPath } from "@/lib/routes";
+import { getTournamentDrawMatches } from "@/lib/tournaments/tournament-presentation";
 
 type ResultsView = "draw" | "table";
 
 export function TournamentResultsExplorer({ matches }: { matches: TournamentMatch[] }) {
-  const hasDraw = matches.length > 0;
+  const drawMatches = useMemo(() => getTournamentDrawMatches(matches), [matches]);
+  const hasDraw = drawMatches.length > 0;
   const [view, setView] = useState<ResultsView>(hasDraw ? "draw" : "table");
 
   if (matches.length === 0) {
@@ -45,7 +47,7 @@ export function TournamentResultsExplorer({ matches }: { matches: TournamentMatc
       </div>
 
       <div role="tabpanel">
-        {view === "draw" ? <TournamentBracket matches={matches} /> : <TournamentResultsTable matches={matches} />}
+        {view === "draw" ? <TournamentBracket matches={drawMatches} /> : <TournamentResultsTable matches={matches} />}
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import type { TournamentDetail } from "../data/types.ts";
+import type { TournamentDetail, TournamentMatch } from "../data/types.ts";
 
 export type TournamentFilters = {
   query: string;
@@ -30,6 +30,18 @@ export type FeaturedTournaments = {
 };
 
 export type TournamentStatus = "Upcoming" | "In progress" | "Completed";
+
+export function getTournamentDrawMatches(matches: TournamentMatch[]): TournamentMatch[] {
+  return matches.filter((match) => ![match.round, match.round_display, match.round_raw]
+    .some((round) => /qualif/i.test(round ?? "")));
+}
+
+export function getDrawStageWindow(stages: number[], selectedIndex: number, expanded: boolean): number[] {
+  if (expanded) return stages.slice(selectedIndex, selectedIndex + 3);
+  if (stages.length <= 3) return stages;
+  const start = Math.max(0, Math.min(selectedIndex - 1, stages.length - 3));
+  return stages.slice(start, start + 3);
+}
 
 export function filterTournaments(tournaments: TournamentDetail[], filters: TournamentFilters): TournamentDetail[] {
   const normalizedQuery = filters.query.trim().toLowerCase();

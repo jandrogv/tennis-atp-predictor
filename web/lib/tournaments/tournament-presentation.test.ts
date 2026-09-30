@@ -1,12 +1,41 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import type { TournamentDetail } from "../data/types.ts";
+import type { TournamentDetail, TournamentMatch } from "../data/types.ts";
 import {
   filterTournaments,
+  getDrawStageWindow,
   getFeaturedTournaments,
+  getTournamentDrawMatches,
   getTournamentImage,
   groupTournamentsByStartMonth
 } from "./tournament-presentation.ts";
+
+test("Draw excludes qualifying rounds without hiding team matches or changing Table data", () => {
+  const matches = [
+    { id_num: "MS001", round: "Final", round_display: "Final" },
+    { id_num: "QS001", round: "1st Round Qualifying" },
+    { id_num: "QS002", round_display: "2nd Round Qualifying" },
+    { id_num: "QS003", round_raw: "3rd Round Qualifying - Court 1" },
+    { id_num: "QS004", round: "Round Robin", round_display: "Round Robin" }
+  ] as TournamentMatch[];
+
+  assert.deepEqual(getTournamentDrawMatches(matches), [matches[0], matches[4]]);
+  assert.equal(matches.length, 5);
+  assert.deepEqual(getTournamentDrawMatches(matches.slice(1, 4)), []);
+});
+
+test("expanded Draw starts at the selected stage and compact Draw keeps its existing context", () => {
+  const stages = [6, 5, 4, 3, 2, 1, 0];
+  assert.deepEqual(getDrawStageWindow(stages, 0, true), [6, 5, 4]);
+  assert.deepEqual(getDrawStageWindow(stages, 4, true), [2, 1, 0]);
+  assert.deepEqual(getDrawStageWindow(stages, 5, true), [1, 0]);
+  assert.deepEqual(getDrawStageWindow(stages, 6, true), [0]);
+  assert.deepEqual(getDrawStageWindow(stages, 3, false), [4, 3, 2]);
+  assert.deepEqual(getDrawStageWindow(stages, 6, false), [2, 1, 0]);
+  assert.deepEqual(getDrawStageWindow([1, 0], 1, false), [1, 0]);
+  assert.deepEqual(getDrawStageWindow([1, 0], 1, true), [0]);
+  assert.deepEqual(getDrawStageWindow([], 0, true), []);
+});
 
 test("active tournaments use inclusive date boundaries and chronological order", () => {
   const tournaments = [
