@@ -111,8 +111,10 @@ El historial Elo heredado y sus métricas no se recalculan con una cronología
 parcial. No se ha entrenado un modelo estricto ni ejecutado una recarga mensual.
 Las fuentes raw de partidos y el modelo activo conservan sus huellas. El catálogo
 de jugadores se amplió posteriormente con permiso explícito, como documenta el
-[informe de identidades](auditoria-identidades-atp-2026-09-30.md). Los datasets completos y los
-hechos de la auditoría permanecen locales, fuera de Git.
+[informe de identidades](auditoria-identidades-atp-2026-09-30.md). El 30/09 el usuario
+autorizó publicar la copia de presentación de `web/public/data/` en `main`, que
+incluye estas 45 fechas verificadas. Los datos raw, los derivados de trabajo y
+la evidencia detallada de la auditoría permanecen locales, fuera de Git.
 
 Evidencia local, excluida de Git, en `data/processed/audit-2026-09-29`:
 

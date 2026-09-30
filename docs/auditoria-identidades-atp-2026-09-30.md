@@ -123,6 +123,11 @@ Revertir un cambio de frontend no requiere restaurar catálogo, partidos ni mode
 
 ## Archivos de implementación local
 
+El 30/09 el usuario autorizó subir todos los cambios pendientes de `main`,
+incluida la copia de presentación en `web/public/data/`. Esta entrega incorpora
+el ranking del 28/09 y los enlaces de las 80 identidades contrastadas. El catálogo
+raw, los respaldos y la evidencia detallada conservan sus exclusiones de Git.
+
 `cleaning.py` reúne alias e identidades contrastadas; `consolidation.py` valida
 country/DOB y respeta el alias del hijo; `scraping_functions.py` utiliza el mismo
 índice; `scraping.py` valida la ficha ATP. El script de revisión reanudable y las

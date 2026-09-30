@@ -23,11 +23,12 @@ predicciones y modelos mantienen sus carpetas de salida separadas.
 
 ## Solución instalada
 
-Abre **Actualizar ATP Insight** en el escritorio. La ventana muestra el progreso
-y permanece abierta hasta pulsar Intro. El lanzador elige la recarga diaria o
-mensual; no necesitas recordar comandos.
+Abre **Actualizar ATP Insight** en el escritorio. Pulsa **Iniciar recarga diaria**
+o **Iniciar recarga mensual**. Se abre una segunda pantalla con la fase, las
+etapas, el tiempo y un resumen visual. El registro técnico está disponible con
+un botón, sin terminal. Abrir la app no inicia la descarga. Consulta [la guía de la app](recarga-app-escritorio.md).
 
-La recarga solo comienza al pulsar el acceso del escritorio. Se ha retirado la
+La recarga solo comienza al pulsar Iniciar dentro de la app. Se ha retirado la
 tarea anterior de Windows: no se ejecuta al iniciar sesion ni a una hora fija.
 Reinstalar con `scripts/install_refresh.ps1` mantiene este comportamiento manual.
 
@@ -44,8 +45,8 @@ veces en el mismo dia. Los scripts antiguos no participan en ese bloqueo.
 | Servidor o servicio en la nube | Funciona con el PC apagado | Requiere alojamiento y adaptar Selenium y almacenamiento |
 
 La opcion elegida es el acceso directo, segun la preferencia actual del usuario.
-Reutiliza Python, PowerShell y Windows sin instalar otra app. La seleccion de
-recarga mensual sigue siendo automatica al pulsar el acceso.
+Reutiliza el pipeline Python y añade CustomTkinter para la interfaz. La app recomienda
+la mensual cuando el modelo necesita actualizarse, pero el usuario decide el modo.
 
 ## Qué ocurre en cada recarga
 
@@ -53,9 +54,11 @@ recarga mensual sigue siendo automatica al pulsar el acceso.
   exportación de datos web → verificación → compilación de la web local.
 - Mensual: el mismo flujo, añadiendo entrenamiento y evaluación antes de predecir.
 - La mensual sustituye a la diaria ese día: no se descarga ni calcula todo dos veces.
-- Se usa un mes natural desde `created_at` del manifiesto de entrenamiento. Por
+- Para recomendar la mensual se usa un mes natural desde `created_at` del manifiesto de entrenamiento. Por
   ejemplo, un entrenamiento del 31 de enero vence el último día de febrero.
-- Si no hay modelo/manifiesto válido o quedó una mensual interrumpida, toca mensual.
+- Si no hay modelo/manifiesto válido o quedó una mensual interrumpida, se recomienda mensual.
+- La selección explícita se respeta: diaria conserva el modelo; mensual fuerza
+  entrenamiento. El modo automático de la CLI mantiene la decisión por antigüedad.
 - Las fechas de éxito solo avanzan al completar todas las fases, incluida la web.
   Los fallos quedan registrados y permiten reintentar. Ante un error controlado de
   entrenamiento o de las fases posteriores, se restauran los archivos del modelo
@@ -92,9 +95,9 @@ y comparar modelos con features previas al partido es un trabajo de modelado apa
 
 ## Datos, registros y publicación
 
-Los originales en `data/raw`, `data/sample`, notebooks y scripts originales no se
-modifican. Se copian los archivos que faltan a una carpeta de trabajo; en futuras
-recargas se reutilizan los datos descargados en esa carpeta.
+El pipeline autorizado guarda las descargas en `data/raw/` y reutiliza los datos
+ya descargados. La creación de la app no modifica esos archivos. `data/sample`,
+los notebooks y los scripts originales permanecen intactos.
 
 | Ruta | Contenido |
 | --- | --- |
@@ -146,8 +149,8 @@ cuatro columnas ausentes, dos estados de torneos caducados y una partición sin
 partidos. Las columnas sí existen en las salidas del consolidador actual; la
 regeneración actualiza los estados y la recuperación consulta los torneos omitidos.
 La solución no da por reparada la cobertura de ATP hasta terminar una recarga real.
-La instalacion actual se ha verificado comprobando que no queda la tarea
-programada y que el acceso del escritorio llama al lanzador con `-Interactive`.
+El instalador retira la tarea programada anterior y el acceso del escritorio
+llama ahora a `launch_refresh_app.pyw` mediante `pythonw.exe`, sin consola.
 La retirada de la tarea no interrumpe una carga ya iniciada.
 
 ## Archivos de implementación
@@ -155,7 +158,9 @@ La retirada de la tarea no interrumpe una carga ya iniciada.
 - `src/tennis_pipeline/auto_refresh.py`: selección de frecuencia, ejecución, estado,
   bloqueo, registros y rutas protegidas.
 - `src/tennis_pipeline/scraping.py`: recuperación de torneos y errores de salida.
-- `scripts/launch_refresh.ps1`: entrada común desde el escritorio y Windows.
+- `src/tennis_pipeline/refresh_app.py`: selector diario/mensual y registro en vivo.
+- `scripts/launch_refresh_app.pyw`: entrada de escritorio sin terminal.
+- `scripts/launch_refresh.ps1`: entrada de consola conservada para diagnóstico.
 - `scripts/install_refresh.ps1`: instalación y retirada de tarea/acceso directo.
 - `web/scripts/prepare-web-data.mjs`: permite indicar el origen de datos mediante
   `ATP_WEB_SOURCE_DIR`, manteniendo el valor anterior para otros usuarios.

@@ -4,6 +4,30 @@ La diaria y la mensual comparten el mismo scraping. La mensual añade entrenamie
 no vuelve a descargar los torneos completos. El inicio sigue siendo manual desde
 **Actualizar ATP Insight** en el escritorio.
 
+## Chrome durante la recarga
+
+La diaria y la mensual abren Chrome mediante `create_scraping_driver`, en
+`src/tennis_pipeline/scraping_functions.py`. La ventana comienza fuera del área
+visible y se minimiza antes de visitar ninguna página. Conserva un tamaño de
+1280 × 900 para mantener la presentación de escritorio; no utiliza modo headless.
+Las pausas, los reintentos y los cierres entre páginas mantienen su comportamiento.
+
+El cambio se aplica a las recargas iniciadas después de actualizar el código. No
+interrumpe una recarga que ya esté en ejecución. Si necesitas ver una ventana del
+scraping mientras sigue abierta, selecciónala con Alt+Tab y pulsa Win+Flecha arriba
+para maximizarla en pantalla.
+
+Comprobado en Windows con Chrome 153.0.8010.53 y una página local: ventana
+minimizada antes y después de navegar, JavaScript operativo y misma ventana en
+primer plano al terminar. Esto no garantiza que Windows nunca produzca un cambio
+momentáneo de foco durante el arranque. No se realizó una descarga ATP para esta
+prueba ni se modificaron los datos de `data/raw`.
+
+La minimización utiliza la [operación estándar de Selenium](https://www.selenium.dev/documentation/webdriver/browser/windows/#minimize-window).
+Las regresiones están en `tests/test_scraping_browser_lifecycle.py`; el navegador
+simulado de `tests/test_incremental_scraping.py` incorpora la misma operación.
+La batería completa termina con 142 pruebas correctas.
+
 ## Dos estados distintos
 
 `terminado` indica si ha pasado la fecha final del calendario. No demuestra que se
@@ -163,3 +187,14 @@ Reinicio del 26/09/2026 a las 14:33:
   claves de cache y conservacion de partidos durante la consolidacion. Registro:
   `data/processed/refresh/logs/20260926-143312-daily-validation.log`.
   El resultado completo de esta ejecucion sigue pendiente.
+
+Cierre de la validación del 26/09/2026:
+- La recarga iniciada a las 14:33 terminó a las 17:01:14 con status=success
+  y error=null en data/processed/refresh/state.json.
+- El catálogo queda con 49 torneos completos y 3 pendientes: Chengdu y Hangzhou
+  (finalizan el 29/09), y Laver Cup (finaliza el 27/09).
+- Se completaron la exportación pública, su verificación y la compilación web.
+  La web local muestra Nombre_final, validado también con Chromium.
+- Ese cierre del 26/09 se verificó en local. La web se integró posteriormente
+  en `main`; la entrega del 30/09 incorpora también sus datos públicos renovados,
+  con autorización expresa del usuario.

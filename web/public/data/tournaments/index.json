@@ -119,10 +119,10 @@
     {
       "key": "chengdu-china-2026-hard",
       "file": "chengdu-china-2026-hard.csv",
-      "rows": 32,
+      "rows": 38,
       "year": 2026,
       "end_date": "2026-09-29",
-      "status": "active"
+      "status": "grace_period"
     },
     {
       "key": "cincinnati-united-states-2026-hard",
@@ -231,10 +231,10 @@
     {
       "key": "hangzhou-china-2026-hard",
       "file": "hangzhou-china-2026-hard.csv",
-      "rows": 30,
+      "rows": 38,
       "year": 2026,
       "end_date": "2026-09-29",
-      "status": "active"
+      "status": "grace_period"
     },
     {
       "key": "hong-kong-hong-kong-2026-hard",
@@ -271,10 +271,10 @@
     {
       "key": "laver-cup-2026-hard",
       "file": "laver-cup-2026-hard.csv",
-      "rows": 3,
+      "rows": 7,
       "year": 2026,
       "end_date": "2026-09-27",
-      "status": "grace_period"
+      "status": "frozen"
     },
     {
       "key": "london-great-britain-2026-grass",

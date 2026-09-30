@@ -48,9 +48,9 @@ tournament_id,tournament_slug,tournament_name,year,surface,tournament_date,start
 2026-6242,winstonsalem-united-states-2026-hard,Winston-Salem Open,2026,Hard,2026-08-23,2026-08-23,2026-08-29,"Winston-Salem, United States",,48,"$818,240",Ignacio Buse,True,False,59,0
 2026-0560,us-open-2026-hard,US Open,2026,Hard,2026-08-30,2026-08-30,2026-09-13,"New York, United States",,128,"$47,540,000",Alexander Zverev,True,False,239,0
 2026-8097,davis-cup-qualifiers-2nd-rd-2026-hard,Davis Cup Qualifiers 2nd Rd,2026,Hard,2026-09-18,2026-09-18,2026-09-20,"Davis Cup,",,2,$0,,True,False,21,0
-2026-7581,chengdu-china-2026-hard,Chengdu Open,2026,Hard,2026-09-23,2026-09-23,2026-09-29,"Chengdu, China",,28,"$1,210,115",Alejandro Tabilo,True,True,32,4
-2026-4713,hangzhou-china-2026-hard,AITO Hangzhou Open,2026,Hard,2026-09-23,2026-09-23,2026-09-29,"Hangzhou, China",,28,"$1,039,090",Alexander Bublik,True,True,30,4
-2026-9210,laver-cup-2026-hard,Laver Cup,2026,Hard,2026-09-25,2026-09-25,2026-09-27,"London, Great Britain",,12,$0,,True,False,3,0
+2026-7581,chengdu-china-2026-hard,Chengdu Open,2026,Hard,2026-09-23,2026-09-23,2026-09-29,"Chengdu, China",,28,"$1,210,115",Alejandro Tabilo,True,True,38,1
+2026-4713,hangzhou-china-2026-hard,AITO Hangzhou Open,2026,Hard,2026-09-23,2026-09-23,2026-09-29,"Hangzhou, China",,28,"$1,039,090",Alexander Bublik,True,True,38,1
+2026-9210,laver-cup-2026-hard,Laver Cup,2026,Hard,2026-09-25,2026-09-25,2026-09-27,"London, Great Britain",,12,$0,,True,False,7,0
 2025-0496,marseille-2025-hard,Marseille,2025,Hard,2025-02-10,2025-02-10,2025-02-10,,,28,,Ugo Humbert,True,False,27,0
 2025-0329,tokyo-2025-hard,Tokyo,2025,Hard,2025-09-24,2025-09-24,2025-09-24,,,32,,Carlos Alcaraz,True,False,31,0
 2025-0747,beijing-2025-hard,Beijing,2025,Hard,2025-09-25,2025-09-25,2025-09-25,,,32,,Jannik Sinner,True,False,31,0

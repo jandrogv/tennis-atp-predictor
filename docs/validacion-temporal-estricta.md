@@ -136,8 +136,9 @@ inalterados. También se normalizan las etiquetas de ronda en perfiles.
 QA local recorrió 31 rutas con filtros, comparador, detalles, modal y móvil sin
 errores de consola. El verificador pasó; mantiene cuatro avisos no críticos:
 un experimento histórico con enlaces fuera de las predicciones actuales y tres
-eventos de equipos sin campeón individual. El sitio desplegado recibió el aviso;
-los datasets completos regenerados permanecen locales y no se añaden a Git.
+eventos de equipos sin campeón individual. El primer despliegue recibió el aviso
+sin los datos renovados. El 30/09 el usuario autorizó incluir también los archivos
+públicos de `web/public/data/` en `main`; esta entrega incorpora esas exportaciones.
 
 La ampliación posterior a 45 fechas regeneró cinco derivados de partidos y
 perfiles, su manifiesto y las particiones web afectadas. Se verificaron 51 visitas,
@@ -150,8 +151,9 @@ público. El exportador ahora admite solo columnas de métricas públicas y se l
 la copia generada. El modelo y las métricas privadas permanecen intactos.
 
 Código Python, exportadores y pruebas privados permanecen locales según las
-exclusiones Git. No se publican datasets completos, modelos ni evidencia detallada
-ATP. Los informes están en `data/processed/audit-2026-09-29`. La única edición manual
+exclusiones Git. La autorización de publicación se limita a las exportaciones
+públicas de la web: no incluye raw, derivados de trabajo, modelos ni evidencia
+detallada ATP. Los informes están en `data/processed/audit-2026-09-29`. La única edición manual
 de raw fue la ampliación del catálogo expresamente autorizada: 76 altas y cuatro
 nacimientos, con respaldo íntegro. No se modificaron las fuentes históricas de partidos.
 Para revertir, conservar el modelo heredado y no activar `strict`; el aviso web se

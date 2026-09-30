@@ -21,8 +21,9 @@ resultados verificables. La app de escritorio está terminada y aceptada por el 
   cerrar cada etapa. No confundir una prueba simulada con una recarga real.
 - Autorización actualizada del usuario: subir cambios a GitHub y publicarlos por
   bloques siempre que estén validados, sin pedir confirmación para cada entrega.
-  Revisar el diff, excluir secretos, datos completos y modelos, y publicar solo
-  archivos del bloque comprobado. Respetar las protecciones de la rama.
+  Revisar el diff, excluir secretos, raw, derivados de trabajo y modelos, y publicar
+  solo archivos del bloque comprobado. El 30/09 autorizó también la copia pública
+  renovada de `web/public/data/` en `main`. Respetar las protecciones de la rama.
 - Tras cada publicación, comprobar el despliegue de Vercel del mismo commit,
   su estado y registros pertinentes, y probar las rutas principales de la web.
   No dar una publicación por correcta únicamente porque terminó el push.
@@ -153,8 +154,10 @@ datos y compilación correctos; 31 visitas locales con interacciones y móvil.
 La caché de snapshots de ranking se actualiza si cambia la fuente, conservando
 los archivos realmente inalterados. El modelo mantiene su huella; el catálogo raw
 se amplió únicamente con los 80 cambios expresamente autorizados, con copia previa.
-Los datasets completos renovados permanecen locales; los commits públicos solo
-incluyen el aviso del modelo y documentación. Véase
+La primera publicación incluyó el aviso del modelo y documentación. La autorización
+posterior del 30/09 permite incorporar los 105 archivos públicos renovados pendientes
+en `main`, con el ranking del 28/09, las identidades y las 45 fechas contrastadas.
+Raw, derivados de trabajo y modelos siguen fuera de Git. Véase
 `docs/auditoria-identidades-atp-2026-09-30.md` para la aplicación del catálogo y su reversión local.
 
 El contrato V3 rechaza fechas con base local o ausente y artefactos V1/V2. Conserva

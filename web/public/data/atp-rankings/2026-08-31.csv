@@ -2,7 +2,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,206173,Jannik Sinner,1,12800,0.0,0.0,ITA,25,atp_rankings_2026_08_31.csv
 2026-08-31,100644,Alexander Zverev,2,7790,0.0,0.0,GER,29,atp_rankings_2026_08_31.csv
 2026-08-31,207989,Carlos Alcaraz,3,7160,0.0,0.0,ESP,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Felix Auger-Aliassime,4,4640,0.0,0.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200000,Felix Auger Aliassime,4,4640,0.0,0.0,CAN,26,atp_rankings_2026_08_31.csv
 2026-08-31,104925,Novak Djokovic,5,3770,0.0,0.0,SRB,39,atp_rankings_2026_08_31.csv
 2026-08-31,207925,Flavio Cobolli,6,3720,0.0,0.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,200282,Alex De Minaur,7,3650,0.0,0.0,AUS,27,atp_rankings_2026_08_31.csv
@@ -37,12 +37,12 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208286,Matteo Arnaldi,36,1349,0.0,-2.0,ITA,25,atp_rankings_2026_08_31.csv
 2026-08-31,200267,Zizou Bergs,37,1345,0.0,-2.0,BEL,27,atp_rankings_2026_08_31.csv
 2026-08-31,209920,Raphael Collignon,38,1207,0.0,0.0,BEL,24,atp_rankings_2026_08_31.csv
-2026-08-31,,Daniel Merida,39,1157,0.0,0.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,210017,Daniel Merida Aguilar,39,1157,0.0,0.0,ESP,21,atp_rankings_2026_08_31.csv
 2026-08-31,209414,Luca Van Assche,40,1140,0.0,0.0,FRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,132686,Nuno Borges,41,1135,0.0,0.0,POR,29,atp_rankings_2026_08_31.csv
 2026-08-31,202058,Thiago Agustin Tirante,42,1125,0.0,0.0,ARG,25,atp_rankings_2026_08_31.csv
 2026-08-31,126610,Matteo Berrettini,43,1115,0.0,0.0,ITA,30,atp_rankings_2026_08_31.csv
-2026-08-31,,Jan-Lennard Struff,44,1089,0.0,0.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,105526,Jan Lennard Struff,44,1089,0.0,0.0,GER,36,atp_rankings_2026_08_31.csv
 2026-08-31,207678,Juan Manuel Cerundolo,45,1076,36.0,6.0,ARG,24,atp_rankings_2026_08_31.csv
 2026-08-31,210506,Alex Michelsen,46,1070,0.0,-1.0,USA,22,atp_rankings_2026_08_31.csv
 2026-08-31,128034,Hubert Hurkacz,47,1070,0.0,-1.0,POL,29,atp_rankings_2026_08_31.csv
@@ -96,7 +96,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208233,Mattia Bellucci,95,659,3.0,1.0,ITA,25,atp_rankings_2026_08_31.csv
 2026-08-31,126846,Aleksandar Vukic,96,659,0.0,-1.0,AUS,30,atp_rankings_2026_08_31.csv
 2026-08-31,126127,Benjamin Bonzi,97,656,84.0,12.0,FRA,30,atp_rankings_2026_08_31.csv
-2026-08-31,,Aleksandr Shevchenko,98,655,0.0,-1.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207686,Alexander Shevchenko,98,655,0.0,-1.0,KAZ,25,atp_rankings_2026_08_31.csv
 2026-08-31,126128,Roman Safiullin,99,634,0.0,-1.0,RUS,29,atp_rankings_2026_08_31.csv
 2026-08-31,207411,Jesper De Jong,100,628,0.0,-1.0,NED,26,atp_rankings_2026_08_31.csv
 2026-08-31,207985,Jacob Fearnley,101,623,0.0,-1.0,GBR,25,atp_rankings_2026_08_31.csv
@@ -104,7 +104,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208169,Titouan Droguet,103,616,0.0,-1.0,FRA,25,atp_rankings_2026_08_31.csv
 2026-08-31,106000,Damir Dzumhur,104,612,0.0,-1.0,BIH,34,atp_rankings_2026_08_31.csv
 2026-08-31,208659,Giovanni Mpetshi Perricard,105,600,0.0,-1.0,FRA,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Christopher O'Connell,106,598,0.0,-1.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,106331,Christopher Oconnell,106,598,0.0,-1.0,AUS,32,atp_rankings_2026_08_31.csv
 2026-08-31,210116,Michael Zheng,107,590,0.0,-1.0,USA,22,atp_rankings_2026_08_31.csv
 2026-08-31,208021,Kyrian Jacquet,108,581,0.0,-1.0,FRA,25,atp_rankings_2026_08_31.csv
 2026-08-31,202261,Otto Virtanen,109,574,0.0,-1.0,FIN,25,atp_rankings_2026_08_31.csv
@@ -122,7 +122,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,209147,Vilius Gaubas,121,511,0.0,-1.0,LTU,21,atp_rankings_2026_08_31.csv
 2026-08-31,105916,Marton Fucsovics,122,510,0.0,-1.0,HUN,34,atp_rankings_2026_08_31.csv
 2026-08-31,208013,Dane Sweeny,123,506,0.0,-1.0,AUS,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Yunchaokete Bu,124,496,0.0,0.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207352,Bu Yunchaokete,124,496,0.0,0.0,CHN,24,atp_rankings_2026_08_31.csv
 2026-08-31,124116,Sebastian Ofner,125,495,0.0,0.0,AUT,30,atp_rankings_2026_08_31.csv
 2026-08-31,208010,Pablo Llamas Ruiz,126,491,0.0,0.0,ESP,23,atp_rankings_2026_08_31.csv
 2026-08-31,104527,Stan Wawrinka,127,486,0.0,0.0,SUI,41,atp_rankings_2026_08_31.csv
@@ -148,7 +148,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,105882,Stefano Travaglia,147,388,0.0,0.0,ITA,34,atp_rankings_2026_08_31.csv
 2026-08-31,124079,Pedro Martinez,148,387,0.0,0.0,ESP,29,atp_rankings_2026_08_31.csv
 2026-08-31,149282,Nicolai Budkov Kjaer,149,379,0.0,0.0,NOR,19,atp_rankings_2026_08_31.csv
-2026-08-31,,Soonwoo Kwon,150,379,0.0,0.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,126952,Soon Woo Kwon,150,379,0.0,0.0,KOR,28,atp_rankings_2026_08_31.csv
 2026-08-31,208210,Chris Rodesch,151,377,0.0,0.0,LUX,25,atp_rankings_2026_08_31.csv
 2026-08-31,210136,Mark Lajal,152,375,0.0,0.0,EST,23,atp_rankings_2026_08_31.csv
 2026-08-31,124187,Reilly Opelka,153,371,0.0,0.0,USA,29,atp_rankings_2026_08_31.csv
@@ -188,7 +188,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,200462,Andrea Guerrieri,187,301,0.0,0.0,ITA,27,atp_rankings_2026_08_31.csv
 2026-08-31,126964,Vitaliy Sachko,188,298,0.0,0.0,UKR,29,atp_rankings_2026_08_31.csv
 2026-08-31,210297,Lautaro Midon,189,293,0.0,0.0,ARG,22,atp_rankings_2026_08_31.csv
-2026-08-31,,Diego Dedura,190,291,0.0,0.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,212309,Diego Dedura Palomero,190,291,0.0,0.0,GER,18,atp_rankings_2026_08_31.csv
 2026-08-31,209903,Lukas Neumayer,191,290,0.0,0.0,AUT,23,atp_rankings_2026_08_31.csv
 2026-08-31,122554,David Jorda Sanchis,192,289,0.0,0.0,ESP,32,atp_rankings_2026_08_31.csv
 2026-08-31,202333,Keegan Smith,193,287,0.0,0.0,USA,28,atp_rankings_2026_08_31.csv
@@ -209,7 +209,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,209405,Daniel Rincon,208,270,0.0,0.0,ESP,23,atp_rankings_2026_08_31.csv
 2026-08-31,106148,Roberto Carballes Baena,209,269,0.0,0.0,ESP,33,atp_rankings_2026_08_31.csv
 2026-08-31,207546,Pol Martin Tiffon,210,269,0.0,0.0,ESP,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Andy Andrade,211,269,40.0,32.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200748,Andres Andrade,211,269,40.0,32.0,ECU,27,atp_rankings_2026_08_31.csv
 2026-08-31,211617,Maxim Mrva,212,265,0.0,-1.0,CZE,19,atp_rankings_2026_08_31.csv
 2026-08-31,209911,Guy Den Ouden,213,263,0.0,-1.0,NED,24,atp_rankings_2026_08_31.csv
 2026-08-31,208269,Felix Gill,214,262,0.0,-1.0,GBR,24,atp_rankings_2026_08_31.csv
@@ -219,7 +219,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208119,Liam Draxl,218,255,0.0,-1.0,CAN,24,atp_rankings_2026_08_31.csv
 2026-08-31,200677,Rio Noguchi,219,255,0.0,-1.0,JPN,27,atp_rankings_2026_08_31.csv
 2026-08-31,207663,Nikolas Sanchez Izquierdo,220,255,0.0,-1.0,ESP,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Chun-Hsin Tseng,221,253,0.0,-1.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,202358,Chun Hsin Tseng,221,253,0.0,-1.0,TPE,25,atp_rankings_2026_08_31.csv
 2026-08-31,212256,Colton Smith,222,253,0.0,-1.0,USA,23,atp_rankings_2026_08_31.csv
 2026-08-31,144821,Genaro Alberto Olivieri,223,249,0.0,-1.0,ARG,28,atp_rankings_2026_08_31.csv
 2026-08-31,134840,Raul Brancaccio,224,249,0.0,-1.0,ITA,29,atp_rankings_2026_08_31.csv
@@ -249,12 +249,12 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212044,Yi Zhou,248,228,0.0,-3.0,CHN,21,atp_rankings_2026_08_31.csv
 2026-08-31,206748,Giulio Zeppieri,249,227,0.0,-3.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,200303,Pavel Kotov,250,226,0.0,-3.0,RUS,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Abdullah Shelbayh,251,226,8.0,5.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,209406,Abedallah Shelbayh,251,226,8.0,5.0,JOR,22,atp_rankings_2026_08_31.csv
 2026-08-31,213149,Felix Balshaw,252,226,8.0,5.0,FRA,20,atp_rankings_2026_08_31.csv
-2026-08-31,,J.J. Wolf,253,225,0.0,-5.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200670,J J Wolf,253,225,0.0,-5.0,USA,27,atp_rankings_2026_08_31.csv
 2026-08-31,212063,Matej Dodig,254,225,0.0,-5.0,CRO,21,atp_rankings_2026_08_31.csv
 2026-08-31,211627,Hayato Matsuoka,255,225,0.0,-5.0,JPN,21,atp_rankings_2026_08_31.csv
-2026-08-31,,Marc-Andrea Huesler,256,224,0.0,-5.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,144817,Marc Andrea Huesler,256,224,0.0,-5.0,SUI,30,atp_rankings_2026_08_31.csv
 2026-08-31,210119,Andrej Nedic,257,220,0.0,-5.0,BIH,21,atp_rankings_2026_08_31.csv
 2026-08-31,209874,Maks Kasnikowski,258,220,0.0,-5.0,POL,23,atp_rankings_2026_08_31.csv
 2026-08-31,209407,Max Basing,259,219,7.0,7.0,GBR,23,atp_rankings_2026_08_31.csv
@@ -272,7 +272,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208364,Franco Roncadelli,271,212,0.0,-4.0,URU,26,atp_rankings_2026_08_31.csv
 2026-08-31,210202,Rodrigo Pacheco Mendez,272,212,22.0,22.0,MEX,21,atp_rankings_2026_08_31.csv
 2026-08-31,208502,Dominic Stricker,273,211,0.0,-5.0,SUI,24,atp_rankings_2026_08_31.csv
-2026-08-31,,Inaki Montes-De La Torre,274,211,11.0,6.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,208540,Inaki Montes De La Torre,274,211,11.0,6.0,ESP,23,atp_rankings_2026_08_31.csv
 2026-08-31,209899,Ilia Simakin,275,210,0.0,-6.0,RUS,22,atp_rankings_2026_08_31.csv
 2026-08-31,202475,Philip Henning,276,210,1.0,-4.0,RSA,25,atp_rankings_2026_08_31.csv
 2026-08-31,111187,Kaichi Uchida,277,210,0.0,-7.0,JPN,32,atp_rankings_2026_08_31.csv
@@ -284,7 +284,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,207491,Sandro Kopp,283,202,10.0,9.0,AUT,26,atp_rankings_2026_08_31.csv
 2026-08-31,200572,Nick Hardt,284,200,0.0,-5.0,DOM,25,atp_rankings_2026_08_31.csv
 2026-08-31,208223,Alvaro Guillen Meza,285,199,0.0,-4.0,ECU,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Pierre-Hugues Herbert,286,198,4.0,2.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,105732,Pierre Hugues Herbert,286,198,4.0,2.0,FRA,35,atp_rankings_2026_08_31.csv
 2026-08-31,202400,Alastair Gray,287,198,0.0,-5.0,GBR,28,atp_rankings_2026_08_31.csv
 2026-08-31,209951,Petr Bar Biryukov,288,198,2.0,-2.0,RUS,24,atp_rankings_2026_08_31.csv
 2026-08-31,210412,Juan Manuel La Serna,289,197,0.0,-6.0,ARG,22,atp_rankings_2026_08_31.csv
@@ -308,11 +308,11 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,209326,Murphy Cassone,307,182,0.0,-3.0,USA,24,atp_rankings_2026_08_31.csv
 2026-08-31,210472,Oliver Tarvet,308,181,14.0,21.0,GBR,22,atp_rankings_2026_08_31.csv
 2026-08-31,207969,Stefan Dostanic,309,181,0.0,-4.0,USA,24,atp_rankings_2026_08_31.csv
-2026-08-31,,Igor Marcondes,310,181,0.0,-4.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,127108,Igor Ribeiro Marcondes,310,181,0.0,-4.0,BRA,29,atp_rankings_2026_08_31.csv
 2026-08-31,104792,Gael Monfils,311,180,0.0,-4.0,FRA,39,atp_rankings_2026_08_31.csv
-2026-08-31,,Jay Friend,312,180,4.0,2.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,210221,Jay Dylan Hara Friend,312,180,4.0,2.0,JPN,22,atp_rankings_2026_08_31.csv
 2026-08-31,208457,Radu Mihai Papoe,313,180,0.0,-5.0,ROU,24,atp_rankings_2026_08_31.csv
-2026-08-31,122909,Andres Martin,314,180,10.0,9.0,ARG,50,atp_rankings_2026_08_31.csv
+2026-08-31,211346,Andres Martin,314,180,10.0,9.0,USA,25,atp_rankings_2026_08_31.csv
 2026-08-31,211514,Justin Engel,315,179,0.0,-6.0,GER,18,atp_rankings_2026_08_31.csv
 2026-08-31,207732,Miguel Damas,316,179,2.0,-3.0,ESP,26,atp_rankings_2026_08_31.csv
 2026-08-31,105676,David Goffin,317,178,0.0,-7.0,BEL,35,atp_rankings_2026_08_31.csv
@@ -368,14 +368,14 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,209506,Francesco Forti,367,142,0.0,-7.0,ITA,27,atp_rankings_2026_08_31.csv
 2026-08-31,202290,Dhakshineswar Suresh,368,141,17.0,26.0,IND,26,atp_rankings_2026_08_31.csv
 2026-08-31,105613,Norbert Gombos,369,141,0.0,-8.0,SVK,36,atp_rankings_2026_08_31.csv
-2026-08-31,,Tung-Lin Wu,370,141,3.0,-1.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,126555,Tung Lin Wu,370,141,3.0,-1.0,TPE,28,atp_rankings_2026_08_31.csv
 2026-08-31,207785,George Loffhagen,371,140,50.0,125.0,GBR,25,atp_rankings_2026_08_31.csv
 2026-08-31,210042,Gabriele Piraino,372,140,0.0,-9.0,ITA,22,atp_rankings_2026_08_31.csv
 2026-08-31,200495,Eduardo Ribeiro,373,140,0.0,-9.0,BRA,28,atp_rankings_2026_08_31.csv
 2026-08-31,206867,Tommaso Compagnucci,374,140,0.0,-9.0,ITA,26,atp_rankings_2026_08_31.csv
 2026-08-31,117360,Marc Polmans,375,139,0.0,-9.0,AUS,29,atp_rankings_2026_08_31.csv
 2026-08-31,208025,Alex Martinez,376,139,0.0,-9.0,ESP,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Murkel Dellien,377,138,0.0,-7.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,123961,Murkel Alejandro Dellien Velasco,377,138,0.0,-7.0,BOL,28,atp_rankings_2026_08_31.csv
 2026-08-31,109054,Daniel Masur,378,137,12.0,14.0,GER,31,atp_rankings_2026_08_31.csv
 2026-08-31,126663,Juan Pablo Ficovich,379,137,6.0,1.0,ARG,29,atp_rankings_2026_08_31.csv
 2026-08-31,105911,Andrea Collarini,380,136,0.0,-9.0,ARG,34,atp_rankings_2026_08_31.csv
@@ -421,7 +421,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,133297,Yosuke Watanuki,420,117,0.0,-5.0,JPN,28,atp_rankings_2026_08_31.csv
 2026-08-31,208431,Semen Pankin,421,117,2.0,-1.0,RUS,26,atp_rankings_2026_08_31.csv
 2026-08-31,210668,Massimo Giunta,422,117,0.0,-6.0,ITA,22,atp_rankings_2026_08_31.csv
-2026-08-31,149099,Joaquin Aguilar Cardozo,423,116,15.0,37.0,URU,,atp_rankings_2026_08_31.csv
+2026-08-31,212051,Joaquin  Aguilar Cardozo,423,116,15.0,37.0,URU,21,atp_rankings_2026_08_31.csv
 2026-08-31,126627,Johan Nikles,424,116,0.0,-7.0,SUI,29,atp_rankings_2026_08_31.csv
 2026-08-31,209354,Ioannis Xilas,425,116,0.0,-7.0,GRE,25,atp_rankings_2026_08_31.csv
 2026-08-31,208322,Eric Vanshelboim,426,115,0.0,-5.0,UKR,25,atp_rankings_2026_08_31.csv
@@ -432,7 +432,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,209254,Valerio Aboian,431,113,2.0,-3.0,ARG,24,atp_rankings_2026_08_31.csv
 2026-08-31,213001,Mika Petkovic,432,113,2.0,-3.0,GER,19,atp_rankings_2026_08_31.csv
 2026-08-31,144970,Constantin Bittoun Kouzmine,433,113,0.0,-6.0,FRA,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Santiago Rodriguez Taverna,434,111,0.0,-4.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,144973,Santiago Fa Rodriguez Taverna,434,111,0.0,-4.0,ARG,27,atp_rankings_2026_08_31.csv
 2026-08-31,212025,Yannik Kelm,435,109,0.0,-4.0,GER,21,atp_rankings_2026_08_31.csv
 2026-08-31,200550,Vladyslav Orlov,436,109,0.0,-4.0,UKR,31,atp_rankings_2026_08_31.csv
 2026-08-31,200266,Javier Barranco Cosano,437,108,0.0,-4.0,ESP,27,atp_rankings_2026_08_31.csv
@@ -455,7 +455,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,200666,Jie Cui,454,104,0.0,-7.0,CHN,28,atp_rankings_2026_08_31.csv
 2026-08-31,126106,Ryan Peniston,455,103,0.0,-7.0,GBR,30,atp_rankings_2026_08_31.csv
 2026-08-31,209512,Tom Paris,456,103,0.0,-7.0,FRA,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Alafia Ayeni,457,103,0.0,-7.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200366,Olukayode Alafia Damina Ayeni,457,103,0.0,-7.0,USA,27,atp_rankings_2026_08_31.csv
 2026-08-31,200484,Rudolf Molleker,458,103,0.0,-7.0,GER,25,atp_rankings_2026_08_31.csv
 2026-08-31,207202,Karl Poling,459,103,0.0,-7.0,USA,27,atp_rankings_2026_08_31.csv
 2026-08-31,207728,Moerani Bouzige,460,103,0.0,-6.0,AUS,27,atp_rankings_2026_08_31.csv
@@ -464,12 +464,12 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,105180,Daniel Dutra Da Silva,463,102,0.0,-6.0,BRA,38,atp_rankings_2026_08_31.csv
 2026-08-31,208389,James Trotter,464,101,0.0,-6.0,JPN,27,atp_rankings_2026_08_31.csv
 2026-08-31,200335,Felipe Meligeni Alves,465,101,0.0,-6.0,BRA,28,atp_rankings_2026_08_31.csv
-2026-08-31,,Khumoyun Sultanov,466,101,0.0,-5.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,126939,Khumoun Sultanov,466,101,0.0,-5.0,UZB,27,atp_rankings_2026_08_31.csv
 2026-08-31,211501,Kenta Miyoshi,467,100,0.0,-5.0,JPN,22,atp_rankings_2026_08_31.csv
 2026-08-31,208063,Paulo Andre Saraiva Dos Santos,468,100,4.0,7.0,BRA,26,atp_rankings_2026_08_31.csv
 2026-08-31,202320,Beibit Zhukayev,469,99,0.0,-6.0,KAZ,25,atp_rankings_2026_08_31.csv
 2026-08-31,207992,Cannon Kingsley,470,99,0.0,-6.0,USA,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Alex Hernandez,471,99,0.0,-6.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207834,Juan Alejandro Hernandez Serrano,471,99,0.0,-6.0,MEX,27,atp_rankings_2026_08_31.csv
 2026-08-31,101495,Miguel Tobon,472,99,12.0,38.0,COL,20,atp_rankings_2026_08_31.csv
 2026-08-31,132052,Christian Langmo,473,99,0.0,-6.0,USA,30,atp_rankings_2026_08_31.csv
 2026-08-31,213760,Pavel Lagutin,474,98,25.0,76.0,RUS,21,atp_rankings_2026_08_31.csv
@@ -498,7 +498,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,105430,Radu Albot,497,91,1.0,0.0,MDA,36,atp_rankings_2026_08_31.csv
 2026-08-31,211566,Patrick Schoen,498,91,0.0,-6.0,SUI,21,atp_rankings_2026_08_31.csv
 2026-08-31,209394,Anton Shepp,499,91,0.0,-6.0,NZL,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Adrian Boitan,500,91,0.0,-6.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,206589,Gabi Adrian Boitan,500,91,0.0,-6.0,ROU,27,atp_rankings_2026_08_31.csv
 2026-08-31,124040,Colin Sinclair,501,91,0.0,-6.0,NMI,31,atp_rankings_2026_08_31.csv
 2026-08-31,210731,Filip Jeff Planinsek,502,91,7.0,19.0,SLO,25,atp_rankings_2026_08_31.csv
 2026-08-31,209338,Daniel Siniakov,503,90,0.0,-5.0,CZE,23,atp_rankings_2026_08_31.csv
@@ -508,7 +508,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,106203,Pedro Sakamoto,507,90,0.0,-4.0,BRA,33,atp_rankings_2026_08_31.csv
 2026-08-31,207704,Alex Marti Pujolras,508,89,0.0,-4.0,ESP,27,atp_rankings_2026_08_31.csv
 2026-08-31,207407,Peter Makk,509,89,0.0,-4.0,HUN,24,atp_rankings_2026_08_31.csv
-2026-08-31,,M Rifki Fitriadi,510,89,14.0,34.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207134,Fitriadi M Rifqi,510,89,14.0,34.0,INA,27,atp_rankings_2026_08_31.csv
 2026-08-31,210726,Cesar Bouchelaghem,511,88,0.0,-5.0,FRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,208421,Lilian Marmousez,512,87,0.0,-5.0,FRA,24,atp_rankings_2026_08_31.csv
 2026-08-31,212174,Enzo Aguiard,513,87,0.0,-5.0,AUS,24,atp_rankings_2026_08_31.csv
@@ -526,7 +526,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,200632,Evan Zhu,525,84,2.0,1.0,USA,28,atp_rankings_2026_08_31.csv
 2026-08-31,209984,Milos Karol,526,83,0.0,-4.0,SVK,23,atp_rankings_2026_08_31.csv
 2026-08-31,208257,Fabrizio Andaloro,527,83,4.0,5.0,ITA,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Sanhui Shin,528,83,0.0,-5.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200321,San Hui Sin,528,83,0.0,-5.0,KOR,29,atp_rankings_2026_08_31.csv
 2026-08-31,210214,Joao Eduardo Schiessl,529,82,0.0,-5.0,BRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,129814,Ivan Ivanov,530,82,4.0,5.0,BUL,17,atp_rankings_2026_08_31.csv
 2026-08-31,210505,Marcel Zielinski,531,82,3.0,2.0,POL,25,atp_rankings_2026_08_31.csv
@@ -550,14 +550,14 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,211727,Pavle Marinkov,549,75,0.0,-8.0,AUS,20,atp_rankings_2026_08_31.csv
 2026-08-31,209971,Michael Bassem Sobhy,550,75,0.0,-8.0,EGY,22,atp_rankings_2026_08_31.csv
 2026-08-31,211324,Mitsuki Wei Kang Leong,551,75,0.0,-8.0,MAS,22,atp_rankings_2026_08_31.csv
-2026-08-31,,Alexander Binda,552,75,0.0,-7.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,208240,Alexandr Binda,552,75,0.0,-7.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,200086,Toufik Sahtali,553,75,0.0,-7.0,ALG,27,atp_rankings_2026_08_31.csv
 2026-08-31,200538,Matyas Fuele,554,74,0.0,-7.0,HUN,27,atp_rankings_2026_08_31.csv
 2026-08-31,207490,Carlos Lopez Montagud,555,74,3.0,6.0,ESP,26,atp_rankings_2026_08_31.csv
 2026-08-31,209867,Daniil Ostapenkov,556,74,0.0,-8.0,BLR,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Digvijay Pratap Singh,557,74,0.0,-8.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200014,Digvijaypratap Singh,557,74,0.0,-8.0,IND,26,atp_rankings_2026_08_31.csv
 2026-08-31,200096,Dragos Nicolae Madaras,558,73,4.0,10.0,SWE,28,atp_rankings_2026_08_31.csv
-2026-08-31,,Fares Zakaria,559,73,0.0,-7.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,209403,Faris Zakaryia,559,73,0.0,-7.0,EGY,25,atp_rankings_2026_08_31.csv
 2026-08-31,106290,Filip Peliwo,560,73,0.0,-6.0,POL,32,atp_rankings_2026_08_31.csv
 2026-08-31,212029,Dimitris Sakellaridis,561,73,0.0,-6.0,GRE,20,atp_rankings_2026_08_31.csv
 2026-08-31,213003,Pierluigi Basile,562,72,14.0,60.0,ITA,19,atp_rankings_2026_08_31.csv
@@ -568,13 +568,13 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,111202,Hyeon Chung,567,71,3.0,5.0,KOR,30,atp_rankings_2026_08_31.csv
 2026-08-31,207893,Daniel De Jonge,568,71,0.0,-6.0,NED,27,atp_rankings_2026_08_31.csv
 2026-08-31,106168,Sidharth Rawat,569,71,0.0,-6.0,IND,33,atp_rankings_2026_08_31.csv
-2026-08-31,149117,Lorenzo Angelini,570,71,0.0,-6.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,210086,Lorenzo Angelini,570,71,0.0,-6.0,ITA,20,atp_rankings_2026_08_31.csv
 2026-08-31,207220,Taha Baadi,571,70,0.0,-6.0,CAN,25,atp_rankings_2026_08_31.csv
 2026-08-31,126125,Maxime Janvier,572,70,0.0,-6.0,FRA,29,atp_rankings_2026_08_31.csv
 2026-08-31,132999,Kai Wehnelt,573,70,6.0,21.0,GER,30,atp_rankings_2026_08_31.csv
 2026-08-31,200070,Kirill Kivattsev,574,70,0.0,-7.0,RUS,28,atp_rankings_2026_08_31.csv
 2026-08-31,210077,Aidan Kim,575,69,4.0,11.0,USA,21,atp_rankings_2026_08_31.csv
-2026-08-31,,Nikita Mashtakov,576,69,15.0,70.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,200125,Mykyta Mashtakov,576,69,15.0,70.0,UKR,27,atp_rankings_2026_08_31.csv
 2026-08-31,122352,Christoph Negritu,577,69,0.0,-8.0,GER,32,atp_rankings_2026_08_31.csv
 2026-08-31,208182,Saba Purtseladze,578,69,0.0,-8.0,GEO,25,atp_rankings_2026_08_31.csv
 2026-08-31,202420,Aidan Mchugh,579,68,0.0,-8.0,GBR,26,atp_rankings_2026_08_31.csv
@@ -591,7 +591,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,202209,Imanol Lopez Morillo,590,67,2.0,1.0,ESP,26,atp_rankings_2026_08_31.csv
 2026-08-31,210531,Paul Inchauspe,591,66,0.0,-11.0,FRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,210425,Svyatoslav Gulin,592,66,7.0,29.0,RUS,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Amr Elsayed,593,66,0.0,-11.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,209871,Amr Elsayed Abdou Ahmed Mohamed,593,66,0.0,-11.0,EGY,27,atp_rankings_2026_08_31.csv
 2026-08-31,210650,Stefan Adrian Andreescu,594,66,0.0,-11.0,ROU,24,atp_rankings_2026_08_31.csv
 2026-08-31,211901,Yanis Ghazouani Durand,595,66,0.0,-11.0,FRA,26,atp_rankings_2026_08_31.csv
 2026-08-31,209510,Nino Ehrenschneider,596,66,0.0,-11.0,GER,25,atp_rankings_2026_08_31.csv
@@ -610,23 +610,23 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,210250,Erik Arutiunian,609,62,0.0,-5.0,BLR,21,atp_rankings_2026_08_31.csv
 2026-08-31,105944,Juan Sebastian Gomez,610,62,0.0,-5.0,COL,34,atp_rankings_2026_08_31.csv
 2026-08-31,214018,Jamie Mackenzie,611,62,0.0,-5.0,GER,,atp_rankings_2026_08_31.csv
-2026-08-31,,Mukund Sasikumar,612,62,0.0,-5.0,,,atp_rankings_2026_08_31.csv
-2026-08-31,,Fryderyk Lechno-Wasiutynski,613,61,0.0,-4.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,124154,Sasi Kumar Mukund,612,62,0.0,-5.0,IND,29,atp_rankings_2026_08_31.csv
+2026-08-31,212248,Fryderyk Lechno Wasiutynski,613,61,0.0,-4.0,POL,21,atp_rankings_2026_08_31.csv
 2026-08-31,209931,Lukas Pokorny,614,61,0.0,-4.0,SVK,24,atp_rankings_2026_08_31.csv
 2026-08-31,210025,Branko Djuric,615,61,0.0,-4.0,SRB,21,atp_rankings_2026_08_31.csv
-2026-08-31,,Kuan-Yi Lee,616,61,0.0,-4.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,134120,Kuan Yi Lee,616,61,0.0,-4.0,TPE,29,atp_rankings_2026_08_31.csv
 2026-08-31,133794,S D Prajwal Dev,617,60,0.0,-3.0,IND,30,atp_rankings_2026_08_31.csv
 2026-08-31,207535,Marlon Vankan,618,60,4.0,16.0,GER,26,atp_rankings_2026_08_31.csv
 2026-08-31,212788,Amir Omarkhanov,619,60,0.0,-4.0,KAZ,18,atp_rankings_2026_08_31.csv
 2026-08-31,202297,Dan Martin,620,60,2.0,4.0,CAN,27,atp_rankings_2026_08_31.csv
 2026-08-31,208168,Nicolas Tepmahc,621,60,0.0,-5.0,FRA,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Cedrik-Marcel Stebe,622,59,0.0,-5.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,105649,Cedrik Marcel Stebe,622,59,0.0,-5.0,GER,35,atp_rankings_2026_08_31.csv
 2026-08-31,211651,Alexander Vasilev,623,59,0.0,-5.0,BUL,19,atp_rankings_2026_08_31.csv
 2026-08-31,200214,Alan Fernando Rubio Fierros,624,59,0.0,-5.0,MEX,27,atp_rankings_2026_08_31.csv
 2026-08-31,212244,Gabriel Ghetu,625,59,0.0,-5.0,ROU,18,atp_rankings_2026_08_31.csv
 2026-08-31,210629,Alejandro Juan Mano,626,59,7.0,31.0,ESP,21,atp_rankings_2026_08_31.csv
 2026-08-31,210029,Bruno Kuzuhara,627,59,1.0,-2.0,USA,22,atp_rankings_2026_08_31.csv
-2026-08-31,,Tsung-Hao Huang,628,58,1.0,2.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,202356,Tsung Hao Huang,628,58,1.0,2.0,TPE,26,atp_rankings_2026_08_31.csv
 2026-08-31,209191,Oleksandr Ovcharenko,629,58,0.0,-6.0,UKR,24,atp_rankings_2026_08_31.csv
 2026-08-31,209251,Stefan Popovic,630,58,0.0,-4.0,SRB,23,atp_rankings_2026_08_31.csv
 2026-08-31,133820,Ignacio Monzon,631,58,1.0,1.0,ARG,28,atp_rankings_2026_08_31.csv
@@ -658,7 +658,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,144985,Ergi Kirkin,657,53,1.0,3.0,TUR,27,atp_rankings_2026_08_31.csv
 2026-08-31,208532,Thiago Cigarran,658,53,0.0,-5.0,ARG,26,atp_rankings_2026_08_31.csv
 2026-08-31,210488,Roger Pascual Ferra,659,52,0.0,-4.0,ESP,20,atp_rankings_2026_08_31.csv
-2026-08-31,,Guto Miguel,660,52,22.0,190.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,213036,Luis Guto Miguel,660,52,22.0,190.0,BRA,17,atp_rankings_2026_08_31.csv
 2026-08-31,209907,Viacheslav Bielinskyi,661,52,0.0,-5.0,UKR,22,atp_rankings_2026_08_31.csv
 2026-08-31,210447,Leo Raquillet,662,52,0.0,-3.0,FRA,20,atp_rankings_2026_08_31.csv
 2026-08-31,200665,Yuta Kawahashi,663,52,0.0,-2.0,JPN,28,atp_rankings_2026_08_31.csv
@@ -684,7 +684,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,202342,Ryan Seggerman,683,49,0.0,-10.0,USA,27,atp_rankings_2026_08_31.csv
 2026-08-31,207884,Arthur Bouquier,684,49,0.0,-10.0,FRA,25,atp_rankings_2026_08_31.csv
 2026-08-31,105806,Mirza Basic,685,49,0.0,-10.0,BIH,35,atp_rankings_2026_08_31.csv
-2026-08-31,,Arklon Huertas Del Pino Cordova,686,49,2.0,9.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207736,Arklon Huertas Del Pino,686,49,2.0,9.0,PER,32,atp_rankings_2026_08_31.csv
 2026-08-31,209385,Samuel Vincent Ruggeri,687,49,0.0,-9.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,210093,Sander Jong,688,49,0.0,-8.0,NED,26,atp_rankings_2026_08_31.csv
 2026-08-31,207456,Dong Ju Kim,689,49,0.0,-10.0,KOR,24,atp_rankings_2026_08_31.csv
@@ -711,7 +711,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,127760,Lukas Klein,710,46,0.0,-7.0,SVK,28,atp_rankings_2026_08_31.csv
 2026-08-31,207809,Khololwam Montsi,711,46,0.0,-7.0,RSA,23,atp_rankings_2026_08_31.csv
 2026-08-31,126573,Thomas Fancutt,712,46,10.0,78.0,AUS,31,atp_rankings_2026_08_31.csv
-2026-08-31,,Daniel Salazar,713,46,0.0,-6.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,202369,Daniel Salazar Martinez,713,46,0.0,-6.0,COL,25,atp_rankings_2026_08_31.csv
 2026-08-31,202398,Michael Vrbensky,714,45,0.0,-6.0,CZE,26,atp_rankings_2026_08_31.csv
 2026-08-31,210142,Olaf Pieczkowski,715,45,0.0,-6.0,POL,22,atp_rankings_2026_08_31.csv
 2026-08-31,211394,Patrick Brady,716,45,7.0,53.0,GBR,21,atp_rankings_2026_08_31.csv
@@ -719,7 +719,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208411,Daniel Antonio Nunez,718,45,0.0,-7.0,CHI,25,atp_rankings_2026_08_31.csv
 2026-08-31,208382,Herman Hoeyeraal,719,45,1.0,-3.0,NOR,24,atp_rankings_2026_08_31.csv
 2026-08-31,200176,Manish Sureshkumar,720,45,0.0,-8.0,IND,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Ignacio Parisca Romera,721,45,3.0,16.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,212306,Ignacio Parisca,721,45,3.0,16.0,VEN,21,atp_rankings_2026_08_31.csv
 2026-08-31,105868,Wilson Leite,722,45,0.0,-9.0,BRA,34,atp_rankings_2026_08_31.csv
 2026-08-31,121264,Oscar Jose Gutierrez,723,45,1.0,-3.0,BRA,33,atp_rankings_2026_08_31.csv
 2026-08-31,213062,Nikolai Barsukov,724,45,0.0,-10.0,GER,,atp_rankings_2026_08_31.csv
@@ -778,6 +778,8 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212455,Lucas Andrade Da Silva,777,38,0.0,-9.0,BRA,21,atp_rankings_2026_08_31.csv
 2026-08-31,210686,Michael Agwi,778,38,8.0,74.0,IRL,22,atp_rankings_2026_08_31.csv
 2026-08-31,208078,Tomas Farjat,779,38,0.0,-9.0,ARG,25,atp_rankings_2026_08_31.csv
+2026-08-31,210063,Matyas Cerny,780,38,0.0,-9.0,CZE,24,atp_rankings_2026_08_31.csv
+2026-08-31,211524,Abel Forger,780,38,0.0,-9.0,NED,21,atp_rankings_2026_08_31.csv
 2026-08-31,111788,Naoki Nakagawa,782,38,0.0,-9.0,JPN,29,atp_rankings_2026_08_31.csv
 2026-08-31,210328,Matt Ponchet,783,38,0.0,-9.0,FRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,210236,Attila Boros,784,38,0.0,-8.0,HUN,22,atp_rankings_2026_08_31.csv
@@ -787,13 +789,13 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,200325,Emil Ruusuvuori,788,37,0.0,-7.0,FIN,27,atp_rankings_2026_08_31.csv
 2026-08-31,211543,Lorenzo Sciahbasi,789,37,0.0,-7.0,ITA,20,atp_rankings_2026_08_31.csv
 2026-08-31,134794,Alexis Gautier,790,37,1.0,-2.0,FRA,29,atp_rankings_2026_08_31.csv
-2026-08-31,,Dimitris Azoidis,791,37,0.0,-6.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,206782,Demetris Azoides,791,37,0.0,-6.0,GRE,25,atp_rankings_2026_08_31.csv
 2026-08-31,208302,Nikola Slavic,792,37,0.0,-5.0,SWE,25,atp_rankings_2026_08_31.csv
 2026-08-31,209337,Luca Castagnola,793,37,3.0,21.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,200273,Hady Habib,794,36,0.0,-5.0,LIB,28,atp_rankings_2026_08_31.csv
-2026-08-31,,Yannick Theodor Alexandrescou,795,36,0.0,-4.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214589,Yannick Theodor Alexandrescou,795,36,0.0,-4.0,FRA,18,atp_rankings_2026_08_31.csv
 2026-08-31,206921,Scott Jones,796,36,0.0,-4.0,AUS,28,atp_rankings_2026_08_31.csv
-2026-08-31,,Stefano D'Agostino,797,36,0.0,-4.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,208806,Stefano Dagostino,797,36,0.0,-4.0,ITA,22,atp_rankings_2026_08_31.csv
 2026-08-31,211649,Fernando Cavallo,798,36,0.0,-4.0,ARG,20,atp_rankings_2026_08_31.csv
 2026-08-31,210577,Alejandro Turriziani Alvarez,799,36,0.0,-4.0,ESP,23,atp_rankings_2026_08_31.csv
 2026-08-31,210099,Dinko Dinev,800,36,0.0,-4.0,BUL,22,atp_rankings_2026_08_31.csv
@@ -828,12 +830,12 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,206216,Tom Zeuch,829,33,2.0,19.0,GER,26,atp_rankings_2026_08_31.csv
 2026-08-31,208277,Taiyo Yamanaka,830,33,0.0,-8.0,JPN,24,atp_rankings_2026_08_31.csv
 2026-08-31,210145,John Sperle,831,33,0.0,-11.0,GER,24,atp_rankings_2026_08_31.csv
-2026-08-31,211719,Carles Cordoba,832,33,0.0,-11.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,213059,Carles Cordoba,832,33,0.0,-11.0,ESP,20,atp_rankings_2026_08_31.csv
 2026-08-31,208094,Jorge Plans,833,33,0.0,-10.0,ESP,24,atp_rankings_2026_08_31.csv
 2026-08-31,105554,Daniel Evans,834,32,0.0,-10.0,GBR,36,atp_rankings_2026_08_31.csv
 2026-08-31,211484,Jangjun Kim,835,32,0.0,-10.0,KOR,19,atp_rankings_2026_08_31.csv
 2026-08-31,208044,Etienne Donnet,836,32,0.0,-10.0,FRA,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Johan Alexander Rodriguez,837,32,0.0,-10.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,208909,Johan Alexander Rodriguez Rodriguez,837,32,0.0,-10.0,COL,22,atp_rankings_2026_08_31.csv
 2026-08-31,200457,Jannik Opitz,838,32,0.0,-10.0,GER,28,atp_rankings_2026_08_31.csv
 2026-08-31,126183,Mariano Kestelboim,839,32,0.0,-10.0,ARG,30,atp_rankings_2026_08_31.csv
 2026-08-31,200270,Alex Knaff,840,32,0.0,-10.0,LUX,28,atp_rankings_2026_08_31.csv
@@ -843,9 +845,9 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,209099,Kristijan Juhas,844,32,8.0,93.0,SRB,25,atp_rankings_2026_08_31.csv
 2026-08-31,212221,Tianhui Zhang,845,32,2.0,12.0,CHN,20,atp_rankings_2026_08_31.csv
 2026-08-31,210424,Michel Hopp,846,32,0.0,-10.0,GER,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Denis Klok,847,32,0.0,-12.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,126723,Denys Klok,847,32,0.0,-12.0,RUS,28,atp_rankings_2026_08_31.csv
 2026-08-31,202327,Marko Miladinovic,848,32,0.0,-8.0,SRB,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Nicolas Robert,849,32,0.0,-11.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,213848,Nicholas Roberts,849,32,0.0,-11.0,FRA,20,atp_rankings_2026_08_31.csv
 2026-08-31,202275,Fermin Tenti,850,32,2.0,9.0,ARG,29,atp_rankings_2026_08_31.csv
 2026-08-31,210132,Julio Cesar Porras,851,31,0.0,-10.0,ARG,28,atp_rankings_2026_08_31.csv
 2026-08-31,207803,Igor Gimenez,852,31,0.0,-10.0,BRA,26,atp_rankings_2026_08_31.csv
@@ -853,6 +855,8 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212115,Hoyoung Roh,854,31,0.0,-10.0,KOR,20,atp_rankings_2026_08_31.csv
 2026-08-31,127087,Dominik Recek,855,31,1.0,-2.0,CZE,31,atp_rankings_2026_08_31.csv
 2026-08-31,208372,Natan Rodrigues,856,31,0.0,-11.0,BRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,132374,Jesse Flores,857,31,0.0,-10.0,CRC,31,atp_rankings_2026_08_31.csv
+2026-08-31,209166,Calvin Mueller,857,31,0.0,-11.0,GER,26,atp_rankings_2026_08_31.csv
 2026-08-31,208401,Giannicola Misasi,859,31,2.0,10.0,ITA,25,atp_rankings_2026_08_31.csv
 2026-08-31,212202,Alvin Nicholas Tudorica,860,30,0.0,-11.0,CAN,24,atp_rankings_2026_08_31.csv
 2026-08-31,212839,Oliver Bonding,861,30,7.0,89.0,GBR,19,atp_rankings_2026_08_31.csv
@@ -901,14 +905,14 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,111568,Michael Zhu,904,27,0.0,-10.0,USA,34,atp_rankings_2026_08_31.csv
 2026-08-31,200330,Tomas Curras Abasolo,905,27,0.0,-10.0,ESP,26,atp_rankings_2026_08_31.csv
 2026-08-31,200441,Grigoriy Lomakin,906,27,0.0,-10.0,KAZ,28,atp_rankings_2026_08_31.csv
-2026-08-31,209917,Benito Sanchez Martinez,907,26,,,GER,24,atp_rankings_2026_08_31.csv
+2026-08-31,209917,Benito Sanchez Martinez,907,26,17.0,337.0,GER,24,atp_rankings_2026_08_31.csv
 2026-08-31,105948,Federico Coria,908,26,0.0,-11.0,ARG,34,atp_rankings_2026_08_31.csv
 2026-08-31,133835,Gijs Brouwer,909,26,0.0,-11.0,NED,30,atp_rankings_2026_08_31.csv
 2026-08-31,105359,Jason Jung,910,26,0.0,-11.0,TPE,37,atp_rankings_2026_08_31.csv
 2026-08-31,212127,Charlie Robertson,911,26,0.0,-11.0,GBR,19,atp_rankings_2026_08_31.csv
 2026-08-31,207343,Hanyi Liu,912,26,0.0,-11.0,CHN,25,atp_rankings_2026_08_31.csv
 2026-08-31,200228,Felix Corwin,913,26,0.0,-10.0,USA,30,atp_rankings_2026_08_31.csv
-2026-08-31,,Nikita Belozertsev,914,26,0.0,-10.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214590,Nikita Belozertsev,914,26,0.0,-10.0,UZB,17,atp_rankings_2026_08_31.csv
 2026-08-31,208818,Finn Murgett,915,26,0.0,-7.0,GBR,24,atp_rankings_2026_08_31.csv
 2026-08-31,212030,Kerem Yilmaz,916,26,0.0,-7.0,TUR,19,atp_rankings_2026_08_31.csv
 2026-08-31,110618,Elmar Ejupovic,917,25,0.0,-7.0,GER,33,atp_rankings_2026_08_31.csv
@@ -919,7 +923,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208092,Filippo Moroni,922,25,0.0,-7.0,ITA,25,atp_rankings_2026_08_31.csv
 2026-08-31,125806,Dominik Kellovsky,923,25,0.0,-7.0,CZE,30,atp_rankings_2026_08_31.csv
 2026-08-31,213007,Tristan Stringer,924,25,0.0,-6.0,USA,20,atp_rankings_2026_08_31.csv
-2026-08-31,214126,Matteo Sciahbasi,925,25,,,ITA,19,atp_rankings_2026_08_31.csv
+2026-08-31,214126,Matteo Sciahbasi,925,25,15.0,297.0,ITA,19,atp_rankings_2026_08_31.csv
 2026-08-31,209997,Marcello Serafini,926,25,0.0,-7.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,208039,Ronald Hohmann,927,25,0.0,-7.0,USA,25,atp_rankings_2026_08_31.csv
 2026-08-31,210198,George Lazarov,928,25,0.0,-7.0,BUL,21,atp_rankings_2026_08_31.csv
@@ -934,7 +938,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,210645,Ofek Shimanov,937,24,0.0,-7.0,ISR,21,atp_rankings_2026_08_31.csv
 2026-08-31,110602,Dennis Novak,938,24,0.0,-7.0,AUT,33,atp_rankings_2026_08_31.csv
 2026-08-31,212476,Noritaka Koizumi,939,24,1.0,10.0,JPN,23,atp_rankings_2026_08_31.csv
-2026-08-31,212803,Yun Seong Chung,940,24,4.0,57.0,KOR,,atp_rankings_2026_08_31.csv
+2026-08-31,126283,Yunseong Chung,940,24,4.0,57.0,KOR,28,atp_rankings_2026_08_31.csv
 2026-08-31,208320,Christopher Li,941,24,0.0,-9.0,PER,23,atp_rankings_2026_08_31.csv
 2026-08-31,104729,Ivan Nedelko,942,24,0.0,-9.0,RUS,40,atp_rankings_2026_08_31.csv
 2026-08-31,104932,Kenny De Schepper,943,24,0.0,-9.0,FRA,39,atp_rankings_2026_08_31.csv
@@ -986,7 +990,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,210727,Taym Al Azmeh,989,21,0.0,-8.0,GER,22,atp_rankings_2026_08_31.csv
 2026-08-31,209334,Micah Braswell,990,21,0.0,-8.0,USA,24,atp_rankings_2026_08_31.csv
 2026-08-31,207452,Matthew Thomson,991,21,0.0,-8.0,USA,26,atp_rankings_2026_08_31.csv
-2026-08-31,209234,Axel Garcian,992,21,0.0,-8.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,209247,Axel Garcian,992,21,0.0,-8.0,FRA,24,atp_rankings_2026_08_31.csv
 2026-08-31,212832,Salvador Price,993,21,0.0,-8.0,COL,21,atp_rankings_2026_08_31.csv
 2026-08-31,134490,Justin Roberts,994,21,0.0,-8.0,BAH,29,atp_rankings_2026_08_31.csv
 2026-08-31,212308,Markus Malaszszak,995,21,0.0,-8.0,GER,22,atp_rankings_2026_08_31.csv
@@ -1000,7 +1004,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,200456,Martin Borisiouk,1003,20,0.0,-8.0,BLR,26,atp_rankings_2026_08_31.csv
 2026-08-31,126165,Aoran Wang,1004,20,0.0,-8.0,CHN,29,atp_rankings_2026_08_31.csv
 2026-08-31,213121,Lars Goran Verwerft,1005,20,0.0,-7.0,BEL,23,atp_rankings_2026_08_31.csv
-2026-08-31,,Chanyeong Oh,1006,20,1.0,9.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,126953,Chan Yeong Oh,1006,20,1.0,9.0,KOR,28,atp_rankings_2026_08_31.csv
 2026-08-31,210163,Elgin Khoeblal,1007,20,0.0,-8.0,NED,24,atp_rankings_2026_08_31.csv
 2026-08-31,208055,Ajeet Rai,1008,20,0.0,-8.0,NZL,27,atp_rankings_2026_08_31.csv
 2026-08-31,149272,Tudor Batin,1009,20,2.0,23.0,ROU,19,atp_rankings_2026_08_31.csv
@@ -1026,13 +1030,13 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212589,Luka Talan Lopatic,1029,19,0.0,-8.0,SLO,18,atp_rankings_2026_08_31.csv
 2026-08-31,210684,Niccolo Ciavarella,1030,19,0.0,-8.0,ITA,22,atp_rankings_2026_08_31.csv
 2026-08-31,144937,Nicolas Parizzia,1031,19,0.0,-8.0,SUI,27,atp_rankings_2026_08_31.csv
-2026-08-31,,Younes Lalami,1032,19,0.0,-8.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207794,Younes Lalami Laaroussi,1032,19,0.0,-8.0,MAR,25,atp_rankings_2026_08_31.csv
 2026-08-31,212259,Benjamin Thomas George,1033,19,0.0,-8.0,CAN,23,atp_rankings_2026_08_31.csv
 2026-08-31,208864,Leyton Rivera,1034,19,0.0,-8.0,NOR,24,atp_rankings_2026_08_31.csv
 2026-08-31,213633,Rethin Pranav Senthil Kumar,1035,18,0.0,-8.0,IND,,atp_rankings_2026_08_31.csv
-2026-08-31,214435,Dimitar Kisimov,1036,18,,,BUL,18,atp_rankings_2026_08_31.csv
+2026-08-31,214435,Dimitar Kisimov,1036,18,15.0,586.0,BUL,18,atp_rankings_2026_08_31.csv
 2026-08-31,209280,Devin Badenhorst,1037,18,0.0,-9.0,RSA,22,atp_rankings_2026_08_31.csv
-2026-08-31,210079,Jisung Nam,1038,18,0.0,-9.0,KOR,33,atp_rankings_2026_08_31.csv
+2026-08-31,106227,Ji Sung Nam,1038,18,0.0,-9.0,KOR,33,atp_rankings_2026_08_31.csv
 2026-08-31,213677,Dante Pagani,1039,18,0.0,-9.0,ARG,,atp_rankings_2026_08_31.csv
 2026-08-31,212530,Mikael Arseneault,1040,18,0.0,-9.0,CAN,19,atp_rankings_2026_08_31.csv
 2026-08-31,209128,Diego Augusto Barreto Sanchez,1041,18,0.0,-8.0,ESP,24,atp_rankings_2026_08_31.csv
@@ -1042,8 +1046,8 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,210429,Pietro Romeo Scomparin,1045,18,0.0,-8.0,ITA,25,atp_rankings_2026_08_31.csv
 2026-08-31,212552,Nicolas Ifi,1046,18,0.0,-8.0,BEL,28,atp_rankings_2026_08_31.csv
 2026-08-31,210745,Matthias Ujvary,1047,18,0.0,-8.0,AUT,22,atp_rankings_2026_08_31.csv
-2026-08-31,,Joaquim de Almeida,1048,17,,,,,atp_rankings_2026_08_31.csv
-2026-08-31,213051,Thanaphat Boosarawongse,1049,17,,,THA,20,atp_rankings_2026_08_31.csv
+2026-08-31,212760,Joaquim Almeida,1048,17,0.0,-8.0,BRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213051,Thanaphat Boosarawongse,1049,17,0.0,-9.0,THA,20,atp_rankings_2026_08_31.csv
 2026-08-31,210323,Luis Felipe Miguel,1050,17,0.0,-8.0,BRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,211585,Alex Kuperstein,1051,17,0.0,-8.0,USA,27,atp_rankings_2026_08_31.csv
 2026-08-31,210651,Vlad Cristian Breazu,1052,17,1.0,7.0,ROU,22,atp_rankings_2026_08_31.csv
@@ -1062,13 +1066,13 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208250,Mihai Razvan Marinescu,1065,17,0.0,-11.0,ROU,24,atp_rankings_2026_08_31.csv
 2026-08-31,210409,Pavlos Tsitsipas,1066,17,1.0,8.0,GRE,21,atp_rankings_2026_08_31.csv
 2026-08-31,208186,Preston Brown,1067,17,0.0,-12.0,USA,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Albert Ramos-Vinolas,1068,16,0.0,-12.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,105077,Albert Ramos,1068,16,0.0,-12.0,ESP,38,atp_rankings_2026_08_31.csv
 2026-08-31,209261,Matteo Gigante,1069,16,0.0,-12.0,ITA,24,atp_rankings_2026_08_31.csv
-2026-08-31,,Alexander Rozin,1070,16,0.0,-12.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,212300,Sasha Rozin,1070,16,0.0,-12.0,CAN,21,atp_rankings_2026_08_31.csv
 2026-08-31,210759,Gianluca Brunkow,1071,16,0.0,-11.0,USA,23,atp_rankings_2026_08_31.csv
-2026-08-31,212981,Jonas Gundacker,1072,16,,,AUT,23,atp_rankings_2026_08_31.csv
+2026-08-31,212981,Jonas Gundacker,1072,16,14.0,806.0,AUT,23,atp_rankings_2026_08_31.csv
 2026-08-31,209330,Bautista Vilicich,1073,16,0.0,-12.0,ARG,24,atp_rankings_2026_08_31.csv
-2026-08-31,212075,Rodrigo Fernandes,1074,16,,,POR,19,atp_rankings_2026_08_31.csv
+2026-08-31,212075,Rodrigo Fernandes,1074,16,7.0,178.0,POR,19,atp_rankings_2026_08_31.csv
 2026-08-31,212149,Nikola Djosic,1075,16,0.0,-12.0,SUI,18,atp_rankings_2026_08_31.csv
 2026-08-31,122495,Shintaro Imai,1076,16,0.0,-12.0,JPN,32,atp_rankings_2026_08_31.csv
 2026-08-31,126135,Jumpei Yamasaki,1077,16,0.0,-12.0,JPN,29,atp_rankings_2026_08_31.csv
@@ -1083,6 +1087,8 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,211551,Asahi Harazaki,1086,15,0.0,-10.0,JPN,,atp_rankings_2026_08_31.csv
 2026-08-31,144841,Christian Sigsgaard,1087,15,0.0,-10.0,DEN,29,atp_rankings_2026_08_31.csv
 2026-08-31,202277,Damien Wenger,1088,15,0.0,-10.0,SUI,26,atp_rankings_2026_08_31.csv
+2026-08-31,213771,Dominick Mosejczuk,1089,15,0.0,-10.0,USA,19,atp_rankings_2026_08_31.csv
+2026-08-31,210312,Oliver Ojakaar,1089,15,0.0,-10.0,EST,21,atp_rankings_2026_08_31.csv
 2026-08-31,210504,Billy Blaydes,1091,15,0.0,-10.0,GBR,22,atp_rankings_2026_08_31.csv
 2026-08-31,212847,Alejandro Hayen,1092,15,0.0,-9.0,MEX,28,atp_rankings_2026_08_31.csv
 2026-08-31,213014,Simeon Stankovic,1093,15,0.0,-9.0,SRB,,atp_rankings_2026_08_31.csv
@@ -1107,6 +1113,8 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212852,Kacper Szymkowiak,1112,14,0.0,-9.0,POL,21,atp_rankings_2026_08_31.csv
 2026-08-31,212841,Lucas Marionneau,1113,14,0.0,-9.0,FRA,20,atp_rankings_2026_08_31.csv
 2026-08-31,210254,Adrien Gobat,1114,14,0.0,-9.0,FRA,25,atp_rankings_2026_08_31.csv
+2026-08-31,211761,Valentin Basel,1115,14,0.0,-9.0,ARG,22,atp_rankings_2026_08_31.csv
+2026-08-31,209038,Linang Xiao,1115,14,0.0,-9.0,CHN,26,atp_rankings_2026_08_31.csv
 2026-08-31,214043,Lachlan James Mcfadzean,1117,14,0.0,-9.0,AUS,19,atp_rankings_2026_08_31.csv
 2026-08-31,212889,Daniel Uta,1118,14,0.0,-8.0,ROU,19,atp_rankings_2026_08_31.csv
 2026-08-31,213103,Viktor Frydrych,1119,14,0.0,-7.0,GBR,,atp_rankings_2026_08_31.csv
@@ -1124,27 +1132,31 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,213655,Maximus Dussault,1131,13,0.0,-8.0,USA,,atp_rankings_2026_08_31.csv
 2026-08-31,210117,William Jansen,1132,13,0.0,-8.0,GBR,21,atp_rankings_2026_08_31.csv
 2026-08-31,209064,Suk Hyun Choo,1133,13,0.0,-8.0,KOR,25,atp_rankings_2026_08_31.csv
-2026-08-31,211671,Jerry  Roddick,1134,13,0.0,-8.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,212542,Jerry Roddick,1134,13,0.0,-8.0,USA,24,atp_rankings_2026_08_31.csv
 2026-08-31,212084,Denis Petak,1135,13,0.0,-8.0,CZE,20,atp_rankings_2026_08_31.csv
 2026-08-31,208132,Noah Schachter,1136,13,0.0,-8.0,USA,26,atp_rankings_2026_08_31.csv
 2026-08-31,105671,Gastao Elias,1137,13,0.0,-7.0,POR,35,atp_rankings_2026_08_31.csv
 2026-08-31,213629,Vincent Dullinger,1138,13,0.0,-9.0,GER,,atp_rankings_2026_08_31.csv
 2026-08-31,209314,Jan Kupcic,1139,13,1.0,13.0,SLO,25,atp_rankings_2026_08_31.csv
 2026-08-31,205825,Joao Vitor Goncalves Ceolin,1140,13,0.0,-9.0,BRA,27,atp_rankings_2026_08_31.csv
+2026-08-31,211505,Denis Constantin Spiridon,1141,13,1.0,13.0,ITA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213138,Alexander Wagner,1141,13,2.0,46.0,AUT,19,atp_rankings_2026_08_31.csv
 2026-08-31,213043,Hiromasa Koyama,1143,13,1.0,13.0,JPN,18,atp_rankings_2026_08_31.csv
 2026-08-31,209171,Thantub Suksumrarn,1144,13,0.0,-12.0,THA,25,atp_rankings_2026_08_31.csv
 2026-08-31,213717,Sebastiano Cocola,1145,13,0.0,-12.0,ITA,,atp_rankings_2026_08_31.csv
 2026-08-31,200024,Makoto Ochi,1146,13,0.0,-11.0,JPN,30,atp_rankings_2026_08_31.csv
 2026-08-31,111197,Jonathan Mridha,1147,13,2.0,42.0,SWE,31,atp_rankings_2026_08_31.csv
 2026-08-31,210532,Giacomo Crisostomo,1148,13,0.0,-14.0,ITA,23,atp_rankings_2026_08_31.csv
-2026-08-31,211676,Saveliy Ivanov,1149,13,,,RUS,21,atp_rankings_2026_08_31.csv
-2026-08-31,211904,Maximilian Figl,1150,13,,,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,211676,Saveliy Ivanov,1149,13,0.0,-11.0,RUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,211904,Maximilian Figl,1150,13,0.0,-12.0,ITA,22,atp_rankings_2026_08_31.csv
 2026-08-31,210038,Matias Ponce De Leon Gomila,1151,12,0.0,-10.0,ESP,23,atp_rankings_2026_08_31.csv
 2026-08-31,213130,Mark Ceban,1152,12,0.0,-12.0,GBR,,atp_rankings_2026_08_31.csv
-2026-08-31,,Nikita Samuel Filin,1153,12,0.0,-11.0,,,atp_rankings_2026_08_31.csv
-2026-08-31,213078,Hugo Car,1154,12,0.0,-11.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,212570,Nikita Filin,1153,12,0.0,-11.0,USA,20,atp_rankings_2026_08_31.csv
+2026-08-31,213098,Hugo Car,1154,12,0.0,-11.0,FRA,23,atp_rankings_2026_08_31.csv
 2026-08-31,200487,Jordan Hasson,1155,12,0.0,-11.0,ISR,26,atp_rankings_2026_08_31.csv
 2026-08-31,213802,Mustafa Ege Sik,1156,12,0.0,-11.0,TUR,16,atp_rankings_2026_08_31.csv
+2026-08-31,208467,Alexander Kotzen,1157,12,0.0,-11.0,USA,26,atp_rankings_2026_08_31.csv
+2026-08-31,210002,Rohan Mehra,1157,12,0.0,-11.0,IND,24,atp_rankings_2026_08_31.csv
 2026-08-31,206600,Zura Tkemaladze,1159,12,0.0,-11.0,GEO,26,atp_rankings_2026_08_31.csv
 2026-08-31,214206,Thiago Agustin Pernas,1160,12,0.0,-11.0,ARG,25,atp_rankings_2026_08_31.csv
 2026-08-31,214123,Elijah Sanogo,1161,12,0.0,-10.0,FRA,18,atp_rankings_2026_08_31.csv
@@ -1152,12 +1164,18 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,138104,Stefan Cooper,1163,12,0.0,-10.0,GBR,30,atp_rankings_2026_08_31.csv
 2026-08-31,212892,Vlado Jankanj,1164,12,0.0,-9.0,SRB,,atp_rankings_2026_08_31.csv
 2026-08-31,211317,Chen Dong,1165,12,0.0,-8.0,AUS,23,atp_rankings_2026_08_31.csv
+2026-08-31,134276,Jacob Brumm,1166,12,0.0,-8.0,USA,27,atp_rankings_2026_08_31.csv
+2026-08-31,211388,Felipe De Dios,1166,12,1.0,20.0,ARG,23,atp_rankings_2026_08_31.csv
+2026-08-31,212934,Antoni Fabre,1166,12,0.0,-8.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,212134,Maxence Rivet,1166,12,0.0,-8.0,FRA,22,atp_rankings_2026_08_31.csv
 2026-08-31,213591,Billy Suarez,1170,12,0.0,-9.0,USA,,atp_rankings_2026_08_31.csv
 2026-08-31,209956,Dev Javia,1171,12,0.0,-9.0,IND,24,atp_rankings_2026_08_31.csv
+2026-08-31,213701,Tobia Costanzo Baragiola Mordini,1172,12,0.0,-9.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,212762,Victor Hugo Remondy Pagotto,1172,12,0.0,-8.0,BRA,21,atp_rankings_2026_08_31.csv
 2026-08-31,212639,Yuto Oki,1174,12,0.0,-9.0,JPN,,atp_rankings_2026_08_31.csv
 2026-08-31,211532,Nicolo Toffanin,1175,12,1.0,20.0,ITA,23,atp_rankings_2026_08_31.csv
 2026-08-31,111505,Enzo Couacaud,1176,11,0.0,-10.0,FRA,31,atp_rankings_2026_08_31.csv
-2026-08-31,,Vincent Jakob Reisach,1177,11,0.0,-10.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214210,Vincent Reisach,1177,11,0.0,-10.0,GER,17,atp_rankings_2026_08_31.csv
 2026-08-31,105156,Federico Zeballos,1178,11,0.0,-10.0,BOL,38,atp_rankings_2026_08_31.csv
 2026-08-31,202418,Stijn Slump,1179,11,0.0,-10.0,NED,27,atp_rankings_2026_08_31.csv
 2026-08-31,210115,Yunseok Jang,1180,11,0.0,-10.0,KOR,23,atp_rankings_2026_08_31.csv
@@ -1176,9 +1194,9 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,210092,Filiberto Fumagalli,1193,11,0.0,-11.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,136648,Jefferson Wendler Filho,1194,11,0.0,-11.0,BRA,30,atp_rankings_2026_08_31.csv
 2026-08-31,144744,Kazuki Nishiwaki,1195,11,0.0,-11.0,JPN,31,atp_rankings_2026_08_31.csv
-2026-08-31,,Thando Longwe-Smit,1196,11,0.0,-11.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,207927,Thando Longwe Smit,1196,11,0.0,-11.0,RSA,25,atp_rankings_2026_08_31.csv
 2026-08-31,213648,Udit Kamboj,1197,11,0.0,-9.0,IND,,atp_rankings_2026_08_31.csv
-2026-08-31,,Seongwoo Cho,1198,11,0.0,-8.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,212649,Seung Woo Cho,1198,11,0.0,-8.0,KOR,28,atp_rankings_2026_08_31.csv
 2026-08-31,213580,Leonardo Primucci,1199,11,0.0,-8.0,ITA,,atp_rankings_2026_08_31.csv
 2026-08-31,212935,Ferdinand Livet Novkirichka,1200,11,0.0,-8.0,FRA,,atp_rankings_2026_08_31.csv
 2026-08-31,210047,Lorenzo Lorusso,1201,11,0.0,-8.0,ITA,26,atp_rankings_2026_08_31.csv
@@ -1196,11 +1214,13 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,149115,Adam Jilly,1213,10,0.0,-7.0,HUN,19,atp_rankings_2026_08_31.csv
 2026-08-31,210098,Victor Lilov,1214,10,0.0,-7.0,USA,22,atp_rankings_2026_08_31.csv
 2026-08-31,210170,Noah Schlagenhauf,1215,10,1.0,32.0,GER,23,atp_rankings_2026_08_31.csv
+2026-08-31,212820,Martin Sabas,1216,10,0.0,-8.0,FRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,209959,Woobin Shin,1216,10,0.0,-8.0,KOR,22,atp_rankings_2026_08_31.csv
 2026-08-31,210697,Harold Huens,1218,10,0.0,-8.0,BEL,24,atp_rankings_2026_08_31.csv
 2026-08-31,210114,Julien Penzlin,1219,10,0.0,-8.0,GER,24,atp_rankings_2026_08_31.csv
 2026-08-31,212738,Manel Lazaro Juncadella,1220,10,0.0,-8.0,ESP,20,atp_rankings_2026_08_31.csv
-2026-08-31,213064,Samuele Seghetti,1221,10,,,ITA,20,atp_rankings_2026_08_31.csv
-2026-08-31,212860,Dakotah Bobo,1222,10,,,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,213064,Samuele Seghetti,1221,10,7.0,457.0,ITA,20,atp_rankings_2026_08_31.csv
+2026-08-31,212860,Dakotah Bobo,1222,10,4.0,186.0,USA,23,atp_rankings_2026_08_31.csv
 2026-08-31,210722,Viktor Markov,1223,10,0.0,-10.0,BUL,21,atp_rankings_2026_08_31.csv
 2026-08-31,149142,Tanguy Genier,1224,10,0.0,-10.0,SUI,28,atp_rankings_2026_08_31.csv
 2026-08-31,212683,Theo Herrmann,1225,10,0.0,-10.0,FRA,21,atp_rankings_2026_08_31.csv
@@ -1208,6 +1228,8 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,210595,Jiri Cizek,1227,10,0.0,-9.0,CZE,21,atp_rankings_2026_08_31.csv
 2026-08-31,212499,Vardan Manukyan,1228,10,0.0,-12.0,RUS,21,atp_rankings_2026_08_31.csv
 2026-08-31,213889,Arjun Rathi,1229,10,0.0,-10.0,IND,,atp_rankings_2026_08_31.csv
+2026-08-31,214341,Oscar Brown,1230,10,0.0,-10.0,GBR,24,atp_rankings_2026_08_31.csv
+2026-08-31,213151,Flynn Thomas,1230,10,0.0,-8.0,SUI,,atp_rankings_2026_08_31.csv
 2026-08-31,212289,Tom Sickenberger,1232,10,0.0,-8.0,GER,,atp_rankings_2026_08_31.csv
 2026-08-31,210667,Edoardo Cherie Ligniere,1233,10,0.0,-12.0,ITA,22,atp_rankings_2026_08_31.csv
 2026-08-31,210605,Liam Branger,1234,10,0.0,-9.0,FRA,25,atp_rankings_2026_08_31.csv
@@ -1220,51 +1242,82 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212106,Noah Lopez Cherubino,1241,10,0.0,-9.0,ESP,,atp_rankings_2026_08_31.csv
 2026-08-31,210535,Maxim Shin,1242,10,0.0,-9.0,UZB,23,atp_rankings_2026_08_31.csv
 2026-08-31,106132,Toby Martin,1243,10,0.0,-9.0,GBR,33,atp_rankings_2026_08_31.csv
-2026-08-31,212547,Timeo Trufelli,1244,10,0.0,-9.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,212770,Timeo Trufelli,1244,10,0.0,-9.0,FRA,18,atp_rankings_2026_08_31.csv
 2026-08-31,202334,Jesse Delaney,1245,10,0.0,-9.0,AUS,27,atp_rankings_2026_08_31.csv
 2026-08-31,210754,Jan Hrazdil,1246,10,1.0,27.0,CZE,21,atp_rankings_2026_08_31.csv
 2026-08-31,200234,Joshua Peck,1247,10,0.0,-10.0,CAN,27,atp_rankings_2026_08_31.csv
+2026-08-31,214591,Thilo Behrmann,1248,9,8.0,664.0,AUT,18,atp_rankings_2026_08_31.csv
+2026-08-31,111569,Gage Brymer,1248,9,0.0,-10.0,USA,31,atp_rankings_2026_08_31.csv
+2026-08-31,212575,Amirkhamza Nasridinov,1248,9,0.0,-10.0,RUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,213672,Erik Schiessl,1248,9,0.0,-10.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,106167,Joris De Loore,1252,9,0.0,-11.0,BEL,33,atp_rankings_2026_08_31.csv
+2026-08-31,208370,Keenan Mayo,1252,9,0.0,-11.0,USA,26,atp_rankings_2026_08_31.csv
 2026-08-31,213119,Landon Ardila,1254,9,0.0,-11.0,USA,,atp_rankings_2026_08_31.csv
-2026-08-31,210526,Niccolo Baroni,1255,9,,,ITA,22,atp_rankings_2026_08_31.csv
-2026-08-31,,Matias Reyniak,1256,9,1.0,30.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,210526,Niccolo Baroni,1255,9,0.0,-11.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,214592,Matias Reyniak,1256,9,1.0,30.0,USA,17,atp_rankings_2026_08_31.csv
 2026-08-31,106348,Evgeny Karlovskiy,1257,9,0.0,-11.0,RUS,32,atp_rankings_2026_08_31.csv
 2026-08-31,213654,Noah Johnston,1258,9,0.0,-10.0,USA,,atp_rankings_2026_08_31.csv
-2026-08-31,149266,Fadi Bidan,1261,9,,,LBN,20,atp_rankings_2026_08_31.csv
+2026-08-31,210728,Youssef Kadiri Hassani,1259,9,0.0,-10.0,MAR,22,atp_rankings_2026_08_31.csv
+2026-08-31,134405,Koray Kirci,1259,9,0.0,-10.0,TUR,28,atp_rankings_2026_08_31.csv
+2026-08-31,149266,Fadi Bidan,1261,9,0.0,-9.0,LBN,20,atp_rankings_2026_08_31.csv
 2026-08-31,212769,Leo Lagarrigue,1262,9,0.0,-8.0,FRA,20,atp_rankings_2026_08_31.csv
 2026-08-31,211670,Marko Mesarovic,1263,9,0.0,-8.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,212250,James Connel,1264,9,0.0,-8.0,GBR,23,atp_rankings_2026_08_31.csv
+2026-08-31,213092,Jonas Kucera,1264,9,0.0,-8.0,CZE,19,atp_rankings_2026_08_31.csv
+2026-08-31,133014,Enzo Wallart,1264,9,0.0,-8.0,FRA,29,atp_rankings_2026_08_31.csv
 2026-08-31,109694,Pedro Araujo,1267,9,0.0,-8.0,POR,24,atp_rankings_2026_08_31.csv
 2026-08-31,149134,Matei Florin Breazu,1268,9,0.0,-8.0,ROU,18,atp_rankings_2026_08_31.csv
 2026-08-31,200036,Abhinav Sanjeev Shanmugam,1269,9,0.0,-8.0,IND,27,atp_rankings_2026_08_31.csv
 2026-08-31,213766,Enrique Carrascosa Diaz,1270,9,0.0,-8.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,209516,Valentin Lapalu,1271,9,0.0,-7.0,FRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213829,Mac Visser,1271,9,0.0,-8.0,NED,21,atp_rankings_2026_08_31.csv
 2026-08-31,208835,Rafael Giotis,1273,9,2.0,99.0,GER,25,atp_rankings_2026_08_31.csv
 2026-08-31,212536,James Beaven,1274,9,0.0,-8.0,GBR,21,atp_rankings_2026_08_31.csv
 2026-08-31,211516,Lorenzo Beraldo,1275,9,0.0,-10.0,ITA,19,atp_rankings_2026_08_31.csv
 2026-08-31,212606,Leonardo Borrelli,1276,9,0.0,-9.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,207864,Noel Larwig,1277,9,1.0,41.0,GER,24,atp_rankings_2026_08_31.csv
+2026-08-31,212871,Piet Luis Pinter,1277,9,0.0,-9.0,AUT,21,atp_rankings_2026_08_31.csv
+2026-08-31,210003,Chirag Duhan,1279,9,0.0,-10.0,IND,22,atp_rankings_2026_08_31.csv
+2026-08-31,213131,Luke Hooper,1279,9,0.0,-10.0,GBR,,atp_rankings_2026_08_31.csv
 2026-08-31,211662,Gabriel Schenekenberg,1281,9,0.0,-10.0,BRA,21,atp_rankings_2026_08_31.csv
-2026-08-31,,Duckhee Lee,1282,9,0.0,-10.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,117353,Duck Hee Lee,1282,9,0.0,-10.0,KOR,28,atp_rankings_2026_08_31.csv
 2026-08-31,144672,Duarte Vale,1283,8,0.0,-9.0,POR,27,atp_rankings_2026_08_31.csv
+2026-08-31,106214,Oscar Otte,1284,8,0.0,-9.0,GER,33,atp_rankings_2026_08_31.csv
+2026-08-31,210565,Elijah Strode,1284,8,0.0,-9.0,USA,24,atp_rankings_2026_08_31.csv
 2026-08-31,211588,Niksa Arsic,1286,8,0.0,-9.0,SRB,,atp_rankings_2026_08_31.csv
-2026-08-31,,Zack Viiala,1287,8,0.0,-9.0,,,atp_rankings_2026_08_31.csv
-2026-08-31,,Julian Alonso Jr,1292,8,0.0,-9.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,210437,Zack Vialla,1287,8,0.0,-9.0,AUS,20,atp_rankings_2026_08_31.csv
+2026-08-31,106262,Boris Arias,1288,8,0.0,-9.0,BOL,32,atp_rankings_2026_08_31.csv
+2026-08-31,210746,Paul Barbier Gazeu,1288,8,0.0,-9.0,FRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,210422,Roan Jones,1288,8,0.0,-9.0,GBR,22,atp_rankings_2026_08_31.csv
+2026-08-31,208871,Takeru Yuzuki,1288,8,0.0,-9.0,JPN,27,atp_rankings_2026_08_31.csv
+2026-08-31,211655,Julian  Alonso,1292,8,0.0,-9.0,ESP,21,atp_rankings_2026_08_31.csv
 2026-08-31,214433,Tanishk Konduri,1293,8,0.0,-9.0,USA,17,atp_rankings_2026_08_31.csv
 2026-08-31,210229,Aleksa Pisaric,1294,8,0.0,-9.0,SRB,20,atp_rankings_2026_08_31.csv
 2026-08-31,209041,Bozo Barun,1295,8,0.0,-8.0,CRO,25,atp_rankings_2026_08_31.csv
 2026-08-31,144081,Alex Chang,1296,8,0.0,-8.0,USA,40,atp_rankings_2026_08_31.csv
 2026-08-31,212894,Patrik Munkhammar,1297,8,0.0,-8.0,SWE,19,atp_rankings_2026_08_31.csv
 2026-08-31,212203,Luca Preda,1298,8,0.0,-8.0,ROU,20,atp_rankings_2026_08_31.csv
-2026-08-31,,Toby Kodat,1299,8,0.0,-8.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,208931,Toby Alex Kodat,1299,8,0.0,-8.0,USA,23,atp_rankings_2026_08_31.csv
 2026-08-31,105590,Uladzimir Ignatik,1300,8,0.0,-8.0,BLR,36,atp_rankings_2026_08_31.csv
 2026-08-31,109946,Pedro Rodrigues,1301,8,0.0,-8.0,BRA,20,atp_rankings_2026_08_31.csv
 2026-08-31,213836,Gavin Goode,1302,8,0.0,-8.0,USA,,atp_rankings_2026_08_31.csv
 2026-08-31,109734,Skander Mansouri,1303,8,0.0,-8.0,TUN,31,atp_rankings_2026_08_31.csv
+2026-08-31,212604,Diego Jarry Fillol,1304,8,0.0,-8.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,213738,Jack Satterfield,1304,8,0.0,-8.0,USA,,atp_rankings_2026_08_31.csv
 2026-08-31,210153,David Fix,1306,8,1.0,35.0,GER,21,atp_rankings_2026_08_31.csv
 2026-08-31,110751,Sebastian Fanselow,1307,8,0.0,-9.0,GER,34,atp_rankings_2026_08_31.csv
+2026-08-31,117352,Oliver Anderson,1308,8,0.0,-9.0,AUS,28,atp_rankings_2026_08_31.csv
+2026-08-31,212854,Felipe Virgili Berini,1308,8,1.0,34.0,ITA,21,atp_rankings_2026_08_31.csv
 2026-08-31,213992,Lev Seidman,1310,8,0.0,-10.0,USA,18,atp_rankings_2026_08_31.csv
+2026-08-31,213557,Alessandro Battiston,1311,8,1.0,35.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,211574,Ethan Cook,1311,8,0.0,-10.0,AUS,23,atp_rankings_2026_08_31.csv
 2026-08-31,144788,Louis Tessa,1313,8,0.0,-11.0,FRA,28,atp_rankings_2026_08_31.csv
-2026-08-31,212937,Achilles Belkovics,1314,8,,,HUN,,atp_rankings_2026_08_31.csv
+2026-08-31,212937,Achilles Belkovics,1314,8,2.0,90.0,HUN,,atp_rankings_2026_08_31.csv
 2026-08-31,213060,Adam Lynch,1315,8,0.0,-12.0,USA,,atp_rankings_2026_08_31.csv
 2026-08-31,213818,William Mirarchi,1316,8,0.0,-12.0,ITA,20,atp_rankings_2026_08_31.csv
 2026-08-31,210458,Bernardo Munk Mesa,1317,8,1.0,34.0,ESP,20,atp_rankings_2026_08_31.csv
+2026-08-31,210055,Noah Lopez,1318,8,0.0,-13.0,SUI,24,atp_rankings_2026_08_31.csv
+2026-08-31,133291,Ryota Tanuma,1318,8,0.0,-13.0,JPN,30,atp_rankings_2026_08_31.csv
 2026-08-31,207183,Ishaque Eqbal,1320,8,0.0,-13.0,IND,28,atp_rankings_2026_08_31.csv
 2026-08-31,210032,Pierre Antoine Tailleu,1321,8,1.0,36.0,FRA,23,atp_rankings_2026_08_31.csv
 2026-08-31,210183,Marcel Kamrowski,1322,8,0.0,-14.0,POL,23,atp_rankings_2026_08_31.csv
@@ -1273,7 +1326,11 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,211601,Alvaro Peiro Serrano,1325,8,1.0,37.0,ESP,22,atp_rankings_2026_08_31.csv
 2026-08-31,202081,Diogo Marques,1326,8,0.0,-16.0,POR,27,atp_rankings_2026_08_31.csv
 2026-08-31,213916,Ashton Mcleod,1327,8,0.0,-16.0,AUS,19,atp_rankings_2026_08_31.csv
+2026-08-31,208866,Leonid Sheyngezikht,1328,8,0.0,-16.0,BUL,25,atp_rankings_2026_08_31.csv
+2026-08-31,212498,Benoit Torcq,1328,8,1.0,41.0,BEL,21,atp_rankings_2026_08_31.csv
 2026-08-31,208892,Mohamed Ali Abibsi,1330,8,0.0,-17.0,ALG,24,atp_rankings_2026_08_31.csv
+2026-08-31,211480,Aleksander Chayka,1331,8,0.0,-17.0,RUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,213026,Amine Jamji,1331,8,0.0,-17.0,MAR,,atp_rankings_2026_08_31.csv
 2026-08-31,212263,Xing Dao Chen,1333,8,0.0,-17.0,CHN,22,atp_rankings_2026_08_31.csv
 2026-08-31,211407,Andrea Bacaloni,1334,8,0.0,-17.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,213198,Kacper Knitter,1335,8,1.0,42.0,POL,19,atp_rankings_2026_08_31.csv
@@ -1281,30 +1338,69 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,208185,Michael Gloeckler,1337,8,0.0,-17.0,AUT,27,atp_rankings_2026_08_31.csv
 2026-08-31,209118,Niklas Waldner,1338,8,0.0,-17.0,AUT,24,atp_rankings_2026_08_31.csv
 2026-08-31,210376,Max  Sheldon,1339,7,0.0,-17.0,USA,23,atp_rankings_2026_08_31.csv
-2026-08-31,210293,Lambert Ruland,1340,7,,,GER,23,atp_rankings_2026_08_31.csv
+2026-08-31,210293,Lambert Ruland,1340,7,0.0,-17.0,GER,23,atp_rankings_2026_08_31.csv
 2026-08-31,206573,Trey Hilderbrand,1341,7,0.0,-16.0,USA,26,atp_rankings_2026_08_31.csv
+2026-08-31,213956,Andrej Loncarevic,1342,7,0.0,-16.0,FRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,210475,Preston Stearns,1342,7,0.0,-16.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,106296,Gregoire Barrere,1344,7,0.0,-16.0,FRA,32,atp_rankings_2026_08_31.csv
+2026-08-31,214593,Aren Baybars,1344,7,0.0,-21.0,TUR,18,atp_rankings_2026_08_31.csv
+2026-08-31,213071,Mitchell Sheldon,1344,7,0.0,-16.0,USA,20,atp_rankings_2026_08_31.csv
 2026-08-31,207507,Stefan Latinovic,1347,7,0.0,-17.0,SRB,26,atp_rankings_2026_08_31.csv
+2026-08-31,209910,Szymon Kielan,1348,7,0.0,-17.0,POL,23,atp_rankings_2026_08_31.csv
+2026-08-31,126609,Patrik Niklas Salminen,1348,7,0.0,-17.0,FIN,29,atp_rankings_2026_08_31.csv
 2026-08-31,200030,Facundo Juarez,1350,7,0.0,-17.0,ITA,28,atp_rankings_2026_08_31.csv
-2026-08-31,,Pawel Juszczak,1351,7,,,,,atp_rankings_2026_08_31.csv
+2026-08-31,109318,Pawel Cias,1351,7,4.0,256.0,POL,32,atp_rankings_2026_08_31.csv
+2026-08-31,214087,Jan Sadzik,1352,7,4.0,270.0,POL,18,atp_rankings_2026_08_31.csv
+2026-08-31,211740,Jeremy Zhang,1352,7,0.0,-18.0,AUS,21,atp_rankings_2026_08_31.csv
 2026-08-31,212912,Mathys Domenc,1354,7,0.0,-19.0,FRA,17,atp_rankings_2026_08_31.csv
-2026-08-31,210742,Phillip Jordan,1355,7,,,USA,25,atp_rankings_2026_08_31.csv
+2026-08-31,210742,Phillip Jordan,1355,7,0.0,-19.0,USA,25,atp_rankings_2026_08_31.csv
+2026-08-31,212110,Mathis Bondaz,1356,7,0.0,-17.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,106232,Roberto Cid,1356,7,0.0,-17.0,DOM,33,atp_rankings_2026_08_31.csv
+2026-08-31,213839,Santiago Giamichelle,1358,7,0.0,-22.0,ARG,22,atp_rankings_2026_08_31.csv
+2026-08-31,212276,Stian Klaassen,1358,7,0.0,-22.0,NED,23,atp_rankings_2026_08_31.csv
 2026-08-31,212617,Shu Muto,1360,7,0.0,-17.0,JPN,,atp_rankings_2026_08_31.csv
-2026-08-31,,Jerrid Gaines Jr,1361,7,0.0,-17.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214264,Jerrid Gaines,1361,7,0.0,-17.0,USA,17,atp_rankings_2026_08_31.csv
 2026-08-31,213783,Oswaldo Alejandro Reyes Tirado,1362,7,0.0,-17.0,MEX,19,atp_rankings_2026_08_31.csv
-2026-08-31,207233,Nemanja Malesevic,1363,7,,,BIH,25,atp_rankings_2026_08_31.csv
+2026-08-31,207233,Nemanja Malesevic,1363,7,0.0,-17.0,BIH,25,atp_rankings_2026_08_31.csv
 2026-08-31,104986,Vishnu Vardhan,1364,7,0.0,-16.0,IND,39,atp_rankings_2026_08_31.csv
 2026-08-31,214192,Ymerali Ibraimi,1365,7,0.0,-16.0,AUS,17,atp_rankings_2026_08_31.csv
+2026-08-31,210454,Jesse De Jager,1366,7,1.0,36.0,NED,24,atp_rankings_2026_08_31.csv
+2026-08-31,209999,Leonardo Malgaroli,1366,7,0.0,-16.0,ITA,24,atp_rankings_2026_08_31.csv
 2026-08-31,207772,Yuttana Charoenphon,1368,7,0.0,-16.0,THA,26,atp_rankings_2026_08_31.csv
+2026-08-31,213930,Zangar Nurlanuly,1369,7,0.0,-16.0,KAZ,18,atp_rankings_2026_08_31.csv
+2026-08-31,212726,Sungbeen Sim,1369,7,0.0,-16.0,KOR,29,atp_rankings_2026_08_31.csv
+2026-08-31,210110,Alessandro Bellifemine,1371,7,1.0,37.0,ITA,25,atp_rankings_2026_08_31.csv
+2026-08-31,207367,Bora Sengul,1371,7,0.0,-16.0,TUR,24,atp_rankings_2026_08_31.csv
+2026-08-31,200310,Alexander Zgirovsky,1371,7,0.0,-16.0,BLR,25,atp_rankings_2026_08_31.csv
 2026-08-31,213120,Lorenzo Berto,1374,7,1.0,39.0,ITA,19,atp_rankings_2026_08_31.csv
+2026-08-31,214246,Nikolas Stoot,1375,7,0.0,-17.0,USA,18,atp_rankings_2026_08_31.csv
+2026-08-31,132018,Drew Van Orderlain,1375,7,0.0,-17.0,USA,32,atp_rankings_2026_08_31.csv
 2026-08-31,213600,Dillon Beckles,1377,7,0.0,-17.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,209955,Mikail Alimli,1378,7,0.0,-15.0,FRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,211495,Andrin Casanova,1378,7,0.0,-15.0,SUI,22,atp_rankings_2026_08_31.csv
+2026-08-31,212932,Noah Karma,1378,7,0.0,-15.0,SUI,,atp_rankings_2026_08_31.csv
 2026-08-31,211450,Alessio Basile,1381,7,0.0,-14.0,BEL,22,atp_rankings_2026_08_31.csv
-2026-08-31,133197,Joao Silva,1382,7,,,POR,19,atp_rankings_2026_08_31.csv
+2026-08-31,133197,Joao Silva,1382,7,0.0,-19.0,POR,19,atp_rankings_2026_08_31.csv
+2026-08-31,212624,Nikola Jovic,1383,7,0.0,-15.0,SRB,19,atp_rankings_2026_08_31.csv
+2026-08-31,213882,Gray Voelzke,1383,7,0.0,-13.0,USA,24,atp_rankings_2026_08_31.csv
 2026-08-31,207236,Taketo Takamisawa,1385,7,0.0,-12.0,JPN,28,atp_rankings_2026_08_31.csv
+2026-08-31,213614,Dmitry Bessonov,1386,7,1.0,41.0,RUS,,atp_rankings_2026_08_31.csv
+2026-08-31,213201,Valentino Grippo,1386,7,0.0,-16.0,ARG,,atp_rankings_2026_08_31.csv
 2026-08-31,213800,Ty Host,1388,7,0.0,-13.0,AUS,19,atp_rankings_2026_08_31.csv
 2026-08-31,209973,Edouard Villoslada,1389,7,0.0,-15.0,FRA,26,atp_rankings_2026_08_31.csv
+2026-08-31,211667,Matteo Fondriest,1390,7,0.0,-14.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,149152,Aaron Gil Garcia,1390,7,0.0,-12.0,LUX,22,atp_rankings_2026_08_31.csv
+2026-08-31,213585,Roman Kharlamov,1392,7,0.0,-14.0,RUS,,atp_rankings_2026_08_31.csv
+2026-08-31,144730,Tomohiro Masabayashi,1392,7,0.0,-12.0,JPN,28,atp_rankings_2026_08_31.csv
+2026-08-31,214425,Yannik Alvarez,1394,6,0.0,-13.0,PUR,17,atp_rankings_2026_08_31.csv
+2026-08-31,131951,Daniel Cukierman,1394,6,0.0,-13.0,ISR,31,atp_rankings_2026_08_31.csv
+2026-08-31,106368,Ramkumar Ramanathan,1394,6,0.0,-13.0,IND,31,atp_rankings_2026_08_31.csv
+2026-08-31,144682,Kaito Uesugi,1394,6,0.0,-13.0,JPN,31,atp_rankings_2026_08_31.csv
 2026-08-31,205842,Arthur Reymond,1398,6,0.0,-13.0,FRA,27,atp_rankings_2026_08_31.csv
 2026-08-31,212899,Moritz Kudernatsch,1399,6,0.0,-13.0,GER,21,atp_rankings_2026_08_31.csv
-2026-08-31,211630,Jan Simonsson,1400,6,,,SWE,23,atp_rankings_2026_08_31.csv
+2026-08-31,211630,Jan Simonsson,1400,6,4.0,348.0,SWE,23,atp_rankings_2026_08_31.csv
+2026-08-31,144848,Sergio Luis Hernandez Ramirez,1401,6,0.0,-14.0,COL,27,atp_rankings_2026_08_31.csv
+2026-08-31,202165,Alberto Lim,1401,6,0.0,-14.0,PHI,27,atp_rankings_2026_08_31.csv
 2026-08-31,207172,Connor Thomson,1403,6,0.0,-14.0,GBR,25,atp_rankings_2026_08_31.csv
 2026-08-31,212066,Artem Alekseychuk,1404,6,0.0,-14.0,RUS,,atp_rankings_2026_08_31.csv
 2026-08-31,210102,Neo Niedner,1405,6,0.0,-14.0,GER,23,atp_rankings_2026_08_31.csv
@@ -1314,24 +1410,40 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,211358,Adam Majchrzak,1409,6,0.0,-17.0,POL,20,atp_rankings_2026_08_31.csv
 2026-08-31,207836,Muzammil Murtaza,1410,6,0.0,-14.0,PAK,26,atp_rankings_2026_08_31.csv
 2026-08-31,212130,Mariano Tammaro,1411,6,0.0,-14.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,210736,Shu Matsuoka,1412,6,0.0,-14.0,JPN,22,atp_rankings_2026_08_31.csv
+2026-08-31,212916,Marko Milosavljevic,1412,6,0.0,-14.0,SRB,,atp_rankings_2026_08_31.csv
+2026-08-31,211322,Lasse Poertner,1412,6,0.0,-14.0,GER,20,atp_rankings_2026_08_31.csv
 2026-08-31,207248,Naoki Tajima,1415,6,0.0,-14.0,JPN,25,atp_rankings_2026_08_31.csv
-2026-08-31,200105,Frazier Rengifo,1416,6,,,COL,27,atp_rankings_2026_08_31.csv
-2026-08-31,214214,Daniel Jovanovski,1417,6,,,AUS,18,atp_rankings_2026_08_31.csv
+2026-08-31,200105,Frazier Rengifo,1416,6,0.0,-14.0,COL,27,atp_rankings_2026_08_31.csv
+2026-08-31,214214,Daniel Jovanovski,1417,6,0.0,-13.0,AUS,18,atp_rankings_2026_08_31.csv
+2026-08-31,210159,Tomas Lanik,1418,6,1.0,42.0,SVK,24,atp_rankings_2026_08_31.csv
+2026-08-31,206888,Zhao Zhao,1418,6,1.0,42.0,CHN,26,atp_rankings_2026_08_31.csv
 2026-08-31,211364,Mihai Alexandru Coman,1420,6,0.0,-13.0,ROU,21,atp_rankings_2026_08_31.csv
+2026-08-31,214202,Gus Grumet,1421,6,0.0,-13.0,USA,18,atp_rankings_2026_08_31.csv
+2026-08-31,210732,Miha Vetrih,1421,6,0.0,-17.0,SLO,23,atp_rankings_2026_08_31.csv
+2026-08-31,212632,Peter Alam,1423,6,0.0,-12.0,GBR,24,atp_rankings_2026_08_31.csv
+2026-08-31,212963,Sebastian Grundtvig Jorgensen,1423,6,0.0,-12.0,DEN,25,atp_rankings_2026_08_31.csv
 2026-08-31,213815,Sergey Petrov,1425,6,0.0,-11.0,RUS,,atp_rankings_2026_08_31.csv
 2026-08-31,212786,Victor Braga,1426,6,0.0,-9.0,BRA,21,atp_rankings_2026_08_31.csv
 2026-08-31,210649,Giammarco Gandolfi,1427,6,0.0,-8.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,200220,Ezekiel Clark,1428,6,0.0,-8.0,USA,28,atp_rankings_2026_08_31.csv
+2026-08-31,208197,Ammar Elamin,1428,6,0.0,-13.0,IRL,24,atp_rankings_2026_08_31.csv
+2026-08-31,212951,Mak Mikovic,1428,6,0.0,-13.0,SLO,20,atp_rankings_2026_08_31.csv
+2026-08-31,212119,Nik Mikovic,1428,6,1.0,49.0,SLO,22,atp_rankings_2026_08_31.csv
+2026-08-31,202106,Juan Bautista Otegui,1428,6,0.0,-8.0,ARG,27,atp_rankings_2026_08_31.csv
 2026-08-31,211457,Sven Corbinais,1433,6,0.0,-11.0,FRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,213023,Filippo Francesco Garbero,1434,6,1.0,49.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,209979,Madhwin Kamath,1434,6,0.0,-16.0,IND,24,atp_rankings_2026_08_31.csv
 2026-08-31,212919,Ivan Biletic,1436,6,0.0,-13.0,BIH,19,atp_rankings_2026_08_31.csv
 2026-08-31,208249,Gian Marco Ortenzi,1437,6,0.0,-13.0,ITA,26,atp_rankings_2026_08_31.csv
 2026-08-31,212545,Henry Lieberman,1438,6,0.0,-13.0,USA,26,atp_rankings_2026_08_31.csv
-2026-08-31,210192,Lucca Pinto,1439,6,,,BRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,210192,Lucca Pinto,1439,6,0.0,-12.0,BRA,23,atp_rankings_2026_08_31.csv
 2026-08-31,213532,Stefan Storch,1440,6,1.0,50.0,AUS,,atp_rankings_2026_08_31.csv
 2026-08-31,202314,Parth Aggarwal,1441,6,0.0,-15.0,IND,28,atp_rankings_2026_08_31.csv
-2026-08-31,209391,Corban Crowther,1442,6,,,NZL,23,atp_rankings_2026_08_31.csv
+2026-08-31,209391,Corban Crowther,1442,6,0.0,-13.0,NZL,23,atp_rankings_2026_08_31.csv
 2026-08-31,202323,Arjun Mehrotra,1443,6,0.0,-12.0,AUS,29,atp_rankings_2026_08_31.csv
-2026-08-31,,Vito Dell'Elba,1444,6,0.0,-12.0,,,atp_rankings_2026_08_31.csv
-2026-08-31,210735,Radovan Michalik,1445,6,,,SVK,23,atp_rankings_2026_08_31.csv
+2026-08-31,202217,Vito Dellelba,1444,6,0.0,-12.0,ITA,27,atp_rankings_2026_08_31.csv
+2026-08-31,210735,Radovan Michalik,1445,6,0.0,-16.0,SVK,23,atp_rankings_2026_08_31.csv
 2026-08-31,213536,Sergio Planella Hernandez,1446,6,1.0,45.0,ESP,,atp_rankings_2026_08_31.csv
 2026-08-31,213898,Richard Antoni,1447,6,0.0,-14.0,GER,,atp_rankings_2026_08_31.csv
 2026-08-31,212465,Charles Chen,1448,6,0.0,-14.0,CHN,18,atp_rankings_2026_08_31.csv
@@ -1339,53 +1451,849 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,134310,Alexey Aleshchev,1450,6,0.0,-14.0,RUS,27,atp_rankings_2026_08_31.csv
 2026-08-31,209977,Matas Vasiliauskas,1451,6,0.0,-14.0,LTU,24,atp_rankings_2026_08_31.csv
 2026-08-31,213890,Henry Jefferson,1452,5,0.0,-14.0,GBR,,atp_rankings_2026_08_31.csv
-2026-08-31,207457,Wojciech Marek,1455,5,,,POL,25,atp_rankings_2026_08_31.csv
-2026-08-31,210352,Santiago  Lora,1456,5,,,BOL,18,atp_rankings_2026_08_31.csv
+2026-08-31,,Oliver Majdanzic,1453,5,,,,,atp_rankings_2026_08_31.csv
+2026-08-31,144874,Ryan James Storrie,1453,5,0.0,-14.0,GBR,28,atp_rankings_2026_08_31.csv
+2026-08-31,207457,Wojciech Marek,1455,5,2.0,136.0,POL,25,atp_rankings_2026_08_31.csv
+2026-08-31,210352,Santiago  Lora,1456,5,0.0,-15.0,BOL,18,atp_rankings_2026_08_31.csv
 2026-08-31,213274,Eli Stephenson,1457,5,0.0,-14.0,USA,21,atp_rankings_2026_08_31.csv
-2026-08-31,213090,Massimo Pizzigoni,1458,5,0.0,-14.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,213118,Massimo Pizzigoni,1458,5,0.0,-14.0,ITA,20,atp_rankings_2026_08_31.csv
+2026-08-31,202307,Alejandro Garcia,1459,5,0.0,-18.0,ESP,24,atp_rankings_2026_08_31.csv
+2026-08-31,212061,Haydar Cem Gokpinar,1459,5,0.0,-14.0,TUR,,atp_rankings_2026_08_31.csv
 2026-08-31,214318,Michael Savano,1461,5,0.0,-15.0,USA,18,atp_rankings_2026_08_31.csv
+2026-08-31,214541,Heorhii Shylov,1462,5,1.0,58.0,UKR,18,atp_rankings_2026_08_31.csv
+2026-08-31,,Jakub Vrba,1462,5,0.0,-15.0,,,atp_rankings_2026_08_31.csv
 2026-08-31,212863,Benjamin Chelia,1464,5,0.0,-15.0,ARG,18,atp_rankings_2026_08_31.csv
+2026-08-31,212472,Xirui Han,1465,5,0.0,-15.0,CHN,20,atp_rankings_2026_08_31.csv
+2026-08-31,207725,Niels Peter Van Noord,1465,5,0.0,-15.0,CAN,26,atp_rankings_2026_08_31.csv
 2026-08-31,213175,Lucca Liu,1467,5,0.0,-15.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,211622,Loan Lestir,1468,5,0.0,-15.0,FRA,20,atp_rankings_2026_08_31.csv
+2026-08-31,209947,Facundo Yunis,1468,5,2.0,160.0,SUI,24,atp_rankings_2026_08_31.csv
+2026-08-31,207831,Ignacio Antonio Becerra Otarola,1470,5,0.0,-16.0,CHI,25,atp_rankings_2026_08_31.csv
+2026-08-31,212859,Matisse Farzam,1470,5,0.0,-16.0,USA,19,atp_rankings_2026_08_31.csv
+2026-08-31,212900,Andrea Paolini,1470,5,0.0,-23.0,ITA,23,atp_rankings_2026_08_31.csv
+2026-08-31,207230,Damien Salvestre,1470,5,0.0,-16.0,FRA,24,atp_rankings_2026_08_31.csv
 2026-08-31,212676,Matthieu Chambonniere,1474,5,0.0,-17.0,FRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,210436,Hayden Jones,1475,5,0.0,-17.0,AUS,20,atp_rankings_2026_08_31.csv
+2026-08-31,208052,Matthew Segura,1475,5,0.0,-17.0,USA,25,atp_rankings_2026_08_31.csv
+2026-08-31,208007,Karlo Kajin,1477,5,1.0,60.0,CRO,26,atp_rankings_2026_08_31.csv
+2026-08-31,213785,Toshiki Karigyo,1477,5,0.0,-17.0,JPN,24,atp_rankings_2026_08_31.csv
 2026-08-31,212069,Kabir Hans,1479,5,0.0,-16.0,IND,25,atp_rankings_2026_08_31.csv
 2026-08-31,208334,Deney Wassermann,1480,5,2.0,175.0,NED,25,atp_rankings_2026_08_31.csv
+2026-08-31,208853,Adrien Burdet,1481,5,0.0,-17.0,SUI,24,atp_rankings_2026_08_31.csv
+2026-08-31,206669,Hugo Maia,1481,5,0.0,-17.0,POR,25,atp_rankings_2026_08_31.csv
+2026-08-31,213173,Nicola Senn,1481,5,3.0,383.0,SUI,,atp_rankings_2026_08_31.csv
+2026-08-31,211610,Andreas Timini,1481,5,0.0,-17.0,CYP,20,atp_rankings_2026_08_31.csv
 2026-08-31,213801,Jake Dembo,1485,5,0.0,-18.0,AUS,,atp_rankings_2026_08_31.csv
+2026-08-31,211387,Jonas Pelle Hartenstein,1486,5,0.0,-18.0,GER,25,atp_rankings_2026_08_31.csv
+2026-08-31,132054,Nathan Ponwith,1486,5,0.0,-18.0,USA,28,atp_rankings_2026_08_31.csv
 2026-08-31,212471,Minghui Zhang,1488,5,0.0,-18.0,CHN,21,atp_rankings_2026_08_31.csv
 2026-08-31,214029,Ye Chen,1489,5,0.0,-18.0,CHN,,atp_rankings_2026_08_31.csv
-2026-08-31,207209,Raghav Jaisinghani,1490,5,,,IND,28,atp_rankings_2026_08_31.csv
+2026-08-31,207209,Raghav Jaisinghani,1490,5,0.0,-18.0,IND,28,atp_rankings_2026_08_31.csv
 2026-08-31,211690,Toprak Avcibasi,1491,5,0.0,-16.0,TUR,22,atp_rankings_2026_08_31.csv
 2026-08-31,213721,Pierre Antoine Faut,1492,5,0.0,-16.0,FRA,,atp_rankings_2026_08_31.csv
-2026-08-31,212896,Melvin Kumar,1501,5,,,SWE,20,atp_rankings_2026_08_31.csv
+2026-08-31,213393,Breno Braga,1493,5,0.0,-16.0,BRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,214016,Bautista De La Pena,1493,5,0.0,-21.0,BRA,17,atp_rankings_2026_08_31.csv
+2026-08-31,213200,Juan Ignacio Gallego,1493,5,0.0,-21.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,210632,Vadym Konovchuk,1493,5,0.0,-16.0,UKR,23,atp_rankings_2026_08_31.csv
+2026-08-31,212078,Riku Takahata,1497,5,0.0,-17.0,JPN,24,atp_rankings_2026_08_31.csv
+2026-08-31,212109,Antonio Voljavec,1497,5,0.0,-17.0,CRO,20,atp_rankings_2026_08_31.csv
+2026-08-31,202077,Ewen Lumsden,1499,5,0.0,-14.0,GBR,26,atp_rankings_2026_08_31.csv
+2026-08-31,213461,Andrea Mchich,1499,5,0.0,-19.0,FRA,20,atp_rankings_2026_08_31.csv
+2026-08-31,212896,Melvin Kumar,1501,5,0.0,-18.0,SWE,20,atp_rankings_2026_08_31.csv
 2026-08-31,210417,Adrian Arcon,1502,5,0.0,-16.0,AUS,25,atp_rankings_2026_08_31.csv
-2026-08-31,213024,Ivan Iutkin,1505,5,,,RUS,19,atp_rankings_2026_08_31.csv
-2026-08-31,211600,Carlos Giraldi,1506,5,,,ESP,21,atp_rankings_2026_08_31.csv
+2026-08-31,210423,Alessandro Coccioli,1503,5,0.0,-16.0,ITA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213628,Volodymyr Gurenko,1503,5,0.0,-16.0,CAN,,atp_rankings_2026_08_31.csv
+2026-08-31,213024,Ivan Iutkin,1505,5,0.0,-18.0,RUS,19,atp_rankings_2026_08_31.csv
+2026-08-31,211600,Carlos Giraldi,1506,5,1.0,65.0,ESP,21,atp_rankings_2026_08_31.csv
 2026-08-31,212094,Liam Delicata,1507,5,0.0,-15.0,MLT,25,atp_rankings_2026_08_31.csv
+2026-08-31,212797,Hitesh Chauhan,1508,5,0.0,-15.0,IND,18,atp_rankings_2026_08_31.csv
+2026-08-31,213692,Karim Mabrouk,1508,5,0.0,-15.0,EGY,,atp_rankings_2026_08_31.csv
 2026-08-31,208581,Noah Thurner,1510,5,0.0,-15.0,GER,26,atp_rankings_2026_08_31.csv
 2026-08-31,210076,Ioannis Kountourakis,1511,5,0.0,-15.0,GRE,23,atp_rankings_2026_08_31.csv
 2026-08-31,210455,Noah Perfetti,1512,5,0.0,-15.0,ITA,25,atp_rankings_2026_08_31.csv
-2026-08-31,,Guglielmo Verdese,1518,4,0.0,-15.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214595,Semen Aginskiy,1513,4,0.0,-15.0,UKR,21,atp_rankings_2026_08_31.csv
+2026-08-31,210569,Sebastian Eriksson,1513,4,0.0,-15.0,SWE,21,atp_rankings_2026_08_31.csv
+2026-08-31,122474,Guy Orly Iradukunda,1513,4,0.0,-15.0,BDI,30,atp_rankings_2026_08_31.csv
+2026-08-31,213552,Jagger Leach,1513,4,0.0,-15.0,USA,19,atp_rankings_2026_08_31.csv
+2026-08-31,212648,Theodore Winegar,1513,4,0.0,-15.0,USA,25,atp_rankings_2026_08_31.csv
+2026-08-31,214596,Guglielmo Verdese,1518,4,0.0,-15.0,ITA,20,atp_rankings_2026_08_31.csv
+2026-08-31,200003,Jeremy Beale,1519,4,0.0,-15.0,AUS,31,atp_rankings_2026_08_31.csv
+2026-08-31,200692,Herbert Jody Maginley,1519,4,0.0,-15.0,ANT,31,atp_rankings_2026_08_31.csv
+2026-08-31,210485,Togan Tokac,1519,4,0.0,-15.0,TUR,22,atp_rankings_2026_08_31.csv
 2026-08-31,209925,Thijmen Loof,1522,4,0.0,-15.0,NED,24,atp_rankings_2026_08_31.csv
+2026-08-31,212153,Filip Gustafsson,1523,4,0.0,-15.0,SWE,21,atp_rankings_2026_08_31.csv
+2026-08-31,213876,Donghyun Hwang,1523,4,0.0,-15.0,KOR,,atp_rankings_2026_08_31.csv
+2026-08-31,105335,Sho Katayama,1523,4,0.0,-15.0,JPN,37,atp_rankings_2026_08_31.csv
+2026-08-31,213626,Angel Veliz,1523,4,0.0,-15.0,ECU,18,atp_rankings_2026_08_31.csv
+2026-08-31,210188,Petar Jovanovic,1527,4,0.0,-15.0,MNE,23,atp_rankings_2026_08_31.csv
+2026-08-31,109739,Maximilian Marterer,1527,4,3.0,464.0,GER,31,atp_rankings_2026_08_31.csv
+2026-08-31,213011,John Bothma,1529,4,0.0,-16.0,RSA,18,atp_rankings_2026_08_31.csv
+2026-08-31,200681,Adil Kalyanpur,1529,4,0.0,-16.0,IND,26,atp_rankings_2026_08_31.csv
+2026-08-31,208040,Logan Zapp,1529,4,0.0,-16.0,USA,24,atp_rankings_2026_08_31.csv
+2026-08-31,208559,Rahul Dhokia,1532,4,0.0,-16.0,GBR,26,atp_rankings_2026_08_31.csv
+2026-08-31,212488,Ludovico Vaccari,1532,4,0.0,-16.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,214125,Raffaele Ciurnelli,1534,4,0.0,-16.0,ITA,18,atp_rankings_2026_08_31.csv
+2026-08-31,106078,Egor Gerasimov,1534,4,0.0,-16.0,BLR,33,atp_rankings_2026_08_31.csv
+2026-08-31,213045,Manvydas Balciunas,1536,4,0.0,-16.0,NED,20,atp_rankings_2026_08_31.csv
+2026-08-31,212232,Yeonsu Jeong,1536,4,0.0,-16.0,KOR,,atp_rankings_2026_08_31.csv
+2026-08-31,212139,Vit Kalina,1536,4,0.0,-16.0,CZE,21,atp_rankings_2026_08_31.csv
 2026-08-31,213964,Bengt Johan Reinhard,1539,4,0.0,-15.0,GER,19,atp_rankings_2026_08_31.csv
 2026-08-31,213042,Hugo Coquelin,1540,4,0.0,-15.0,GBR,20,atp_rankings_2026_08_31.csv
+2026-08-31,105419,Patricio Alvarado,1541,4,0.0,-15.0,ECU,36,atp_rankings_2026_08_31.csv
+2026-08-31,131910,Lucas Bouquet,1541,4,0.0,-15.0,FRA,29,atp_rankings_2026_08_31.csv
+2026-08-31,213840,Teodor Davidov,1541,4,0.0,-15.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,105273,Mauricio Echazu,1541,4,0.0,-15.0,PER,37,atp_rankings_2026_08_31.csv
+2026-08-31,210753,Matic Kriznik,1541,4,0.0,-15.0,SLO,20,atp_rankings_2026_08_31.csv
+2026-08-31,212231,Junhyeon Lee,1541,4,0.0,-15.0,KOR,,atp_rankings_2026_08_31.csv
+2026-08-31,213980,Arnav Paparkar,1541,4,0.0,-15.0,IND,18,atp_rankings_2026_08_31.csv
+2026-08-31,123843,Davide Pontoglio,1541,4,0.0,-15.0,ITA,34,atp_rankings_2026_08_31.csv
 2026-08-31,212068,Stepan Baum,1549,4,0.0,-14.0,CZE,23,atp_rankings_2026_08_31.csv
 2026-08-31,210105,Martyn Pawelski,1550,4,0.0,-14.0,POL,21,atp_rankings_2026_08_31.csv
+2026-08-31,212796,Tristan Berard,1551,4,0.0,-14.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,212270,Ruben Hartig,1551,4,0.0,-14.0,GER,23,atp_rankings_2026_08_31.csv
+2026-08-31,106245,Rodolfo Jauregui Sainz De Rozas,1551,4,0.0,-14.0,MEX,32,atp_rankings_2026_08_31.csv
+2026-08-31,208027,Alex Jones,1551,4,0.0,-14.0,USA,27,atp_rankings_2026_08_31.csv
+2026-08-31,212459,Kai I Wang,1551,4,0.0,-25.0,TPE,22,atp_rankings_2026_08_31.csv
+2026-08-31,211392,Mateo Luis Alvarez Sarmiento,1556,4,0.0,-14.0,ESP,21,atp_rankings_2026_08_31.csv
+2026-08-31,213215,Bill Chan,1556,4,0.0,-14.0,SGP,,atp_rankings_2026_08_31.csv
+2026-08-31,213920,Nathan Cox,1556,4,1.0,82.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,213204,Zane Stevens,1556,4,0.0,-14.0,AUS,20,atp_rankings_2026_08_31.csv
 2026-08-31,214213,Rhys Lawlor,1560,4,0.0,-15.0,GBR,17,atp_rankings_2026_08_31.csv
+2026-08-31,211660,Ryan Augusto Dos Santos,1561,4,0.0,-15.0,BRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,212638,Gregor Hausberger,1561,4,1.0,84.0,AUT,23,atp_rankings_2026_08_31.csv
+2026-08-31,149130,Joe Leather,1561,4,0.0,-15.0,GBR,,atp_rankings_2026_08_31.csv
+2026-08-31,212950,Vid Mohar,1561,4,1.0,84.0,SLO,20,atp_rankings_2026_08_31.csv
 2026-08-31,210711,Francisco Tomas Geschwind,1565,4,0.0,-17.0,ARG,23,atp_rankings_2026_08_31.csv
+2026-08-31,210601,Oskari Eerola,1566,4,0.0,-16.0,FIN,24,atp_rankings_2026_08_31.csv
+2026-08-31,213058,Weiyi Kong,1566,4,1.0,90.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,212285,Albert Pedrico Kravtsov,1566,4,0.0,-16.0,ESP,21,atp_rankings_2026_08_31.csv
+2026-08-31,212196,Yua Taka,1569,4,0.0,-17.0,JPN,,atp_rankings_2026_08_31.csv
+2026-08-31,213218,Elias Julian Werner,1569,4,0.0,-17.0,GER,,atp_rankings_2026_08_31.csv
 2026-08-31,148674,Emon Van Loben Sels,1571,4,0.0,-17.0,USA,21,atp_rankings_2026_08_31.csv
 2026-08-31,206580,Nicola Rispoli,1572,4,0.0,-23.0,ITA,29,atp_rankings_2026_08_31.csv
+2026-08-31,213777,Savva Rybkin,1573,4,0.0,-18.0,RUS,,atp_rankings_2026_08_31.csv
+2026-08-31,211411,Tyler Stice,1573,4,0.0,-18.0,USA,26,atp_rankings_2026_08_31.csv
+2026-08-31,214038,Laurence Teunissen,1573,4,0.0,-18.0,NED,,atp_rankings_2026_08_31.csv
+2026-08-31,212864,Valentin Garay,1576,4,0.0,-18.0,ARG,19,atp_rankings_2026_08_31.csv
+2026-08-31,202439,Sean Hodkin,1576,4,0.0,-18.0,GBR,27,atp_rankings_2026_08_31.csv
+2026-08-31,208381,Nicolas Esteban Rico Arias,1576,4,0.0,-18.0,COL,25,atp_rankings_2026_08_31.csv
 2026-08-31,212767,Aryan Lakshmanan,1579,4,0.0,-17.0,IND,21,atp_rankings_2026_08_31.csv
-2026-08-31,,Benjamin Gusic - Wan,1588,4,,,,,atp_rankings_2026_08_31.csv
+2026-08-31,211684,Emirhan Bulut,1580,4,0.0,-17.0,TUR,20,atp_rankings_2026_08_31.csv
+2026-08-31,212183,Yuquan Jin,1580,4,0.0,-17.0,CHN,25,atp_rankings_2026_08_31.csv
+2026-08-31,213765,Weiwen Pan,1582,4,0.0,-24.0,CHN,20,atp_rankings_2026_08_31.csv
+2026-08-31,200671,Daisuke Sumizawa,1582,4,0.0,-17.0,JPN,27,atp_rankings_2026_08_31.csv
+2026-08-31,213391,Silvio Mencaglia,1584,4,0.0,-18.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,213624,Kosuke Shibano,1584,4,0.0,-18.0,JPN,,atp_rankings_2026_08_31.csv
+2026-08-31,212745,Tadeo Meneo,1586,4,0.0,-18.0,ARG,21,atp_rankings_2026_08_31.csv
+2026-08-31,105060,Aldin Setkic,1586,4,0.0,-18.0,BIH,38,atp_rankings_2026_08_31.csv
+2026-08-31,212806,Benjamin Gusic Wan,1588,4,0.0,-17.0,GBR,18,atp_rankings_2026_08_31.csv
+2026-08-31,205885,Joao Graa,1589,4,0.0,-16.0,POR,25,atp_rankings_2026_08_31.csv
+2026-08-31,206646,Louis Van Herck,1589,4,1.0,106.0,LUX,27,atp_rankings_2026_08_31.csv
 2026-08-31,214015,Xavi Palomar,1591,4,0.0,-21.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,210204,Drazen Petrovic,1592,4,1.0,109.0,BIH,23,atp_rankings_2026_08_31.csv
+2026-08-31,213588,Esteban Talavera Cortes,1592,4,1.0,109.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,213037,Luis Garcia Paez,1594,4,0.0,-20.0,ESP,20,atp_rankings_2026_08_31.csv
+2026-08-31,213923,Gilberto Ravasio,1594,4,0.0,-20.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,211454,Federico Valle,1594,4,1.0,114.0,ITA,26,atp_rankings_2026_08_31.csv
+2026-08-31,212668,Tyler Bowers,1597,3,0.0,-21.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,122081,Luis Britto,1597,3,0.0,-21.0,BRA,33,atp_rankings_2026_08_31.csv
+2026-08-31,210756,Loren Thomas Byers,1597,3,0.0,-21.0,USA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213911,Connor Church,1597,3,0.0,-21.0,CAN,19,atp_rankings_2026_08_31.csv
+2026-08-31,213691,Connor Doig,1597,3,0.0,-21.0,RSA,,atp_rankings_2026_08_31.csv
+2026-08-31,108766,Samir Iftikhar,1597,3,0.0,-21.0,PAK,34,atp_rankings_2026_08_31.csv
+2026-08-31,214587,Aradhya Kshitij,1597,3,0.0,-21.0,IND,17,atp_rankings_2026_08_31.csv
+2026-08-31,144747,Courtney John Lock,1597,3,0.0,-21.0,ZIM,29,atp_rankings_2026_08_31.csv
+2026-08-31,149280,William Mroz,1597,3,0.0,-21.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,211612,Frederic Schlossmann,1597,3,,,GER,24,atp_rankings_2026_08_31.csv
+2026-08-31,126193,Mark Whitehouse,1597,3,0.0,-21.0,GBR,33,atp_rankings_2026_08_31.csv
+2026-08-31,214565,Bienvenue Bolangi,1608,3,0.0,-32.0,COD,24,atp_rankings_2026_08_31.csv
+2026-08-31,213141,Georgi Georgiev,1608,3,0.0,-21.0,BUL,19,atp_rankings_2026_08_31.csv
+2026-08-31,214581,Oscar Andres Martinez De Freitas,1608,3,0.0,-21.0,VEN,20,atp_rankings_2026_08_31.csv
+2026-08-31,214600,Alexander Ikenna Okonkwo,1608,3,0.0,-21.0,GBR,21,atp_rankings_2026_08_31.csv
+2026-08-31,213784,Guillermo Tunas,1608,3,0.0,-21.0,MEX,25,atp_rankings_2026_08_31.csv
+2026-08-31,208262,Alejo Lorenzo Lingua Lavallen,1613,3,0.0,-22.0,ARG,25,atp_rankings_2026_08_31.csv
+2026-08-31,212608,Miguel Angel Machado,1613,3,0.0,-22.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,212930,Mario Martinez Serrano,1613,3,0.0,-22.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,207839,Yousaf Khalil,1616,3,0.0,-20.0,PAK,27,atp_rankings_2026_08_31.csv
+2026-08-31,111515,Thai Son Kwiatkowski,1616,3,0.0,-20.0,USA,31,atp_rankings_2026_08_31.csv
+2026-08-31,214331,Valentino Conte,1618,3,0.0,-20.0,ARG,21,atp_rankings_2026_08_31.csv
+2026-08-31,200474,Ivan Denisov,1618,3,0.0,-20.0,RUS,26,atp_rankings_2026_08_31.csv
+2026-08-31,209273,Romain Gales,1618,3,0.0,-20.0,FRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,214601,Didrik Liljekvist,1618,3,0.0,-27.0,SWE,24,atp_rankings_2026_08_31.csv
+2026-08-31,211536,Patrik Meszaros,1618,3,0.0,-20.0,HUN,20,atp_rankings_2026_08_31.csv
+2026-08-31,210212,Alexander Petrov,1618,3,0.0,-20.0,BUL,24,atp_rankings_2026_08_31.csv
+2026-08-31,213957,Daniel Phillips,1618,3,0.0,-20.0,BER,21,atp_rankings_2026_08_31.csv
+2026-08-31,214530,Oliver Sanders,1618,3,0.0,-20.0,CZE,18,atp_rankings_2026_08_31.csv
+2026-08-31,210301,Benjamin Ignacio Torres Fernandez,1618,3,0.0,-20.0,CHI,22,atp_rankings_2026_08_31.csv
+2026-08-31,212098,Iker Urribarrens Ramirez,1618,3,0.0,-20.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,214292,Ignacio De Armas,1628,3,1.0,120.0,VEN,17,atp_rankings_2026_08_31.csv
+2026-08-31,214603,Alex Huszar,1628,3,0.0,-21.0,AUT,18,atp_rankings_2026_08_31.csv
+2026-08-31,210060,Aleksandar Mihailovic,1628,3,0.0,-21.0,SRB,24,atp_rankings_2026_08_31.csv
+2026-08-31,210339,Jannik Maute,1631,3,,,GER,22,atp_rankings_2026_08_31.csv
+2026-08-31,213862,Robert Watzka,1631,3,0.0,-21.0,ESP,20,atp_rankings_2026_08_31.csv
+2026-08-31,214280,Fantino Alberca,1633,3,0.0,-22.0,ARG,21,atp_rankings_2026_08_31.csv
+2026-08-31,212678,David Bakonyi,1633,3,0.0,-22.0,HUN,20,atp_rankings_2026_08_31.csv
+2026-08-31,214242,Dan Brand,1633,3,0.0,-22.0,ISR,17,atp_rankings_2026_08_31.csv
+2026-08-31,207761,Julien De Cuyper,1633,3,0.0,-22.0,FRA,27,atp_rankings_2026_08_31.csv
+2026-08-31,144896,Hao Sheng Koay,1633,3,0.0,-22.0,MAS,28,atp_rankings_2026_08_31.csv
+2026-08-31,213157,Yannic Nittmann,1633,3,0.0,-22.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,214332,Henrique Ortenblad Nogueira,1633,3,0.0,-22.0,BRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,211790,Rudy Quan,1633,3,0.0,-22.0,USA,20,atp_rankings_2026_08_31.csv
+2026-08-31,214483,Harrison Satara,1633,3,0.0,-22.0,AUS,19,atp_rankings_2026_08_31.csv
+2026-08-31,,James Weber,1633,3,0.0,-22.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,209117,Marco Furlanetto,1643,3,0.0,-21.0,ITA,25,atp_rankings_2026_08_31.csv
+2026-08-31,214598,Cem Christopher Kucukhuseyin,1643,3,0.0,-21.0,TUR,19,atp_rankings_2026_08_31.csv
+2026-08-31,212293,Karl Kazuma Lee,1643,3,0.0,-21.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,116985,Petr Michnev,1643,3,0.0,-21.0,CZE,37,atp_rankings_2026_08_31.csv
+2026-08-31,211554,Suk Ann,1647,3,0.0,-19.0,KOR,,atp_rankings_2026_08_31.csv
+2026-08-31,214232,Lorenzo Balducci,1647,3,0.0,-19.0,ITA,18,atp_rankings_2026_08_31.csv
+2026-08-31,209060,Alexander Bernard,1647,3,0.0,-19.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,202192,Kuzey Cekirge,1647,3,0.0,-19.0,TUR,26,atp_rankings_2026_08_31.csv
+2026-08-31,210486,Nicholas Godsick,1647,3,0.0,-19.0,USA,21,atp_rankings_2026_08_31.csv
+2026-08-31,208243,Seon Yong Han,1647,3,0.0,-19.0,KOR,25,atp_rankings_2026_08_31.csv
+2026-08-31,214269,Marcel Latak,1647,3,0.0,-19.0,USA,17,atp_rankings_2026_08_31.csv
+2026-08-31,210602,Peetu Pohjola,1647,3,0.0,-19.0,FIN,25,atp_rankings_2026_08_31.csv
+2026-08-31,212083,Aleksandre Shvangiradze,1647,3,0.0,-19.0,GEO,20,atp_rankings_2026_08_31.csv
+2026-08-31,210571,Isac Stroemberg,1647,3,0.0,-36.0,SWE,23,atp_rankings_2026_08_31.csv
+2026-08-31,149278,Daniel Khazime,1657,3,0.0,-19.0,RUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,213196,Rihards Neimanis,1657,3,0.0,-19.0,LAT,18,atp_rankings_2026_08_31.csv
+2026-08-31,212953,Ilija Palavestra,1657,3,0.0,-19.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,207541,Michalis Sakellaridis,1657,3,0.0,-19.0,GRE,25,atp_rankings_2026_08_31.csv
+2026-08-31,214390,Antonin Witz,1657,3,0.0,-19.0,FRA,18,atp_rankings_2026_08_31.csv
 2026-08-31,213814,Gustavo Albieri,1662,3,0.0,-18.0,BRA,18,atp_rankings_2026_08_31.csv
-2026-08-31,210205,Edoardo Zanada,1694,3,,,ITA,25,atp_rankings_2026_08_31.csv
-2026-08-31,209847,Dorian Tremblay,1707,3,,,FRA,24,atp_rankings_2026_08_31.csv
-2026-08-31,213758,Pablo Aunion,1708,3,,,ESP,19,atp_rankings_2026_08_31.csv
+2026-08-31,211539,Gabor Hornung,1663,3,0.0,-18.0,HUN,21,atp_rankings_2026_08_31.csv
+2026-08-31,127143,Jirat Navasirisomboon,1663,3,0.0,-18.0,THA,29,atp_rankings_2026_08_31.csv
+2026-08-31,213798,Noah Brownrigg,1665,3,0.0,-16.0,AUS,19,atp_rankings_2026_08_31.csv
+2026-08-31,206893,Piotr Galus,1665,3,0.0,-16.0,POL,25,atp_rankings_2026_08_31.csv
+2026-08-31,214005,Ludvig Fredrik Hede,1665,3,0.0,-16.0,SWE,19,atp_rankings_2026_08_31.csv
+2026-08-31,214436,Simone Massellani,1665,3,0.0,-16.0,ITA,18,atp_rankings_2026_08_31.csv
+2026-08-31,207958,Roman Postolka,1665,3,0.0,-16.0,CZE,27,atp_rankings_2026_08_31.csv
+2026-08-31,207439,Dax Donders,1670,3,0.0,-14.0,NED,26,atp_rankings_2026_08_31.csv
+2026-08-31,212753,Allan Gatoto,1670,3,0.0,-14.0,BDI,,atp_rankings_2026_08_31.csv
+2026-08-31,214243,Odysseas Geladaris,1670,3,0.0,-14.0,GRE,18,atp_rankings_2026_08_31.csv
+2026-08-31,210598,Nicolas Hollender,1670,3,0.0,-14.0,ARG,24,atp_rankings_2026_08_31.csv
+2026-08-31,213955,Santiago Pesino,1670,3,0.0,-14.0,ARG,19,atp_rankings_2026_08_31.csv
+2026-08-31,208365,Amador Salazar,1670,3,0.0,-14.0,CHI,25,atp_rankings_2026_08_31.csv
+2026-08-31,213278,Leonardo Angeloni,1676,3,1.0,171.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,214156,Mahmoud Chetouane,1676,3,0.0,-13.0,TUN,18,atp_rankings_2026_08_31.csv
+2026-08-31,212262,Kylian Collignon,1676,3,1.0,171.0,BEL,21,atp_rankings_2026_08_31.csv
+2026-08-31,212876,Pedro Andre De Almeida Santos,1676,3,0.0,-13.0,BRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,213667,Valentin Guadagno,1676,3,0.0,-13.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,212798,Shanker Heisnam,1676,3,0.0,-13.0,IND,,atp_rankings_2026_08_31.csv
+2026-08-31,214259,Rodrigo Leal,1676,3,0.0,-13.0,POR,,atp_rankings_2026_08_31.csv
+2026-08-31,211701,Jules Leroux,1676,3,0.0,-13.0,FRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,210420,Gheorghe Claudiu Schinteie,1676,3,0.0,-13.0,ROU,24,atp_rankings_2026_08_31.csv
+2026-08-31,213553,Dmytro Shirokyi,1676,3,0.0,-13.0,UKR,20,atp_rankings_2026_08_31.csv
+2026-08-31,210331,Alessandro Spadola,1676,3,0.0,-27.0,ITA,23,atp_rankings_2026_08_31.csv
+2026-08-31,213074,Hugo Hashimoto,1687,3,0.0,-15.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,212180,Shaoyun Liu,1687,3,0.0,-15.0,CHN,24,atp_rankings_2026_08_31.csv
+2026-08-31,213114,Chun Chien Hou,1689,3,0.0,-15.0,TPE,20,atp_rankings_2026_08_31.csv
+2026-08-31,210330,Evangelos Kypriotis,1689,3,0.0,-15.0,GRE,23,atp_rankings_2026_08_31.csv
+2026-08-31,125843,Ren Nakamura,1689,3,0.0,-15.0,JPN,31,atp_rankings_2026_08_31.csv
+2026-08-31,212294,Matei Todoran,1689,3,0.0,-15.0,ROU,,atp_rankings_2026_08_31.csv
+2026-08-31,207586,Justas Trainauskas,1689,3,0.0,-26.0,LTU,24,atp_rankings_2026_08_31.csv
+2026-08-31,210205,Edoardo Zanada,1694,3,0.0,-13.0,ITA,25,atp_rankings_2026_08_31.csv
+2026-08-31,214211,Arian Barbic,1695,3,0.0,-17.0,GER,17,atp_rankings_2026_08_31.csv
+2026-08-31,213637,Daniel Domingos,1695,3,0.0,-11.0,AGO,,atp_rankings_2026_08_31.csv
+2026-08-31,213228,Valentin Gonzalez Galino,1695,3,0.0,-11.0,ESP,17,atp_rankings_2026_08_31.csv
+2026-08-31,211389,Manuel Mouilleron Salvo,1695,3,0.0,-17.0,ARG,23,atp_rankings_2026_08_31.csv
+2026-08-31,213535,Mario Arce Fernandez,1699,3,0.0,-18.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,208840,Daniel Bagnolini,1699,3,0.0,-12.0,ITA,23,atp_rankings_2026_08_31.csv
+2026-08-31,209417,Alan Bojarski,1699,3,0.0,-12.0,POL,23,atp_rankings_2026_08_31.csv
+2026-08-31,213180,Leonardo Cattaneo,1699,3,0.0,-12.0,ITA,20,atp_rankings_2026_08_31.csv
+2026-08-31,213075,Alejandro Lopez Escribano,1699,3,0.0,-12.0,ESP,20,atp_rankings_2026_08_31.csv
+2026-08-31,148670,Karol Malirz,1699,3,0.0,-12.0,POL,23,atp_rankings_2026_08_31.csv
+2026-08-31,210284,Pijus Vaitiekunas,1699,3,0.0,-18.0,LTU,23,atp_rankings_2026_08_31.csv
+2026-08-31,212890,Caheer Warik,1699,3,0.0,-12.0,IND,,atp_rankings_2026_08_31.csv
+2026-08-31,209847,Dorian Tremblay,1707,3,0.0,-23.0,FRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213758,Pablo Aunion,1708,3,0.0,-21.0,ESP,19,atp_rankings_2026_08_31.csv
 2026-08-31,213819,Andrei Kunitsyn,1709,3,0.0,-15.0,RUS,21,atp_rankings_2026_08_31.csv
-2026-08-31,144955,Yuichiro Inui,1722,3,,,JPN,31,atp_rankings_2026_08_31.csv
-2026-08-31,211490,Daniel Verbeek,1723,3,,,NED,22,atp_rankings_2026_08_31.csv
-2026-08-31,214183,Marko Retelj,1874,2,,,SLO,18,atp_rankings_2026_08_31.csv
+2026-08-31,212571,Jim Hendrikx,1710,3,1.0,192.0,NED,25,atp_rankings_2026_08_31.csv
+2026-08-31,213298,Carl Holder,1710,3,0.0,-15.0,FRA,20,atp_rankings_2026_08_31.csv
+2026-08-31,122234,Alp Horoz,1710,3,0.0,-15.0,TUR,31,atp_rankings_2026_08_31.csv
+2026-08-31,214111,Tomas Jordi Leston,1710,3,0.0,-15.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,211762,David Naharro,1710,3,0.0,-15.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,214170,Cagan Efe Tufecki,1710,3,0.0,-15.0,TUR,22,atp_rankings_2026_08_31.csv
+2026-08-31,212757,Jack Bruce Smith,1716,3,0.0,-15.0,AUS,24,atp_rankings_2026_08_31.csv
+2026-08-31,213378,Adam Farag Cao,1716,3,0.0,-15.0,CAN,18,atp_rankings_2026_08_31.csv
+2026-08-31,213376,Jeffrey Fradkin,1718,3,0.0,-17.0,USA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213791,Fumin Jiang,1718,3,0.0,-17.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,124045,Lawrence Bataljin,1720,3,0.0,-12.0,AUS,30,atp_rankings_2026_08_31.csv
+2026-08-31,149162,Xiaoyin Yang,1720,3,0.0,-12.0,CHN,21,atp_rankings_2026_08_31.csv
+2026-08-31,144955,Yuichiro Inui,1722,3,0.0,-11.0,JPN,31,atp_rankings_2026_08_31.csv
+2026-08-31,211490,Daniel Verbeek,1723,3,0.0,-12.0,NED,22,atp_rankings_2026_08_31.csv
+2026-08-31,210014,Imran Daniel Abd Hazli,1724,2,0.0,-11.0,MAS,21,atp_rankings_2026_08_31.csv
+2026-08-31,202269,Justin Barki,1724,2,0.0,-11.0,INA,26,atp_rankings_2026_08_31.csv
+2026-08-31,212790,Nour Fathalla,1724,2,0.0,-11.0,EGY,,atp_rankings_2026_08_31.csv
+2026-08-31,105960,Evan King,1724,2,0.0,-11.0,USA,34,atp_rankings_2026_08_31.csv
+2026-08-31,200225,Nathaniel Lammons,1724,2,0.0,-11.0,USA,33,atp_rankings_2026_08_31.csv
+2026-08-31,207505,Mario Mansilla Diez,1724,2,0.0,-11.0,ESP,24,atp_rankings_2026_08_31.csv
+2026-08-31,211754,Pablo Manzano Lapuerta,1724,2,0.0,-11.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,214329,Diego Eduardo Munoz Navia,1724,2,0.0,-11.0,BOL,20,atp_rankings_2026_08_31.csv
+2026-08-31,209854,Tanapatt Nirundorn,1724,2,0.0,-11.0,THA,22,atp_rankings_2026_08_31.csv
+2026-08-31,208254,Ignacio Novo,1724,2,0.0,-11.0,ARG,26,atp_rankings_2026_08_31.csv
+2026-08-31,207547,Bruno Pujol Navarro,1724,2,0.0,-11.0,ESP,25,atp_rankings_2026_08_31.csv
+2026-08-31,214604,Aniss Rafiq,1724,2,0.0,-11.0,MAR,22,atp_rankings_2026_08_31.csv
+2026-08-31,212913,Pietro Ricci,1724,2,0.0,-11.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,105578,Cristian Rodriguez,1724,2,0.0,-11.0,COL,36,atp_rankings_2026_08_31.csv
+2026-08-31,210461,Sebastian Sec,1724,2,0.0,-11.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,211359,Jakub Solarski,1724,2,0.0,-11.0,POL,,atp_rankings_2026_08_31.csv
+2026-08-31,214327,Oliver Andre Solis Encinas,1724,2,0.0,-11.0,BOL,,atp_rankings_2026_08_31.csv
+2026-08-31,211386,Alessio Vasquez Gehrke,1724,2,0.0,-11.0,GER,23,atp_rankings_2026_08_31.csv
+2026-08-31,214606,David Wallechner,1724,2,,,AUT,22,atp_rankings_2026_08_31.csv
+2026-08-31,208874,Seita Watanabe,1724,2,0.0,-11.0,JPN,25,atp_rankings_2026_08_31.csv
+2026-08-31,110774,Marcelo Zormann Da Silva,1724,2,0.0,-11.0,BRA,30,atp_rankings_2026_08_31.csv
+2026-08-31,214270,Tomas Zurmendi,1724,2,0.0,-11.0,URU,17,atp_rankings_2026_08_31.csv
+2026-08-31,200331,Leonardo Aboian,1746,2,0.0,-11.0,ARG,28,atp_rankings_2026_08_31.csv
+2026-08-31,212510,Emiliano Aguilera Guerrero,1746,2,0.0,-11.0,MEX,23,atp_rankings_2026_08_31.csv
+2026-08-31,202378,Ignacio Carou,1746,2,0.0,-11.0,URU,27,atp_rankings_2026_08_31.csv
+2026-08-31,214337,Eudald Gonzalez,1746,2,0.0,-11.0,ESP,18,atp_rankings_2026_08_31.csv
+2026-08-31,208603,Cleeve Harper,1746,2,0.0,-11.0,CAN,25,atp_rankings_2026_08_31.csv
+2026-08-31,211638,Jack Loutit,1746,2,0.0,-11.0,NZL,22,atp_rankings_2026_08_31.csv
+2026-08-31,214588,Hanlei Lu,1746,2,0.0,-33.0,CHN,17,atp_rankings_2026_08_31.csv
+2026-08-31,214609,Roman Sancilio,1746,2,0.0,-11.0,USA,19,atp_rankings_2026_08_31.csv
+2026-08-31,213189,Tanakorn Srirat,1746,2,0.0,-11.0,THA,,atp_rankings_2026_08_31.csv
+2026-08-31,212705,Nathan Trouve,1746,2,0.0,-11.0,FRA,20,atp_rankings_2026_08_31.csv
+2026-08-31,127443,Andres Urrea,1746,2,0.0,-11.0,COL,32,atp_rankings_2026_08_31.csv
+2026-08-31,211674,Kuang Qing Xu,1746,2,0.0,-11.0,CHN,20,atp_rankings_2026_08_31.csv
+2026-08-31,214025,Boxiong Zhang,1746,2,0.0,-11.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,210037,Mehdi Benchakroun,1759,2,0.0,-11.0,MAR,22,atp_rankings_2026_08_31.csv
+2026-08-31,214138,Bastian Berenz,1759,2,0.0,-11.0,AUT,,atp_rankings_2026_08_31.csv
+2026-08-31,214060,Jan Chlodnicki,1759,2,0.0,-11.0,POL,,atp_rankings_2026_08_31.csv
+2026-08-31,214597,Rafalentino Ali Da Costa,1759,2,0.0,-11.0,INA,16,atp_rankings_2026_08_31.csv
+2026-08-31,213263,Christoph Gayk,1759,2,0.0,-11.0,GER,20,atp_rankings_2026_08_31.csv
+2026-08-31,211472,Oliver Johansson,1759,2,0.0,-11.0,SWE,,atp_rankings_2026_08_31.csv
+2026-08-31,212905,Kabeer Kapasi,1759,2,1.0,153.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,212669,Botond Kisantal,1759,2,0.0,-11.0,HUN,21,atp_rankings_2026_08_31.csv
+2026-08-31,105011,Illya Marchenko,1759,2,0.0,-11.0,UKR,38,atp_rankings_2026_08_31.csv
+2026-08-31,202190,Gregor Ramskogler,1759,2,0.0,-11.0,AUT,27,atp_rankings_2026_08_31.csv
+2026-08-31,213651,Agustin Salazar Salazar,1759,2,0.0,-11.0,MEX,22,atp_rankings_2026_08_31.csv
+2026-08-31,106264,Karue Sell,1759,2,0.0,-11.0,BRA,32,atp_rankings_2026_08_31.csv
+2026-08-31,106138,Yaraslav Shyla,1759,2,0.0,-11.0,BLR,33,atp_rankings_2026_08_31.csv
+2026-08-31,214602,Aleksandar Tolev,1759,2,0.0,-11.0,BUL,17,atp_rankings_2026_08_31.csv
+2026-08-31,212099,Benjamin Vitter,1759,2,0.0,-11.0,FRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,202247,Simon Beaupain,1774,2,0.0,-39.0,BEL,27,atp_rankings_2026_08_31.csv
+2026-08-31,111580,Ku Keon Kang,1774,2,,,KOR,29,atp_rankings_2026_08_31.csv
+2026-08-31,214607,Kaan Isik Kosaner,1774,2,0.0,-7.0,TUR,17,atp_rankings_2026_08_31.csv
+2026-08-31,212167,Darius Florin Pop,1774,2,0.0,-7.0,ROU,22,atp_rankings_2026_08_31.csv
+2026-08-31,207973,Ainius Sabaliauskas,1774,2,0.0,-7.0,LTU,23,atp_rankings_2026_08_31.csv
+2026-08-31,213967,Cristian Felipe Sanchez Rojas,1774,2,0.0,-7.0,COL,,atp_rankings_2026_08_31.csv
+2026-08-31,211732,Kaua Lorenzo Santos Gava,1774,2,0.0,-7.0,BRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,209982,Konstantin Zhzhenov,1774,2,0.0,-7.0,RUS,22,atp_rankings_2026_08_31.csv
+2026-08-31,210101,Simone Agostini,1782,2,0.0,-34.0,ITA,29,atp_rankings_2026_08_31.csv
+2026-08-31,214613,Marko Bekeni,1782,2,0.0,-8.0,SVK,18,atp_rankings_2026_08_31.csv
+2026-08-31,105029,Sergey Betov,1782,2,0.0,-8.0,BLR,38,atp_rankings_2026_08_31.csv
+2026-08-31,212663,Gianluca Carlini,1782,2,0.0,-8.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,209206,Antonio Caruso,1782,2,0.0,-8.0,ITA,27,atp_rankings_2026_08_31.csv
+2026-08-31,212914,Corey Craig,1782,2,0.0,-34.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,214131,Edward Etty,1782,2,0.0,-8.0,NED,24,atp_rankings_2026_08_31.csv
+2026-08-31,212527,Adam Kaczmarek,1782,2,0.0,-8.0,POL,22,atp_rankings_2026_08_31.csv
+2026-08-31,214276,Min Ho Ko,1782,2,0.0,-8.0,KOR,19,atp_rankings_2026_08_31.csv
+2026-08-31,211406,Yazid Lahjomri,1782,2,0.0,-8.0,MAR,21,atp_rankings_2026_08_31.csv
+2026-08-31,214265,Jordan Lee,1782,2,0.0,-8.0,USA,16,atp_rankings_2026_08_31.csv
+2026-08-31,214614,Matisse Martin,1782,2,0.0,-8.0,FRA,17,atp_rankings_2026_08_31.csv
+2026-08-31,213069,Gasper Matijasic,1782,2,0.0,-8.0,SLO,,atp_rankings_2026_08_31.csv
+2026-08-31,212024,Alejandro Melero Kretzer,1782,2,0.0,-8.0,ESP,21,atp_rankings_2026_08_31.csv
+2026-08-31,212278,Milos Mikovic,1782,2,0.0,-8.0,SRB,21,atp_rankings_2026_08_31.csv
+2026-08-31,204737,Alejandro Moreno,1782,2,0.0,-8.0,MEX,36,atp_rankings_2026_08_31.csv
+2026-08-31,212805,Saba George Nanobashvili,1782,2,1.0,209.0,SWE,21,atp_rankings_2026_08_31.csv
+2026-08-31,212619,Charlie Pade,1782,2,0.0,-8.0,AUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,207972,Minjong Park,1782,2,0.0,-8.0,KOR,24,atp_rankings_2026_08_31.csv
+2026-08-31,214254,Roberto Perez Socas,1782,2,0.0,-34.0,ESP,18,atp_rankings_2026_08_31.csv
+2026-08-31,104908,Mikal Oliver Statham,1782,2,0.0,-8.0,NZL,39,atp_rankings_2026_08_31.csv
+2026-08-31,208329,Maximilian Todorov,1782,2,0.0,-8.0,GER,27,atp_rankings_2026_08_31.csv
+2026-08-31,209225,Martin Antonio Vergara Del Puerto,1782,2,1.0,209.0,PAR,22,atp_rankings_2026_08_31.csv
+2026-08-31,207370,Ryusuke Horiuchi,1805,2,0.0,-12.0,JPN,27,atp_rankings_2026_08_31.csv
+2026-08-31,149156,Jakub Jedrzejczak,1805,2,0.0,-12.0,POL,20,atp_rankings_2026_08_31.csv
+2026-08-31,210166,Mika Lipp,1805,2,0.0,-12.0,GER,22,atp_rankings_2026_08_31.csv
+2026-08-31,212148,Novak Novakovic,1805,2,0.0,-12.0,SRB,25,atp_rankings_2026_08_31.csv
+2026-08-31,206479,S Mert Ozdemir,1805,2,0.0,-12.0,TUR,26,atp_rankings_2026_08_31.csv
+2026-08-31,213873,Benjamin Perez,1805,2,0.0,-38.0,CHI,19,atp_rankings_2026_08_31.csv
+2026-08-31,209267,Vesa Ahti,1811,2,0.0,-12.0,FIN,27,atp_rankings_2026_08_31.csv
+2026-08-31,213663,Maximilian Borisov,1811,2,0.0,-12.0,BUL,,atp_rankings_2026_08_31.csv
+2026-08-31,212057,Gabriele Brancatelli,1811,2,0.0,-12.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,149161,David Cristian Carteputreda,1811,2,0.0,-12.0,ROU,19,atp_rankings_2026_08_31.csv
+2026-08-31,214333,Woong Bi Lee,1811,2,0.0,-12.0,KOR,21,atp_rankings_2026_08_31.csv
+2026-08-31,214251,Noah Martens,1811,2,0.0,-37.0,BEL,24,atp_rankings_2026_08_31.csv
+2026-08-31,132804,Jordi Mas De Ugarte,1811,2,0.0,-12.0,ESP,31,atp_rankings_2026_08_31.csv
+2026-08-31,134113,Cing Yang Meng,1811,2,0.0,-12.0,TPE,28,atp_rankings_2026_08_31.csv
+2026-08-31,210419,Daniele Minighini,1811,2,1.0,269.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,213005,Ali Missoum,1811,2,0.0,-12.0,MAR,18,atp_rankings_2026_08_31.csv
+2026-08-31,214355,Eyad Reda Ezzat Mohamed Sherif,1811,2,0.0,-12.0,EGY,18,atp_rankings_2026_08_31.csv
+2026-08-31,149157,Luis Jose Nakamine,1811,2,0.0,-12.0,PER,20,atp_rankings_2026_08_31.csv
+2026-08-31,213287,Diego Ortiz Gamonsl,1811,2,0.0,-12.0,CHI,22,atp_rankings_2026_08_31.csv
+2026-08-31,212923,Hugo Ouzilou,1811,2,0.0,-12.0,SUI,23,atp_rankings_2026_08_31.csv
+2026-08-31,212230,Seungmin Park,1811,2,0.0,-12.0,KOR,20,atp_rankings_2026_08_31.csv
+2026-08-31,210613,Derek Pham,1811,2,0.0,-12.0,AUS,22,atp_rankings_2026_08_31.csv
+2026-08-31,214261,Lautaro Rocha,1811,2,0.0,-12.0,ARG,19,atp_rankings_2026_08_31.csv
+2026-08-31,214531,Oliwier Sterniczuk,1811,2,0.0,-12.0,POL,18,atp_rankings_2026_08_31.csv
+2026-08-31,212636,Maxime St Hilaire,1811,2,0.0,-12.0,CAN,23,atp_rankings_2026_08_31.csv
+2026-08-31,207591,David Tixhon,1811,2,0.0,-12.0,BEL,25,atp_rankings_2026_08_31.csv
+2026-08-31,212857,Cooper Woestendick,1811,2,0.0,-12.0,USA,19,atp_rankings_2026_08_31.csv
+2026-08-31,202357,Bang Shuo Yin,1811,2,0.0,-12.0,TPE,27,atp_rankings_2026_08_31.csv
+2026-08-31,213213,Hyu Kawanishi,1833,2,0.0,-13.0,JPN,,atp_rankings_2026_08_31.csv
+2026-08-31,206895,Alex Kobelt,1833,2,0.0,-13.0,USA,29,atp_rankings_2026_08_31.csv
+2026-08-31,208315,Javier Molino,1833,2,0.0,-13.0,ESP,25,atp_rankings_2026_08_31.csv
+2026-08-31,213910,Victor Ryden,1833,2,0.0,-40.0,SWE,18,atp_rankings_2026_08_31.csv
+2026-08-31,214376,Taiki Takizawa,1833,2,0.0,-13.0,AUS,16,atp_rankings_2026_08_31.csv
+2026-08-31,210662,Marco Alvarez,1838,2,0.0,-14.0,USA,25,atp_rankings_2026_08_31.csv
+2026-08-31,213137,Alejandro Arcila,1838,2,0.0,-14.0,COL,19,atp_rankings_2026_08_31.csv
+2026-08-31,133667,Congsup Congcar,1838,2,0.0,-14.0,THA,30,atp_rankings_2026_08_31.csv
+2026-08-31,202128,Louis Dussin,1838,2,0.0,-14.0,FRA,27,atp_rankings_2026_08_31.csv
+2026-08-31,200622,Hernando Jose Escurra Isnardi,1838,2,0.0,-14.0,PAR,28,atp_rankings_2026_08_31.csv
+2026-08-31,213576,Matt Kleiman,1838,2,0.0,-14.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,211742,Daniel Lara Salmeron,1838,2,0.0,-14.0,ESP,25,atp_rankings_2026_08_31.csv
+2026-08-31,211587,Diogo Morais,1838,2,0.0,-39.0,POR,22,atp_rankings_2026_08_31.csv
+2026-08-31,209932,Michal Novansky,1838,2,0.0,-14.0,SVK,24,atp_rankings_2026_08_31.csv
+2026-08-31,213979,Kunanan Pantaratorn,1838,2,0.0,-14.0,THA,18,atp_rankings_2026_08_31.csv
+2026-08-31,212992,Niels Ratiu,1838,2,0.0,-14.0,BEL,21,atp_rankings_2026_08_31.csv
+2026-08-31,207587,Martins Rocens,1838,2,0.0,-14.0,LAT,26,atp_rankings_2026_08_31.csv
+2026-08-31,214222,Felix Roussel,1838,2,0.0,-14.0,CAN,18,atp_rankings_2026_08_31.csv
+2026-08-31,212243,Hiroki Sakagawa,1838,2,0.0,-14.0,JPN,25,atp_rankings_2026_08_31.csv
+2026-08-31,213632,Glib Sekachov,1838,2,0.0,-14.0,UKR,,atp_rankings_2026_08_31.csv
+2026-08-31,214142,Kai Thompson,1838,2,0.0,-14.0,HKG,,atp_rankings_2026_08_31.csv
+2026-08-31,209870,Gunawan Trismuwantara,1838,2,0.0,-14.0,INA,23,atp_rankings_2026_08_31.csv
+2026-08-31,206789,Lingxi Zhao,1838,2,0.0,-14.0,CHN,26,atp_rankings_2026_08_31.csv
+2026-08-31,209238,Sebastian Dominguez,1856,2,0.0,-14.0,GUA,24,atp_rankings_2026_08_31.csv
+2026-08-31,209035,Mikel Martinez,1856,2,0.0,-14.0,ESP,25,atp_rankings_2026_08_31.csv
+2026-08-31,207738,Brandon Perez,1856,2,0.0,-14.0,VEN,26,atp_rankings_2026_08_31.csv
+2026-08-31,213830,Saki Tange,1856,2,0.0,-14.0,JPN,22,atp_rankings_2026_08_31.csv
+2026-08-31,212310,Pepijn Bastiaansen,1860,2,0.0,-13.0,NED,21,atp_rankings_2026_08_31.csv
+2026-08-31,213885,Nav Dayal,1860,2,0.0,-13.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,210396,Dmitry Dolzhenkov,1860,2,0.0,-13.0,RUS,22,atp_rankings_2026_08_31.csv
+2026-08-31,206790,Alexis Gurmendi,1860,2,0.0,-13.0,ARG,28,atp_rankings_2026_08_31.csv
+2026-08-31,144813,Benjamin Hannestad,1860,2,0.0,-13.0,DEN,29,atp_rankings_2026_08_31.csv
+2026-08-31,209103,Haoyuan Huang,1860,2,0.0,-13.0,CHN,23,atp_rankings_2026_08_31.csv
+2026-08-31,213617,Mattia Nannelli,1860,2,0.0,-13.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,209346,Stijn Pel,1860,2,0.0,-13.0,NED,24,atp_rankings_2026_08_31.csv
+2026-08-31,210190,Timofey Stepanov,1860,2,0.0,-13.0,SUI,23,atp_rankings_2026_08_31.csv
+2026-08-31,200205,Valentin Vanta,1860,2,0.0,-36.0,ROU,28,atp_rankings_2026_08_31.csv
+2026-08-31,149153,Gabriele Volpi,1860,2,0.0,-13.0,ITA,30,atp_rankings_2026_08_31.csv
+2026-08-31,149268,Gabriele Vulpitta,1860,2,0.0,-13.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,212103,Zhan Zheng,1860,2,0.0,-13.0,CHN,23,atp_rankings_2026_08_31.csv
+2026-08-31,209199,Ilias Zimmermann,1860,2,0.0,-13.0,SUI,,atp_rankings_2026_08_31.csv
+2026-08-31,214183,Marko Retelj,1874,2,0.0,-32.0,SLO,18,atp_rankings_2026_08_31.csv
+2026-08-31,214198,Daniel Aleksandar Amarandei,1875,2,0.0,-11.0,ITA,18,atp_rankings_2026_08_31.csv
+2026-08-31,209967,Antoine Berger,1875,2,0.0,-11.0,FRA,28,atp_rankings_2026_08_31.csv
+2026-08-31,214488,Henry Best,1875,2,0.0,-28.0,GBR,19,atp_rankings_2026_08_31.csv
+2026-08-31,213759,Maxi Carrascosa Diaz,1875,2,0.0,-11.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,211634,Tobia Grandinetti,1875,2,0.0,-11.0,ARG,22,atp_rankings_2026_08_31.csv
+2026-08-31,149124,Oskar Grzegorzewski,1875,2,0.0,-11.0,POL,21,atp_rankings_2026_08_31.csv
+2026-08-31,214364,Alexander Gschiel,1875,2,0.0,-11.0,AUT,19,atp_rankings_2026_08_31.csv
+2026-08-31,149104,Patrik Homola,1875,2,0.0,-11.0,CZE,22,atp_rankings_2026_08_31.csv
+2026-08-31,214263,Matic Hribar,1875,2,0.0,-28.0,SLO,19,atp_rankings_2026_08_31.csv
+2026-08-31,149141,Marko Nikolic,1875,2,0.0,-11.0,SRB,21,atp_rankings_2026_08_31.csv
+2026-08-31,213958,Ramazan Kaan Oktay,1875,2,0.0,-11.0,TUR,,atp_rankings_2026_08_31.csv
+2026-08-31,213716,Yoshka Sborowsky,1875,2,0.0,-11.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,213135,Ruslan Serazhetdinov,1875,2,0.0,-11.0,RUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,130493,Tiago Silva,1875,2,1.0,355.0,POR,21,atp_rankings_2026_08_31.csv
+2026-08-31,138467,Marvin Bernardo Becker Spiering,1875,2,0.0,-11.0,BRA,28,atp_rankings_2026_08_31.csv
+2026-08-31,210733,Arthur Bonnaud,1890,2,0.0,-12.0,FRA,29,atp_rankings_2026_08_31.csv
+2026-08-31,206645,Samuel De Felipe Garcia,1890,2,0.0,-12.0,ESP,27,atp_rankings_2026_08_31.csv
+2026-08-31,212840,Thomas Gerbaud,1890,2,0.0,-12.0,FRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,210191,Gian Gruenig,1890,2,0.0,-12.0,SUI,26,atp_rankings_2026_08_31.csv
+2026-08-31,213579,Jan Klimas,1890,2,0.0,-12.0,CZE,,atp_rankings_2026_08_31.csv
+2026-08-31,214082,Justin Lenders,1890,2,0.0,-12.0,SUI,,atp_rankings_2026_08_31.csv
+2026-08-31,209877,Stevan Popovic,1890,2,0.0,-12.0,GER,24,atp_rankings_2026_08_31.csv
+2026-08-31,206827,Alan Sau Franco,1890,2,0.0,-12.0,MEX,25,atp_rankings_2026_08_31.csv
+2026-08-31,212922,Maties Torres Ramis,1890,2,0.0,-26.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,214081,Denis Vishenchuk Vishenko,1890,2,0.0,-12.0,RUS,19,atp_rankings_2026_08_31.csv
+2026-08-31,210666,Ha Minh Duc Vu,1890,2,0.0,-12.0,VIE,23,atp_rankings_2026_08_31.csv
 2026-08-31,120545,Ko Suzuki,1901,2,0.0,-11.0,JPN,35,atp_rankings_2026_08_31.csv
-2026-08-31,207559,Darrshan Suresh,1919,2,,,MAS,25,atp_rankings_2026_08_31.csv
+2026-08-31,213410,Romain Andres,1902,2,0.0,-11.0,FRA,19,atp_rankings_2026_08_31.csv
+2026-08-31,211517,Gregorio Biondolillo,1902,2,0.0,-24.0,ITA,26,atp_rankings_2026_08_31.csv
+2026-08-31,214117,Jack Mcgary,1902,2,0.0,-11.0,USA,21,atp_rankings_2026_08_31.csv
+2026-08-31,206739,Essa Qabazard,1902,2,0.0,-11.0,KUW,24,atp_rankings_2026_08_31.csv
+2026-08-31,212192,Victor Bini,1906,2,0.0,-12.0,BRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,214209,Lenny Couturier,1906,2,0.0,-12.0,FRA,17,atp_rankings_2026_08_31.csv
+2026-08-31,212924,Emanuel Ivanisevic,1906,2,0.0,-12.0,CRO,18,atp_rankings_2026_08_31.csv
+2026-08-31,207463,Sheng Tang,1906,2,0.0,-12.0,CHN,26,atp_rankings_2026_08_31.csv
+2026-08-31,214317,Giovanni Ciocca,1910,2,0.0,-16.0,ITA,19,atp_rankings_2026_08_31.csv
+2026-08-31,210068,Lorenzo Ferri,1910,2,0.0,-16.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,214139,Nicola Ion,1910,2,0.0,-8.0,CAN,,atp_rankings_2026_08_31.csv
+2026-08-31,210103,Luca Parenti,1910,2,0.0,-16.0,ITA,23,atp_rankings_2026_08_31.csv
+2026-08-31,210287,Noah Regas Luis,1910,2,0.0,-8.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,208867,Tomas Luis,1910,2,0.0,-8.0,POR,24,atp_rankings_2026_08_31.csv
+2026-08-31,214037,Jan Wygona,1910,2,0.0,-16.0,POL,,atp_rankings_2026_08_31.csv
+2026-08-31,210174,Matic Dimic,1917,2,0.0,-11.0,SLO,24,atp_rankings_2026_08_31.csv
+2026-08-31,213537,Jose Dominguez Alonso,1917,2,0.0,-11.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,207559,Darrshan Suresh,1919,2,0.0,-13.0,MAS,25,atp_rankings_2026_08_31.csv
+2026-08-31,212724,Anas Bennour Dit Sahli,1920,2,0.0,-10.0,TUN,19,atp_rankings_2026_08_31.csv
+2026-08-31,209978,Jordi Garcia Mestre,1920,2,0.0,-11.0,ESP,23,atp_rankings_2026_08_31.csv
 2026-08-31,213494,Bogdan Seleznev,1922,2,0.0,-11.0,RUS,24,atp_rankings_2026_08_31.csv
+2026-08-31,214385,Motoharu Abe,1923,1,0.0,-11.0,JPN,17,atp_rankings_2026_08_31.csv
+2026-08-31,120792,M Abid Ali Khan Akbar,1923,1,0.0,-11.0,PAK,36,atp_rankings_2026_08_31.csv
+2026-08-31,214615,Filippo Alfano,1923,1,0.0,-11.0,ITA,18,atp_rankings_2026_08_31.csv
+2026-08-31,214283,Juan Ignacio Barraza,1923,1,0.0,-11.0,ARG,25,atp_rankings_2026_08_31.csv
+2026-08-31,213258,Manuel Belda,1923,1,0.0,-11.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,212712,Alexis Berquier,1923,1,0.0,-11.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,214619,Daniel Borisov,1923,1,0.0,-11.0,IRL,22,atp_rankings_2026_08_31.csv
+2026-08-31,209991,Hanamichi Carvajal,1923,1,0.0,-11.0,CHI,24,atp_rankings_2026_08_31.csv
+2026-08-31,214620,Yago Castellanos,1923,1,0.0,-11.0,ESP,18,atp_rankings_2026_08_31.csv
+2026-08-31,130247,Anton Chekhov,1923,1,0.0,-11.0,RUS,33,atp_rankings_2026_08_31.csv
+2026-08-31,214621,Kayden Colombo,1923,1,0.0,-11.0,USA,17,atp_rankings_2026_08_31.csv
+2026-08-31,210444,Charlelie Cosnet,1923,1,0.0,-11.0,FRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,214622,Vitor Costa Gonçalves,1923,1,0.0,-11.0,BRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,211730,Sandesh Dattatray Kurale,1923,1,0.0,-11.0,IND,,atp_rankings_2026_08_31.csv
+2026-08-31,214623,Gregoire Delattre,1923,1,0.0,-11.0,FRA,19,atp_rankings_2026_08_31.csv
+2026-08-31,214218,Malanqi Du,1923,1,0.0,-11.0,CHN,24,atp_rankings_2026_08_31.csv
+2026-08-31,214353,Gian Durrer,1923,1,0.0,-11.0,SUI,22,atp_rankings_2026_08_31.csv
+2026-08-31,210729,Hamza El Amine,1923,1,0.0,-11.0,MAR,22,atp_rankings_2026_08_31.csv
+2026-08-31,214472,Finn Emslie Robson,1923,1,0.0,-11.0,NZL,22,atp_rankings_2026_08_31.csv
+2026-08-31,213383,Drew Fishback,1923,1,0.0,-11.0,USA,19,atp_rankings_2026_08_31.csv
+2026-08-31,214502,Kanta Kujisaki,1923,1,0.0,-11.0,JPN,20,atp_rankings_2026_08_31.csv
+2026-08-31,214624,Ruochen Gao,1923,1,0.0,-11.0,CHN,17,atp_rankings_2026_08_31.csv
+2026-08-31,214310,Pietro Gava,1923,1,0.0,-11.0,BRA,17,atp_rankings_2026_08_31.csv
+2026-08-31,214625,Jou-George Gnjidic,1923,1,0.0,-11.0,CRO,17,atp_rankings_2026_08_31.csv
+2026-08-31,206625,Daniil Golubev,1923,1,0.0,-11.0,RUS,24,atp_rankings_2026_08_31.csv
+2026-08-31,213568,Federico Gaston Gonzalez Benitez,1923,1,0.0,-11.0,PRY,,atp_rankings_2026_08_31.csv
+2026-08-31,214626,Chen Hui Ho,1923,1,,,TPE,19,atp_rankings_2026_08_31.csv
+2026-08-31,209855,James Hopper,1923,1,0.0,-11.0,GBR,25,atp_rankings_2026_08_31.csv
+2026-08-31,213959,Ilya Ignatov,1923,1,0.0,-11.0,UZB,20,atp_rankings_2026_08_31.csv
+2026-08-31,214627,Masaki Ishikawa,1923,1,0.0,-11.0,JPN,22,atp_rankings_2026_08_31.csv
+2026-08-31,106234,Aslan Karatsev,1923,1,0.0,-11.0,RUS,32,atp_rankings_2026_08_31.csv
+2026-08-31,214035,Guelord Kayombo,1923,1,0.0,-11.0,COD,,atp_rankings_2026_08_31.csv
+2026-08-31,212521,Thomas Kostka,1923,1,0.0,-11.0,FRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,212023,Oscar Lacides,1923,1,0.0,-11.0,GUD,21,atp_rankings_2026_08_31.csv
+2026-08-31,214233,Woong Chan Lee,1923,1,0.0,-11.0,KOR,17,atp_rankings_2026_08_31.csv
+2026-08-31,208841,Zekai Li,1923,1,0.0,-11.0,CHN,26,atp_rankings_2026_08_31.csv
+2026-08-31,104810,Zhe Li,1923,1,0.0,-11.0,CHN,39,atp_rankings_2026_08_31.csv
+2026-08-31,127913,Dylan Long,1923,1,0.0,-11.0,AUS,30,atp_rankings_2026_08_31.csv
+2026-08-31,212076,Zoran Ludoski,1923,1,0.0,-11.0,SRB,21,atp_rankings_2026_08_31.csv
+2026-08-31,214629,Dominik Macej,1923,1,0.0,-11.0,SVK,17,atp_rankings_2026_08_31.csv
+2026-08-31,208276,Obrad Markovski,1923,1,0.0,-11.0,MKD,25,atp_rankings_2026_08_31.csv
+2026-08-31,212158,Will Mayew,1923,1,0.0,-11.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,210050,Dusan Milanovic,1923,1,0.0,-11.0,SRB,24,atp_rankings_2026_08_31.csv
+2026-08-31,214631,Maximillian Mroz,1923,1,0.0,-11.0,USA,20,atp_rankings_2026_08_31.csv
+2026-08-31,213733,Ronan Tashinga Mtisi,1923,1,0.0,-11.0,ZIM,18,atp_rankings_2026_08_31.csv
+2026-08-31,214306,Juan Francisco Munoz,1923,1,0.0,-11.0,MEX,19,atp_rankings_2026_08_31.csv
+2026-08-31,208204,Francois Musitelli,1923,1,0.0,-11.0,FRA,27,atp_rankings_2026_08_31.csv
+2026-08-31,213944,Diogo Coelho,1923,1,,,POR,20,atp_rankings_2026_08_31.csv
+2026-08-31,214100,Niklas Niggemann,1923,1,0.0,-11.0,GER,23,atp_rankings_2026_08_31.csv
+2026-08-31,149097,Felipe Pagnacco,1923,1,0.0,-11.0,ARG,21,atp_rankings_2026_08_31.csv
+2026-08-31,212047,Danil Panarin,1923,1,0.0,-11.0,RUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,210133,Valdemar Frederik Pape,1923,1,0.0,-11.0,DEN,22,atp_rankings_2026_08_31.csv
+2026-08-31,214632,Facundo Perlov,1923,1,0.0,-11.0,ARG,22,atp_rankings_2026_08_31.csv
+2026-08-31,,Claus Piening,1923,1,0.0,-11.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214633,Paris Pouatcha,1923,1,0.0,-11.0,USA,20,atp_rankings_2026_08_31.csv
+2026-08-31,132584,Stefano Reitano,1923,1,,,ITA,29,atp_rankings_2026_08_31.csv
+2026-08-31,200100,Tomas Rengel Sierra,1923,1,0.0,-11.0,ARG,30,atp_rankings_2026_08_31.csv
+2026-08-31,214635,Milan Ristov,1923,1,0.0,-11.0,MNE,20,atp_rankings_2026_08_31.csv
+2026-08-31,213295,Samuel Rovai,1923,1,0.0,-11.0,SWE,22,atp_rankings_2026_08_31.csv
+2026-08-31,105633,Mohamed Safwat,1923,1,0.0,-11.0,EGY,35,atp_rankings_2026_08_31.csv
+2026-08-31,105688,Manuel Sanchez,1923,1,0.0,-11.0,MEX,35,atp_rankings_2026_08_31.csv
+2026-08-31,214019,Hidde Schoenmakers,1923,1,0.0,-11.0,NED,,atp_rankings_2026_08_31.csv
+2026-08-31,214271,Mauricio Schtulmann Gasca,1923,1,0.0,-11.0,MEX,17,atp_rankings_2026_08_31.csv
+2026-08-31,213761,Jack Secord,1923,1,0.0,-11.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,131999,Kyle Seelig,1923,1,0.0,-11.0,USA,28,atp_rankings_2026_08_31.csv
+2026-08-31,213976,Matthew Shearer,1923,1,0.0,-11.0,NZL,23,atp_rankings_2026_08_31.csv
+2026-08-31,213999,Leon Sloboda,1923,1,0.0,-11.0,SVK,,atp_rankings_2026_08_31.csv
+2026-08-31,214637,Jannik Sötebier,1923,1,0.0,-11.0,GER,16,atp_rankings_2026_08_31.csv
+2026-08-31,214031,Nicholas Steiglehner,1923,1,0.0,-11.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,210664,Bjorn Swenson,1923,1,0.0,-11.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,214638,Cole Thurgur,1923,1,0.0,-11.0,CAN,19,atp_rankings_2026_08_31.csv
+2026-08-31,210162,Harry Thursfield,1923,1,0.0,-11.0,GBR,25,atp_rankings_2026_08_31.csv
+2026-08-31,214639,Alexandr Tiutchenko,1923,1,0.0,-11.0,UKR,16,atp_rankings_2026_08_31.csv
+2026-08-31,214640,Andrea Tognolini,1923,1,0.0,-11.0,ITA,19,atp_rankings_2026_08_31.csv
+2026-08-31,214508,Mikhail Tsapenko,1923,1,0.0,-11.0,RUS,18,atp_rankings_2026_08_31.csv
+2026-08-31,208397,Barkat Khan,1923,1,0.0,-11.0,PAK,28,atp_rankings_2026_08_31.csv
+2026-08-31,210356,Andres Urquiola Montellano,1923,1,0.0,-11.0,BOL,22,atp_rankings_2026_08_31.csv
+2026-08-31,214641,Nand Vandepoele,1923,1,0.0,-11.0,BEL,18,atp_rankings_2026_08_31.csv
+2026-08-31,214458,Adria Velazquez Farre,1923,1,0.0,-11.0,ESP,16,atp_rankings_2026_08_31.csv
+2026-08-31,212824,Sergej Zivkovic,1923,1,0.0,-11.0,SRB,19,atp_rankings_2026_08_31.csv
+2026-08-31,214285,Daniel Adeleye,2003,1,0.0,-12.0,NGR,20,atp_rankings_2026_08_31.csv
+2026-08-31,126732,Eric Ahren Moonga,2003,1,0.0,-12.0,SWE,30,atp_rankings_2026_08_31.csv
+2026-08-31,214643,Alan Aiukhanov,2003,1,0.0,-12.0,RUS,17,atp_rankings_2026_08_31.csv
+2026-08-31,206738,Bader Alabdullah,2003,1,0.0,-12.0,KUW,24,atp_rankings_2026_08_31.csv
+2026-08-31,214226,Pedro Albuquerque Dietrich,2003,1,0.0,-12.0,BRA,18,atp_rankings_2026_08_31.csv
+2026-08-31,212493,Ramiro Amarilla,2003,1,0.0,-12.0,ARG,24,atp_rankings_2026_08_31.csv
+2026-08-31,149100,Romeo Arcuschin,2003,1,0.0,-12.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,212291,Siwanat Auytayakul,2003,1,0.0,-12.0,THA,22,atp_rankings_2026_08_31.csv
+2026-08-31,210616,Jean Baptiste Badon,2003,1,0.0,-12.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,211640,Victor Barrere,2003,1,0.0,-12.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,211396,Vladimir Bazilevskiy,2003,1,0.0,-12.0,ISR,21,atp_rankings_2026_08_31.csv
+2026-08-31,149143,Adrien Berrut,2003,1,0.0,-12.0,SUI,21,atp_rankings_2026_08_31.csv
+2026-08-31,214611,Giovanni Branchetti,2003,1,0.0,-12.0,ARG,23,atp_rankings_2026_08_31.csv
+2026-08-31,212462,Evan Burnett,2003,1,0.0,-12.0,USA,20,atp_rankings_2026_08_31.csv
+2026-08-31,214659,Dmitrii Burtsev,2003,1,0.0,-12.0,RUS,20,atp_rankings_2026_08_31.csv
+2026-08-31,214542,Luka Ceramilac,2003,1,0.0,-12.0,SRB,17,atp_rankings_2026_08_31.csv
+2026-08-31,207780,Jordan Chiu,2003,1,0.0,-12.0,USA,25,atp_rankings_2026_08_31.csv
+2026-08-31,214644,Min Hyuk Cho,2003,1,0.0,-12.0,KOR,17,atp_rankings_2026_08_31.csv
+2026-08-31,208672,Jose Luis Claro,2003,1,0.0,-12.0,PER,23,atp_rankings_2026_08_31.csv
+2026-08-31,213736,Martin Doskocil,2003,1,0.0,-12.0,CZE,,atp_rankings_2026_08_31.csv
+2026-08-31,127140,Alessandro Dragoni,2003,1,0.0,-12.0,ITA,29,atp_rankings_2026_08_31.csv
+2026-08-31,214308,Tomas Dummer Macedo,2003,1,0.0,-12.0,BRA,17,atp_rankings_2026_08_31.csv
+2026-08-31,213386,Dennis Andre Dutine,2003,1,0.0,-12.0,GER,21,atp_rankings_2026_08_31.csv
+2026-08-31,214551,Marwan Ehab,2003,1,0.0,-12.0,EGY,18,atp_rankings_2026_08_31.csv
+2026-08-31,210035,Karim El Feky,2003,1,0.0,-12.0,EGY,24,atp_rankings_2026_08_31.csv
+2026-08-31,213671,Roberto Ferrer Guimaraes,2003,1,0.0,-12.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,214312,Rafael Augusto Garcia Finetto,2003,1,0.0,-12.0,BRA,18,atp_rankings_2026_08_31.csv
+2026-08-31,209316,Anthony Genov,2003,1,0.0,-12.0,BUL,24,atp_rankings_2026_08_31.csv
+2026-08-31,213767,Alexander Glomb,2003,1,0.0,-12.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,210400,Nicolas Rafael Goldberg Alviani,2003,1,0.0,-12.0,ESP,23,atp_rankings_2026_08_31.csv
+2026-08-31,208083,Adam Heinonen,2003,1,0.0,-12.0,SWE,24,atp_rankings_2026_08_31.csv
+2026-08-31,213917,Yuya Hirose,2003,1,0.0,-12.0,JPN,,atp_rankings_2026_08_31.csv
+2026-08-31,214555,Juchan Hwang,2003,1,0.0,-12.0,KOR,18,atp_rankings_2026_08_31.csv
+2026-08-31,213342,David Jeanne Grandinot,2003,1,0.0,-12.0,FRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,202155,Yeongseok Jeong,2003,1,0.0,-12.0,KOR,26,atp_rankings_2026_08_31.csv
+2026-08-31,214191,Omar Kandil,2003,1,0.0,-12.0,EGY,17,atp_rankings_2026_08_31.csv
+2026-08-31,210615,Egor Khotchenkov,2003,1,,,RUS,23,atp_rankings_2026_08_31.csv
+2026-08-31,211540,Kolos Kincses,2003,1,0.0,-12.0,HUN,,atp_rankings_2026_08_31.csv
+2026-08-31,213630,Ferdinand Kloesters,2003,1,0.0,-12.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,211608,Nicolas Kobelt,2003,1,0.0,-12.0,SUI,22,atp_rankings_2026_08_31.csv
+2026-08-31,214216,Anes Latifovic,2003,1,0.0,-12.0,GER,21,atp_rankings_2026_08_31.csv
+2026-08-31,,Jea Moon Lee,2003,1,0.0,-12.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214455,Liangxuan Lu,2003,1,0.0,-12.0,CHN,16,atp_rankings_2026_08_31.csv
+2026-08-31,210548,Tim Loosen,2003,1,0.0,-12.0,GER,25,atp_rankings_2026_08_31.csv
+2026-08-31,124001,Gergely Madarasz,2003,1,0.0,-12.0,HUN,31,atp_rankings_2026_08_31.csv
+2026-08-31,211699,Franco Marini,2003,1,0.0,-12.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,149277,Andrea Meduri,2003,1,0.0,-12.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,211545,Seiya Nakanishi,2003,1,0.0,-12.0,JPN,29,atp_rankings_2026_08_31.csv
+2026-08-31,208933,Dian Nedev,2003,1,0.0,-12.0,BUL,25,atp_rankings_2026_08_31.csv
+2026-08-31,214373,Pierre Ngijol Carre,2003,1,0.0,-12.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,210473,Fnu Nidunjianzan,2003,1,0.0,-12.0,CHN,22,atp_rankings_2026_08_31.csv
+2026-08-31,212247,Lun Obrul,2003,1,0.0,-12.0,SLO,22,atp_rankings_2026_08_31.csv
+2026-08-31,211489,Maximilian Oezcelik,2003,1,0.0,-12.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,200075,Yshai Oliel,2003,1,0.0,-12.0,ISR,26,atp_rankings_2026_08_31.csv
+2026-08-31,209873,Eric Jr. Olivarez,2003,1,0.0,-12.0,PHI,28,atp_rankings_2026_08_31.csv
+2026-08-31,212764,Fabrizio Karol Pio Osti,2003,1,0.0,-12.0,ITA,20,atp_rankings_2026_08_31.csv
+2026-08-31,213922,Max Pade,2003,1,0.0,-12.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,213186,David Petrovic,2003,1,0.0,-12.0,GER,21,atp_rankings_2026_08_31.csv
+2026-08-31,122649,Photos Photiades,2003,1,0.0,-12.0,CYP,22,atp_rankings_2026_08_31.csv
+2026-08-31,207412,Sidane Pontjodikromo,2003,1,0.0,-12.0,NED,25,atp_rankings_2026_08_31.csv
+2026-08-31,214426,Felix Raser,2003,1,0.0,-12.0,AUT,17,atp_rankings_2026_08_31.csv
+2026-08-31,,Philippe Renard,2003,1,0.0,-12.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214649,Felipe Rivadeneira,2003,1,0.0,-12.0,ECU,20,atp_rankings_2026_08_31.csv
+2026-08-31,208418,Jonas Schaer,2003,1,0.0,-12.0,SUI,26,atp_rankings_2026_08_31.csv
+2026-08-31,210349,Amaan Siddiqui,2003,1,0.0,-12.0,IND,24,atp_rankings_2026_08_31.csv
+2026-08-31,214387,Svarmanyu Singh,2003,1,0.0,-12.0,IND,20,atp_rankings_2026_08_31.csv
+2026-08-31,212557,Samuel Stolarik,2003,1,0.0,-12.0,SVK,22,atp_rankings_2026_08_31.csv
+2026-08-31,214290,Leonardo Suarez,2003,1,0.0,-12.0,BOL,17,atp_rankings_2026_08_31.csv
+2026-08-31,214503,Sulaiman Syed,2003,1,0.0,-12.0,USA,16,atp_rankings_2026_08_31.csv
+2026-08-31,214514,Abubakar Talha,2003,1,0.0,-12.0,PAK,16,atp_rankings_2026_08_31.csv
+2026-08-31,212234,Joan Torres Espinosa,2003,1,0.0,-12.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,214297,Julian Valenzuela,2003,1,0.0,-12.0,CHI,18,atp_rankings_2026_08_31.csv
+2026-08-31,214187,Luigi Valletta,2003,1,0.0,-12.0,ITA,19,atp_rankings_2026_08_31.csv
+2026-08-31,202413,Lazar Vojinovic,2003,1,0.0,-12.0,SRB,27,atp_rankings_2026_08_31.csv
+2026-08-31,208589,Nikita Volonski,2003,1,0.0,-12.0,AUS,24,atp_rankings_2026_08_31.csv
+2026-08-31,125804,Brandon Walkin,2003,1,0.0,-12.0,GBR,32,atp_rankings_2026_08_31.csv
+2026-08-31,213907,Christian Wedel,2003,1,0.0,-12.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,213188,Luc Wieland,2003,1,,,SUI,,atp_rankings_2026_08_31.csv
+2026-08-31,211563,Aaron James Williams,2003,1,0.0,-12.0,GER,22,atp_rankings_2026_08_31.csv
+2026-08-31,214358,Finn Willman,2003,1,0.0,-12.0,NZL,19,atp_rankings_2026_08_31.csv
+2026-08-31,214110,Kai An Wu,2003,1,0.0,-12.0,TPE,19,atp_rankings_2026_08_31.csv
+2026-08-31,214509,Natsuki Yamamoto,2003,1,0.0,-12.0,JPN,21,atp_rankings_2026_08_31.csv
+2026-08-31,210021,Yerassyl Yerdilda,2003,1,0.0,-12.0,KAZ,20,atp_rankings_2026_08_31.csv
+2026-08-31,214303,Lucas Yunez,2003,1,0.0,-12.0,ECU,18,atp_rankings_2026_08_31.csv
+2026-08-31,213950,Nicolas Baena,2087,1,0.0,-7.0,PER,18,atp_rankings_2026_08_31.csv
+2026-08-31,212504,Nika Bidzinashvili,2087,1,0.0,-7.0,GEO,,atp_rankings_2026_08_31.csv
+2026-08-31,209093,Juliusz Bienkiewicz,2087,1,0.0,-96.0,POL,,atp_rankings_2026_08_31.csv
+2026-08-31,214055,Flavio Bocci,2087,1,0.0,-7.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,109732,Enrique Bogo,2087,1,0.0,-7.0,BRA,31,atp_rankings_2026_08_31.csv
+2026-08-31,210440,Federico Bove,2087,1,0.0,-96.0,ITA,27,atp_rankings_2026_08_31.csv
+2026-08-31,214301,Matthew Carroll,2087,1,0.0,-7.0,GBR,,atp_rankings_2026_08_31.csv
+2026-08-31,210364,Mateo Castañeda,2087,1,0.0,-7.0,COL,20,atp_rankings_2026_08_31.csv
+2026-08-31,214154,Enrique Collar,2087,1,0.0,-7.0,ESP,18,atp_rankings_2026_08_31.csv
+2026-08-31,213984,Goncalo Da Rosa Castro,2087,1,0.0,-7.0,POR,17,atp_rankings_2026_08_31.csv
+2026-08-31,211737,Sean Daryabeigi,2087,1,0.0,-7.0,USA,21,atp_rankings_2026_08_31.csv
+2026-08-31,212129,Mariano Dedura Palomero,2087,1,0.0,-7.0,GER,20,atp_rankings_2026_08_31.csv
+2026-08-31,209933,Clement Deleersnyder,2087,1,0.0,-7.0,FRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,214165,Joao Pedro Didoni Bonini,2087,1,0.0,-7.0,BRA,19,atp_rankings_2026_08_31.csv
+2026-08-31,214351,Filip Drab,2087,1,0.0,-7.0,SVK,18,atp_rankings_2026_08_31.csv
+2026-08-31,213678,Felipe Dreer,2087,1,0.0,-7.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,210403,Ivan Dreycopp,2087,1,0.0,-7.0,ARG,23,atp_rankings_2026_08_31.csv
+2026-08-31,211685,Birtan Duran,2087,1,0.0,-7.0,TUR,22,atp_rankings_2026_08_31.csv
+2026-08-31,214544,Tugra Duran,2087,1,0.0,-7.0,TUR,19,atp_rankings_2026_08_31.csv
+2026-08-31,210432,Felix  Einig,2087,1,0.0,-7.0,GER,26,atp_rankings_2026_08_31.csv
+2026-08-31,214133,Wen Bo Fan,2087,1,0.0,-7.0,CHN,18,atp_rankings_2026_08_31.csv
+2026-08-31,214375,Luis Andres Flores Avila,2087,1,0.0,-7.0,MEX,18,atp_rankings_2026_08_31.csv
+2026-08-31,214248,Oriol Font,2087,1,0.0,-7.0,ESP,20,atp_rankings_2026_08_31.csv
+2026-08-31,209895,Sai Karteek Reddy Ganta,2087,1,0.0,-7.0,IND,26,atp_rankings_2026_08_31.csv
+2026-08-31,213282,Trisztan Gubi,2087,1,0.0,-7.0,HUN,21,atp_rankings_2026_08_31.csv
+2026-08-31,214083,Thomas Gunzinger,2087,1,0.0,-7.0,SUI,,atp_rankings_2026_08_31.csv
+2026-08-31,213680,Javier Guzman,2087,1,0.0,-7.0,CHL,,atp_rankings_2026_08_31.csv
+2026-08-31,214467,Zac Hamill,2087,1,0.0,-7.0,AUS,21,atp_rankings_2026_08_31.csv
+2026-08-31,214661,Tim Hammes,2087,1,0.0,-7.0,GER,22,atp_rankings_2026_08_31.csv
+2026-08-31,213949,Julius Maximilian Haus,2087,1,0.0,-7.0,GER,19,atp_rankings_2026_08_31.csv
+2026-08-31,214096,llan Hediger,2087,1,0.0,-7.0,SUI,20,atp_rankings_2026_08_31.csv
+2026-08-31,214078,Leonardo Iemmi,2087,1,0.0,-7.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,208878,Ryder Jackson,2087,1,0.0,-7.0,USA,21,atp_rankings_2026_08_31.csv
+2026-08-31,210348,Jarno Jans,2087,1,0.0,-7.0,NED,26,atp_rankings_2026_08_31.csv
+2026-08-31,213928,Reid Jarvis,2087,1,0.0,-7.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,103499,Aqeel Khan,2087,1,0.0,-7.0,PAK,46,atp_rankings_2026_08_31.csv
+2026-08-31,214137,Marko Knezevic,2087,1,0.0,-7.0,NED,19,atp_rankings_2026_08_31.csv
+2026-08-31,149122,Bruno Kokot,2087,1,,,POL,19,atp_rankings_2026_08_31.csv
+2026-08-31,213044,Reiya Komagata,2087,1,0.0,-96.0,JPN,23,atp_rankings_2026_08_31.csv
+2026-08-31,213127,Jeri Lassila,2087,1,0.0,-7.0,FIN,,atp_rankings_2026_08_31.csv
+2026-08-31,213565,Isaac Lhomond,2087,1,0.0,-7.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,213850,Aron Janos Major,2087,1,0.0,-7.0,HUN,,atp_rankings_2026_08_31.csv
+2026-08-31,210670,Sasa Markovic,2087,1,0.0,-7.0,SRB,20,atp_rankings_2026_08_31.csv
+2026-08-31,212754,Norbert Marosik,2087,1,0.0,-7.0,SVK,22,atp_rankings_2026_08_31.csv
+2026-08-31,213831,Vicente Freda,2087,1,0.0,-7.0,BRA,19,atp_rankings_2026_08_31.csv
+2026-08-31,132433,Stefan Menichella,2087,1,0.0,-7.0,USA,31,atp_rankings_2026_08_31.csv
+2026-08-31,214367,Marco Migliorati,2087,1,0.0,-7.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,212037,Amir Milushev,2087,1,0.0,-7.0,UZB,21,atp_rankings_2026_08_31.csv
+2026-08-31,213158,Vicente Monge,2087,1,0.0,-7.0,PER,20,atp_rankings_2026_08_31.csv
+2026-08-31,200233,Nicaise Muamba,2087,1,0.0,-7.0,CAN,26,atp_rankings_2026_08_31.csv
+2026-08-31,149283,Freddy Murray,2087,1,0.0,-7.0,IRL,23,atp_rankings_2026_08_31.csv
+2026-08-31,212938,Botond Nagy,2087,1,0.0,-7.0,HUN,,atp_rankings_2026_08_31.csv
+2026-08-31,212813,Kentaro Otsuka,2087,1,0.0,-7.0,JPN,,atp_rankings_2026_08_31.csv
+2026-08-31,210081,Viacheslav Ovchinnikov,2087,1,0.0,-7.0,RUS,24,atp_rankings_2026_08_31.csv
+2026-08-31,212170,David Prasievi,2087,1,0.0,-7.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,214547,Ntungamili Raguin,2087,1,0.0,-7.0,BOT,17,atp_rankings_2026_08_31.csv
+2026-08-31,212902,Danial Rakhmatullayev,2087,1,0.0,-7.0,KAZ,,atp_rankings_2026_08_31.csv
+2026-08-31,214160,Henry Ren,2087,1,0.0,-7.0,CAN,22,atp_rankings_2026_08_31.csv
+2026-08-31,214479,Gabriel Sardo,2087,1,0.0,-7.0,ITA,22,atp_rankings_2026_08_31.csv
+2026-08-31,212137,Jelani Sarr,2087,1,0.0,-7.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,214372,Rajat Shirur,2087,1,0.0,-7.0,USA,18,atp_rankings_2026_08_31.csv
+2026-08-31,211607,Filip Stidell,2087,1,0.0,-7.0,SWE,21,atp_rankings_2026_08_31.csv
+2026-08-31,210702,Jinpeng Tang,2087,1,0.0,-7.0,CHN,19,atp_rankings_2026_08_31.csv
+2026-08-31,212124,Ander Tarrio Ponte,2087,1,0.0,-7.0,ESP,20,atp_rankings_2026_08_31.csv
+2026-08-31,214657,Christopher Thies,2087,1,0.0,-7.0,GER,18,atp_rankings_2026_08_31.csv
+2026-08-31,212862,Tomas Tischner,2087,1,0.0,-7.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,213020,Aadarsh Tripathi,2087,1,0.0,-96.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,207178,Joe Tyler,2087,1,0.0,-7.0,GBR,27,atp_rankings_2026_08_31.csv
+2026-08-31,212956,Lachlan Vickery,2087,1,0.0,-7.0,AUS,22,atp_rankings_2026_08_31.csv
+2026-08-31,214307,Ids Waterbolk,2087,1,0.0,-7.0,NED,25,atp_rankings_2026_08_31.csv
+2026-08-31,212165,Rafael Ymer,2087,1,0.0,-7.0,SWE,20,atp_rankings_2026_08_31.csv
+2026-08-31,210597,Ahmed Zaki,2087,1,0.0,-7.0,EGY,21,atp_rankings_2026_08_31.csv
+2026-08-31,208542,Linghao Zhang,2087,1,0.0,-7.0,CHN,23,atp_rankings_2026_08_31.csv
+2026-08-31,214132,William Zhang,2087,1,0.0,-7.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,214010,Shixun Zhu,2087,1,0.0,-7.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,213047,Marcin Andrzejczak,2162,1,0.0,-9.0,POL,,atp_rankings_2026_08_31.csv
+2026-08-31,106339,Felipe Assuncao Garla,2162,1,0.0,-9.0,BRA,32,atp_rankings_2026_08_31.csv
+2026-08-31,212601,Luka Bojicic Ono,2162,1,0.0,-9.0,BRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,214089,Ole Bredschneijder,2162,1,0.0,-9.0,NED,24,atp_rankings_2026_08_31.csv
+2026-08-31,208216,Alberto Bronzetti,2162,1,0.0,-9.0,ITA,28,atp_rankings_2026_08_31.csv
+2026-08-31,213602,Filippo Callerio,2162,1,0.0,-9.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,214014,Pedro Henrique Chabalgoity,2162,1,0.0,-9.0,BRA,,atp_rankings_2026_08_31.csv
+2026-08-31,212473,Miles Clark,2162,1,0.0,-9.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,214241,Sasha Colleu,2162,1,0.0,-9.0,FRA,,atp_rankings_2026_08_31.csv
+2026-08-31,208927,Milledge Cossu,2162,1,0.0,-9.0,USA,24,atp_rankings_2026_08_31.csv
+2026-08-31,213140,Edoardo De Filippo,2162,1,0.0,-9.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,212929,Nikola Djukic Valera,2162,1,0.0,-9.0,ESP,,atp_rankings_2026_08_31.csv
+2026-08-31,212529,Alex Finkelstein,2162,1,0.0,-9.0,USA,23,atp_rankings_2026_08_31.csv
+2026-08-31,207748,Hong Lin Fu,2162,1,0.0,-9.0,TPE,24,atp_rankings_2026_08_31.csv
+2026-08-31,212720,Juan Carlos Fuentes Vasquez,2162,1,0.0,-9.0,ESA,20,atp_rankings_2026_08_31.csv
+2026-08-31,211353,Thomas Nicholas Gadecki,2162,1,0.0,-9.0,AUS,20,atp_rankings_2026_08_31.csv
+2026-08-31,214660,Alexander Guajardo,2162,1,0.0,-9.0,USA,20,atp_rankings_2026_08_31.csv
+2026-08-31,214520,Stijn Hofman,2162,1,0.0,-9.0,NED,23,atp_rankings_2026_08_31.csv
+2026-08-31,213165,Jia Hu,2162,1,0.0,-9.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,208157,Jan Jermar,2162,1,0.0,-9.0,CZE,26,atp_rankings_2026_08_31.csv
+2026-08-31,214011,Kaigaoge Kang,2162,1,0.0,-9.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,210490,Matthias Uwe Kask,2162,1,0.0,-9.0,CAN,21,atp_rankings_2026_08_31.csv
+2026-08-31,214067,Mikhail Khodorchenko,2162,1,0.0,-9.0,RUS,,atp_rankings_2026_08_31.csv
+2026-08-31,211573,Lucky Candra Kurniawan,2162,1,0.0,-9.0,INA,22,atp_rankings_2026_08_31.csv
+2026-08-31,212851,Espen Lagarde,2162,1,0.0,-9.0,FRA,24,atp_rankings_2026_08_31.csv
+2026-08-31,125848,Niels Lootsma,2162,1,0.0,-9.0,NED,32,atp_rankings_2026_08_31.csv
+2026-08-31,209328,Martin Maldonado,2162,1,0.0,-9.0,ECU,,atp_rankings_2026_08_31.csv
+2026-08-31,214314,Cooper Mccarthy,2162,1,0.0,-9.0,RSA,16,atp_rankings_2026_08_31.csv
+2026-08-31,121366,Abdulhamid Mubarak,2162,1,,,KUW,32,atp_rankings_2026_08_31.csv
+2026-08-31,210476,Enmanuel Munoz,2162,1,0.0,-9.0,DOM,21,atp_rankings_2026_08_31.csv
+2026-08-31,213613,Kaue Noatto,2162,1,0.0,-9.0,BRA,,atp_rankings_2026_08_31.csv
+2026-08-31,213939,Aleksa Oparnica,2162,1,0.0,-82.0,SRB,,atp_rankings_2026_08_31.csv
+2026-08-31,212945,Yong Joon Park,2162,1,0.0,-9.0,KOR,24,atp_rankings_2026_08_31.csv
+2026-08-31,,Leon Peranovic,2162,1,0.0,-9.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214404,Oscar Pinto Sansano,2162,1,0.0,-9.0,ESP,23,atp_rankings_2026_08_31.csv
+2026-08-31,214172,Mattias Pisanu,2162,1,0.0,-9.0,ITA,19,atp_rankings_2026_08_31.csv
+2026-08-31,211592,Tadija Radovanovic,2162,1,0.0,-9.0,SRB,26,atp_rankings_2026_08_31.csv
+2026-08-31,214247,Vihaan Reddy,2162,1,0.0,-9.0,IND,16,atp_rankings_2026_08_31.csv
+2026-08-31,211603,Freddie Ridout,2162,1,0.0,-9.0,GBR,,atp_rankings_2026_08_31.csv
+2026-08-31,213886,Roshan Santhosh,2162,1,0.0,-9.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,200479,Luke Simkiss,2162,1,0.0,-9.0,GBR,28,atp_rankings_2026_08_31.csv
+2026-08-31,214328,Andre Souza,2162,1,0.0,-9.0,BRA,23,atp_rankings_2026_08_31.csv
+2026-08-31,213905,Daniil Stepanov,2162,1,0.0,-9.0,RUS,20,atp_rankings_2026_08_31.csv
+2026-08-31,214148,Leonardo Storck Franca,2162,1,0.0,-9.0,BRA,,atp_rankings_2026_08_31.csv
+2026-08-31,211703,Sarthak Suden,2162,1,0.0,-9.0,IND,,atp_rankings_2026_08_31.csv
+2026-08-31,213902,Benedikt Szerencsits,2162,1,,,AUT,,atp_rankings_2026_08_31.csv
+2026-08-31,210580,Zaharije Zak Talic,2162,1,0.0,-9.0,AUS,27,atp_rankings_2026_08_31.csv
+2026-08-31,214088,Uladzislau Tarasevich,2162,1,0.0,-82.0,BEL,21,atp_rankings_2026_08_31.csv
+2026-08-31,211474,Pablo Trochu,2162,1,0.0,-9.0,FRA,22,atp_rankings_2026_08_31.csv
+2026-08-31,213856,Calin Apostol,2211,1,0.0,-11.0,ROU,19,atp_rankings_2026_08_31.csv
+2026-08-31,138328,Patricio Betancourt Gonzalez,2211,1,0.0,-11.0,MEX,32,atp_rankings_2026_08_31.csv
+2026-08-31,214129,Joaquin Bianchi,2211,1,0.0,-11.0,ARG,26,atp_rankings_2026_08_31.csv
+2026-08-31,211471,Henrik Bladelius,2211,1,0.0,-11.0,SWE,22,atp_rankings_2026_08_31.csv
+2026-08-31,213612,Daniil Bogatov,2211,1,0.0,-11.0,RUS,,atp_rankings_2026_08_31.csv
+2026-08-31,,Hugo Cardinaud,2211,1,0.0,-11.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214094,Penn Charusorn,2211,1,0.0,-11.0,THA,18,atp_rankings_2026_08_31.csv
+2026-08-31,213769,Kuan Shou Chen,2211,1,,,TPE,,atp_rankings_2026_08_31.csv
+2026-08-31,212625,Vito Antonio Darderi,2211,1,0.0,-11.0,ITA,18,atp_rankings_2026_08_31.csv
+2026-08-31,214147,Livas Eduardo De Carvalho Damazio,2211,1,0.0,-11.0,BRA,16,atp_rankings_2026_08_31.csv
+2026-08-31,149285,Mustapha El Natour,2211,1,0.0,-11.0,LBN,21,atp_rankings_2026_08_31.csv
+2026-08-31,207167,Barney Fitzpatrick,2211,1,0.0,-11.0,GBR,24,atp_rankings_2026_08_31.csv
+2026-08-31,214070,Jose Freitas,2211,1,0.0,-11.0,POR,19,atp_rankings_2026_08_31.csv
+2026-08-31,213640,Stephane Pierre Jo Kamendje,2211,1,0.0,-11.0,CAN,,atp_rankings_2026_08_31.csv
+2026-08-31,111772,Krittin Koaykul,2211,1,0.0,-11.0,THA,31,atp_rankings_2026_08_31.csv
+2026-08-31,214076,Matyas Kozlovsky,2211,1,0.0,-11.0,CZE,18,atp_rankings_2026_08_31.csv
+2026-08-31,149139,Arthur Laborde,2211,1,0.0,-11.0,SUI,22,atp_rankings_2026_08_31.csv
+2026-08-31,211330,Vasco Leote Prata,2211,1,,,POR,22,atp_rankings_2026_08_31.csv
+2026-08-31,214294,Augusto Mateo Lucarelli,2211,1,0.0,-11.0,ARG,19,atp_rankings_2026_08_31.csv
+2026-08-31,214576,Andre Megrabian,2211,1,0.0,-11.0,BEL,21,atp_rankings_2026_08_31.csv
+2026-08-31,213329,Matteo Mesaglio,2211,1,0.0,-11.0,ITA,21,atp_rankings_2026_08_31.csv
+2026-08-31,212811,Matteo Mura,2211,1,0.0,-11.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,213595,Oluwaseun Peter Ogunsakin,2211,1,0.0,-11.0,NGA,,atp_rankings_2026_08_31.csv
+2026-08-31,212828,Fedor Sosedkin,2211,1,0.0,-11.0,RUS,,atp_rankings_2026_08_31.csv
+2026-08-31,210453,Cedric Stanke,2211,1,0.0,-11.0,GER,27,atp_rankings_2026_08_31.csv
+2026-08-31,212875,Zhengyu Sun,2211,1,0.0,-11.0,CHN,19,atp_rankings_2026_08_31.csv
+2026-08-31,214012,Jaden Dewandaka Tan,2211,1,0.0,-11.0,INA,,atp_rankings_2026_08_31.csv
+2026-08-31,214068,Daniel Tazabekov,2211,1,0.0,-11.0,KAZ,18,atp_rankings_2026_08_31.csv
+2026-08-31,214077,Vaal Urankar,2211,1,0.0,-58.0,SLO,21,atp_rankings_2026_08_31.csv
+2026-08-31,212164,Breno Rossetto Urvaneja,2211,1,0.0,-11.0,BRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,214427,Tim Vaisman,2211,1,0.0,-11.0,ISR,19,atp_rankings_2026_08_31.csv
+2026-08-31,213746,Felipe Vazquez,2211,1,0.0,-58.0,URU,18,atp_rankings_2026_08_31.csv
+2026-08-31,212869,Franco Ariel Vazquez,2211,1,0.0,-11.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,144927,Siddharth Vishwakarma,2211,1,0.0,-11.0,IND,31,atp_rankings_2026_08_31.csv
+2026-08-31,208154,Laurin Aerne,2245,1,0.0,-15.0,SUI,27,atp_rankings_2026_08_31.csv
+2026-08-31,212752,Filippo Alberti,2245,1,0.0,-15.0,ITA,23,atp_rankings_2026_08_31.csv
+2026-08-31,211738,Jonah Braswell,2245,1,0.0,-15.0,USA,22,atp_rankings_2026_08_31.csv
+2026-08-31,214063,Simon Caldwell,2245,1,0.0,-15.0,USA,,atp_rankings_2026_08_31.csv
+2026-08-31,134545,Alexis Canter,2245,1,0.0,-15.0,GBR,28,atp_rankings_2026_08_31.csv
+2026-08-31,213952,Leonel Cesar Castro,2245,1,0.0,-15.0,ARG,,atp_rankings_2026_08_31.csv
+2026-08-31,214664,Samuil Chestovaliev,2245,1,0.0,-15.0,MKD,18,atp_rankings_2026_08_31.csv
+2026-08-31,212792,Thomas Drayton,2245,1,0.0,-15.0,GBR,,atp_rankings_2026_08_31.csv
+2026-08-31,207980,Alexey Dubinin,2245,1,0.0,-15.0,RUS,27,atp_rankings_2026_08_31.csv
+2026-08-31,214305,Mario Andre Galarraga,2245,1,0.0,-15.0,ECU,18,atp_rankings_2026_08_31.csv
+2026-08-31,214124,Matteo Gribaldo,2245,1,0.0,-15.0,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,210723,Liam Hignett,2245,1,0.0,-15.0,GBR,26,atp_rankings_2026_08_31.csv
+2026-08-31,127999,Petr Iamachkine,2245,1,0.0,-15.0,PER,30,atp_rankings_2026_08_31.csv
+2026-08-31,212701,Ruslan Kastsiukevich,2245,1,0.0,-15.0,BLR,19,atp_rankings_2026_08_31.csv
+2026-08-31,124074,Kazuma Kawachi,2245,1,0.0,-15.0,JPN,31,atp_rankings_2026_08_31.csv
+2026-08-31,213774,Dmitry Kopilevich,2245,1,0.0,-15.0,SLO,19,atp_rankings_2026_08_31.csv
+2026-08-31,213185,Makar Krivoshchekov,2245,1,0.0,-15.0,RUS,20,atp_rankings_2026_08_31.csv
+2026-08-31,213339,Agustin Libre,2245,1,0.0,-15.0,ARG,19,atp_rankings_2026_08_31.csv
+2026-08-31,214099,Kaspar Mathes,2245,1,0.0,-15.0,GER,,atp_rankings_2026_08_31.csv
+2026-08-31,214207,Thomas Enrique Menzel Piccioli,2245,1,0.0,-15.0,CHI,19,atp_rankings_2026_08_31.csv
+2026-08-31,149108,Loic Namigandet Tenguere,2245,1,0.0,-15.0,FRA,27,atp_rankings_2026_08_31.csv
+2026-08-31,209858,Vladimir Osminkin,2245,1,0.0,-15.0,RUS,24,atp_rankings_2026_08_31.csv
+2026-08-31,210315,Pietro Pampanin,2245,1,0.0,-15.0,ITA,23,atp_rankings_2026_08_31.csv
+2026-08-31,211677,Matthew Rankin,2245,1,0.0,-15.0,GBR,22,atp_rankings_2026_08_31.csv
+2026-08-31,207685,Peter Sallay,2245,1,0.0,-15.0,HUN,25,atp_rankings_2026_08_31.csv
+2026-08-31,211766,Zachary Adam Gedge,2270,1,0.0,-10.0,AUS,,atp_rankings_2026_08_31.csv
+2026-08-31,206447,Daniel Batista,2270,1,0.0,-10.0,POR,27,atp_rankings_2026_08_31.csv
+2026-08-31,213855,Cezar Stefan Bentzel,2270,1,0.0,-40.0,ROU,,atp_rankings_2026_08_31.csv
+2026-08-31,212925,Alexandru Toubi Hebhang Balan,2270,1,0.0,-40.0,CAN,,atp_rankings_2026_08_31.csv
+2026-08-31,212150,Oskar Jansson,2270,1,0.0,-40.0,SWE,21,atp_rankings_2026_08_31.csv
+2026-08-31,211589,Tilen Kovac,2270,1,0.0,-40.0,SLO,24,atp_rankings_2026_08_31.csv
+2026-08-31,212825,Cian Maguire,2270,1,0.0,-10.0,IRL,27,atp_rankings_2026_08_31.csv
+2026-08-31,214260,Salvador Monteiro,2270,1,0.0,-10.0,POR,18,atp_rankings_2026_08_31.csv
+2026-08-31,213582,Andrea Motta,2270,1,,,ITA,,atp_rankings_2026_08_31.csv
+2026-08-31,213990,Simphiwe Ngwenya,2270,1,0.0,-10.0,RSA,,atp_rankings_2026_08_31.csv
+2026-08-31,213415,Glauco Pinheiro Da Cruz Junior,2270,1,0.0,-10.0,BRA,21,atp_rankings_2026_08_31.csv
+2026-08-31,212971,Tsz Fu Wong,2270,1,0.0,-10.0,HKG,20,atp_rankings_2026_08_31.csv
+2026-08-31,202347,Francisco Faria,2282,1,0.0,-13.0,POR,28,atp_rankings_2026_08_31.csv
+2026-08-31,213859,Andrei Corneliu Gadoiu,2282,1,0.0,-13.0,ROU,17,atp_rankings_2026_08_31.csv
+2026-08-31,,Alvaro Jimenez,2282,1,0.0,-13.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,213168,Patrick Jozwicki,2282,1,0.0,-22.0,AUT,,atp_rankings_2026_08_31.csv
+2026-08-31,213810,Alex Santino Nunez Vera,2282,1,0.0,-22.0,PAR,19,atp_rankings_2026_08_31.csv
+2026-08-31,106175,Ricardo Rodriguez,2282,1,0.0,-13.0,VEN,33,atp_rankings_2026_08_31.csv
+2026-08-31,213392,Carles Rojas,2282,1,0.0,-13.0,ESP,22,atp_rankings_2026_08_31.csv
+2026-08-31,209281,Dylan Salton,2282,1,0.0,-13.0,RSA,23,atp_rankings_2026_08_31.csv
+2026-08-31,209255,Vladan Tadic,2282,1,0.0,-13.0,BIH,25,atp_rankings_2026_08_31.csv
+2026-08-31,213883,Yue Xia,2282,1,0.0,-13.0,CHN,,atp_rankings_2026_08_31.csv
+2026-08-31,,Ignasi Forcano Aparicio,2292,1,0.0,-15.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,213931,Jun Hao Luo,2292,1,0.0,-15.0,CHN,18,atp_rankings_2026_08_31.csv
+2026-08-31,209885,Gokberk Saritas,2292,1,0.0,-15.0,TUR,23,atp_rankings_2026_08_31.csv
+2026-08-31,213373,William Nolan,2295,1,0.0,-15.0,GBR,23,atp_rankings_2026_08_31.csv
+2026-08-31,214159,Yassin Ahmed Wageh,2295,1,0.0,-15.0,EGY,18,atp_rankings_2026_08_31.csv
 2026-08-31,200045,Anthony Susanto,2297,1,0.0,-15.0,INA,29,atp_rankings_2026_08_31.csv
 2026-08-31,211455,Oren Vasser,2298,1,0.0,-15.0,USA,26,atp_rankings_2026_08_31.csv
