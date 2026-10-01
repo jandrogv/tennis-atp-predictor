@@ -47,8 +47,11 @@ resultados ni estadísticas.
 
 La altura del cuadro conectado parte de cuartos, o de la ronda seleccionada si es
 anterior. Las rondas anteriores se muestran en columnas con desplazamiento propio;
-sus tarjetas no alargan el cuadro principal. Las conexiones se dibujan entre las
-rondas del cuadro central. Las cuatro columnas caben desde 1280 píxeles de ancho;
+sus tarjetas no alargan el cuadro principal. Todas las columnas conservan sus
+conexiones: en las columnas desplazables se recalculan al hacer scroll y solo se
+dibujan cuando los centros de ambas tarjetas están visibles en sus columnas. Sus
+enlaces curvos evitan compartir un tramo vertical entre parejas distintas; el
+cuadro central conserva los enlaces rectos. Las cuatro columnas caben desde 1280 píxeles de ancho;
 en ventanas menores se puede desplazar horizontalmente y se mantiene visible la
 columna seleccionada. El selector y las flechas permiten volver a cualquier etapa.
 La vista compacta conserva sus tres rondas de contexto y la vista móvil muestra
@@ -114,3 +117,18 @@ muestra las rondas anteriores como contexto de semifinales y de su final pendien
 sin inventar estadísticas. Veinte comprobaciones de estados terminaron sin errores de consola;
 capturas y script temporal permanecen fuera del repositorio. No se modificaron
 datasets, scraping ni modelos.
+
+### Regresión de conexiones — 01/10/2026
+
+La comprobación anterior de cuatro columnas no detectó que los octavos estaban
+desconectados al seleccionar cuartos, semifinales o final. La nueva prueba de
+navegador reproduce ese fallo en la versión anterior y comprueba cada enlace
+contra las posiciones reales de sus dos tarjetas, con tolerancia de un píxel.
+Incluye scroll al principio, mitad y final de cada columna, cambio de ronda,
+redimensionado a 1280 y 1024 píxeles, desplazamiento horizontal, cierre y apertura
+del cuadro, vista compacta y resaltado del recorrido de un jugador.
+Se verifican Indian Wells, Wimbledon y Chengdu (con final pendiente), incluyendo
+dos columnas de contexto desplazables a la vez. Las 61 comprobaciones geométricas
+y las 20 comprobaciones anteriores pasan en Chrome, además de las 65 pruebas web
+y la compilación. Las capturas y el script ejecutable de regresión permanecen fuera
+del repositorio. No se han comprobado otros motores de navegador.

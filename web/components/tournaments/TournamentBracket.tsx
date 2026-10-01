@@ -261,7 +261,7 @@ function BracketCanvas({
       const measured: MeasuredConnection[] = [];
 
       for (const depth of measuredDepths) {
-        if (depth === 0 || depth > baseDepth || !measuredDepths.includes(depth - 1)) continue;
+        if (depth === 0 || !measuredDepths.includes(depth - 1)) continue;
         for (const child of nodesAtDepth(depth)) {
           const parent = Math.floor(child / 2);
           const childCard = cardRefs.current.get(child);
@@ -270,6 +270,13 @@ function BracketCanvas({
 
           const childRect = childCard.getBoundingClientRect();
           const parentRect = parentCard.getBoundingClientRect();
+          // Context columns scroll independently: only connect visible card centers.
+          const hiddenEndpoint = [[childCard, childRect], [parentCard, parentRect]] as const;
+          if (hiddenEndpoint.some(([card, rect]) => {
+            const clip = card.closest('[role="region"]')?.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            return clip && (center < clip.top || center > clip.bottom);
+          })) continue;
           const childX = childRect.right - canvasRect.left;
           const childY = childRect.top - canvasRect.top + childRect.height / 2;
           const parentX = parentRect.left - canvasRect.left;
@@ -278,7 +285,10 @@ function BracketCanvas({
           measured.push({
             child,
             parent,
-            path: `M ${childX} ${childY} H ${middleX} V ${parentY} H ${parentX}`
+            // Curves keep independently scrolled pairs from sharing an ambiguous vertical trunk.
+            path: depth > baseDepth
+              ? `M ${childX} ${childY} C ${middleX} ${childY}, ${middleX} ${parentY}, ${parentX} ${parentY}`
+              : `M ${childX} ${childY} H ${middleX} V ${parentY} H ${parentX}`
           });
         }
       }
@@ -294,12 +304,14 @@ function BracketCanvas({
     resizeObserver.observe(canvas);
     for (const card of Array.from(cardRefs.current.values())) resizeObserver.observe(card);
     window.addEventListener("resize", scheduleMeasurement);
+    canvas.addEventListener("scroll", scheduleMeasurement, true);
     scheduleMeasurement();
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
       resizeObserver.disconnect();
       window.removeEventListener("resize", scheduleMeasurement);
+      canvas.removeEventListener("scroll", scheduleMeasurement, true);
     };
   }, [bracket, visibleDepthKey, baseDepth, width, height]);
 
@@ -313,6 +325,8 @@ function BracketCanvas({
             <path
               key={`${path}-${index}`}
               d={path}
+              data-child-node={child}
+              data-parent-node={parent}
               fill="none"
               stroke={selected ? "rgba(101,163,13,0.82)" : hovered ? "rgba(132,204,22,0.48)" : "rgba(15,23,42,0.16)"}
               strokeWidth={selected ? 2 : hovered ? 1.6 : 1.25}
@@ -346,6 +360,7 @@ function BracketCanvas({
           {nodesAtDepth(depth).map((node) => (
             <div
               key={node}
+              data-bracket-node={node}
               ref={(element) => {
                 if (element) cardRefs.current.set(node, element);
                 else cardRefs.current.delete(node);
