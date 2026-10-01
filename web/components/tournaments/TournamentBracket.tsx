@@ -82,7 +82,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
   const nextStage = stages[selectedIndex + 1];
   const visibleDepths = getDrawStageWindow(stages, selectedIndex, expanded, bracket.playedStages);
   const earliestVisibleDepth = Math.max(0, ...visibleDepths);
-  const baseDepth = expanded ? Math.min(earliestVisibleDepth, Math.max(selectedDepth, 2)) : earliestVisibleDepth;
+  const baseDepth = earliestVisibleDepth;
   const columnGap = expanded && visibleDepths.length === 4 ? 56 : COLUMN_GAP;
   const canvasWidth = visibleDepths.length * CARD_WIDTH + Math.max(0, visibleDepths.length - 1) * columnGap + CANVAS_PADDING * 2;
   const canvasHeight = HEADER_HEIGHT + 2 ** baseDepth * LEAF_STEP + CANVAS_PADDING;
@@ -106,7 +106,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
           <div>
             <p className="text-sm font-semibold text-slate-950">Tournament draw</p>
             <p className="mt-1 text-xs leading-5 text-slate-500">
-              {expanded ? "Explore the selected stage. Scroll earlier rounds for context." : "Explore the draw and results from each stage."}
+              {expanded ? "Explore four rounds around the selected stage." : "Explore the draw and results from each stage."}
             </p>
           </div>
           <div className="flex flex-wrap items-end gap-2">
@@ -270,13 +270,6 @@ function BracketCanvas({
 
           const childRect = childCard.getBoundingClientRect();
           const parentRect = parentCard.getBoundingClientRect();
-          // Context columns scroll independently: only connect visible card centers.
-          const hiddenEndpoint = [[childCard, childRect], [parentCard, parentRect]] as const;
-          if (hiddenEndpoint.some(([card, rect]) => {
-            const clip = card.closest('[role="region"]')?.getBoundingClientRect();
-            const center = rect.top + rect.height / 2;
-            return clip && (center < clip.top || center > clip.bottom);
-          })) continue;
           const childX = childRect.right - canvasRect.left;
           const childY = childRect.top - canvasRect.top + childRect.height / 2;
           const parentX = parentRect.left - canvasRect.left;
@@ -285,10 +278,7 @@ function BracketCanvas({
           measured.push({
             child,
             parent,
-            // Curves keep independently scrolled pairs from sharing an ambiguous vertical trunk.
-            path: depth > baseDepth
-              ? `M ${childX} ${childY} C ${middleX} ${childY}, ${middleX} ${parentY}, ${parentX} ${parentY}`
-              : `M ${childX} ${childY} H ${middleX} V ${parentY} H ${parentX}`
+            path: `M ${childX} ${childY} H ${middleX} V ${parentY} H ${parentX}`
           });
         }
       }
@@ -304,14 +294,12 @@ function BracketCanvas({
     resizeObserver.observe(canvas);
     for (const card of Array.from(cardRefs.current.values())) resizeObserver.observe(card);
     window.addEventListener("resize", scheduleMeasurement);
-    canvas.addEventListener("scroll", scheduleMeasurement, true);
     scheduleMeasurement();
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
       resizeObserver.disconnect();
       window.removeEventListener("resize", scheduleMeasurement);
-      canvas.removeEventListener("scroll", scheduleMeasurement, true);
     };
   }, [bracket, visibleDepthKey, baseDepth, width, height]);
 
@@ -349,14 +337,6 @@ function BracketCanvas({
           >
             {stageLabel(depth)}
           </div>
-          <div
-            className={depth > baseDepth ? "absolute overflow-x-hidden overflow-y-auto rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500/35" : undefined}
-            style={depth > baseDepth ? { left: columnX(columnIndex, columnGap), top: HEADER_HEIGHT, width: CARD_WIDTH + 16, height: height - HEADER_HEIGHT } : undefined}
-            role={depth > baseDepth ? "region" : undefined}
-            aria-label={depth > baseDepth ? `${stageLabel(depth)} context matches` : undefined}
-            tabIndex={depth > baseDepth ? 0 : undefined}
-          >
-          <div className={depth > baseDepth ? "relative" : undefined} style={depth > baseDepth ? { height: 2 ** depth * LEAF_STEP } : undefined}>
           {nodesAtDepth(depth).map((node) => (
             <div
               key={node}
@@ -366,9 +346,7 @@ function BracketCanvas({
                 else cardRefs.current.delete(node);
               }}
               className="absolute"
-              style={depth > baseDepth
-                ? { left: 0, top: nodeCenter(node, depth) - CARD_HEIGHT / 2 }
-                : { left: columnX(columnIndex, columnGap), top: HEADER_HEIGHT + nodeCenter(node, baseDepth) - CARD_HEIGHT / 2 }}
+              style={{ left: columnX(columnIndex, columnGap), top: HEADER_HEIGHT + nodeCenter(node, baseDepth) - CARD_HEIGHT / 2 }}
             >
               <BracketMatchCard
                 node={node}
@@ -380,8 +358,6 @@ function BracketCanvas({
               />
             </div>
           ))}
-          </div>
-          </div>
         </div>
       ))}
     </div>

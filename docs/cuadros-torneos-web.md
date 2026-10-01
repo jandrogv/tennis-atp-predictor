@@ -45,13 +45,12 @@ posteriores jugadas, completa el contexto con las anteriores. Una ronda pendient
 conserva los ganadores conocidos o los participantes por determinar, sin inventar
 resultados ni estadísticas.
 
-La altura del cuadro conectado parte de cuartos, o de la ronda seleccionada si es
-anterior. Las rondas anteriores se muestran en columnas con desplazamiento propio;
-sus tarjetas no alargan el cuadro principal. Todas las columnas conservan sus
-conexiones: en las columnas desplazables se recalculan al hacer scroll y solo se
-dibujan cuando los centros de ambas tarjetas están visibles en sus columnas. Sus
-enlaces curvos evitan compartir un tramo vertical entre parejas distintas; el
-cuadro central conserva los enlaces rectos. Las cuatro columnas caben desde 1280 píxeles de ancho;
+La altura del cuadro parte siempre de la primera ronda visible. Las posiciones
+y las conexiones ortogonales originales son idénticas para una misma ventana
+de rondas, independientemente de la etapa seleccionada. Cada partido de la ronda
+siguiente queda centrado entre sus dos partidos de origen. Todo el cuadro comparte
+el desplazamiento; no hay columnas con scroll independiente ni conexiones curvas.
+Las cuatro columnas caben desde 1280 píxeles de ancho;
 en ventanas menores se puede desplazar horizontalmente y se mantiene visible la
 columna seleccionada. El selector y las flechas permiten volver a cualquier etapa.
 La vista compacta conserva sus tres rondas de contexto y la vista móvil muestra
@@ -101,34 +100,24 @@ origen siguen ausentes; la vista no fabrica partidos ni recupera datos de ATP.
 La validación descrita arriba fue local el 26/09. Los cambios de la web se
 integraron después en `main` mediante la [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
 
-## Validación del enfoque por ronda — 01/10/2026
+## Validación de geometría uniforme — 01/10/2026
 
-Las 65 pruebas web y la compilación Next.js 16.3.6 pasan. Dos regresiones cubren
-el filtro de clasificación y las ventanas de etapas, incluida la vista compacta.
-Chrome oculto con Playwright comprobó Wimbledon a 1280×720, 1440×900, 1920×1200 y 390×844:
-los cuatro cuartos, dos semifinales y la final caben en sus vistas ampliadas.
-Table conserva los 239 partidos y las tres rondas de clasificación. Se comprobaron
-las flechas, el cambio desde Round of 128 con desplazamiento previo, Escape,
-el resaltado de jugadores y la restauración del foco y del scroll de fondo.
-Los 21 partidos de Davis Cup Qualifiers 2nd Rd y los siete de Laver Cup siguen
-en Draw. Indian Wells a 1613×1244 mantiene cuatro rondas al seleccionar cuartos,
-semifinales o final y todos los partidos seleccionados caben en pantalla. Chengdu
-muestra las rondas anteriores como contexto de semifinales y de su final pendiente,
-sin inventar estadísticas. Veinte comprobaciones de estados terminaron sin errores de consola;
-capturas y script temporal permanecen fuera del repositorio. No se modificaron
-datasets, scraping ni modelos.
+La vista ampliada conserva el cuadro original: el selector cambia la ventana de
+cuatro rondas y resalta la seleccionada. Se retiraron las columnas con scroll
+independiente y las conexiones curvas porque alteraban la distribución solicitada.
+Cuando el cuadro supera la altura disponible se recorre con el scroll común.
 
-### Regresión de conexiones — 01/10/2026
+La regresión de navegador compara todas las posiciones y todos los trazados al
+seleccionar octavos, cuartos, semifinales y final. Para ventanas iguales exige
+geometría idéntica, conexiones rectas, tarjetas de 264×108 y cada padre centrado
+entre sus dos hijos. También verifica que desplazar el cuadro no cambie esa
+geometría, que las cuatro rondas sigan disponibles y que una final pendiente no
+invente estadísticas. La prueba falla en la versión anterior.
 
-La comprobación anterior de cuatro columnas no detectó que los octavos estaban
-desconectados al seleccionar cuartos, semifinales o final. La nueva prueba de
-navegador reproduce ese fallo en la versión anterior y comprueba cada enlace
-contra las posiciones reales de sus dos tarjetas, con tolerancia de un píxel.
-Incluye scroll al principio, mitad y final de cada columna, cambio de ronda,
-redimensionado a 1280 y 1024 píxeles, desplazamiento horizontal, cierre y apertura
-del cuadro, vista compacta y resaltado del recorrido de un jugador.
-Se verifican Indian Wells, Wimbledon y Chengdu (con final pendiente), incluyendo
-dos columnas de contexto desplazables a la vez. Las 61 comprobaciones geométricas
-y las 20 comprobaciones anteriores pasan en Chrome, además de las 65 pruebas web
-y la compilación. Las capturas y el script ejecutable de regresión permanecen fuera
-del repositorio. No se han comprobado otros motores de navegador.
+Se comprueban Indian Wells, Wimbledon y Chengdu en Chrome a 1613×1244, 1280×720 y
+1024×768, además de la vista móvil a 390×844. Incluye Table con los 239 partidos y
+las tres rondas Qualifying de Wimbledon, flechas, resaltado del recorrido, Escape,
+restauración del foco y desbloqueo del scroll de fondo. Las 65 pruebas web y la
+compilación Next.js también se ejecutan. Las capturas y el script de navegador
+están fuera del repositorio. No se modifican datasets, scraping ni modelos;
+otros motores de navegador no se han comprobado.
