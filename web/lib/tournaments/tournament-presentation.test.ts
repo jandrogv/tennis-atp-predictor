@@ -24,16 +24,21 @@ test("Draw excludes qualifying rounds without hiding team matches or changing Ta
   assert.deepEqual(getTournamentDrawMatches(matches.slice(1, 4)), []);
 });
 
-test("expanded Draw starts at the selected stage and compact Draw keeps its existing context", () => {
+test("expanded Draw keeps four stages around late and unplayed rounds without changing compact Draw", () => {
   const stages = [6, 5, 4, 3, 2, 1, 0];
-  assert.deepEqual(getDrawStageWindow(stages, 0, true), [6, 5, 4]);
-  assert.deepEqual(getDrawStageWindow(stages, 4, true), [2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 5, true), [1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 6, true), [0]);
+  assert.deepEqual(getDrawStageWindow(stages, 0, true), [6, 5, 4, 3]);
+  assert.deepEqual(getDrawStageWindow(stages, 3, true), [3, 2, 1, 0]);
+  assert.deepEqual(getDrawStageWindow(stages, 4, true), [3, 2, 1, 0]);
+  assert.deepEqual(getDrawStageWindow(stages, 5, true), [3, 2, 1, 0]);
+  assert.deepEqual(getDrawStageWindow(stages, 6, true), [3, 2, 1, 0]);
+  assert.deepEqual(getDrawStageWindow(stages, 3, true, [6, 5, 4]), [6, 5, 4, 3]);
+  assert.deepEqual(getDrawStageWindow(stages, 4, true, [6, 5, 4, 3]), [5, 4, 3, 2]);
+  assert.deepEqual(getDrawStageWindow(stages, 5, true, [6, 5, 4, 3, 2]), [4, 3, 2, 1]);
+  assert.deepEqual(getDrawStageWindow(stages, 6, true, [6, 5, 4, 3, 2, 1]), [3, 2, 1, 0]);
   assert.deepEqual(getDrawStageWindow(stages, 3, false), [4, 3, 2]);
   assert.deepEqual(getDrawStageWindow(stages, 6, false), [2, 1, 0]);
   assert.deepEqual(getDrawStageWindow([1, 0], 1, false), [1, 0]);
-  assert.deepEqual(getDrawStageWindow([1, 0], 1, true), [0]);
+  assert.deepEqual(getDrawStageWindow([1, 0], 1, true), [1, 0]);
   assert.deepEqual(getDrawStageWindow([], 0, true), []);
 });
 

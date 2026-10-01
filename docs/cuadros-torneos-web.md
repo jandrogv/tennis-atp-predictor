@@ -39,12 +39,20 @@ al cerrar. Conserva el espacio de la vista compacta para evitar saltos de págin
 Funciona con Escape y con el botón de cierre; si hay un jugador resaltado, Escape
 primero quita el resaltado, igual que antes.
 
-Desde el 30/09, la vista ampliada empieza en la ronda seleccionada y muestra hasta
-dos rondas posteriores. Quarter-Finals muestra cuartos, semifinales y final;
-Semi-Finals muestra semifinales y final; Final muestra solo la final. Las primeras
-rondas ya no determinan la altura de esas vistas. El selector y las flechas
-permiten volver a cualquier etapa. La vista compacta conserva sus tres rondas
-de contexto y la vista móvil muestra los partidos de la ronda elegida.
+La vista ampliada de escritorio muestra cuatro rondas cuando el torneo dispone
+de ellas, también al seleccionar cuartos, semifinales o final. Si no hay rondas
+posteriores jugadas, completa el contexto con las anteriores. Una ronda pendiente
+conserva los ganadores conocidos o los participantes por determinar, sin inventar
+resultados ni estadísticas.
+
+La altura del cuadro conectado parte de cuartos, o de la ronda seleccionada si es
+anterior. Las rondas anteriores se muestran en columnas con desplazamiento propio;
+sus tarjetas no alargan el cuadro principal. Las conexiones se dibujan entre las
+rondas del cuadro central. Las cuatro columnas caben desde 1280 píxeles de ancho;
+en ventanas menores se puede desplazar horizontalmente y se mantiene visible la
+columna seleccionada. El selector y las flechas permiten volver a cualquier etapa.
+La vista compacta conserva sus tres rondas de contexto y la vista móvil muestra
+los partidos de la ronda elegida.
 
 ## Archivos modificados
 
@@ -90,16 +98,19 @@ origen siguen ausentes; la vista no fabrica partidos ni recupera datos de ATP.
 La validación descrita arriba fue local el 26/09. Los cambios de la web se
 integraron después en `main` mediante la [PR #1](https://github.com/jandrogv/tennis-atp-predictor/pull/1).
 
-## Validación del enfoque por ronda — 30/09/2026
+## Validación del enfoque por ronda — 01/10/2026
 
 Las 65 pruebas web y la compilación Next.js 16.3.6 pasan. Dos regresiones cubren
 el filtro de clasificación y las ventanas de etapas, incluida la vista compacta.
-Chrome oculto con Playwright comprobó Wimbledon a 1280×720, 1440×900 y 390×844:
+Chrome oculto con Playwright comprobó Wimbledon a 1280×720, 1440×900, 1920×1200 y 390×844:
 los cuatro cuartos, dos semifinales y la final caben en sus vistas ampliadas.
 Table conserva los 239 partidos y las tres rondas de clasificación. Se comprobaron
 las flechas, el cambio desde Round of 128 con desplazamiento previo, Escape,
 el resaltado de jugadores y la restauración del foco y del scroll de fondo.
 Los 21 partidos de Davis Cup Qualifiers 2nd Rd y los siete de Laver Cup siguen
-en Draw. Once comprobaciones de estados terminaron sin errores de consola;
+en Draw. Indian Wells a 1613×1244 mantiene cuatro rondas al seleccionar cuartos,
+semifinales o final y todos los partidos seleccionados caben en pantalla. Chengdu
+muestra las rondas anteriores como contexto de semifinales y de su final pendiente,
+sin inventar estadísticas. Veinte comprobaciones de estados terminaron sin errores de consola;
 capturas y script temporal permanecen fuera del repositorio. No se modificaron
 datasets, scraping ni modelos.

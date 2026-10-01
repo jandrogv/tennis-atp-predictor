@@ -80,11 +80,13 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
   const selectedIndex = Math.max(0, stages.indexOf(selectedDepth));
   const previousStage = stages[selectedIndex - 1];
   const nextStage = stages[selectedIndex + 1];
-  const visibleDepths = getDrawStageWindow(stages, selectedIndex, expanded);
+  const visibleDepths = getDrawStageWindow(stages, selectedIndex, expanded, bracket.playedStages);
   const earliestVisibleDepth = Math.max(0, ...visibleDepths);
-  const canvasWidth = visibleDepths.length * CARD_WIDTH + Math.max(0, visibleDepths.length - 1) * COLUMN_GAP + CANVAS_PADDING * 2;
-  const canvasHeight = HEADER_HEIGHT + 2 ** earliestVisibleDepth * LEAF_STEP + CANVAS_PADDING;
-  const expandedGutter = expanded ? 96 : 0;
+  const baseDepth = expanded ? Math.min(earliestVisibleDepth, Math.max(selectedDepth, 2)) : earliestVisibleDepth;
+  const columnGap = expanded && visibleDepths.length === 4 ? 56 : COLUMN_GAP;
+  const canvasWidth = visibleDepths.length * CARD_WIDTH + Math.max(0, visibleDepths.length - 1) * columnGap + CANVAS_PADDING * 2;
+  const canvasHeight = HEADER_HEIGHT + 2 ** baseDepth * LEAF_STEP + CANVAS_PADDING;
+  const expandedGutter = expanded && visibleDepths.length < 4 ? 96 : 0;
   const stageOptions: Array<FilterOption<string>> = stages.map((depth) => ({ value: String(depth), label: stageLabel(depth) }));
 
   const content = (
@@ -104,7 +106,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
           <div>
             <p className="text-sm font-semibold text-slate-950">Tournament draw</p>
             <p className="mt-1 text-xs leading-5 text-slate-500">
-              {expanded ? "Explore the selected stage and the following rounds." : "Explore the draw and results from each stage."}
+              {expanded ? "Explore the selected stage. Scroll earlier rounds for context." : "Explore the draw and results from each stage."}
             </p>
           </div>
           <div className="flex flex-wrap items-end gap-2">
@@ -152,7 +154,9 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
             bracket={bracket}
             visibleDepths={visibleDepths}
             selectedDepth={selectedDepth}
-            baseDepth={earliestVisibleDepth}
+            baseDepth={baseDepth}
+            columnGap={columnGap}
+            focusSelectedStage={expanded}
             width={canvasWidth}
             height={canvasHeight}
             selectedPlayerId={selectedPlayerId}
@@ -212,6 +216,8 @@ function BracketCanvas({
   visibleDepths,
   selectedDepth,
   baseDepth,
+  columnGap,
+  focusSelectedStage,
   width,
   height,
   selectedPlayerId,
@@ -223,6 +229,8 @@ function BracketCanvas({
   visibleDepths: number[];
   selectedDepth: number;
   baseDepth: number;
+  columnGap: number;
+  focusSelectedStage: boolean;
   width: number;
   height: number;
   selectedPlayerId: string | null;
@@ -237,6 +245,12 @@ function BracketCanvas({
   const visibleDepthKey = visibleDepths.join(",");
 
   useLayoutEffect(() => {
+    if (focusSelectedStage && canvasRef.current?.getBoundingClientRect().width) {
+      cardRefs.current.get(2 ** selectedDepth)?.scrollIntoView({ block: "nearest", inline: "nearest" });
+    }
+  }, [focusSelectedStage, selectedDepth, visibleDepthKey]);
+
+  useLayoutEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const measuredDepths = visibleDepthKey.split(",").filter(Boolean).map(Number);
@@ -247,7 +261,7 @@ function BracketCanvas({
       const measured: MeasuredConnection[] = [];
 
       for (const depth of measuredDepths) {
-        if (depth === 0 || !measuredDepths.includes(depth - 1)) continue;
+        if (depth === 0 || depth > baseDepth || !measuredDepths.includes(depth - 1)) continue;
         for (const child of nodesAtDepth(depth)) {
           const parent = Math.floor(child / 2);
           const childCard = cardRefs.current.get(child);
@@ -287,7 +301,7 @@ function BracketCanvas({
       resizeObserver.disconnect();
       window.removeEventListener("resize", scheduleMeasurement);
     };
-  }, [bracket, visibleDepthKey, width, height]);
+  }, [bracket, visibleDepthKey, baseDepth, width, height]);
 
   return (
     <div ref={canvasRef} className="relative" style={{ width, height }} onClick={() => onSelectPlayer(null)}>
@@ -317,10 +331,18 @@ function BracketCanvas({
                 ? "border-lime-300/80 bg-lime-100/75 text-lime-900"
                 : "border-slate-950/[0.07] bg-white/80 text-slate-600"
             )}
-            style={{ left: columnX(columnIndex) }}
+            style={{ left: columnX(columnIndex, columnGap) }}
           >
             {stageLabel(depth)}
           </div>
+          <div
+            className={depth > baseDepth ? "absolute overflow-x-hidden overflow-y-auto rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-500/35" : undefined}
+            style={depth > baseDepth ? { left: columnX(columnIndex, columnGap), top: HEADER_HEIGHT, width: CARD_WIDTH + 16, height: height - HEADER_HEIGHT } : undefined}
+            role={depth > baseDepth ? "region" : undefined}
+            aria-label={depth > baseDepth ? `${stageLabel(depth)} context matches` : undefined}
+            tabIndex={depth > baseDepth ? 0 : undefined}
+          >
+          <div className={depth > baseDepth ? "relative" : undefined} style={depth > baseDepth ? { height: 2 ** depth * LEAF_STEP } : undefined}>
           {nodesAtDepth(depth).map((node) => (
             <div
               key={node}
@@ -329,7 +351,9 @@ function BracketCanvas({
                 else cardRefs.current.delete(node);
               }}
               className="absolute"
-              style={{ left: columnX(columnIndex), top: HEADER_HEIGHT + nodeCenter(node, baseDepth) - CARD_HEIGHT / 2 }}
+              style={depth > baseDepth
+                ? { left: 0, top: nodeCenter(node, depth) - CARD_HEIGHT / 2 }
+                : { left: columnX(columnIndex, columnGap), top: HEADER_HEIGHT + nodeCenter(node, baseDepth) - CARD_HEIGHT / 2 }}
             >
               <BracketMatchCard
                 node={node}
@@ -341,6 +365,8 @@ function BracketCanvas({
               />
             </div>
           ))}
+          </div>
+          </div>
         </div>
       ))}
     </div>
@@ -567,6 +593,7 @@ type BracketData = {
   matchesByNode: Map<number, TournamentMatch>;
   maxDepth: number;
   stages: number[];
+  playedStages: number[];
 };
 
 function buildBracketData(matches: TournamentMatch[]): BracketData {
@@ -579,7 +606,8 @@ function buildBracketData(matches: TournamentMatch[]): BracketData {
   const maxNode = Math.max(1, ...Array.from(matchesByNode.keys()));
   const maxDepth = Math.min(6, Math.floor(Math.log2(maxNode)));
   const stages = Array.from({ length: matchesByNode.size ? maxDepth + 1 : 0 }, (_, index) => maxDepth - index);
-  return { matchesByNode, maxDepth, stages };
+  const playedStages = Array.from(new Set(Array.from(matchesByNode.keys(), (node) => Math.floor(Math.log2(node)))));
+  return { matchesByNode, maxDepth, stages, playedStages };
 }
 
 function potentialPlayers(node: number, matchesByNode: Map<number, TournamentMatch>): string[] {
@@ -609,8 +637,8 @@ function nodeCenter(node: number, baseDepth: number): number {
   return (index * span + span / 2) * LEAF_STEP;
 }
 
-function columnX(columnIndex: number): number {
-  return CANVAS_PADDING + columnIndex * (CARD_WIDTH + COLUMN_GAP);
+function columnX(columnIndex: number, gap: number): number {
+  return CANVAS_PADDING + columnIndex * (CARD_WIDTH + gap);
 }
 
 function stageLabel(depth: number): string {
