@@ -185,7 +185,7 @@ pendiente repetir esa entrega. El cuadro aceptado por el usuario se conserva.
 | Identidades | Parcial: siete casos dependen de evidencia | Recalculadas 30 fechas, 67.702 filas; última fecha 28/09, 2.290 filas, siete sin ID y cero colisiones. Sin nuevas modificaciones de raw |
 | Fechas | Ampliación completada; historia parcial | 47 coincidencias únicas de 2.952, 2.905 pendientes. Dos partidos US Open añadidos; 227 `n/a` y todos los balances conservados |
 | Temporal V3 | Código verificado; transición manual pendiente | 183 pruebas Python. Sin otro defecto reproducible. Faltan entradas UTC contrastadas y evaluación real; el modelo activo no cambia |
-| Publicación | Bloque revisado para main | Seis archivos públicos y documentación existente; despliegue y comprobación pública se registran al cerrar la entrega |
+| Publicación | Publicada; estado y web verificados; logs internos sin acceso | Commit `7c8130d`, Vercel success, 36 visitas de producción, 72 comprobaciones del cuadro y ocho archivos públicos idénticos a la copia local |
 | Mensual / escritorio | Fuera del alcance | Mensual del usuario finalizada el 28/09 a las 20:25:18; modelo activo correspondiente. App aceptada, sin modificaciones |
 
 Se comprobó ausencia de procesos de recarga y disponibilidad del bloqueo antes de
@@ -213,3 +213,20 @@ junto a ella en `tournament-index-before.json`. Código y prueba privados tienen
 respaldo en `code-backup` (la prueba lleva extensión `.bak`). Para producción,
 revertir el commit de esta entrega y comprobar el nuevo despliegue. Nunca restaurar
 raw ni modelos para revertir este bloque. Evidencia y salidas internas siguen ignoradas.
+
+
+### Publicación comprobada
+
+- [Commit 7c8130d](https://github.com/jandrogv/tennis-atp-predictor/commit/7c8130d54ff2efcae58d4e17a1adb32652b7da92), publicado directamente en `main` con autorización previa.
+- [Despliegue Vercel del mismo commit](https://vercel.com/jandrogvs-projects/atpinsight/4aKLDZteG3cPzmnTJpRKamQGooi6): estado `success` confirmado mediante GitHub.
+- [Producción](https://atpinsight-two.vercel.app): 36 visitas en escritorio/móvil y 72 comprobaciones geométricas/funcionales del cuadro en escritorio/tablet/móvil, todas correctas. Búsqueda ATP, navegación a perfil, selección de dos jugadores, filtro Elo y fechas de detalle comprobados; sin errores de consola ni overflow detectado.
+- Ocho archivos descargados de producción coinciden con la versión local (normalizando únicamente CRLF): los seis públicos modificados, `web_model_summary.csv` y `web_match_cards.csv`. La web conserva el resumen y las predicciones del modelo de la mensual del 28/09.
+- Límite de acceso: no se pudieron consultar configuración privada ni logs internos del despliegue. El navegador integrado falla al iniciar; no hay conector Vercel ni CLI autenticada. Se ha solicitado acceso de lectura o el registro de compilación; no se presenta el estado `success` como una lectura de esos logs.
+
+Evidencia de esta ejecución en `data/processed/audit-2026-10-02`: logs de pruebas,
+verificador y build, `publication.json`, `production-content-check.json` y
+`final-protection-check.json`. Capturas y QA del navegador, fuera del repositorio,
+usaron los prefijos `audit-oct2-local` y `audit-oct2-production`. Chrome instalado
+en modo oculto mediante Playwright; no se han probado otros motores de navegador.
+Para revertir la publicación de datos, `git revert 7c8130d` y validar el despliegue
+resultante. El cierre documental posterior no cambia código ni datos públicos.
