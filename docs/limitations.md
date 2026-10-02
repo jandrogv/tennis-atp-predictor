@@ -31,7 +31,7 @@ These factors can matter more than historical averages for a single match.
 
 ## Temporal and leakage risk
 
-The audit confirmed that the legacy model includes two post-match Elo differences (`ELO_DIFF`, `ELO_SURFACE_DIFF`). Its published scores may overstate generalization because those inputs contain outcome information. The opt-in strict implementation excludes them and updates sequential history only after verified result availability, including overnight results. It has not replaced the active model: historical dates are incomplete, and no real strict evaluation has been performed. V2 additionally requires earlier verified ranking and context availability; the dates and declarations still need source verification.
+The audit confirmed that the legacy model includes two post-match Elo differences (`ELO_DIFF`, `ELO_SURFACE_DIFF`). Its published scores may overstate generalization because those inputs contain outcome information. The opt-in strict implementation excludes them and updates sequential history only after verified result availability, including overnight results. It has not replaced the active model: historical dates are incomplete, and no real strict evaluation has been performed. V3 requires a verified common UTC day basis and earlier verified ranking and context availability; V1/V2 artifacts and local or unspecified date bases are rejected. The dates and declarations still need source verification.
 
 ## Evaluation design
 

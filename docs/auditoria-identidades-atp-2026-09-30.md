@@ -135,3 +135,34 @@ pruebas permanecen privados conforme a las exclusiones del repositorio.
 
 Referencias: [ranking ATP](https://www.atptour.com/en/rankings/singles?dateWeek=Current+Week&rankRange=0-5000),
 [ficha de Andres Martin](https://www.atptour.com/en/players/andres-martin/m0np/overview).
+
+
+## Revisión del 02/10/2026
+
+Se recalculó el informe con el catálogo actual (66.947 filas), leyendo las dos
+columnas de nombres y reutilizando la normalización compartida: 67.702 registros
+de ranking en 30 fechas. El último snapshot, 28/09, conserva 2.290 filas,
+siete jugadores sin ID y cero colisiones entre IDs resueltos. No se repiten las
+altas ni las cuatro correcciones de nacimiento ya autorizadas.
+
+| Pendiente | IDs locales candidatos | Motivo pendiente |
+| --- | --- | --- |
+| Jakub Vrba | 149107, 213551 | Duplicados sin nacimiento; historia de ranking insuficiente para elegir |
+| James Weber | 115238, 214062 | Duplicados sin nacimiento |
+| Hugo Cardinaud | 212172, 213220 | Duplicados sin nacimiento |
+| Claus Piening | Sin coincidencia exacta | País/nacimiento coinciden con Markus Malaszszak, pero no prueban identidad |
+| Philippe Renard | 213079, 213099 | Duplicados; compartir nacimiento con Lucas Schurdevin no demuestra alias |
+| Leon Peranovic | 213086, 213110 | Duplicados sin nacimiento ni enlace histórico inequívoco |
+| Alvaro Jimenez | 213077, 213097 | Duplicados; otro apellido en fuente secundaria requiere un puente verificable |
+
+Se reutiliza la evidencia ATP anterior y se consulta primero el CSV. Las consultas
+actuales de seis fichas ATP devuelven 403 y la de Cardinaud devuelve contenido
+incompleto. No se intenta eludir el bloqueo. Las fuentes independientes revisadas,
+incluidas las fichas de [Vrba](https://www.tennis.com/players-rankings/jakub-vrba) y
+[Renard](https://www.tennis.com/players-rankings/philippe-renard), corroboran datos
+públicos del jugador, pero no la correspondencia con un ID local duplicado.
+
+No hay nuevas altas o correcciones concretas preparadas para aplicar: falta evidencia,
+no permiso. El catálogo queda intacto. Informe recalculado y decisiones en
+`data/processed/audit-2026-10-02/ranking_identity_validation.csv`,
+`identity-recheck.json` e `identity-evidence-review.json`, excluidos de Git.

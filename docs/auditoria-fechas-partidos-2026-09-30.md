@@ -1,6 +1,6 @@
 # Fechas de partidos contrastadas — 30/09/2026
 
-La tabla derivada `data/processed/match_date_corrections.csv` contiene 45 fechas
+El cierre del 30/09 registraba 45 fechas en `data/processed/match_date_corrections.csv`
 de 2026 contrastadas mediante resultados y crónicas ATP. Se añadieron las trece
 filas siguientes a las cuatro correcciones anteriores de Brisbane, Australian
 Open y Wimbledon, y después las 28 finales detalladas más abajo. El código exige coincidencia única de torneo, ganador,
@@ -28,7 +28,7 @@ el día de inicio de la semifinal es el viernes 15; el resultado final estuvo
 disponible el sábado 16. Ambos hechos se conservan por separado en la evidencia.
 
 No se infieren días a partir de una ronda, del calendario previsto ni del inicio
-del torneo. La final de US Open sigue sin fecha individual contrastada: el horario
+del torneo. En el cierre del 30/09, la final de US Open seguía sin fecha individual contrastada: el horario
 previsto por sí solo no prueba cuándo se disputó.
 
 ## Ampliación de finales contrastadas
@@ -140,3 +140,43 @@ Véase la [auditoría temporal](validacion-temporal-estricta.md) para la transic
 que todavía exige entradas verificadas en una base UTC común antes de usar
 `strict-pre-match-v3`. Las fechas locales contrastadas en las crónicas no prueban
 por sí solas el día UTC de inicio o disponibilidad.
+
+
+## Revisión del 02/10/2026
+
+Recuento por coincidencias únicas: **47 de 2.952 partidos** con día contrastado,
+**2.905 pendientes**. Las 28 fechas del segundo bloque ya formaban parte de las
+45 anteriores: 4 + 13 + 28 + 2 = 47. El inventario reabierto comprende 24 Excel
+más dos CSV de resultados/próximos partidos, no 26 Excel; ninguno aporta fechas
+individuales utilizables. Raw anual sigue sin fechas individuales verificadas.
+
+| Partido US Open | Día local comprobado | Fuente oficial y coincidencia |
+| --- | --- | --- |
+| Zverev–Shelton, final | 13/09/2026 | [ATP Finals](https://www.nittoatpfinals.com/en/news/zverev-shelton-us-open-2026-final-report): domingo, 6-3 7-6(2) 5-7 6-2 |
+| Shelton–Tiafoe, semifinal | 11/09/2026 | [US Open](https://www.usopen.org/amp/en_US/news/articles/2026-09-11/shelton_beats_tiafoe_to_reach_first_grand_slam_final_at_2026_us_open.html): viernes por la noche, 4-6 6-3 6-3 7-5 |
+
+Se contrastan torneo, participantes, ronda y marcador exacto; ambas filas locales
+son únicas. Son fechas locales para presentación, sin certificación UTC ni nueva
+información para entrenar. La lista prioritaria de finales deja tres pendientes:
+Dubai (walkover), Ginebra (día contradictorio) y Umag (marcador discrepante).
+
+La función compartida admite ahora también los dominios HTTPS oficiales de ATP
+Finals y US Open. Una prueba anterior al cambio reprodujo el rechazo; cinco casos
+comprueban fuentes admitidas y rechazo de dominios parecidos, HTTP y terceros.
+La lista permitida no sustituye el contraste manual de cada crónica.
+
+Se recalcularon cinco derivados en una carpeta aislada. Solo cambiaron tres CSV:
+partidos de torneo (dos fechas), perfiles (último partido de Tiafoe) y partidos
+recientes (cuatro filas); rankings y directorio permanecieron idénticos. Se integran
+además la tabla de correcciones y el manifiesto. La copia pública cambia cinco
+archivos, incluidos estadísticas y partición US Open. Sus dos URL contienen la
+fecha nueva; se actualizan conjuntamente los enlaces internos. No se añade una
+redirección de marcadores externos a URL antiguas. Balances, 227 marcadores `n/a`,
+estadísticas, Elo, predicciones y modelo conservados.
+
+Evidencia privada: `data/processed/audit-2026-10-02/date-evidence.json`,
+`public-candidate-review.json`, `date-integration.json` y `raw-date-inventory.json`.
+La copia previa conserva las rutas relativas en
+`data/processed/audit-2026-10-02/backups/before-date-integration`.
+Para revertir, restaurar únicamente esas rutas y volver a compilar; no tocar raw.
+El respaldo del código privado está en `code-backup` dentro de la misma auditoría.

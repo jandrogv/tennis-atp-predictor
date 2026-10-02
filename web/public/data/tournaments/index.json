@@ -122,7 +122,7 @@
       "rows": 38,
       "year": 2026,
       "end_date": "2026-09-29",
-      "status": "grace_period"
+      "status": "frozen"
     },
     {
       "key": "cincinnati-united-states-2026-hard",
@@ -234,7 +234,7 @@
       "rows": 38,
       "year": 2026,
       "end_date": "2026-09-29",
-      "status": "grace_period"
+      "status": "frozen"
     },
     {
       "key": "hong-kong-hong-kong-2026-hard",

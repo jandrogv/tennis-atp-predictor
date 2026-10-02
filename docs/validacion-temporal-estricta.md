@@ -86,7 +86,7 @@ un test ya consultado.
 ## Cobertura real y transición pendiente
 
 La fuente anual local de 2026 tiene 2.952 filas sin fecha individual verificada.
-Los 26 Excel de torneo revisados tampoco aportan ese dato. La página de resultados
+Los 24 Excel de torneo y dos CSV de resultados/próximos partidos revisados tampoco aportan ese dato. La página de resultados
 de Brisbane contiene 49 partidos pero no fechas individuales en los campos revisados.
 No se deducen por ronda ni se vuelven a descargar torneos completos para esta auditoría.
 
@@ -160,3 +160,60 @@ Para revertir, conservar el modelo heredado y no activar `strict`; el aviso web 
 puede revertir independientemente sin alterar datos ni modelos.
 
 Referencia metodológica: [validación temporal de scikit-learn](https://sklearn.org/stable/modules/cross_validation.html#time-series-split).
+
+
+## Verificación del 02/10/2026 y preparación manual
+
+El modelo operativo sigue siendo el entrenado en la mensual del usuario del
+28/09/2026 (finalizada 20:25:18), con metodología `notebook_legacy`. No es un
+modelo antiguo por falta de recarga: lo heredado es su contrato metodológico.
+Esta revisión no vuelve a entrenar ni activa V3. La cobertura actual de presentación
+es 47 fechas únicas y 2.905 pendientes; las 28 de la ampliación no se suman dos veces.
+
+| Familia / flujo | Fuente y garantía comprobada | Límite |
+| --- | --- | --- |
+| Ranking y puntos | Campos del partido más snapshot anterior contrastado; se rechaza fecha futura, ausente o no verificada | La declaración necesita procedencia real del snapshot |
+| Edad, altura y tamaño del cuadro | Contexto suministrado para el partido; disponibilidad verificada anterior exigida | El código no reconstruye por sí solo datos históricos faltantes |
+| H2H, partidos jugados, forma y estadísticas | Consultan el historial antes de escribir resultados disponibles; las predicciones solo leen | Días UTC, no resolución intradía |
+| Elo general/superficie y gradientes | Consultan estado previo por los mismos eventos; se excluyen los dos Elo posteriores del contrato estricto | El modelo operativo heredado sigue admitiendo esos dos Elo posteriores |
+| Cortes y calibración | Días completos, orden temporal y purga individual de etiquetas tardías | No acredita calidad predictiva sin entrenamiento real |
+| Selección y evaluación | Selección anterior, prueba final posterior con huella de datos; candidatos no reciben el periodo final | Las decisiones humanas después de consultar resultados pueden contaminar una evaluación futura |
+| Predicción y artefactos | Comparación exacta con `strict-pre-match-v3`; bases locales/ausentes y V1/V2 rechazados | No convertir un artefacto heredado cambiando solo su etiqueta |
+| Caché de rankings | Comparación con la fuente antes de reutilizar; correcciones invalidan, archivos idénticos conservan fecha de modificación | Se ha probado con fixtures y contrastado con fuente local |
+
+No se encontró otro defecto reproducible en V3 que requiera modificar el código.
+La suite actual pasa **183 pruebas Python**, incluidas causalidad del mismo día,
+resultados nocturnos, purgas, artefactos, disponibilidad de contexto y conservación
+de UTC desde CSV. Hay **65 pruebas web**; se incluyen invalidación y conservación
+de snapshots. Estas pruebas utilizan muestras/fixtures y candidatos simulados,
+no constituyen entrenamiento ni una evaluación nueva del modelo activo.
+
+Pasos manuales, pendientes de entradas verificadas:
+
+1. Preparar en un directorio nuevo el dataset completo con todas las columnas
+   del contrato, fuentes y días UTC contrastados; no rellenar flags por conveniencia.
+2. Generar variables en modo estricto sobre el historial unido, para que el periodo
+   posterior pueda leer el pasado. Por ejemplo, cuando exista
+   `data/processed/strict-input/final_dataset.csv`:
+
+   ```powershell
+   $env:PYTHONPATH = "src"
+   .\.venv\Scripts\python.exe -m tennis_pipeline.pipeline features --mode strict --input-dir data/processed/strict-input --output-dir data/processed/strict-v3-features
+   ```
+
+   No añadir `--current-year` en este ejemplo: esa ruta vuelve a leer los archivos
+   anuales raw, que aún carecen de la procedencia temporal requerida.
+3. Separar las variables generadas por días completos en `train.csv` y
+   `later-period.csv`, conservar límites y huellas, y entrenar en **otro directorio**:
+
+   ```powershell
+   .\.venv\Scripts\python.exe -m tennis_pipeline.pipeline train --mode strict --train-file data/processed/strict-v3-features/train.csv --test-file data/processed/strict-v3-features/later-period.csv --model-dir models/strict-v3-candidate
+   .\.venv\Scripts\python.exe -m tennis_pipeline.pipeline evaluate --test-file data/processed/strict-v3-features/later-period.csv --model-dir models/strict-v3-candidate --output-dir data/processed/strict-v3-evaluation
+   ```
+
+4. Revisar manifiesto, exclusiones, purgas y evaluación final reservada. Comparar
+   metodologías y métricas en condiciones equivalentes antes de decidir una activación.
+   La app mensual mantiene su contrato heredado; pulsar Mensual no activa V3.
+
+Los comandos anteriores están documentados para una ejecución posterior y **no se
+han ejecutado**. La activación seguirá siendo una decisión manual separada.

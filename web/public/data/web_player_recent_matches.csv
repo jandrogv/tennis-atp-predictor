@@ -83,7 +83,7 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 100644,2026-09-25,Laver Cup,Hard,Round Robin Day 2,200282,Alex De Minaur,L,200282,Alex De Minaur,2-6 7-6(5) 11-9,web_tournament_matches
 100644,2026-09-18,Davis Cup Qualifiers 2nd Rd,Hard,Round Robin,209976,Dino Prizmic,W,100644,Alexander Zverev,6-2 6-4,web_tournament_matches
 100644,2026-09-18,Davis Cup Qualifiers 2nd Rd,Hard,Round Robin,212063,Matej Dodig,W,100644,Alexander Zverev,6-4 7-6(3),web_tournament_matches
-100644,2026-08-30,US Open,Hard,Final,210097,Ben Shelton,W,100644,Alexander Zverev,6-3 7-6(2) 5-7 6-2,web_tournament_matches
+100644,2026-09-13,US Open,Hard,Final,210097,Ben Shelton,W,100644,Alexander Zverev,6-3 7-6(2) 5-7 6-2,web_tournament_matches
 100644,2026-08-30,US Open,Hard,Semifinals,111575,Karen Khachanov,W,100644,Alexander Zverev,6-3 7-6(7) 7-6(6),web_tournament_matches
 100644,2026-08-30,US Open,Hard,Quarterfinals,122298,Botic Van De Zandschulp,W,100644,Alexander Zverev,6-2 7-5 6-1,web_tournament_matches
 100644,2026-08-30,US Open,Hard,Round of 16,209260,Luciano Darderi,W,100644,Alexander Zverev,6-2 6-2 7-6(3),web_tournament_matches
@@ -12203,7 +12203,7 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 126205,2026-08-13,Cincinnati Open,Hard,Quarterfinals,207925,Flavio Cobolli,L,207925,Flavio Cobolli,2-6 6-3 6-4,web_tournament_matches
 126205,2026-08-13,Cincinnati Open,Hard,Round of 16,100644,Alexander Zverev,W,126205,Tommy Paul,4-6 7-6(6) 6-4,web_tournament_matches
 126206,2023-02-06,Dallas,Hard,R32,106218,106218.0,L,106218,106218.0,n/a,train
-126207,2026-08-30,US Open,Hard,Semifinals,210097,Ben Shelton,L,210097,Ben Shelton,4-6 6-3 6-3 7-5,web_tournament_matches
+126207,2026-09-11,US Open,Hard,Semifinals,210097,Ben Shelton,L,210097,Ben Shelton,4-6 6-3 6-3 7-5,web_tournament_matches
 126207,2026-08-30,US Open,Hard,Quarterfinals,210506,Alex Michelsen,W,126207,Frances Tiafoe,5-7 3-6 7-5 6-3 7-6(6),web_tournament_matches
 126207,2026-08-30,US Open,Hard,Round of 16,106421,Daniil Medvedev,W,126207,Frances Tiafoe,7-6(1) 6-4 7-6(6),web_tournament_matches
 126207,2026-08-30,US Open,Hard,Round of 32,200473,Valentin Vacherot,W,126207,Frances Tiafoe,6-4 6-2 6-4,web_tournament_matches
@@ -14632,8 +14632,8 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 210093,2026-06-14,Libema Open,Grass,1st Round Qualifying,208278,Shintaro Mochizuki,W,210093,Sander Jong,4-6 6-3 6-4,web_tournament_matches
 210097,2026-09-18,Davis Cup Qualifiers 2nd Rd,Hard,Round Robin,210150,Jakub Mensik,L,210150,Jakub Mensik,5-7 6-4 6-3,web_tournament_matches
 210097,2026-09-18,Davis Cup Qualifiers 2nd Rd,Hard,Round Robin,208103,Jiri Lehecka,L,208103,Jiri Lehecka,6-4 6-4,web_tournament_matches
-210097,2026-08-30,US Open,Hard,Final,100644,Alexander Zverev,L,100644,Alexander Zverev,6-3 7-6(2) 5-7 6-2,web_tournament_matches
-210097,2026-08-30,US Open,Hard,Semifinals,126207,Frances Tiafoe,W,210097,Ben Shelton,4-6 6-3 6-3 7-5,web_tournament_matches
+210097,2026-09-13,US Open,Hard,Final,100644,Alexander Zverev,L,100644,Alexander Zverev,6-3 7-6(2) 5-7 6-2,web_tournament_matches
+210097,2026-09-11,US Open,Hard,Semifinals,126207,Frances Tiafoe,W,210097,Ben Shelton,4-6 6-3 6-3 7-5,web_tournament_matches
 210097,2026-08-30,US Open,Hard,Quarterfinals,207989,Carlos Alcaraz,W,210097,Ben Shelton,6-7(5) 6-1 6-3 1-6 7-6(7),web_tournament_matches
 210097,2026-08-30,US Open,Hard,Round of 16,126774,Stefanos Tsitsipas,W,210097,Ben Shelton,6-2 6-3 6-4,web_tournament_matches
 210097,2026-08-30,US Open,Hard,Round of 32,133430,Denis Shapovalov,W,210097,Ben Shelton,7-6(3) 6-7(5) 6-3 6-4,web_tournament_matches

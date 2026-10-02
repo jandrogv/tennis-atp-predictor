@@ -75,3 +75,30 @@ del entorno principal mientras esté ejecutando una recarga.
 Referencias: [migración oficial a Next.js 16](https://nextjs.org/docs/app/guides/upgrading/version-16),
 [cambios de Next.js 15](https://nextjs.org/docs/app/guides/upgrading/version-15),
 [respuestas not-found con streaming](https://nextjs.org/docs/app/api-reference/file-conventions/not-found).
+
+
+## Comprobación actual — 02/10/2026
+
+PR #1 sigue integrada en `main`. Manifiesto, lockfile e instalación mantienen
+Next.js 16.3.6, React/React DOM 19.3.0, Node 24.16.0 y TypeScript 5.9.3.
+`npm ls` no señala incompatibilidades. No se reinstaló ni migró de nuevo.
+Las 65 pruebas web pasan y `npm run build` termina, incluida la comprobación de tipos.
+No existe un script de linter configurado que se pueda declarar ejecutado.
+
+El verificador detectó dos estados de partición vencidos por el paso del tiempo:
+Chengdu y Hangzhou debían pasar de `grace_period` a `frozen`. Se regeneró el índice
+mediante la función existente en copia aislada y se revisaron solo esas dos líneas.
+El índice previo está en `data/processed/audit-2026-10-02/tournament-index-before.json`.
+Tras ello y las correcciones de fechas, el verificador vuelve a pasar con cuatro
+avisos ya conocidos (experimento histórico y tres eventos de equipos sin campeón individual).
+
+QA local: 36 visitas en Chrome oculto a 1440×1000 y 390×844, con búsqueda/enlace de
+ranking, perfiles, comparador, filtro Elo, avisos de modelo heredado y dos detalles
+US Open fechados correctamente. Además, 72 comprobaciones del cuadro en Indian
+Wells, Wimbledon y Chengdu: cuatro rondas y conexiones originales en R16/QF/SF/F,
+exclusión de qualifying solo en Draw, scroll, Escape y recuperación de foco.
+Se revisó escritorio a 1613×1244, 1280×720 y tablet 1024×768, además de móvil.
+Sin errores de consola ni desbordamientos detectados. Se utilizó Playwright instalado
+porque la skill/plugin Browser no está disponible; no se instalaron dependencias.
+Capturas e informes están fuera del repositorio, en la carpeta de visualizaciones
+local, con prefijo `audit-oct2-local`. No se modificó el diseño aceptado.

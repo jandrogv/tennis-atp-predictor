@@ -1,6 +1,6 @@
 # Plan de acción de ATP Insight
 
-Fecha: 28/09/2026. Revisión: 30/09/2026. Estado: Next.js publicado; contrato temporal V3
+Fecha: 28/09/2026. Revisión: 02/10/2026. Estado: Next.js publicado; contrato temporal V3
 implementado y probado en local; catálogo ampliado con autorización y siete identidades no verificables documentadas.
 Objetivo: completar los pendientes técnicos y de datos, una etapa cada vez, con
 resultados verificables. La app de escritorio está terminada y aceptada por el usuario.
@@ -126,7 +126,7 @@ Acciones:
 Cierre: entrega publicada y verificada. Si falta acceso al alojamiento, documentar
 exactamente la comprobación pendiente y solicitar solo el acceso necesario.
 
-## Seguimiento
+## Seguimiento histórico — cierre del 30/09
 
 | Etapa | Estado | Evidencia de cierre |
 | --- | --- | --- |
@@ -171,3 +171,45 @@ la nueva prueba falla antes del arreglo y pasa después. Incorporadas 28 fechas 
 adicionales: 27 cambian de día y Roland Garros conserva su día ahora contrastado.
 La ampliación no se aplica a Elo, entrenamiento ni predicciones heredadas. Reversión
 local y fuentes en `docs/auditoria-fechas-partidos-2026-09-30.md`.
+
+
+## Estado actual — 02/10/2026
+
+La inspección partió de `main` limpio en `f47ab9f`. PR #1 ya estaba integrada y los
+105 archivos públicos autorizados ya se habían publicado en `25c3dde`: no quedaba
+pendiente repetir esa entrega. El cuadro aceptado por el usuario se conserva.
+
+| Etapa | Estado actual | Evidencia de esta ejecución |
+| --- | --- | --- |
+| Next.js | Verificada de nuevo; sin otra migración | Versiones instaladas/lock coherentes; 65 pruebas web, tipos y build; 36 visitas locales y 72 comprobaciones del cuadro |
+| Identidades | Parcial: siete casos dependen de evidencia | Recalculadas 30 fechas, 67.702 filas; última fecha 28/09, 2.290 filas, siete sin ID y cero colisiones. Sin nuevas modificaciones de raw |
+| Fechas | Ampliación completada; historia parcial | 47 coincidencias únicas de 2.952, 2.905 pendientes. Dos partidos US Open añadidos; 227 `n/a` y todos los balances conservados |
+| Temporal V3 | Código verificado; transición manual pendiente | 183 pruebas Python. Sin otro defecto reproducible. Faltan entradas UTC contrastadas y evaluación real; el modelo activo no cambia |
+| Publicación | Bloque revisado para main | Seis archivos públicos y documentación existente; despliegue y comprobación pública se registran al cerrar la entrega |
+| Mensual / escritorio | Fuera del alcance | Mensual del usuario finalizada el 28/09 a las 20:25:18; modelo activo correspondiente. App aceptada, sin modificaciones |
+
+Se comprobó ausencia de procesos de recarga y disponibilidad del bloqueo antes de
+integrar. Los 143 archivos protegidos de raw, modelos y predicciones conservan sus
+huellas. Cinco derivados se calcularon aislados; solo se sustituyeron los tres CSV
+que cambiaron, la tabla de correcciones y el manifiesto. La copia pública modifica
+cinco archivos por fechas y el índice de torneos por sus dos estados vencidos.
+
+El código privado solo amplía las fuentes oficiales admitidas para correcciones
+manuales (ATP Finals y US Open). Cinco casos de regresión complementan la suite.
+No se modifica scraping, entrenamiento, dependencias, interfaz ni escritorio.
+La primera invocación de pytest sin directorio recorrió copias y carpetas históricas
+con ACL; se ejecutó después la suite correcta `pytest tests -q`, con 183 aprobadas.
+El verificador se ejecuta desde `web`; los cuatro avisos restantes son preexistentes.
+
+Pendientes reales: evidencias de los siete IDs, 2.905 días de partido y procedencia
+UTC/ranking/contexto del conjunto histórico. No hay una propuesta nueva de catálogo
+suficientemente acreditada que justifique pedir permiso. La transición V3 no se
+considera terminada ni se anuncia una mejora del modelo.
+
+Reversión: para los datos locales, restaurar las rutas listadas en
+`data/processed/audit-2026-10-02/date-integration.json` desde
+`backups/before-date-integration` dentro de esa auditoría; el índice anterior está
+junto a ella en `tournament-index-before.json`. Código y prueba privados tienen
+respaldo en `code-backup` (la prueba lleva extensión `.bak`). Para producción,
+revertir el commit de esta entrega y comprobar el nuevo despliegue. Nunca restaurar
+raw ni modelos para revertir este bloque. Evidencia y salidas internas siguen ignoradas.
