@@ -166,3 +166,60 @@ No hay nuevas altas o correcciones concretas preparadas para aplicar: falta evid
 no permiso. El catálogo queda intacto. Informe recalculado y decisiones en
 `data/processed/audit-2026-10-02/ranking_identity_validation.csv`,
 `identity-recheck.json` e `identity-evidence-review.json`, excluidos de Git.
+
+## Nueva fase de datos del 02/10 — una identidad desbloqueada
+
+Inventario recalculado al iniciar en `374979f`: 66.947 jugadores, 67.702 filas de
+ranking en 30 fechas, 2.290 filas en el último snapshot y siete pendientes. Se
+contrastaron todas las columnas de los candidatos; no se eligió un ID por orden
+numérico, frecuencia en rankings ni por ausencia de nacimiento.
+
+La estrategia nueva combina fichas ITF, participación federativa y procedencia del
+catálogo. El repositorio original de Sackmann respondió 404; una
+[copia fijada a un commit](https://github.com/slicesofdata/tennis-167-2025/blob/b16b712a289d7ecba6e833f670e9c8b108e62326/data/raw/atp_players.csv)
+conserva los duplicados sin nacimiento. Permite rastrear su procedencia, pero
+no acredita cuál de dos IDs corresponde a la ficha ATP actual. No se fuerza una
+fusión ni se vuelve a intentar el acceso ATP bloqueado.
+
+| Caso | ATP / país / nacimiento contrastados | Candidatos y decisión actual |
+| --- | --- | --- |
+| Jakub Vrba | v0hr / CZE / 14/02/2005 | 149107 y 213551 sin DOB; [ITF 800492400](https://www.itftennis.com/en/players/jakub-vrba/800492400/cze/mt/s/) confirma la persona, no el vínculo con uno de esos IDs. Pendiente |
+| James Weber | w0fz / USA / 03/10/2006 | 115238 y 214062 sin DOB; [ITF 800773667](https://www.itftennis.com/en/players/james-weber/800773667/usa/jt/s/overview/) no distingue los registros locales. La mano derecha de uno no excluye al otro, cuya mano es desconocida. Pendiente |
+| Hugo Cardinaud | c0lh / FRA / 21/02/2004 | 212172 y 213220 sin DOB; [ATP](https://www.atptour.com/en/players/hugo-cardinaud/c0lh/overview) e [ITF](https://www.itftennis.com/en/players/hugo-cardinaud/800478510/fra/jt/s/titles/) corroboran al jugador, sin puente al ID local. Pendiente |
+| Claus Piening | p0q6 / GER / 08/07/2004 | Sin nombre exacto anterior en catálogo. Markus Malaszszak 212308 queda descartado por participación simultánea como persona distinta. Alta 214665 autorizada y aplicada |
+| Philippe Renard | r0lq / FRA / 07/08/2003 | 213079 y 213099 sin DOB. [Orden de juego ITF de Toulouse](https://www.itftennis.com/en/tournament/order-of-play/print/?orderOfPlayDayId=2567986&tournamentid=1100197874) confirma participación en 2025; no distingue IDs ni prueba alias con Lucas Schurdevin 211672. Pendiente |
+| Leon Peranovic | p0oi / GER / 04/01/2007 | 213086 y 213110 sin DOB; [ITF 800593317](https://www.itftennis.com/en/players/leon-peranovic/800593317/ger/mt/S/overview/) no ofrece puente al catálogo duplicado. Pendiente |
+| Alvaro Jimenez | j0fa / ESP / 08/01/2007 | 213077 y 213097 sin DOB; [ITF 800603225](https://www.itftennis.com/en/players/alvaro-jimenez/800603225/esp/mt/S/overview/) corrobora país/edad, sin resolver el ID local. Pendiente |
+
+El [cuadro oficial alemán juvenil indoor de 2022](https://www.rlp-tennis.de/fileadmin/user_upload/Draws-Stand_27.11.22_Einzel___Doppel-1.pdf),
+páginas 1–2, incluye por separado a Claus Piening (DTB 10400780, Garstedt) y Markus
+Malaszszak (DTB 10451227, SCC Berlin), con rivales y resultados distintos. Despeja
+el bloqueo de identidad compartida. La ficha ATP previamente guardada acredita
+país y nacimiento; [ITF](https://www.itftennis.com/en/players/claus-piening/800493050/ger/mt/s/overview/)
+acredita la mano derecha. ATP `p0q6`, ITF `800493050`, DTB `10400780` y el ID local
+`214665` son identificadores diferentes; no son intercambiables.
+
+Tras presentar diff, evidencia, copia y reversión, el usuario respondió
+«Sí, autorizo esa única alta». Se comprobó de nuevo el siguiente ID libre y la
+huella del catálogo, y se añadió exclusivamente:
+
+```csv
+214665,Claus,Piening,R,20040708,GER,,
+```
+
+Las 66.947 filas anteriores y sus bytes permanecen intactos; catálogo final:
+**66.948 filas**. Resultado real en derivados: **seis pendientes**, cero colisiones
+en 2.290 filas del último ranking; Claus enlazado en seis snapshots, perfil y
+directorio. No quedan propuestas sin aplicar en esta fase. Se reutiliza el índice
+y la normalización compartidos, sin introducir otro sistema de alias.
+
+Evidencia privada: `data/processed/audit-2026-10-02-data-phase/identity-case-review.json`
+(candidatos completos y razones por caso), `upstream-player-evidence.json`,
+`catalogue-proposal.diff`, `catalogue-proposal.json` y
+`approved-catalogue-application.json`. Copia íntegra en
+`backups/atp_players.before-proposed-addition.csv` dentro de esa auditoría.
+Revertir raw requiere explicar la sustitución, permiso específico y comprobar que
+no haya cambios posteriores; restaurar solo esa copia y regenerar identidades.
+Para los seis casos pendientes hace falta un puente documental entre ID local e
+identidad oficial, por ejemplo resultados históricos de categorías inferiores
+coincidentes en torneo, rival y marcador. No basta completar un DOB por intuición.

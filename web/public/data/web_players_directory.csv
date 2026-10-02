@@ -1929,6 +1929,7 @@ player_id,player_name,country,is_active,atp_rank,atp_points,overall_elo,elo_rank
 214626,Chen Hui Ho,TPE,True,1914.0,1.0,,,,0.0,,
 212265,Chen Yu Lu,TPE,True,1914.0,1.0,,,,0.0,,
 214616,Chetanna Amadike,CAN,True,1914.0,1.0,,,,0.0,,
+214665,Claus Piening,GER,True,1914.0,1.0,,,,0.0,,
 214638,Cole Thurgur,CAN,True,1914.0,1.0,,,,0.0,,
 214619,Daniel Borisov,IRL,True,1914.0,1.0,,,,0.0,,
 206625,Daniil Golubev,RUS,True,1914.0,1.0,,,,0.0,,
@@ -3794,6 +3795,8 @@ player_id,player_name,country,is_active,atp_rank,atp_points,overall_elo,elo_rank
 101354,Andrew Sznajder,CAN,False,,,1347.5019268620306,2079.0,Grass,28.0,1-9,3-25
 101416,Joao Cunha Silva,POR,False,,,1346.4637729586711,2080.0,Grass,59.0,2-8,6-24
 101243,Roberto Azar,ARG,False,,,1332.9668123036424,2081.0,Carpet,59.0,0-10,5-25
+141466,,OMA,False,,,,,,0.0,,
+212731,,USA,False,,,,,,0.0,,
 130142,A Ram Kim,KOR,False,,,,,,0.0,,
 213513,A Trice Pickens,USA,False,,,,,,0.0,,
 213020,Aadarsh Tripathi,USA,False,,,,,,0.0,,
@@ -44873,5 +44876,3 @@ player_id,player_name,country,is_active,atp_rank,atp_points,overall_elo,elo_rank
 136848,Zvonimir Podvinski,CRO,False,,,,,,0.0,,
 125506,Zygmunt Krainski,POL,False,,,,,,0.0,,
 213731,canice Abua,NGR,False,,,,,,1.0,0-1,0-1
-141466,,OMA,False,,,,,,0.0,,
-212731,,USA,False,,,,,,0.0,,

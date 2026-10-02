@@ -217,3 +217,48 @@ Pasos manuales, pendientes de entradas verificadas:
 
 Los comandos anteriores están documentados para una ejecución posterior y **no se
 han ejecutado**. La activación seguirá siendo una decisión manual separada.
+
+## Cobertura medida en la nueva fase de datos del 02/10
+
+Se examinaron **42 archivos anuales (1985–2026)** con **135.455 filas** y
+**135.453 claves distintas** por edición, ganador, perdedor, ronda y marcador,
+normalizadas con utilidades existentes. `atp_matches_test.csv` queda fuera del
+inventario anual histórico. Dos claves repetidas corresponden a Davis Cup de 2024
+(Austria–Turquía) y 2025 (El Salvador–Rumanía), con los mismos participantes y
+marcador y diferente `match_num` (2/3). Se documentan sin eliminar filas raw.
+
+| Evidencia / requisito | Cobertura constatada |
+| --- | --- |
+| Día local de presentación en 2026 | 53/2.952 partidos únicos; 2.899 pendientes |
+| Inicio y conclusión con hora y zona contrastadas | 1 partido: Shelton–Alcaraz, US Open QF; precisión de minuto |
+| Día UTC de inicio que pasa su validador | 1/2.952, en evidencia aislada |
+| Disponibilidad original del resultado/estadísticas acreditada | 0 |
+| Disponibilidad anterior verificada de ranking y contexto | 0 |
+| Elegibles V3 en la evidencia ampliada de 2026 | **0/2.952**, evaluados individualmente |
+| Elegibles en fuentes anuales actuales | **0/135.455 filas**: faltan metadatos temporales requeridos |
+
+V3 exige **días UTC**, no orden intradía ni timestamps completos obligatorios en
+todas las filas. Se reutilizan `verified_match_dates`,
+`verified_result_available_dates` y `validate_prematch_context_dates`. El único
+inicio UTC acreditado pasa su validador específico, pero falla disponibilidad de
+resultado. Las otras 2.951 filas fallan por base UTC no acreditada. Ranking y contexto
+requieren días verificados estrictamente anteriores; disponer de sus valores o de
+30 etiquetas semanales de snapshot no acredita su publicación histórica.
+
+Un encabezado de crónica puede preceder a revisiones posteriores. Ni ese encabezado
+solo, ni la fecha de consulta, ni el `mtime` demuestran cuándo estuvo disponible
+originalmente el registro consumido. El último punto prueba conclusión, separada
+de disponibilidad verificable del resultado y estadísticas.
+
+El cero medido **no depende de completar los 2.899 días locales restantes**. Un
+subconjunto futuro puede ser elegible si aporta todos los requisitos; su suficiencia
+para entrenar exige además justificar cobertura histórica, tamaño, clases,
+superficies y cortes temporales. No se generan variables, entrena, calibra,
+evalúa ni activa un modelo. Se mantiene `notebook_legacy` de la mensual del 28/09.
+Los rechazos de bases locales y artefactos V1/V2 siguen probados: 183 tests Python.
+
+Inventario, rechazos y fuentes: `data/processed/audit-2026-10-02-data-phase/v3-readiness.json`.
+Cobertura por partido: `v3-current-year-coverage.csv`, solo auditoría, nunca entrada
+del modelo operativo. Siguiente bloque útil: versiones históricas trazables de
+resultados/estadísticas, rankings y contexto de un grupo acotado, antes de preparar
+entrenamiento o ampliar indiscriminadamente fechas.

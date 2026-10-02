@@ -55919,7 +55919,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-10,149097,Felipe Pagnacco,1929,1,0.0,-19.0,ARG,21,atp_rankings_2026_08_10.csv
 2026-08-10,212047,Danil Panarin,1929,1,0.0,-19.0,RUS,21,atp_rankings_2026_08_10.csv
 2026-08-10,122536,Juan Pablo Paz,1929,1,0.0,-19.0,ARG,31,atp_rankings_2026_08_10.csv
-2026-08-10,,Claus Piening,1929,1,,,,,atp_rankings_2026_08_10.csv
+2026-08-10,214665,Claus Piening,1929,1,,,GER,22,atp_rankings_2026_08_10.csv
 2026-08-10,214633,Paris Pouatcha,1929,1,0.0,-19.0,USA,20,atp_rankings_2026_08_10.csv
 2026-08-10,212491,Alexander Razeghi,1929,1,0.0,-19.0,USA,20,atp_rankings_2026_08_10.csv
 2026-08-10,200100,Tomas Rengel Sierra,1929,1,0.0,-19.0,ARG,30,atp_rankings_2026_08_10.csv
@@ -58214,7 +58214,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-24,212047,Danil Panarin,1912,1,0.0,17.0,RUS,21,atp_rankings_2026_08_24.csv
 2026-08-24,210133,Valdemar Frederik Pape,1912,1,-1.0,-140.0,DEN,22,atp_rankings_2026_08_24.csv
 2026-08-24,214632,Facundo Perlov,1912,1,,,ARG,22,atp_rankings_2026_08_24.csv
-2026-08-24,,Claus Piening,1912,1,0.0,17.0,,,atp_rankings_2026_08_24.csv
+2026-08-24,214665,Claus Piening,1912,1,0.0,17.0,GER,22,atp_rankings_2026_08_24.csv
 2026-08-24,214633,Paris Pouatcha,1912,1,0.0,17.0,USA,20,atp_rankings_2026_08_24.csv
 2026-08-24,200100,Tomas Rengel Sierra,1912,1,0.0,17.0,ARG,30,atp_rankings_2026_08_24.csv
 2026-08-24,214635,Milan Ristov,1912,1,0.0,17.0,MNE,20,atp_rankings_2026_08_24.csv
@@ -60508,7 +60508,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-08-31,212047,Danil Panarin,1923,1,0.0,-11.0,RUS,21,atp_rankings_2026_08_31.csv
 2026-08-31,210133,Valdemar Frederik Pape,1923,1,0.0,-11.0,DEN,22,atp_rankings_2026_08_31.csv
 2026-08-31,214632,Facundo Perlov,1923,1,0.0,-11.0,ARG,22,atp_rankings_2026_08_31.csv
-2026-08-31,,Claus Piening,1923,1,0.0,-11.0,,,atp_rankings_2026_08_31.csv
+2026-08-31,214665,Claus Piening,1923,1,0.0,-11.0,GER,22,atp_rankings_2026_08_31.csv
 2026-08-31,214633,Paris Pouatcha,1923,1,0.0,-11.0,USA,20,atp_rankings_2026_08_31.csv
 2026-08-31,132584,Stefano Reitano,1923,1,,,ITA,29,atp_rankings_2026_08_31.csv
 2026-08-31,200100,Tomas Rengel Sierra,1923,1,0.0,-11.0,ARG,30,atp_rankings_2026_08_31.csv
@@ -62797,7 +62797,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-09-14,210133,Valdemar Frederik Pape,1906,1,0.0,17.0,DEN,23,atp_rankings_2026_09_14.csv
 2026-09-14,214632,Facundo Perlov,1906,1,0.0,17.0,ARG,22,atp_rankings_2026_09_14.csv
 2026-09-14,213186,David Petrovic,1906,1,0.0,97.0,GER,21,atp_rankings_2026_09_14.csv
-2026-09-14,,Claus Piening,1906,1,0.0,17.0,,,atp_rankings_2026_09_14.csv
+2026-09-14,214665,Claus Piening,1906,1,0.0,17.0,GER,22,atp_rankings_2026_09_14.csv
 2026-09-14,214633,Paris Pouatcha,1906,1,0.0,17.0,USA,20,atp_rankings_2026_09_14.csv
 2026-09-14,214634,Andrei Radu,1906,1,,,ROU,16,atp_rankings_2026_09_14.csv
 2026-09-14,132584,Stefano Reitano,1906,1,0.0,17.0,ITA,29,atp_rankings_2026_09_14.csv
@@ -65095,7 +65095,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-09-21,212047,Danil Panarin,1912,1,0.0,-6.0,RUS,21,atp_rankings_2026_09_21.csv
 2026-09-21,210133,Valdemar Frederik Pape,1912,1,0.0,-6.0,DEN,23,atp_rankings_2026_09_21.csv
 2026-09-21,214632,Facundo Perlov,1912,1,0.0,-6.0,ARG,22,atp_rankings_2026_09_21.csv
-2026-09-21,,Claus Piening,1912,1,0.0,-6.0,,,atp_rankings_2026_09_21.csv
+2026-09-21,214665,Claus Piening,1912,1,0.0,-6.0,GER,22,atp_rankings_2026_09_21.csv
 2026-09-21,214633,Paris Pouatcha,1912,1,0.0,-6.0,USA,20,atp_rankings_2026_09_21.csv
 2026-09-21,214634,Andrei Radu,1912,1,0.0,-6.0,ROU,16,atp_rankings_2026_09_21.csv
 2026-09-21,132584,Stefano Reitano,1912,1,0.0,-6.0,ITA,29,atp_rankings_2026_09_21.csv
@@ -67385,7 +67385,7 @@ ranking_date,player_id,player_name,atp_rank,atp_points,atp_points_change,atp_ran
 2026-09-28,212047,Danil Panarin,1914,1,0.0,-2.0,RUS,21,atp_rankings_2026_09_28.csv
 2026-09-28,210133,Valdemar Frederik Pape,1914,1,0.0,-2.0,DEN,23,atp_rankings_2026_09_28.csv
 2026-09-28,214632,Facundo Perlov,1914,1,0.0,-2.0,ARG,22,atp_rankings_2026_09_28.csv
-2026-09-28,,Claus Piening,1914,1,0.0,-2.0,,,atp_rankings_2026_09_28.csv
+2026-09-28,214665,Claus Piening,1914,1,0.0,-2.0,GER,22,atp_rankings_2026_09_28.csv
 2026-09-28,214633,Paris Pouatcha,1914,1,0.0,-2.0,USA,20,atp_rankings_2026_09_28.csv
 2026-09-28,214634,Andrei Radu,1914,1,0.0,-2.0,ROU,16,atp_rankings_2026_09_28.csv
 2026-09-28,132584,Stefano Reitano,1914,1,0.0,-2.0,ITA,29,atp_rankings_2026_09_28.csv

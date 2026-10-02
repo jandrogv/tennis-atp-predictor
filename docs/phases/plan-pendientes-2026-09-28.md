@@ -1,7 +1,7 @@
 # Plan de acción de ATP Insight
 
 Fecha: 28/09/2026. Revisión: 02/10/2026. Estado: Next.js publicado; contrato temporal V3
-implementado y probado en local; catálogo ampliado con autorización y siete identidades no verificables documentadas.
+implementado y probado en local; catálogo ampliado con autorización y seis identidades pendientes de un vínculo documental.
 Objetivo: completar los pendientes técnicos y de datos, una etapa cada vez, con
 resultados verificables. La app de escritorio está terminada y aceptada por el usuario.
 
@@ -230,3 +230,46 @@ usaron los prefijos `audit-oct2-local` y `audit-oct2-production`. Chrome instala
 en modo oculto mediante Playwright; no se han probado otros motores de navegador.
 Para revertir la publicación de datos, `git revert 7c8130d` y validar el despliegue
 resultante. El cierre documental posterior no cambia código ni datos públicos.
+
+## Nueva fase de datos — 02/10/2026
+
+Partida comprobada: `main` limpio en `374979f`, bloqueo disponible y sin proceso de
+recarga. Inventario recalculado: siete identidades, 47 fechas únicas y 2.905 días
+pendientes. Se reutilizan consolidación, normalización, correcciones y validadores;
+no cambia código de producción, interfaz, cuadros, escritorio, Next.js ni dependencias.
+
+| Bloque | Resultado actual | Siguiente paso concreto |
+| --- | --- | --- |
+| Identidades | Claus Piening añadido como 214665 con permiso específico; 66.948 jugadores, seis pendientes y cero colisiones en 2.290 filas del último ranking | Vincular documentalmente los IDs locales duplicados con las seis fichas oficiales; no elegir por similitud o frecuencia |
+| Cronología | Seis fechas nuevas US Open; 53/2.952 verificadas, 2.899 pendientes; QF/SF/F completo y un R16 adicional | Continuar por ediciones con evidencia inequívoca, conservando inicio/conclusión y marcadores ausentes |
+| Preparación V3 | 42 archivos anuales, 135.455 filas, 135.453 claves distintas; cero elegibles. Un inicio/final contrastados a precisión de minuto | Acreditar disponibilidad de resultados/estadísticas, ranking y contexto de un grupo acotado; no exige completar antes todas las fechas de presentación |
+| Validación | 183 pruebas Python, 65 web, verificador y build aprobados; 26 visitas locales y cuatro recorridos de navegación, escritorio/móvil, sin errores ni desbordamientos | Comprobar publicación del mismo commit y rutas en producción |
+| Mensual/modelo | Sin ejecución ni cambio; se conserva la mensual del 28/09 | Entrenamiento/activación V3 fuera del encargo |
+
+El usuario autorizó exactamente `214665,Claus,Piening,R,20040708,GER,,` después de
+revisar evidencia, diff, copia y reversión. Los bytes previos del catálogo no
+cambian; los otros **142 archivos protegidos** conservan su huella. No quedan altas
+propuestas sin aplicar. Los seis casos restantes necesitan evidencia, no otra
+autorización genérica. Se distinguen los identificadores ATP, ITF, federativos y locales.
+
+Se integran nueve CSV derivados, el manifiesto y la tabla de correcciones, más
+14 archivos públicos: seis CSV generales, seis snapshots ATP, estadísticas y
+partición US Open. Se conserva el formato numérico anterior para evitar diferencias
+de serialización sin significado. Fuentes, decisiones y reversión en las auditorías
+existentes de [identidades](../auditoria-identidades-atp-2026-09-30.md),
+[fechas](../auditoria-fechas-partidos-2026-09-30.md) y
+[V3](../validacion-temporal-estricta.md). Evidencia privada en
+`data/processed/audit-2026-10-02-data-phase`.
+
+El verificador conserva cuatro avisos preexistentes: experimento histórico con
+enlaces ajenos a predicciones actuales y tres eventos por equipos sin campeón
+individual. No se convierten en trabajo nuevo de UI. Por instrucción de esta fase,
+la falta de acceso a logs privados de Vercel sigue explícita: no bloquea otras
+comprobaciones ni se vuelve a pedir acceso.
+
+QA local: Chrome instalado oculto mediante Playwright porque el plugin Browser no
+está disponible. Se verifican identidad de página, contenido, ausencia de overlay,
+consola, capturas, búsqueda ATP → perfil de Claus y selección de semifinal → detalle
+corregido. Las seis fechas pasan en escritorio 1440×1000 y móvil 390×844, junto con
+los cuatro perfiles cuya última fecha cambia. Evidencia fuera del repositorio con
+prefijo `data-phase-local`; no se han probado otros motores.

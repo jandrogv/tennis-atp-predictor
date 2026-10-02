@@ -180,3 +180,51 @@ La copia previa conserva las rutas relativas en
 `data/processed/audit-2026-10-02/backups/before-date-integration`.
 Para revertir, restaurar únicamente esas rutas y volver a compilar; no tocar raw.
 El respaldo del código privado está en `code-backup` dentro de la misma auditoría.
+
+## Nueva fase de datos del 02/10 — bloque US Open
+
+Recuento inicial nuevo: **47 coincidencias únicas**. Se incorporan seis partidos
+distintos: cobertura final **53/2.952 (1,80 %)** y **2.899 pendientes** en 2026.
+Queda contrastado el grupo QF/SF/F del US Open (siete partidos, dos ya verificados),
+más un R16 encontrado durante la misma investigación. Todas las filas siguientes
+tenían `2026-08-30` antes de la corrección.
+
+| Partido / ronda | Inicio local | Fuente y coincidencia exacta |
+| --- | --- | --- |
+| Zverev–Khachanov / SF | 11/09/2026 | [Crónica US Open](https://www.usopen.org/amp/en_US/news/articles/2026-09-11/alexander_zverev_advances_to_second_us_open_mens_singles_final.html): viernes, 6-3 7-6(7) 7-6(6) |
+| Zverev–Van de Zandschulp / QF | 09/09/2026 | [Crónica y fotografías](https://www.usopen.org/amp/en_US/news/articles/2026-09-09/alexander_zverev_vs_botic_van_de_zandschulp_at_the_2026_us_open.html): miércoles por la noche, 6-2 7-5 6-1 |
+| Khachanov–Blockx / QF | 09/09/2026 | [Crónica posterior a la retirada](https://www.usopen.org/en_US/news/articles/2026-09-09/alexander_blockx_on_his_2026_us_open_qf_retirement_it_just_kept_getting_worse.html): miércoles, 6-2 7-5 3-2. Se conserva la representación del marcador local |
+| Tiafoe–Michelsen / QF | 08/09/2026 | [Crónica y fotografías](https://www.usopen.org/amp/en_US/news/articles/2026-09-08/frances_tiafoe_vs_alex_michelsen_at_the_2026_us_open.html): martes, 5-7 3-6 7-5 6-3 7-6(6) |
+| Shelton–Alcaraz / QF | 08/09/2026 | [Retrospectiva oficial](https://www.usopen.org/en_US/news/articles/2026-09-10/best_quotes_from_ben_shelton_2026_us_open_semifinalist.html): fecha explícita, 6-7(5) 6-1 6-3 1-6 7-6(7) |
+| Shelton–Tsitsipas / R16 | 06/09/2026 | [Crónica US Open](https://www.usopen.org/amp/en_US/news/articles/2026-09-06/shelton_dominates_tsitsipas_sets_alcaraz_clash_in_2026_us_open_quarterfinals.html): domingo por la noche, 6-2 6-3 6-4 |
+
+Se exige coincidencia única por torneo, ganador, perdedor, ronda y marcador, no
+solo calendario/publicación. Se descarta como prueba de marcador un resumen de
+semifinales discrepante, usando la crónica individual concordante de Zverev–Khachanov.
+La evidencia legible procede de versiones oficiales indexadas/AMP disponibles;
+no se fuerzan accesos ni se completan datos ausentes de páginas inaccesibles.
+
+La [crónica cronológica del martes](https://www.usopen.org/amp/en_US/news/articles/2026-09-09/us_open_2026_is_terrific_tuesday_the_new_super_saturday.html)
+sitúa el inicio real de Shelton–Alcaraz a las **23:05 del 08/09** y el final a las
+**03:33 del 09/09**, en Nueva York. La conversión documentada usa EDT UTC−4:
+inicio **09/09 03:05 UTC**, final **09/09 07:33 UTC**, precisión de minuto, sin
+inventar segundos. Reglas y desplazamiento contrastados con
+[NIST](https://www.nist.gov/pml/time-and-frequency-division/local-time-faqs) y su
+[calendario DST 2026](https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst).
+La presentación conserva el día local de inicio. Concluir el partido no demuestra
+cuándo se publicó la versión de estadísticas consumida: disponibilidad no verificada.
+
+La tabla existente `data/processed/match_date_corrections.csv` recibe seis filas;
+no se crea otra lógica ni se amplían dominios admitidos. Se conservan los 227 `n/a`,
+estadísticas, balances y correcciones anteriores. Los seis IDs de detalle basados
+en fecha cambian junto con sus enlaces internos y la partición US Open. No se
+redirigen marcadores externos antiguos. Se actualizan doce filas de partidos
+recientes y cuatro fechas de último partido. Los demás cambios de perfiles/rankings
+corresponden al alta autorizada de Claus.
+
+Fuentes y precisión: `data/processed/audit-2026-10-02-data-phase/new-date-facts.json`
+y `date-evidence.json`. Regeneración aislada con funciones existentes; integración
+y huellas en `integration.json`. Copia anterior de las 25 rutas sustituidas en
+`backups/before-integration`, respetando rutas relativas. Para revertir derivados,
+restaurar únicamente esas rutas bajo comprobación de procesos/bloqueo, exportar,
+compilar y verificar; no restaurar raw, modelos ni predicciones en esa reversión.
