@@ -114,12 +114,27 @@ test("image manifest entries win and missing entries use the surface fallback", 
     }
   };
 
-  assert.deepEqual(getTournamentImage(tournament({ tournament_id: "exact" }), manifest), manifest.tournaments.exact);
+  assert.deepEqual(getTournamentImage(tournament({ tournament_id: "exact" }), manifest), { ...manifest.tournaments.exact, fallbackImage: manifest.fallbacks.Hard });
   assert.deepEqual(getTournamentImage(tournament({ tournament_id: "missing", surface: "Clay" }), manifest), {
     image: "/images/fallback-clay.webp",
+    fallbackImage: "/images/fallback-clay.webp",
     isFallback: true,
     sourceReference: "surface-fallback:clay"
   });
+});
+
+test("venue images follow the ATP event ID across years and sponsor aliases, not the city", () => {
+  const image = { image: "/images/wimbledon.webp", isFallback: false, sourceReference: "licensed-photo" };
+  const manifest = {
+    schemaVersion: 1 as const,
+    fallbacks: { Hard: "/hard.webp", Clay: "/clay.webp", Grass: "/grass.webp", Carpet: "/carpet.webp" },
+    tournaments: { "0540": image }
+  };
+  for (const year of ["2025", "2026", "2027"]) {
+    assert.deepEqual(getTournamentImage(tournament({ tournament_id: `${year}-0540`, year, tournament_name: "Wimbledon", location: "London", surface: "Grass" }), manifest), { ...image, fallbackImage: manifest.fallbacks.Grass });
+  }
+  assert.equal(getTournamentImage(tournament({ tournament_id: "2027-0311", tournament_name: "HSBC Championships", location: "London", surface: "Grass" }), manifest).isFallback, true);
+  assert.deepEqual(getTournamentImage(tournament({ tournament_id: "2027-0540", tournament_name: "Sponsor variant" }), manifest), { ...image, fallbackImage: manifest.fallbacks.Hard });
 });
 
 function tournament(overrides: Partial<TournamentDetail>): TournamentDetail {

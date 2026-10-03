@@ -1,221 +1,652 @@
 {
-    "schemaVersion":  1,
-    "fallbacks":  {
-                      "Hard":  "/images/tournaments/courts/fallback-hard.webp",
-                      "Clay":  "/images/tournaments/courts/fallback-clay.webp",
-                      "Grass":  "/images/tournaments/courts/fallback-grass.webp",
-                      "Carpet":  "/images/tournaments/courts/fallback-carpet.webp"
-                  },
-    "tournaments":  {
-                        "2026-9900":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0339":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0336":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-8998":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0301":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0580":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0375":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-8096":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0506":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0424":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0407":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0499":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0451":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-6932":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0807":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0495":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-8996":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0404":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-0403":  {
-                                          "image":  "/images/tournaments/courts/fallback-hard.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:hard"
-                                      },
-                        "2026-4462":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0717":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0360":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0410":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0425":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0308":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-1536":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0416":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0322":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0414":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0520":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0321":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-0440":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-0500":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-0311":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-8994":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-0741":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-0540":  {
-                                          "image":  "/images/tournaments/courts/fallback-grass.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:grass"
-                                      },
-                        "2026-0316":  {
-                                          "image":  "/images/tournaments/courts/bastad-tennis-stadium.webp",
-                                          "isFallback":  false,
-                                          "sourceReference":  "wikimedia:bastad-tennis-stadium-2009"
-                                      },
-                        "2026-0314":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0439":  {
-                                          "image":  "/images/tournaments/courts/umag-goran-ivanisevic-stadium.webp",
-                                          "isFallback":  false,
-                                          "sourceReference":  "wikimedia:umag-goran-ivanisevic-stadium"
-                                      },
-                        "2026-7290":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      },
-                        "2026-0319":  {
-                                          "image":  "/images/tournaments/courts/fallback-clay.webp",
-                                          "isFallback":  true,
-                                          "sourceReference":  "project-surface-fallback:clay"
-                                      }
-                    }
+  "schemaVersion": 1,
+  "fallbacks": {
+    "Hard": "/images/tournaments/courts/fallback-hard.webp",
+    "Clay": "/images/tournaments/courts/fallback-clay.webp",
+    "Grass": "/images/tournaments/courts/fallback-grass.webp",
+    "Carpet": "/images/tournaments/courts/fallback-carpet.webp"
+  },
+  "tournaments": {
+    "0301": {
+      "image": "/images/tournaments/venues/0301.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:ASB Tennis Arena 2020.jpg",
+      "alt": "ASB Tennis Arena in Auckland",
+      "credit": {
+        "author": "Communico",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ASB_Tennis_Arena_2020.jpg"
+      }
+    },
+    "0308": {
+      "image": "/images/tournaments/venues/0308.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Panorama Center Court BMW Open 2026.jpg",
+      "alt": "Centre court at the BMW Open in Munich",
+      "credit": {
+        "author": "Partynia",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Center_Court_BMW_Open_2026.jpg"
+      }
+    },
+    "0311": {
+      "image": "/images/tournaments/venues/0311.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Queens Club, Centre Court (1).png",
+      "alt": "Centre court and pavilion at Queen's Club in London",
+      "credit": {
+        "author": "Benjamin Liebald",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Queens_Club,_Centre_Court_(1).png"
+      }
+    },
+    "0314": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "Las fotos reutilizables localizadas de Gstaad son retratos de jugadores o voleibol; no se ha verificado una vista adecuada de Roy Emerson Arena."
+    },
+    "0316": {
+      "image": "/images/tournaments/courts/bastad-tennis-stadium.webp",
+      "isFallback": false,
+      "sourceReference": "wikimedia:bastad-tennis-stadium-2009",
+      "alt": "Bastad Tennis Stadium and Hotel Skansen",
+      "credit": {
+        "author": "Janders",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:B%C3%A5stad_Tennisstadion_och_Hotel_Skansen_augusti_2009.jpg"
+      }
+    },
+    "0319": {
+      "image": "/images/tournaments/venues/0319.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Kitzbuehel-Stadion1.jpg",
+      "alt": "Clay centre court at the Kitzbuhel tennis stadium",
+      "credit": {
+        "author": "Jomajoma",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitzbuehel-Stadion1.jpg"
+      }
+    },
+    "0321": {
+      "image": "/images/tournaments/courts/fallback-grass.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:grass",
+      "pendingReason": "La búsqueda de Weissenhof devuelve edificios del barrio y otras pistas; no se ha verificado una foto reutilizable del recinto del BOSS OPEN."
+    },
+    "0322": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "Las fotos localizadas son del Centre des Evaux o un logotipo, no de la pista del Geneva Open en Parc des Eaux-Vives."
+    },
+    "0328": {
+      "image": "/images/tournaments/venues/0328.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:St Jakobshalle Basel.JPG",
+      "alt": "Exterior of St. Jakobshalle in Basel",
+      "credit": {
+        "author": "--Wladyslaw Disk.",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:St_Jakobshalle_Basel.JPG"
+      }
+    },
+    "0329": {
+      "image": "/images/tournaments/venues/0329.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Ariake Tennis no Mori Kōen 1.jpg",
+      "alt": "Ariake Coliseum and tennis grounds in Tokyo",
+      "credit": {
+        "author": "Arne Müseler",
+        "license": "CC BY-SA 3.0 de",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ariake_Tennis_no_Mori_K%C5%8Den_1.jpg"
+      }
+    },
+    "0336": {
+      "image": "/images/tournaments/venues/0336.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Victoria Park Tennis and Swimming.jpg",
+      "alt": "Tennis stadium at Victoria Park in Hong Kong",
+      "credit": {
+        "author": "Nath87",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Park_Tennis_and_Swimming.jpg"
+      }
+    },
+    "0337": {
+      "image": "/images/tournaments/venues/0337.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Stadthalle Tennis.JPG",
+      "alt": "Tennis court inside Wiener Stadthalle in Vienna",
+      "credit": {
+        "author": "Piedro",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stadthalle_Tennis.JPG"
+      }
+    },
+    "0339": {
+      "image": "/images/tournaments/venues/0339.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Centre Court, Pat Rafter Arena, Queensland Tennis Centre.jpg",
+      "alt": "Centre court inside Pat Rafter Arena in Brisbane",
+      "credit": {
+        "author": "Chris Olszewski",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Centre_Court,_Pat_Rafter_Arena,_Queensland_Tennis_Centre.jpg"
+      }
+    },
+    "0341": {
+      "image": "/images/tournaments/venues/0341.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Metz 2010 4.1.jpg",
+      "alt": "Les Arenes sports venue in Metz",
+      "credit": {
+        "author": "EPei",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Metz_2010_4.1.jpg"
+      }
+    },
+    "0352": {
+      "image": "/images/tournaments/venues/0352.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Entrée 4 Paris Défense Arena - Nanterre (FR92) - 2022-07-24 - 1.jpg",
+      "alt": "Entrance to Paris La Defense Arena in Nanterre",
+      "credit": {
+        "author": "Chabe01",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_4_Paris_D%C3%A9fense_Arena_-_Nanterre_(FR92)_-_2022-07-24_-_1.jpg"
+      }
+    },
+    "0360": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "No se ha localizado una vista adecuada del Royal Tennis Club de Marrakech con licencia de redistribución comprobada."
+    },
+    "0375": {
+      "image": "/images/tournaments/venues/0375.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Arena de Montpellier 2.jpg",
+      "alt": "Exterior of Sud de France Arena in Montpellier",
+      "credit": {
+        "author": "Marianne Casamance",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arena_de_Montpellier_2.jpg"
+      }
+    },
+    "0403": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "Las imágenes verificadas muestran jugadores, la antigua sede de Crandon Park o el Hard Rock Stadium preparado para fútbol; falta una vista adecuada de la sede actual de tenis."
+    },
+    "0404": {
+      "image": "/images/tournaments/venues/0404.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Indian Wells Tennis Garden, Stadium 1.jpg",
+      "alt": "Stadium 1 at Indian Wells Tennis Garden",
+      "credit": {
+        "author": "IvanAndreevich",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indian_Wells_Tennis_Garden,_Stadium_1.jpg"
+      }
+    },
+    "0407": {
+      "image": "/images/tournaments/venues/0407.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Rotterdam Ahoy 2.jpg",
+      "alt": "Exterior of Rotterdam Ahoy",
+      "credit": {
+        "author": "Tukka",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rotterdam_Ahoy_2.jpg"
+      }
+    },
+    "0410": {
+      "image": "/images/tournaments/venues/0410.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Monte-Carlo Masters (cropped).jpg",
+      "alt": "Rainier III clay court at Monte-Carlo Country Club",
+      "credit": {
+        "author": "Nikeush",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monte-Carlo_Masters_(cropped).jpg"
+      }
+    },
+    "0414": {
+      "image": "/images/tournaments/venues/0414.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Centre Court Am Rothenbaum (Hamburg).jpg",
+      "alt": "Entrance to Centre Court at Am Rothenbaum in Hamburg",
+      "credit": {
+        "author": "HSV23",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Centre_Court_Am_Rothenbaum_(Hamburg).jpg"
+      }
+    },
+    "0416": {
+      "image": "/images/tournaments/venues/0416.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Il Centrale (108607831).jpeg",
+      "alt": "Clay centre court at the Foro Italico in Rome",
+      "credit": {
+        "author": "Stefano Cappa",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Il_Centrale_(108607831).jpeg"
+      }
+    },
+    "0418": {
+      "image": "/images/tournaments/venues/0418.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:FitzGerald Tennis Center.jpg",
+      "alt": "Centre court at the FitzGerald Tennis Center in Washington",
+      "credit": {
+        "author": "Asolsma1988",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FitzGerald_Tennis_Center.jpg"
+      }
+    },
+    "0421": {
+      "image": "/images/tournaments/venues/0421.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Rogers Cup Semifinal 2009 - 3.jpg",
+      "alt": "Canadian Open court in Montreal; representative competition photograph",
+      "credit": {
+        "author": "Sorin Nechita",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rogers_Cup_Semifinal_2009_-_3.jpg"
+      }
+    },
+    "0422": {
+      "image": "/images/tournaments/venues/0422.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Lindner Family Tennis Center 2025.jpg",
+      "alt": "Centre court at the Cincinnati tennis centre",
+      "credit": {
+        "author": "RandyFitz",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lindner_Family_Tennis_Center_2025.jpg"
+      }
+    },
+    "0424": {
+      "image": "/images/tournaments/venues/0424.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Ford Center at the Star - May 2018 - Exterior.jpg",
+      "alt": "Ford Center facade at The Star in Frisco, home of the Dallas Open",
+      "credit": {
+        "author": "Danazar",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ford_Center_at_the_Star_-_May_2018_-_Exterior.jpg"
+      }
+    },
+    "0425": {
+      "image": "/images/tournaments/venues/0425.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:2010 Barcelona Open - Empty court.jpg",
+      "alt": "Empty clay court at the Barcelona Open",
+      "credit": {
+        "author": "SuiteLife Barcelona (www.SuiteLife.com)",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010_Barcelona_Open_-_Empty_court.jpg"
+      }
+    },
+    "0429": {
+      "image": "/images/tournaments/venues/0429.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Centre Court Nordic Open 2023.jpg",
+      "alt": "Centre court at the Stockholm Open",
+      "credit": {
+        "author": "Sven-Filip",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Centre_Court_Nordic_Open_2023.jpg"
+      }
+    },
+    "0439": {
+      "image": "/images/tournaments/courts/umag-goran-ivanisevic-stadium.webp",
+      "isFallback": false,
+      "sourceReference": "wikimedia:umag-goran-ivanisevic-stadium",
+      "alt": "Goran Ivanisevic Tennis Stadium in Umag",
+      "credit": {
+        "author": "Silverije",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Teniski_stadion_%27Goran_Ivani%C5%A1evi%C4%87%27,_Umag.jpg"
+      }
+    },
+    "0440": {
+      "image": "/images/tournaments/courts/fallback-grass.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:grass",
+      "pendingReason": "Las fotografías reutilizables localizadas de Autotron muestran jugadores en acción, no una vista adecuada del recinto o de la pista."
+    },
+    "0451": {
+      "image": "/images/tournaments/venues/0451.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Khalifa Tennis and Squash Complex in Lekhwair.jpg",
+      "alt": "Entrance to Khalifa Tennis and Squash Complex in Doha",
+      "credit": {
+        "author": "kaartcam @ Mapillary.com",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Khalifa_Tennis_and_Squash_Complex_in_Lekhwair.jpg"
+      }
+    },
+    "0495": {
+      "image": "/images/tournaments/venues/0495.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:PXL 20230121 083119935.jpg",
+      "alt": "Empty court at Dubai Duty Free Tennis Stadium",
+      "credit": {
+        "author": "Kiranlal A",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PXL_20230121_083119935.jpg"
+      }
+    },
+    "0496": {
+      "image": "/images/tournaments/venues/0496.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Palais des sport marseille.jpg",
+      "alt": "Exterior of Palais des Sports in Marseille",
+      "credit": {
+        "author": "Jonath841",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palais_des_sport_marseille.jpg"
+      }
+    },
+    "0499": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "Las fotografías verificadas de Delray Beach son retratos o primeros planos de jugadores; falta una vista adecuada del Tennis Center."
+    },
+    "0500": {
+      "image": "/images/tournaments/venues/0500.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:GerryWeberStadion.JPG",
+      "alt": "Exterior of the tennis stadium in Halle",
+      "credit": {
+        "author": "User:Drahreg01",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GerryWeberStadion.JPG"
+      }
+    },
+    "0506": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "Las fuentes verificadas muestran el club histórico en blanco y negro o los Juegos de la Juventud de 2018; falta una vista actual adecuada del Argentina Open."
+    },
+    "0520": {
+      "image": "/images/tournaments/venues/0520.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Paris Court Philippe-Chatrier.jpg",
+      "alt": "Court Philippe Chatrier at Roland Garros in Paris",
+      "credit": {
+        "author": "Arne Müseler",
+        "license": "CC BY-SA 3.0 de",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paris_Court_Philippe-Chatrier.jpg"
+      }
+    },
+    "0540": {
+      "image": "/images/tournaments/venues/0540.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Right side of Centre Court, Wimbledon.jpg",
+      "alt": "Grass Centre Court at Wimbledon in London",
+      "credit": {
+        "author": "Bonoahx",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Right_side_of_Centre_Court,_Wimbledon.jpg"
+      }
+    },
+    "0560": {
+      "image": "/images/tournaments/venues/0560.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Arthur Ashe Stadium with the roof closed (32938595438).jpg",
+      "alt": "Arthur Ashe Stadium with its roof closed at the US Open",
+      "credit": {
+        "author": "Carine06 from UK",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arthur_Ashe_Stadium_with_the_roof_closed_(32938595438).jpg"
+      }
+    },
+    "0580": {
+      "image": "/images/tournaments/venues/0580.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Rod Laver Arena Melbourne Park Australian Open 2023 quarter final.jpg",
+      "alt": "Blue court inside Rod Laver Arena at Melbourne Park",
+      "credit": {
+        "author": "Gracchus250",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rod_Laver_Arena_Melbourne_Park_Australian_Open_2023_quarter_final.jpg"
+      }
+    },
+    "0605": {
+      "image": "/images/tournaments/venues/0605.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Piazzale Grande Torino, Turin, Italy.jpg",
+      "alt": "Arena and plaza at the ATP Finals venue in Turin",
+      "credit": {
+        "author": "SetteTreSette",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Piazzale_Grande_Torino,_Turin,_Italy.jpg"
+      }
+    },
+    "0717": {
+      "image": "/images/tournaments/venues/0717.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:River Oaks Country Club.jpg",
+      "alt": "River Oaks Country Club, home of the Houston clay court championship",
+      "credit": {
+        "author": "Itsmejames",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:River_Oaks_Country_Club.jpg"
+      }
+    },
+    "0741": {
+      "image": "/images/tournaments/venues/0741.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Devonshire Park in September 2021.jpg",
+      "alt": "Grass courts at Devonshire Park in Eastbourne",
+      "credit": {
+        "author": "YCDI2020",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Devonshire_Park_in_September_2021.jpg"
+      }
+    },
+    "0747": {
+      "image": "/images/tournaments/venues/0747.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Diamond Court, National Tennis Center (20240821134822).jpg",
+      "alt": "Diamond Court at the National Tennis Center in Beijing",
+      "credit": {
+        "author": "N509FZ",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Diamond_Court,_National_Tennis_Center_(20240821134822).jpg"
+      }
+    },
+    "0807": {
+      "image": "/images/tournaments/venues/0807.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Arena GNP Seguros cancha principal 1.png",
+      "alt": "Centre court at Arena GNP Seguros in Acapulco",
+      "credit": {
+        "author": "Radio y Televisión de Guerrero",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arena_GNP_Seguros_cancha_principal_1.png"
+      }
+    },
+    "1536": {
+      "image": "/images/tournaments/venues/1536.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Arrancan las negociaciones para la permanencia del Mutua Madrid Open más allá de 2021 01.jpg",
+      "alt": "Clay court inside Caja Magica in Madrid",
+      "credit": {
+        "author": "Diario de Madrid",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arrancan_las_negociaciones_para_la_permanencia_del_Mutua_Madrid_Open_m%C3%A1s_all%C3%A1_de_2021_01.jpg"
+      }
+    },
+    "4462": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "La fotografía reutilizable localizada corresponde a Arenele BNR en 2012; la sede actual es Nastase & Marica Sports Club y no se ha verificado una foto adecuada de ella."
+    },
+    "4713": {
+      "image": "/images/tournaments/venues/4713.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Hangzhou Olympic Sports Expo Center under construction2021.jpg",
+      "alt": "Lotus tennis arena at the Hangzhou Olympic Sports Centre",
+      "credit": {
+        "author": "Charlie fong",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hangzhou_Olympic_Sports_Expo_Center_under_construction2021.jpg"
+      }
+    },
+    "5014": {
+      "image": "/images/tournaments/venues/5014.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Qizhong Stadium.jpg",
+      "alt": "Exterior of Qizhong tennis stadium in Shanghai",
+      "credit": {
+        "author": "Curt Smith from  Bellevue, WA, USA",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qizhong_Stadium.jpg"
+      }
+    },
+    "5100": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "El ATP 250 de Atenas se juega en OAKA Basketball Arena/Telekom Center, no en Olympic Tennis Centre; las fotos de tenis olímpico de 2004 localizadas corresponden a otra instalación."
+    },
+    "6242": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "No se ha verificado una fotografía reutilizable de la pista del Winston-Salem Open; los resultados de Wake Forest incluyen otros deportes y personas."
+    },
+    "6932": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "No se ha localizado una vista adecuada de la pista del Rio Open en Jockey Club Brasileiro con licencia comprobada; las imágenes de hipódromos no identifican su recinto de tenis."
+    },
+    "7290": {
+      "image": "/images/tournaments/courts/fallback-clay.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:clay",
+      "pendingReason": "Las imágenes verificadas del Estoril Open son logos o retratos; falta una vista reutilizable adecuada del Clube de Tenis do Estoril."
+    },
+    "7480": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "No se ha localizado una fotografía adecuada del Cabo Sports Complex con condiciones de redistribución verificadas."
+    },
+    "7485": {
+      "image": "/images/tournaments/venues/7485.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:P12 Exterior.png",
+      "alt": "Exterior of ING Arena at Brussels Expo",
+      "credit": {
+        "author": "Marcbxlexpo",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:P12_Exterior.png"
+      }
+    },
+    "7581": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "No se ha localizado una vista adecuada del Sichuan International Tennis Center con licencia de redistribución verificada."
+    },
+    "7696": {
+      "image": "/images/tournaments/courts/fallback-hard.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:hard",
+      "pendingReason": "No se ha verificado una fotografía adecuada de la pista de los Next Gen Finals en Jeddah; no se utilizarán imágenes de la antigua sede de Milan ni del estadio de fútbol de King Abdullah Sports City."
+    },
+    "8096": {
+      "image": "/images/tournaments/venues/8097.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Davis Cup Action - Emirates Arena (geograph 5909524).jpg",
+      "alt": "Davis Cup court at Emirates Arena in Glasgow; representative competition photograph",
+      "credit": {
+        "author": "Stephen McKay",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Davis_Cup_Action_-_Emirates_Arena_(geograph_5909524).jpg"
+      }
+    },
+    "8097": {
+      "image": "/images/tournaments/venues/8097.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Davis Cup Action - Emirates Arena (geograph 5909524).jpg",
+      "alt": "Davis Cup court at Emirates Arena in Glasgow; representative competition photograph",
+      "credit": {
+        "author": "Stephen McKay",
+        "license": "CC BY-SA 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Davis_Cup_Action_-_Emirates_Arena_(geograph_5909524).jpg"
+      }
+    },
+    "8994": {
+      "image": "/images/tournaments/courts/fallback-grass.webp",
+      "isFallback": true,
+      "sourceReference": "project-surface-fallback:grass",
+      "pendingReason": "No se ha localizado una vista adecuada de las pistas de hierba del Mallorca Country Club en Santa Ponsa con licencia de redistribución comprobada."
+    },
+    "8996": {
+      "image": "/images/tournaments/venues/8996.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:20240303 Final Chile Open 2024 - 1.jpg",
+      "alt": "Clay court at the Chile Open in Santiago",
+      "credit": {
+        "author": "Aeveraal",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240303_Final_Chile_Open_2024_-_1.jpg"
+      }
+    },
+    "8998": {
+      "image": "/images/tournaments/venues/8998.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:The New Memorial Drive at Night.jpg",
+      "alt": "Memorial Drive tennis centre in Adelaide at night",
+      "credit": {
+        "author": "Michael Coghlan",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_New_Memorial_Drive_at_Night.jpg"
+      }
+    },
+    "9210": {
+      "image": "/images/tournaments/venues/9210.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Laver Cup black court before match.jpg",
+      "alt": "Laver Cup court; representative competition photograph",
+      "credit": {
+        "author": "Sportsfan77777",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laver_Cup_black_court_before_match.jpg"
+      }
+    },
+    "9410": {
+      "image": "/images/tournaments/venues/9410.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:Ice Palace \"Almaty Arena\".jpg",
+      "alt": "Exterior of Almaty Arena",
+      "credit": {
+        "author": "МаратД",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ice_Palace_%22Almaty_Arena%22.jpg"
+      }
+    },
+    "9900": {
+      "image": "/images/tournaments/venues/9900.webp",
+      "isFallback": false,
+      "sourceReference": "commons:File:RAC Arena, October 2018.jpg",
+      "alt": "RAC Arena in Perth, a United Cup host venue",
+      "credit": {
+        "author": "Samuel Wiki",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:RAC_Arena,_October_2018.jpg"
+      }
+    }
+  }
 }

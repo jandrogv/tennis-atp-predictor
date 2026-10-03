@@ -16,6 +16,9 @@ export type TournamentImageEntry = {
   image: string;
   isFallback: boolean;
   sourceReference: string;
+  pendingReason?: string;
+  alt?: string;
+  credit?: { author: string; license: string; sourceUrl: string };
 };
 
 export type TournamentImageManifest = {
@@ -30,6 +33,12 @@ export type FeaturedTournaments = {
 };
 
 export type TournamentStatus = "Upcoming" | "In progress" | "Completed";
+
+export function resolveTournamentYear(requestedYear: string | null, currentDate: string): string {
+  return requestedYear === "all" || (requestedYear !== null && /^[1-9]\d{3}$/.test(requestedYear))
+    ? requestedYear
+    : currentDate.slice(0, 4);
+}
 
 export function getTournamentDrawMatches(matches: TournamentMatch[]): TournamentMatch[] {
   return matches.filter((match) => ![match.round, match.round_display, match.round_raw]
@@ -119,13 +128,15 @@ export function groupTournamentsByStartMonth(tournaments: TournamentDetail[]): T
 export function getTournamentImage(
   tournament: TournamentDetail,
   manifest: TournamentImageManifest
-): TournamentImageEntry {
-  const exact = manifest.tournaments[tournament.tournament_id];
-  if (exact) return exact;
-
+): TournamentImageEntry & { fallbackImage: string } {
+  const eventId = tournament.tournament_id.match(/^\d{4}-(\d+)$/)?.[1] ?? tournament.tournament_id;
+  const exact = manifest.tournaments[eventId];
   const surface = normalizeSurface(tournament.surface);
+  const fallbackImage = manifest.fallbacks[surface];
+  if (exact) return { ...exact, fallbackImage };
   return {
-    image: manifest.fallbacks[surface],
+    image: fallbackImage,
+    fallbackImage,
     isFallback: true,
     sourceReference: `surface-fallback:${surface.toLowerCase()}`
   };

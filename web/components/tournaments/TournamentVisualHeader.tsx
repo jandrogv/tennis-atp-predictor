@@ -83,7 +83,9 @@ export function TournamentVisualHeader({
 
         <TournamentImagePanel
           src={image.image}
-          alt={image.isFallback ? `${tournament.surface} tennis court` : `${tournament.tournament_name} tournament venue`}
+          alt={image.alt ?? (image.isFallback ? `${tournament.surface} tennis court illustration` : `${tournament.tournament_name} tournament venue`)}
+          fallbackSrc={image.fallbackImage}
+          credit={image.credit}
           sizes="(max-width: 1024px) 100vw, 44vw"
           className="order-first min-h-64 lg:order-last lg:min-h-full"
         />

@@ -119,7 +119,7 @@ function ActiveTournamentCard({
   priority
 }: {
   tournament: TournamentDetail;
-  image: { image: string; isFallback: boolean };
+  image: ReturnType<typeof getTournamentImage>;
   priority: boolean;
 }) {
   const href = getTournamentDetailPath(tournament.tournament_slug || tournament.tournament_id);
@@ -183,7 +183,9 @@ function ActiveTournamentCard({
 
         <TournamentImagePanel
           src={image.image}
-          alt={image.isFallback ? `${tournament.surface} tennis court` : `${tournament.tournament_name} tournament venue`}
+          alt={image.alt ?? (image.isFallback ? `${tournament.surface} tennis court illustration` : `${tournament.tournament_name} tournament venue`)}
+          fallbackSrc={image.fallbackImage}
+          credit={image.credit}
           priority={priority}
           sizes="(max-width: 1024px) 100vw, 46vw"
           className="order-first min-h-60 lg:order-last lg:min-h-full"

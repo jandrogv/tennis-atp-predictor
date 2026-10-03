@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { EmptyState } from "@/components/EmptyState";
 import { FilterMenu, FilterReset, FilterSearch, FilterSummary } from "@/components/filters";
 import { ActiveTournamentCarousel } from "@/components/tournaments/ActiveTournamentCarousel";
@@ -10,25 +11,36 @@ import {
   filterTournaments,
   getFeaturedTournaments,
   groupTournamentsByStartMonth,
+  resolveTournamentYear,
   type TournamentImageManifest
 } from "@/lib/tournaments/tournament-presentation";
 import imageManifest from "@/public/images/tournaments/courts/manifest.json";
 
-export function TournamentsBoard({ tournaments }: { tournaments: TournamentDetail[] }) {
+export function TournamentsBoard({ tournaments, currentDate }: { tournaments: TournamentDetail[]; currentDate: string }) {
   const [query, setQuery] = useState("");
   const [surface, setSurface] = useState("all");
-  const [year, setYear] = useState("all");
-  const [currentDate] = useState(() => new Date().toISOString().slice(0, 10));
+  const searchParams = useSearchParams();
+  const currentYear = currentDate.slice(0, 4);
+  const year = resolveTournamentYear(searchParams.get("year"), currentDate);
   const deferredQuery = useDeferredValue(query);
 
   const surfaces = useMemo(() => buildOptions(tournaments.map((tournament) => tournament.surface)), [tournaments]);
-  const years = useMemo(() => buildOptions(tournaments.map((tournament) => tournament.year)), [tournaments]);
+  const years = useMemo(() => buildOptions([...tournaments.map((tournament) => tournament.year), currentYear, ...(year === "all" ? [] : [year])]), [currentYear, tournaments, year]);
   const rows = useMemo(
     () => filterTournaments(tournaments, { query: deferredQuery, surface, year }),
     [deferredQuery, surface, tournaments, year]
   );
   const featured = useMemo(() => getFeaturedTournaments(rows, currentDate), [currentDate, rows]);
   const monthGroups = useMemo(() => groupTournamentsByStartMonth(rows), [rows]);
+
+  function setYear(value: string | null) {
+    const url = new URL(window.location.href);
+    if (value === null) url.searchParams.delete("year");
+    else url.searchParams.set("year", value);
+    window.history.pushState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+
+  const seasonMissing = year !== "all" && !tournaments.some((tournament) => tournament.year === year);
 
   return (
     <div className="space-y-12">
@@ -44,7 +56,7 @@ export function TournamentsBoard({ tournaments }: { tournaments: TournamentDetai
             onClick={() => {
               setQuery("");
               setSurface("all");
-              setYear("all");
+              setYear(null);
             }}
           />
         </div>
@@ -81,7 +93,10 @@ export function TournamentsBoard({ tournaments }: { tournaments: TournamentDetai
           </section>
         </>
       ) : (
-        <EmptyState title="No tournaments match these filters" description="Try another surface, year or search term." />
+        <EmptyState
+          title={seasonMissing ? `No tournaments loaded for ${year}` : "No tournaments match these filters"}
+          description={seasonMissing ? "Choose another year in the Year selector above to explore available editions." : "Try another surface, year or search term."}
+        />
       )}
     </div>
   );
