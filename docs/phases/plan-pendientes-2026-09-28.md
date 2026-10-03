@@ -338,3 +338,43 @@ idénticos byte a byte; se conservan la primera pasada y sus resultados. Validac
 la copia web ni se repitió su QA/build porque no cambia la web. Solo se publica
 documentación, dentro de la autorización vigente. Los logs privados de Vercel
 siguen como pendiente independiente.
+
+## Corrección de extracción estadística: revisión del 3 de octubre de 2026
+
+Se corrigió el defecto de ambas estructuras ATP y se validó la protección de
+consumidores con autorización expresa. El detalle y la propuesta existente
+ampliada están en
+[validación temporal](../validacion-temporal-estricta.md#corrección-estadística-y-protección-del-modelo-3-de-octubre-de-2026).
+
+| Bloque | Estado comprobado | Pendiente |
+| --- | --- | --- |
+| Extracción | `svpt` usa puntos al servicio disputados; ganados/retorno/total separados; cantidades, fracciones y ausencias validadas por etiqueta | Validar futuras respuestas reales guardadas cuando ATP permita obtenerlas |
+| Compatibilidad | Contrato estadístico conservado en caché/limpieza y bloqueado antes de generar/sustituir salidas del modelo | Transición manual homogénea de datos, variables y artefactos antes de consumir la definición corregida |
+| Piloto aislado | Siete partidos reextraídos desde Chrome normal; conteos de puntos coherentes; cero elegibles V3 | Juegos de servicio declarados cero por la fuente; versiones históricas/contexto/historial sin acreditar |
+| Inventario acotado | 1.617 de 2.952 filas de 2026 con incoherencias examinadas; 2025 sin esas violaciones | No atribuir todas al mismo defecto ni ejecutar reparación masiva sin fuentes y autorización específica |
+| Validación/protección | 157 pruebas correctas, dos excluidas; compilación correcta; once archivos reproducidos; raw/modelo/predicciones/derivados/piloto preservados | Código/pruebas siguen privados; sin QA web porque no cambia web ni sus datos |
+| Captura futura | Fuentes, cortes UTC, versiones, fallos/reintentos, almacenamiento privado y criterios de primera captura definidos | Aprobar implementación manual aislada; sin servicio ni programación automática |
+| Inicialización | Historial verificable compatible con V3 o arranque prospectivo explícito con acumulación | Aprobar metodología/contrato si se elige arranque; no importar Elo heredado como verificado |
+
+**Consecuencia para el actualizador:** cuando una recarga descargue estadísticas
+con `atp-service-counts-v1`, se detendrá antes de alimentar el modelo heredado con
+ellas. El modelo y las predicciones de la mensual del 28/09 permanecen operativos.
+No se entrenó, calibró ni activó un reemplazo; tampoco se ejecutó una recarga.
+
+Orden de la siguiente fase, pendiente de aprobación/implementación:
+
+1. Acordar frontera, acumulación/cobertura y contrato del arranque prospectivo,
+   o aportar un historial/checkpoint verificable que permita mantener V3 actual.
+2. Implementar la captura manual en un destino nuevo de `data/processed/temporal/`,
+   con respuestas congeladas y versiones anteriores al corte, y verificar su
+   primera adquisición. Una captura correcta no habilita entrenamiento por sí sola.
+3. Validar la calidad restante de las fuentes y delimitar una población adicional
+   para reextraer en salidas aisladas. Cualquier sustitución en raw requiere permiso
+   específico; el piloto aislado ya está reextraído.
+4. Definir compatibilidad de artefactos, regenerar variables y validar candidato
+   por separado; entrenamiento, calibración y activación requieren una fase posterior.
+
+Se recomienda captura prospectiva con arranque declarado y cobertura explícita;
+esa recomendación **no cambia el contrato ni reinicia estados ahora**. Quedan
+pendientes la preparación V3 y la transición, no la corrección demostrada del
+extractor. El acceso a logs privados de Vercel sigue como limitación independiente.

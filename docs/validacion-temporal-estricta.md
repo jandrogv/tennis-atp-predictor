@@ -414,11 +414,96 @@ abrió otra campaña general de identidades o fechas.
 | Estado de variables | Reconstruir desde historial certificado y frontera declarada, o especificar un checkpoint V3 verificable antes de usarlo | Versión del código, configuración, orden de eventos, linaje del estado y dependencias |
 
 La captura futura es necesaria pero **no recupera por sí sola el historial anterior**.
-La siguiente decisión debe resolver primero el mapeo/validación de conteos y el
-estado inicial: recuperar un historial o checkpoint defendible, o autorizar una
-metodología prospectiva distinta, con frontera y periodo inicial explícitos. Esta
-última alternativa no se presenta como recuperación del historial actual ni como
-V3 ya preparado. No se implementó ni programó ninguna de estas opciones.
+El mapeo de conteos quedó corregido en la revisión descrita más abajo. Esta
+propuesta permanece sin implementar ni programar, con los siguientes requisitos.
+
+#### Flujo manual y conservación de versiones
+
+La integración prevista reutiliza la ejecución manual diaria/mensual y el lock
+existente: un paso explícito de captura guarda evidencia antes de transformar
+datos. Su primera implementación escribirá únicamente en un destino nuevo bajo
+`data/processed/temporal/`, sin activar predicciones ni sustituir raw. CSV/JSON y
+los manifiestos existentes bastan; no se propone un servicio ni una dependencia.
+
+1. Antes del corte de una futura observación objetivo, capturar ranking ATP,
+   perfiles y contexto oficial del torneo/cuadro. Con V3 diario, la recepción debe
+   ser **anterior a 00:00 UTC del día real del partido**. Una descarga durante ese
+   día no vale aunque preceda al comienzo del encuentro. Guardar las entradas
+   concretas seleccionadas y referencias a sus versiones antes de cualquier
+   predicción; no seleccionar posteriormente la versión más reciente.
+2. Conservar cada respuesta exacta, URL y parámetros sin secretos, petición y
+   recepción UTC, estado HTTP, tipo de contenido, localizador del bloque y SHA-256.
+   Registrar IDs de partido/jugadores y cobertura: partido completo, parcial o set.
+   Mantener esquema, versión de extractor y contrato estadístico junto a valores,
+   unidades, numeradores/denominadores y procedencia de derivaciones. Cabeceras
+   seguras como ETag pueden ayudar; cookies y cabeceras de autenticación no forman
+   parte de los manifiestos. La evidencia completa queda privada e ignorada por Git.
+3. Separar `event_at` real, `published_at` cuando una fuente lo acredita y
+   `observed_at` de recepción. Una fecha editorial o Last-Modified no certifica
+   por sí sola la primera publicación de todo el contenido. Conservar zona,
+   precisión y cotas; nunca convertir horario previsto en inicio real verificado.
+   La planificación de un encuentro futuro queda como tal, hasta contrastar su
+   evento real; la primera captura no habilita automáticamente predicciones V3.
+4. Después del partido, capturar por separado resultado y paquete estadístico.
+   Cada corrección crea una versión nueva con su propia observación; no modifica
+   la anterior ni se aplica retrospectivamente a cortes anteriores. En el
+   constructor V3 actual hay una sola fecha de disponibilidad para el evento:
+   usar como cota conservadora el día más tardío de resultado y componentes
+   estadísticos consumidos. Adelantar Elo/H2H y retrasar solo estadísticas exigiría
+   diseñar y aprobar otra semántica de eventos; no se implementa en esta fase.
+5. Guardar manifiestos de intentos fallidos y su clasificación: bloqueo HTTP,
+   navegación fallida, estadísticas oficialmente vacías, identidad ambigua o
+   conteos contradictorios. Un 403 permanece pendiente, sin eludirlo; no equivale
+   a un partido sin estadísticas. Mantener pausas/cierre de Chrome y reintentos
+   acotados existentes. Reintentos posteriores serán manuales y únicamente sobre
+   registros pendientes; una nueva respuesta recibida tarde conserva esa demora.
+6. Distinguir repetición de captura de contenido repetido: registrar las dos
+   observaciones aunque compartan huella. Deduplicar contenido por SHA-256, no
+   eliminar partidos ni observaciones. La clave incluye torneo/temporada, ID
+   oficial de partido y jugadores, sin unir silenciosamente identidades ambiguas.
+
+#### Primera captura: criterios de aceptación
+
+- Reproducir fuera de línea la lectura con la respuesta congelada y obtener los
+  mismos valores/huellas, sin nuevas consultas ni sobrescrituras.
+- Resolver inequívocamente IDs y cobertura del contexto previo al partido. Para
+  resultados y estadísticas posteriores, acreditar además orientación
+  ganador/perdedor y validar cantidades, porcentajes, ausencias y el contrato
+  `atp-service-counts-v1`.
+- Conservar versiones de ranking y contexto anteriores al corte UTC y demostrar
+  su selección. Capturas tardías deben recibir rechazo temporal explícito.
+- En la captura posterior, contrastar inicio real/intervalo UTC y disponibilidad
+  de resultado/estadísticas; la captura previa no acredita todavía esos hechos.
+  Conservar evidencia de publicación solo cuando realmente exista.
+- Pasar los validadores V3 existentes con el historial completo de dependencias
+  y su frontera documentada. Tener una respuesta estadística correcta es solo
+  aceptación de captura, no autorización para entrenar o activar un candidato.
+- Mantener raw, modelo, predicciones y datos públicos idénticos; demostrar los
+  rechazos de duplicados ambiguos, errores y versiones incompatibles.
+
+#### Estado inicial recomendado y decisión pendiente
+
+| Opción | Uso admisible y limitación | Compatibilidad actual |
+| --- | --- | --- |
+| Historial verificable desde una frontera declarada | Orden UTC, disponibilidad, contexto y versiones de todas las dependencias; reconstruir estado y cobertura | Es la vía compatible con el constructor V3 actual, si el historial pasa sus controles |
+| Elo/forma heredados sin procedencia suficiente | Referencia de comparación; no acredita qué eventos y versiones estaban disponibles | No se importa como estado verificado |
+| Checkpoint auditado | Tendría que fijar frontera, código, parámetros, orden, eventos consumidos y todas las ventanas/colas, no solo un valor Elo | El constructor actual no lo importa; requiere diseño y aprobación de implementación |
+| Arranque prospectivo explícito | Elo 1.500, H2H/conteos cero y ventanas inicialmente vacías en una fecha declarada; describe historial acumulado desde esa fecha | Cambia el significado frente a historia completa; requiere metodología y contrato aprobados |
+
+Recomiendo **captura prospectiva de evidencia y arranque explícito con periodo de
+acumulación**, por no existir hoy un historial ni checkpoint certificado para el
+piloto. Es una decisión pendiente de aprobación, no una modificación de V3. La
+alternativa para mantener exactamente el contrato actual es aportar historial
+verificable suficiente; una campaña general sin fuentes certificadas no lo crea.
+
+La acumulación debe medirse por jugador, superficie y pareja: forma hasta 100
+partidos, estadísticas hasta 2.000 y gradientes hasta 250 estados. No existe un
+número fijo de días que complete esas ventanas para todos. Elo no tiene una
+ventana finita cuya cobertura certifique por sí sola ausencia de efecto inicial.
+Se deberá acordar si se espera la cobertura elegida o se admite historial parcial
+con indicadores y reglas expresas; estas últimas cambiarían entradas/metodología.
+El relleno actual de ventanas vacías y un reinicio del piloto no constituyen
+historial recuperado. Ninguna de estas decisiones se implementó silenciosamente.
 
 ### Salidas privadas, reproducción y protección
 
@@ -461,3 +546,161 @@ Los **268 archivos protegidos** de raw, modelos, predicciones, originales, muest
 y datos públicos conservaron su contenido. Se mantiene la mensual del 28/09,
 su modelo `notebook_legacy` y sus predicciones. No se activó V3 ni se alteró la
 corrección de fechas de presentación o la tabla pública de 53 días contrastados.
+
+## Corrección estadística y protección del modelo: 3 de octubre de 2026
+
+Esta revisión sucede al piloto documental publicado en `19bc056`. Se autorizó
+expresamente la corrección y las protecciones de consumidores. **El defecto del
+código está corregido y los siete partidos se reextrajeron en salidas aisladas;
+raw y las salidas operativas permanecen intactos.**
+
+### Causa y semántica aplicada
+
+Ambos extractores asignaban el numerador de `Service Points Won` a `svpt` y
+trataban otras fracciones mediante texto/selección dependiente del formato. El
+primer formato aceptaba también cualquier etiqueta que empezase por Break Points,
+confundiendo potencialmente puntos convertidos con salvados; su conversión
+numérica podía concatenar cifras de porcentajes y cantidades. Los consumidores
+esperan `svpt` como todos los puntos disputados **al servicio de ese jugador**.
+No es el total de puntos del partido ni los puntos ganados al servicio/al resto.
+Además, la cabecera ATP actual carece del marcador de ganador: el código antiguo
+tomaba su ausencia como victoria del segundo jugador y **cruzaba las estadísticas
+de los participantes**. Reproducir el extractor anterior con las respuestas
+actuales genera exactamente los 18 campos dañados del anual en los siete partidos.
+Esta igualdad no acredita que la respuesta íntegra actual fuera históricamente
+la misma versión.
+
+Los dos formatos usan ahora un lector compartido por etiqueta, independiente
+del orden de métricas. `109/174` aporta 109 ganados al servicio y 174 disputados;
+un porcentaje visible permanece en la evidencia y nunca se convierte en cantidad.
+Servicio, resto y total conservan campos distintos. `1stIn` usa su numerador,
+`1stWon/2ndWon` sus puntos ganados y `bpSaved/bpFaced` la fracción de puntos
+salvados, sin usar convertidos ni juegos ganados como reemplazos.
+
+Se conservan ausencias y ceros expresos. Un total derivado necesita ambos
+componentes compatibles y registra suma, componentes y procedencia; no se deriva
+una cantidad de un porcentaje redondeado. Las contradicciones entre cantidades,
+denominadores, servicio/resto/totales y dobles faltas provocan rechazo. No se exigen
+mínimos por marcador ni un partido terminado a datos parciales o retiradas.
+Cuando falta el marcador de ganador, la orientación exige el resultado ya
+acreditado y coincidencia inequívoca de ambos nombres con los enlaces de perfil
+ATP completos. No se utilizan nombres abreviados ni la posición como prueba de
+victoria. Identidades diferentes o un marcador contradictorio causan rechazo.
+Las pausas, cierre/minimización de Chrome y tratamiento de Cloudflare permanecen.
+
+### Compatibilidad y archivos privados modificados
+
+Las nuevas extracciones llevan `statistics_contract_version=atp-service-counts-v1`
+y procedencia serializada. Esto identifica una definición estadística corregida;
+no modifica `strict-pre-match-v3` ni certifica disponibilidad temporal.
+
+| Archivo privado | Cambio |
+| --- | --- |
+| `src/tennis_pipeline/scraping_functions.py` | Lector común, fracciones/unidades, orientación contrastada con perfiles/resultados, campos separados, validación y disponibilidad que ignora metadatos |
+| `src/tennis_pipeline/tournament_sync.py` | Cantidades numéricas finitas como disponibilidad; caché conserva versión, procedencia y conteos |
+| `src/tennis_pipeline/validation.py` | Rechazo compartido de estadísticas versionadas en rutas actuales de modelos |
+| `src/tennis_pipeline/preprocessing.py` | Conservación del marcador y rechazo antes de selección/escritura legacy |
+| `src/tennis_pipeline/features.py` | Rechazo no estricto antes de transformación; todos los splits se validan antes de escribir; predicciones de auditoría heredan incompatibilidad del historial |
+| `src/tennis_pipeline/training.py` | Rechazo antes de entrenar/crear artefactos; marcador fuera de variables numéricas |
+| `src/tennis_pipeline/prediction.py` | Rechazo antes de cargar modelos/escribir y comprobación de contrato estricto frente a artefacto legacy |
+| `src/tennis_pipeline/evaluation.py` | Misma protección antes de evaluar el modelo por ambas entradas |
+| `tests/test_scraping_statistic_semantics.py`, `test_statistics_contract.py`, `test_statistics_alignment.py`, `test_statistics_evaluation_contract.py`, `test_atp_saved_statistics_response.py` y respuesta real reducida en `tests/fixtures/` | Regresiones offline de extracción, ausencia/ceros, coherencia, cabecera sin ganador, caché, identidad, procedencia y ausencia de sustituciones |
+| `tests/test_scraping_browser_lifecycle.py`, `test_incremental_scraping.py`, `test_download_history_integration.py` | Dobles de descarga adaptados al contexto de identidad; se verifica su envío y se conservan comprobaciones de pausas/caché |
+
+El modelo activo conserva sus 77 variables y su semántica heredada. Los porcentajes
+recientes de aces, dobles faltas, primeros/segundos servicios y sus ventanas pueden
+cambiar con las correcciones. **Una próxima recarga que obtenga estadísticas
+marcadas se detendrá antes de generar entradas incompatibles para el modelo.**
+Los datos heredados sin marcador conservan su ruta; eso no certifica su calidad.
+Incluso entrenar/evaluar/predicir en modo estricto con datos marcados permanece
+bloqueado hasta definir una transición compatible de artefactos. La auditoría de
+features estrictas puede conservar la procedencia para examinarla, sin activar
+consumidores del modelo. No se reproduce deliberadamente el error como fallback.
+
+Son operaciones separadas: **corregir extractor** y **reextraer el piloto aislado**
+(realizados), **sustituir raw**, **regenerar variables**, **entrenar** y **activar**
+(no realizadas). La transición posterior debe fijar fuentes y contrato homogéneo,
+producir derivados/candidato aislados y validar antes de una activación explícita.
+
+### Comparación del piloto y límites de la fuente
+
+El Excel `US_Open_stats.xlsx` y el anual contienen los mismos diccionarios
+dañados, sin fracciones originales. El HTML archivado es un cuadro de Munich 2025,
+no la página estadística de estos encuentros. El HTML reducido de la regresión es
+sintético y trazable al ejemplo anterior; no acredita las cifras reales del piloto.
+Se añadió también una respuesta actual real reducida para comprobar cabecera,
+identidades, conteos y formatos sin depender de la red durante las pruebas.
+
+Una consulta HTTP directa a ATP `ms007` devolvió 403/Cloudflare. El cliente Chrome
+normal ya existente sí obtuvo la página: se mantuvieron minimización, pausa y
+cierre originales, sin resolver desafíos. Esa primera captura se reutilizó; se
+leyeron las otras seis páginas una vez, con pausas y sesiones separadas. Se
+conservan DOM exactos renderizados, tiempos UTC y huellas. **Un DOM renderizado
+no es el cuerpo HTTP original ni acredita un estado HTTP**; este queda desconocido
+en esas capturas. La respuesta HTTP 403 se conserva aparte. Ninguna observación
+actual es una versión disponible antes del partido.
+
+| Partido, ganador–perdedor | `svpt` anterior, ganador/perdedor | Total corregido acreditado | Resultado |
+| --- | --- | --- | --- |
+| MS007 Shelton–Alcaraz | 109 / 102 | 160 / 182 | Conteos de puntos coherentes; calidad de juegos de servicio pendiente |
+| MS006 Tiafoe–Michelsen | 100 / 109 | 183 / 171 | Conteos de puntos coherentes; calidad de juegos de servicio pendiente |
+| MS004 Zverev–Van de Zandschulp | 43 / 58 | 86 / 79 | Conteos de puntos coherentes; calidad de juegos de servicio pendiente |
+| MS005 Khachanov–Blockx | 45 / 51 | 66 / 74 | Retirada admitida; calidad de juegos de servicio pendiente |
+| MS002 Zverev–Khachanov | 71 / 78 | 111 / 100 | Conteos de puntos coherentes; calidad de juegos de servicio pendiente |
+| MS003 Shelton–Tiafoe | 81 / 75 | 114 / 121 | Conteos de puntos coherentes; calidad de juegos de servicio pendiente |
+| MS001 Zverev–Shelton | 82 / 84 | 116 / 122 | Conteos de puntos coherentes; calidad de juegos de servicio pendiente |
+
+Se reprocesaron siete decisiones/controles en un destino nuevo. **Siete conteos
+reextraídos desde sus respuestas actuales y cero elegibles V3.**
+No se reemplazó `svpt` por `1stIn` de raw: también es incoherente y no demuestra
+el denominador perdido. El CSV corregido contiene siete filas y el de entradas
+elegibles solo encabezados. Los siete paquetes antiguos siguen rechazados por
+conteos; los nuevos pasan las restricciones de puntos. **La fuente devuelve
+`Service Games Played=0` en ambos lados de los siete encuentros**: se conserva
+el valor declarado y una advertencia de calidad, sin inventar juegos ni certificar
+el paquete como completo. El normalizador deja ese indicador sin dato válido.
+Esto permanece separado del rechazo temporal: cinco inicios UTC pendientes,
+siete versiones de ranking/contexto previas al corte no acreditadas e historial
+causal no certificado. Los dos inicios UTC acreditados se conservan.
+
+### Impacto acotado y validación
+
+El inventario lee únicamente anuales 2025/2026; no regenera la historia:
+
+| Fuente | Filas | Filas con violaciones de conteos examinadas | Sin estadísticas en ambos lados |
+| --- | --- | --- | --- |
+| 2025 | 2.944 | 0 | 259 |
+| 2026 | 2.952 | 1.617 | 143 |
+
+En 2026, primeros servicios dentro superan `svpt` en 533 ganadores/902 perdedores;
+segundos ganados superan sus puntos disputados en 1.615/1.617. La igualdad
+`svpt=1stWon+2ndWon` aparece en 1.622/1.621 lados: es un patrón compatible con el
+defecto, no prueba causal individual. Cero violaciones en 2025 tampoco certifica
+procedencia o semántica. Normalización pública y ventanas del modelo están
+afectadas; los datos públicos publicados no se cambiaron ni se auditaron de nuevo.
+
+La regresión mínima falló antes en los dos formatos y pasa después. También se
+registraron fallos previos de protección/modelo y evaluación. Validación final:
+**157 pruebas correctas, dos excluidas por implicar entrenamiento/artefactos**, y
+compilación Python correcta. Incluye consumidores, joins/IDs, porcentajes,
+ausencias, caché, pausas/cierre del navegador y metadatos temporales. No se ejecutó
+entrenamiento, calibración, mensual, modelo real ni QA/build web.
+
+Auditoría privada nueva: `data/processed/audit-2026-10-03-statistics-fix/`.
+`final-audit/` y `final-reproduction/` conservan comparación, inventario, controles
+de IDs, validadores, referencias/huellas de fuentes y manifiesto; los once archivos coinciden
+byte a byte sin consultas durante la reproducción. `audit-statistics-current.py`
+exige destino nuevo, huellas congeladas y lock libre. Se conservan también las
+primeras salidas `results/` y `reproduction/`, anteriores a la lectura Chrome.
+Los DOM congelados se guardan en `current-atp-sources/`, sin duplicarlos en esas
+carpetas de resultados.
+Las huellas distinguen el texto UTF-8 del DOM capturado de los bytes del fichero
+guardado con saltos CRLF en Windows; ambos se verifican sin modificar la evidencia.
+El piloto anterior y sus 96 archivos
+permanecen intactos; no se rehacen sus 14 salidas con el código nuevo.
+
+Se comprobaron las 268 huellas protegidas y 49 archivos operativos derivados
+adicionales. Modelo/predicciones siguen siendo los de la mensual del 28/09/2026.
+Código/pruebas/datos privados permanecen ignorados; se publica únicamente esta
+documentación y el plan. La comprobación del despliegue corresponde al mismo
+commit documental; los logs privados de Vercel no están disponibles.
