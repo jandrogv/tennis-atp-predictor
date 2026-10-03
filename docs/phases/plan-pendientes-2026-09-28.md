@@ -296,3 +296,45 @@ de partido; disponibilidad temporal de resultados/estadísticas, ranking y conte
 para V3. No hay un subconjunto actualmente elegible ni nuevas métricas. La siguiente
 investigación debe priorizar un grupo acotado con procedencia temporal completa;
 no presupone que sea necesario completar toda la presentación antes de obtenerlo.
+
+## Piloto temporal histórico: revisión del 3 de octubre de 2026
+
+Se terminó la investigación acotada de los cuatro cuartos, dos semifinales y final
+del US Open 2026, partiendo de Shelton–Alcaraz. **La preparación de datos V3 sigue
+pendiente: 7 partidos examinados, 0 elegibles y 7 rechazados.** No se entrenó,
+calibró, activó, ejecutó ni programó ninguna recarga. El modelo y las predicciones
+de la mensual del 28/09 siguen intactos.
+
+| Comprobación del piloto | Resultado | Siguiente requisito |
+| --- | --- | --- |
+| Identidad y claves de los objetivos | 8 jugadores resueltos, 7 coincidencias únicas | No depende de las seis identidades pendientes de rankings |
+| Inicio UTC | Shelton–Alcaraz a precisión de minuto; Tiafoe–Michelsen por un intervalo íntegramente dentro del 08/09 UTC | Cinco objetivos aún sin intervalo cuantitativo UTC certificado |
+| Etiquetas y disponibilidad | V3 acepta la cota tardía de observación local del 03/10 en los dos objetivos con inicio UTC | Esa cota no acredita estadísticas correctas ni permite usar resultados durante septiembre |
+| Ranking/contexto | No hay versiones acreditadas previas al corte; seis discrepancias de ranking/puntos frente a la copia 31/08 | Resolver procedencia y versión consumida, no elegir una copia por su nombre |
+| Estadísticas de objetivos | Siete fallan las protecciones de conteos existentes; columnas rellenas no equivalen a estadísticas válidas | Corregir/verificar extracción antes de una captura futura; no reparar raw sin propuesta específica |
+| Historial | 2.918 filas directas sin duplicados/IDs ausentes; 49 con estadísticas faltantes y 59 con valores obligatorios ausentes | Historial UTC/disponibilidad/contexto certificado y frontera inicial declarada |
+| Elo y estados | Clausura estructural de 135.200 filas, sin afirmar que sea el mínimo causal; no hay checkpoint V3 auditado | No reiniciar el estado al principio del piloto ni importar Elo heredado |
+| Fuentes nuevas/alternativas | Dos consultas concretas a Internet Archive sin snapshots; notas ATP 403; PDF candidato de Indian Wells 404 | No se certifica inexistencia global de archivos; no se justificó cambiar de grupo |
+
+Se documentó además un defecto concreto en ambas funciones de extracción:
+`Service Points Won` se asigna por su numerador a `w_svpt/l_svpt`, cuyo contrato
+consumido espera el total de puntos al servicio. No se atribuyen a ese único
+detalle todas las anomalías sin las respuestas originales. La fase no modifica
+scraping, raw ni salidas operativas; incorpora el hallazgo a la decisión pendiente.
+
+La siguiente fase propuesta debe definir la corrección/validación de conteos y la
+captura inmutable de ranking, contexto, inicio real e intervalos, resultados y
+estadísticas, con observación UTC, versiones y huellas. Capturar desde ahora no
+reconstruye automáticamente el historial previo: elegir recuperación de historial/
+checkpoint defendible o una metodología prospectiva distinta expresamente definida.
+La propuesta está preparada **sin implementación ni programación** en el apartado
+[Piloto histórico acotado de V3](../validacion-temporal-estricta.md#piloto-histórico-acotado-3-de-octubre-de-2026).
+
+Auditoría privada: `data/processed/audit-2026-10-03-v3-pilot/final-audit/`, con
+entradas, etiquetas y estadísticas separadas, referencias de dependencias y
+rechazos individuales. `eligible-inputs.csv` está vacío. Reproducción: 14 archivos
+idénticos byte a byte; se conservan la primera pasada y sus resultados. Validación:
+21 pruebas enfocadas correctas y 268 huellas protegidas preservadas. No se regeneró
+la copia web ni se repitió su QA/build porque no cambia la web. Solo se publica
+documentación, dentro de la autorización vigente. Los logs privados de Vercel
+siguen como pendiente independiente.

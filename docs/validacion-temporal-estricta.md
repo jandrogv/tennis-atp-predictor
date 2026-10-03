@@ -262,3 +262,202 @@ Cobertura por partido: `v3-current-year-coverage.csv`, solo auditoría, nunca en
 del modelo operativo. Siguiente bloque útil: versiones históricas trazables de
 resultados/estadísticas, rankings y contexto de un grupo acotado, antes de preparar
 entrenamiento o ampliar indiscriminadamente fechas.
+
+## Piloto histórico acotado: 3 de octubre de 2026
+
+Se examinaron los cuatro cuartos, las dos semifinales y la final del US Open 2026:
+**7 objetivos, 8 identidades inequívocas, 0 elegibles y 7 rechazados**. La investigación
+del piloto queda documentada; la preparación de datos V3 continúa abierta. No se
+generaron variables de estos partidos ni se entrenó, calibró o activó un modelo.
+La elección parte del inicio acreditado de Shelton–Alcaraz y permite estudiar una
+cadena de rondas de una misma edición. No acredita representatividad para entrenar.
+
+### Corte, etiquetas y estados según el código actual
+
+El corte de variables es **00:00 del día UTC de inicio**, no la hora real del primer
+punto. Se inspeccionaron el constructor y validadores de `features.py`, su carga
+por temporadas, `preprocessing.py`, los consumidores de entrenamiento/predicción,
+los normalizadores de estadísticas y las dos funciones de extracción de ATP.
+
+- Ranking y contexto deben tener una versión acreditada disponible en un día UTC
+  estrictamente anterior. La fecha efectiva del ranking no prueba su disponibilidad.
+- El resultado observado puede conocerse después del inicio. El validador acepta
+  una fecha posterior, incluida una **cota conservadora de observación**; no exige
+  demostrar la primera publicación. Esa cota nunca se retrotrae al final del partido.
+- Cada día se leen todas las variables antes de escribir los resultados disponibles
+  ese día. El mismo mecanismo gobierna H2H, superficie, partidos jugados, forma,
+  estadísticas, Elo y gradientes. Las filas de predicción no escriben estado.
+- Dentro de un día de disponibilidad, las escrituras conservan el orden estable de
+  entrada, previamente ordenado por día de inicio e IDs. No se afirma orden intradía
+  real. Una corrección o captura tardía cambia cuándo se permite usar esa versión.
+- La disponibilidad del resultado gobierna también la incorporación de sus
+  estadísticas. Para esa escritura debe estar acreditada la versión del paquete
+  consumido; una noticia con el ganador no demuestra el paquete completo.
+- Los indicadores y las comprobaciones de fechas no certifican por sí solos la
+  calidad de los valores, la fuente o la integridad del historial.
+
+### Evidencia de inicio y alcance de las cotas
+
+| Objetivo | Inicio acreditado para V3 | Resultado del piloto |
+| --- | --- | --- |
+| Shelton–Alcaraz, QF | 09/09 UTC; 03:05, precisión de minuto | Rechazado por ranking, contexto, historial y calidad de estadísticas |
+| Tiafoe–Michelsen, QF | 08/09 UTC, por intervalo; sin hora exacta | Mismos bloqueos |
+| Zverev–Van de Zandschulp, QF | Noche del 09/09 local; día UTC pendiente | También falta inicio UTC |
+| Khachanov–Blockx, QF | 09/09 local; día UTC pendiente | También falta inicio UTC |
+| Zverev–Khachanov, SF | Tarde del 11/09 local, evidencia cualitativa conservada | También falta un intervalo cuantitativo UTC certificado |
+| Shelton–Tiafoe, SF | Noche del 11/09 local; día UTC pendiente | También falta inicio UTC |
+| Zverev–Shelton, F | 13/09 local; día UTC pendiente | También falta inicio UTC |
+
+La [cronología oficial de Arthur Ashe](https://www.usopen.org/amp/en_US/news/articles/2026-09-09/us_open_2026_is_terrific_tuesday_the_new_super_saturday.html)
+identifica el comienzo de Shelton–Alcaraz a las 23:05 locales del 8 y el final a las
+03:33 del 9. EDT corresponde a UTC−4 durante ese periodo, conforme a la
+[tabla de NIST](https://www.nist.gov/pml/time-and-frequency-division/local-time-faqs)
+y sus [reglas de horario de verano](https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst).
+Se conserva la precisión de minuto: inicio 09/09 03:05 UTC y final 09/09 07:33 UTC.
+
+Para Tiafoe–Michelsen se combina esa secuencia real de partidos con la
+[crónica individual](https://www.usopen.org/amp/en_US/news/articles/2026-09-08/frances_tiafoe_vs_alex_michelsen_at_the_2026_us_open.html),
+que acredita el martes local y una duración de 4 h 39 min. El inicio local del
+martes establece una cota inferior de 08/09 04:00 UTC. El partido terminó antes
+del comienzo real de Shelton; utilizando solo la cota de duración de más de cuatro
+horas y un minuto de margen para la precisión del reloj, su inicio es anterior a
+08/09 23:06 UTC. Todo ese intervalo pertenece al mismo día UTC. **Es una inferencia
+por cotas, no una hora inventada**; `verified_match_dates` admite el día contrastado.
+No se usa un horario previsto, un encabezado editorial o una fecha de rastreo como
+hora real ni como prueba de una versión histórica.
+
+Las siete filas locales y sus valores se observaron, con huellas de contenido,
+a más tardar el **03/10/2026 09:36:36 UTC**. Los dos objetivos con inicio UTC pasan
+el validador de disponibilidad usando el 03/10 como cota tardía. Esto verifica
+solamente la admisibilidad de la fecha de observación para la etiqueta; no valida
+las estadísticas ni demuestra disponibilidad durante septiembre. Los otros cinco
+no se prueban como paquetes V3 sin inicio UTC. Usar esta cota para resultados
+de septiembre no permite escribirlos en el historial de otra predicción de septiembre.
+Las versiones de ranking y contexto observadas en octubre tampoco pasan el corte.
+
+### Historial y calidad que impiden generar variables
+
+Se trazaron **6.150 referencias para los siete objetivos, correspondientes a 2.918
+filas distintas de historial directo**. En esa población no hay claves de partido
+duplicadas ni IDs de jugador ausentes/no únicos en el catálogo. Son candidatos
+agrupados por temporada, comienzo de torneo y rondas anteriores; esos criterios
+no se convierten en días UTC ni disponibilidad verificados.
+
+H2H y número de partidos necesitan los eventos anteriores de cada pareja/jugador.
+Forma llega a 100 partidos; estadísticas de saque, a 2.000; gradientes de Elo, a
+250 estados. Elo general y por superficie dependen además de los estados previos
+de los rivales. La clausura del grafo de candidatos alcanza **135.200 filas y 4.418
+jugadores**: es una cota estructural sin orden temporal, **no el mínimo historial
+causal que necesariamente habría que recuperar**. No se calculó Elo con ese grafo.
+
+El constructor inicializa Elo/superficie a 1.500 y los contadores a cero en el
+principio de la entrada; no carga checkpoints. La fuente local empieza en 1985.
+Un recorte a los siete partidos reiniciaría el estado y cambiaría el significado
+de las variables. No se hizo. Falta un historial admisible con frontera inicial
+declarada, o un estado inicial V3 auditado cuya importación habría que diseñar y
+validar en otra fase. El constructor exige también los metadatos de contexto de
+cada fila histórica suministrada, aunque sus estadísticas se consuman más tarde.
+
+Además de la procedencia temporal, se encontraron estos bloqueos de valores:
+
+- **Seis discrepancias** de posición/puntos en cuatro objetivos frente a la copia
+  fechada 31/08: Michelsen 45 frente a 46; Van de Zandschulp 71/834 frente a 70/868;
+  Khachanov 49 frente a 50 en dos partidos; Blockx 32 frente a 34. No se eligió una
+  versión como correcta sin procedencia previa al corte ni se corrigió raw.
+- **Los siete objetivos fallan las comprobaciones de conteos** de
+  `normalize_service_statistics`. Por ejemplo, Shelton–Alcaraz contiene
+  `w_svpt=109`, `w_1stIn=174`, `l_svpt=102` y `l_1stIn=157`; los primeros servicios
+  dentro no pueden superar todos los puntos al servicio. Las columnas rellenas no
+  constituyen un paquete estadístico válido.
+- Se verificó un defecto del mapeo actual: `parse_match_stats` y `parse_match_stats2`
+  asignan el numerador de **Service Points Won** a `w_svpt/l_svpt`, mientras que
+  los consumidores esperan el total de puntos al servicio, denominador de esa
+  fracción. No se atribuyen todas las anomalías de estas filas a ese único defecto
+  sin sus respuestas HTML originales. Se registra como corrección necesaria antes
+  de una futura captura; no se cambia scraping ni se redescargan partidos en esta fase.
+- De las 2.918 filas directas, **49 tienen estadísticas ausentes y 59 tienen algún
+  valor obligatorio ausente**. No se eliminaron para fabricar un historial completo.
+- La crónica conjunta de semifinales presenta 6-2 en el primer set de Zverev;
+  el informe individual y el registro local indican 6-3. No se mezclaron versiones.
+
+### Fuentes comprobadas y decisión acotada
+
+Se reutilizaron el catálogo, la copia de ranking, los archivos anuales y los hechos
+documentados el 02/10. Se contrastaron las crónicas oficiales individuales y la
+cronología real de Arthur Ashe. Las versiones actuales acreditan hechos que narran;
+sus encabezados no fijan cuándo existía el contenido íntegro que hoy se consulta.
+
+La estrategia nueva de archivos históricos consultó la API de disponibilidad de
+Internet Archive para la URL exacta del ranking 31/08, antes del primer objetivo,
+y las estadísticas ATP `2026/560/ms007`, antes de semifinales. Ambas respuestas
+fueron HTTP 200 con `archived_snapshots` vacío. **No prueba inexistencia global de
+capturas bajo otras URLs.** Se conservan consultas, respuestas, fecha UTC y SHA-256.
+Las notas ATP devolvieron 403; no se eludió el bloqueo. Una búsqueda acotada de notas
+prematch no produjo una versión histórica completa certificada.
+
+Se consideró Indian Wells 2026 como alternativa por sus notas oficiales indexadas:
+el PDF consultado redirige a `/404` y la evidencia existente de su final solo
+contrasta el día local. Roma/Eastbourne aportan límites nocturnos locales, pero no
+versiones de ranking, contexto y estadísticas disponibles para sus variables.
+Ningún grupo considerado mejora conjuntamente los requisitos del piloto. No se
+abrió otra campaña general de identidades o fechas.
+
+### Propuesta de captura futura, sin implementación ni programación
+
+| Datos/fuente | Momento y prueba necesarios | Conservación propuesta |
+| --- | --- | --- |
+| Ranking oficial ATP fechado | Captura previa al corte UTC; conservar la última versión ya conocida. La nueva publicación del mismo día no entra en V3 diario | Fecha efectiva separada de observación, contenido exacto y su huella |
+| Perfil ATP y contexto de torneo/draw oficial | Versión de DOB, altura, superficie y tamaño del cuadro conocida antes de 00:00 UTC; registrar correcciones como nuevas versiones | IDs, valores, localizador y versión, sin reescribir evidencias anteriores |
+| Inicio/final reales del centro oficial del torneo o feed oficial | Hora efectiva si la fuente la aporta; en otro caso, intervalo de observaciones justificadas. Admitir día solo si todo el intervalo cae en un único día UTC | Hora original, zona, UTC, precisión y fundamento; horario previsto separado |
+| Resultado y estadísticas oficiales completas | Captura tras finalizar, con valores coherentes y esquema verificado; reintento razonable si falta contenido. Usar su observación como cota conocida, sin retrotraer publicación | Ganador/score separados del paquete de estadísticas; conservar cada revisión |
+| Cada respuesta/captura | Registrar petición y recepción UTC, URL, estado HTTP, localizador, contenido o referencia inmutable y SHA-256; fecha declarada del proveedor separada | Evidencia privada bajo `data/processed/temporal/`, utilizando CSV/JSON y manifiestos existentes |
+| Estado de variables | Reconstruir desde historial certificado y frontera declarada, o especificar un checkpoint V3 verificable antes de usarlo | Versión del código, configuración, orden de eventos, linaje del estado y dependencias |
+
+La captura futura es necesaria pero **no recupera por sí sola el historial anterior**.
+La siguiente decisión debe resolver primero el mapeo/validación de conteos y el
+estado inicial: recuperar un historial o checkpoint defendible, o autorizar una
+metodología prospectiva distinta, con frontera y periodo inicial explícitos. Esta
+última alternativa no se presenta como recuperación del historial actual ni como
+V3 ya preparado. No se implementó ni programó ninguna de estas opciones.
+
+### Salidas privadas, reproducción y protección
+
+Se amplió la auditoría existente mediante CSV/JSON y un script puntual que llama
+a los normalizadores y validadores de producción; no se añadió otro framework ni
+se modificó código operativo. Directorio:
+`data/processed/audit-2026-10-03-v3-pilot/`.
+
+- `baseline.json`, `evidence.json`, `archive-queries.json`: fuentes, versiones,
+  localizadores, precisión y cotas. `final-audit/dependency-quality.json` detalla
+  controles de valores y coincidencias. Se conserva la primera pasada y su script.
+- `final-audit/`: entradas candidatas sin etiquetas, `labels.csv`, estadísticas
+  observadas separadas, identidades/ranking/contexto, referencias de historial,
+  cotas UTC, rechazos y manifiesto. **Es la auditoría comprobada, no un subconjunto
+  elegible**; `eligible-inputs.csv` tiene cero filas. No contiene features generadas.
+- `final-reproduction/` y `completed-reproducibility.json`: los **14 archivos** de
+  salida coinciden byte a byte, utilizando las mismas versiones locales.
+
+Reproducción desde la raíz, con un directorio de salida nuevo:
+
+```powershell
+$env:PYTHONPATH = 'src'
+.\.venv\Scripts\python.exe data/processed/audit-2026-10-03-v3-pilot/audit-pilot.py --output-dir data/processed/audit-2026-10-03-v3-pilot/reproduction-new
+```
+
+El script rechaza un destino existente o fuera de `data/processed`, verifica las
+huellas congeladas y toma el lock compartido sin iniciar recargas. Requiere las
+versiones locales enumeradas: si una mensual posterior las cambia, aborta en vez
+de afirmar una reproducción con datos distintos. No debe restaurarse raw para
+sortear esa comprobación. Código/configuración y fuentes locales quedan fijados
+por SHA-256; las consultas externas no se repiten durante la reproducción.
+
+Validación de esta fase: **19 pruebas temporales/estadísticas recientes y dos de
+normalización de conteos**, todas correctas. Se excluyeron los dos tests que crean
+artefactos de modelos, incluso de prueba. Se verificaron coincidencias, cotas,
+rechazos completos, ausencia de duplicados directos y reproducción. No se ejecutó
+la batería web ni build: no cambia contenido ni comportamiento de la web.
+
+Los **268 archivos protegidos** de raw, modelos, predicciones, originales, muestras
+y datos públicos conservaron su contenido. Se mantiene la mensual del 28/09,
+su modelo `notebook_legacy` y sus predicciones. No se activó V3 ni se alteró la
+corrección de fechas de presentación o la tabla pública de 53 días contrastados.
