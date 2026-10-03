@@ -1,6 +1,6 @@
 # Plan de acción de ATP Insight
 
-Fecha: 28/09/2026. Revisión: 02/10/2026. Estado: Next.js publicado; contrato temporal V3
+Fecha: 28/09/2026. Revisión: 03/10/2026. Estado: Next.js publicado; contrato temporal V3
 implementado y probado en local; catálogo ampliado con autorización y seis identidades pendientes de un vínculo documental.
 Objetivo: completar los pendientes técnicos y de datos, una etapa cada vez, con
 resultados verificables. La app de escritorio está terminada y aceptada por el usuario.
@@ -273,3 +273,26 @@ consola, capturas, búsqueda ATP → perfil de Claus y selección de semifinal �
 corregido. Las seis fechas pasan en escritorio 1440×1000 y móvil 390×844, junto con
 los cuatro perfiles cuya última fecha cambia. Evidencia fuera del repositorio con
 prefijo `data-phase-local`; no se han probado otros motores.
+
+### Publicación y cierre comprobados el 03/10
+
+- [Commit de datos y documentación `ed27a06`](https://github.com/jandrogv/tennis-atp-predictor/commit/ed27a06750bf51c7e262d7c0afaead37bb1b1e6c), publicado en `main` tras revisar los 18 archivos: 14 públicos y cuatro documentos. Código, raw, modelos, auditorías privadas y salidas internas respetan `.gitignore`.
+- [Vercel del mismo commit](https://vercel.com/jandrogvs-projects/atpinsight/GALxVgaZ7i1BQBqV5dgMYtKarrfZ): estado `success` confirmado mediante GitHub. No se consultaron logs internos por falta del acceso ya documentado; no se solicitó otro permiso.
+- [Producción](https://atpinsight-two.vercel.app): 26 visitas en Chrome a 1440×1000 y 390×844, con cuatro recorridos de búsqueda ATP → perfil y semifinal del cuadro → detalle. Fechas, enlaces, título, contenido, consola, ausencia de overlay y desbordamientos comprobados; sin errores.
+- Los 14 archivos públicos del bloque y los dos archivos operativos `web_model_summary.csv`/`web_match_cards.csv` descargados de producción coinciden con la copia local, normalizando solo CRLF. Se verificaron nuevamente las 143 huellas protegidas posteriores al alta autorizada; ninguna cambió durante el cierre.
+- Se mantiene el resultado de 183 pruebas Python, 65 web, verificador y build correctos. No se repiten tests ni build por este cierre exclusivamente documental. Se detuvo únicamente el servidor local de QA creado por Codex.
+
+Evidencia privada: `production-content-check.json`, `publication.json` y
+`final-protection-check.json` en `data/processed/audit-2026-10-02-data-phase`.
+QA y capturas fuera del repositorio con prefijos `data-phase-local` y
+`data-phase-production`. La comprobación de rutas afectadas está terminada.
+Para revertir producción, revertir `ed27a06` y verificar el despliegue resultante;
+esa reversión no modifica el catálogo local. Para revertir los derivados, usar las
+rutas y copias de `integration.json`; el catálogo requiere su procedimiento y
+autorización específicos.
+
+Pendientes de datos: seis identidades sin puente al ID local; 2.899 días locales
+de partido; disponibilidad temporal de resultados/estadísticas, ranking y contexto
+para V3. No hay un subconjunto actualmente elegible ni nuevas métricas. La siguiente
+investigación debe priorizar un grupo acotado con procedencia temporal completa;
+no presupone que sea necesario completar toda la presentación antes de obtenerlo.
