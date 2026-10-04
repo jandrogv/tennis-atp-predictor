@@ -45,19 +45,10 @@ export function getTournamentDrawMatches(matches: TournamentMatch[]): Tournament
     .some((round) => /qualif/i.test(round ?? "")));
 }
 
-export function getDrawStageWindow(stages: number[], selectedIndex: number, expanded: boolean, playedStages: number[] = stages): number[] {
-  if (expanded) {
-    const size = Math.min(4, stages.length);
-    let end = selectedIndex + 1;
-    for (let index = end; index < Math.min(stages.length, selectedIndex + size); index++) {
-      if (playedStages.includes(stages[index])) end = index + 1;
-    }
-    end = Math.max(size, end);
-    return stages.slice(end - size, end);
-  }
-  if (stages.length <= 3) return stages;
-  const start = Math.max(0, Math.min(selectedIndex - 1, stages.length - 3));
-  return stages.slice(start, start + 3);
+export function getDrawStageWindow(stages: number[], selectedIndex: number, limit: 3 | 4): number[] {
+  const size = Math.min(limit, stages.length);
+  const start = Math.max(0, Math.min(selectedIndex - 1, stages.length - size));
+  return stages.slice(start, start + size);
 }
 
 export function filterTournaments(tournaments: TournamentDetail[], filters: TournamentFilters): TournamentDetail[] {

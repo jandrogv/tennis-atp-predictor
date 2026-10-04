@@ -80,7 +80,7 @@ export function TournamentBracket({ matches }: { matches: TournamentMatch[] }) {
   const selectedIndex = Math.max(0, stages.indexOf(selectedDepth));
   const previousStage = stages[selectedIndex - 1];
   const nextStage = stages[selectedIndex + 1];
-  const visibleDepths = getDrawStageWindow(stages, selectedIndex, expanded, bracket.playedStages);
+  const visibleDepths = getDrawStageWindow(stages, selectedIndex, expanded ? 4 : 3);
   const earliestVisibleDepth = Math.max(0, ...visibleDepths);
   const baseDepth = earliestVisibleDepth;
   const columnGap = expanded && visibleDepths.length === 4 ? 56 : COLUMN_GAP;
@@ -584,7 +584,6 @@ type BracketData = {
   matchesByNode: Map<number, TournamentMatch>;
   maxDepth: number;
   stages: number[];
-  playedStages: number[];
 };
 
 function buildBracketData(matches: TournamentMatch[]): BracketData {
@@ -597,8 +596,7 @@ function buildBracketData(matches: TournamentMatch[]): BracketData {
   const maxNode = Math.max(1, ...Array.from(matchesByNode.keys()));
   const maxDepth = Math.min(6, Math.floor(Math.log2(maxNode)));
   const stages = Array.from({ length: matchesByNode.size ? maxDepth + 1 : 0 }, (_, index) => maxDepth - index);
-  const playedStages = Array.from(new Set(Array.from(matchesByNode.keys(), (node) => Math.floor(Math.log2(node)))));
-  return { matchesByNode, maxDepth, stages, playedStages };
+  return { matchesByNode, maxDepth, stages };
 }
 
 function potentialPlayers(node: number, matchesByNode: Map<number, TournamentMatch>): string[] {

@@ -24,22 +24,64 @@ test("Draw excludes qualifying rounds without hiding team matches or changing Ta
   assert.deepEqual(getTournamentDrawMatches(matches.slice(1, 4)), []);
 });
 
-test("expanded Draw keeps four stages around late and unplayed rounds without changing compact Draw", () => {
+test("compact Draw centers three consecutive rounds and fills either boundary", () => {
+  const stages = [4, 3, 2, 1, 0];
+  const expected = [[4, 3, 2], [4, 3, 2], [3, 2, 1], [2, 1, 0], [2, 1, 0]];
+  stages.forEach((_, index) => assert.deepEqual(getDrawStageWindow(stages, index, 3), expected[index]));
+});
+
+test("expanded Draw prefers one previous and two following rounds, then fills boundaries", () => {
+  const stages = [4, 3, 2, 1, 0];
+  const expected = [[4, 3, 2, 1], [4, 3, 2, 1], [3, 2, 1, 0], [3, 2, 1, 0], [3, 2, 1, 0]];
+  stages.forEach((_, index) => assert.deepEqual(getDrawStageWindow(stages, index, 4), expected[index]));
+  assert.deepEqual(getDrawStageWindow([6, 5, 4, 3, 2, 1, 0], 3, 4), [4, 3, 2, 1]);
+});
+
+test("Draw retains structural future rounds without requiring played matches or fixed round names", () => {
+  // The last rounds exist in the draw, even when no match or player has been loaded yet.
+  const stages = [50, 40, 30, 20, 10];
+  assert.deepEqual(getDrawStageWindow(stages, 2, 3), [40, 30, 20]);
+  assert.deepEqual(getDrawStageWindow(stages, 2, 4), [40, 30, 20, 10]);
+  assert.deepEqual(getDrawStageWindow(stages, 3, 4), [40, 30, 20, 10]);
+});
+
+test("Draw windows preserve count, selection, order and both sides throughout navigation", () => {
+  for (const limit of [3, 4] as const) {
+    assert.deepEqual(getDrawStageWindow([], 0, limit), []);
+    for (let size = 1; size <= 9; size++) {
+      const stages = Array.from({ length: size }, (_, index) => (size - index) * 10);
+      const original = [...stages];
+      for (let index = 0; index < size; index++) {
+        const visible = getDrawStageWindow(stages, index, limit);
+        const start = stages.indexOf(visible[0]);
+        assert.equal(visible.length, Math.min(size, limit));
+        assert.ok(visible.includes(stages[index]));
+        assert.equal(new Set(visible).size, visible.length);
+        assert.deepEqual(visible, stages.slice(start, start + visible.length));
+        if (index > 0) assert.ok(visible.includes(stages[index - 1]));
+        if (index < size - 1) assert.ok(visible.includes(stages[index + 1]));
+        if (index > 0 && index + 2 < size && limit === 4) {
+          assert.ok(visible.includes(stages[index + 2]));
+        }
+        if (index === 0) assert.deepEqual(visible, stages.slice(0, limit));
+        if (index === size - 1) assert.deepEqual(visible, stages.slice(-limit));
+      }
+      assert.deepEqual(stages, original);
+    }
+  }
+});
+
+test("switching Draw size recalculates the window without changing the selected stage", () => {
   const stages = [6, 5, 4, 3, 2, 1, 0];
-  assert.deepEqual(getDrawStageWindow(stages, 0, true), [6, 5, 4, 3]);
-  assert.deepEqual(getDrawStageWindow(stages, 3, true), [3, 2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 4, true), [3, 2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 5, true), [3, 2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 6, true), [3, 2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 3, true, [6, 5, 4]), [6, 5, 4, 3]);
-  assert.deepEqual(getDrawStageWindow(stages, 4, true, [6, 5, 4, 3]), [5, 4, 3, 2]);
-  assert.deepEqual(getDrawStageWindow(stages, 5, true, [6, 5, 4, 3, 2]), [4, 3, 2, 1]);
-  assert.deepEqual(getDrawStageWindow(stages, 6, true, [6, 5, 4, 3, 2, 1]), [3, 2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow(stages, 3, false), [4, 3, 2]);
-  assert.deepEqual(getDrawStageWindow(stages, 6, false), [2, 1, 0]);
-  assert.deepEqual(getDrawStageWindow([1, 0], 1, false), [1, 0]);
-  assert.deepEqual(getDrawStageWindow([1, 0], 1, true), [1, 0]);
-  assert.deepEqual(getDrawStageWindow([], 0, true), []);
+  for (let index = 0; index < stages.length; index++) {
+    const selected = stages[index];
+    const compact = getDrawStageWindow(stages, index, 3);
+    const expanded = getDrawStageWindow(stages, index, 4);
+    assert.ok(compact.includes(selected));
+    assert.ok(expanded.includes(selected));
+    assert.deepEqual(getDrawStageWindow(stages, index, 3), compact);
+    assert.equal(stages[index], selected);
+  }
 });
 
 test("active tournaments use inclusive date boundaries and chronological order", () => {
