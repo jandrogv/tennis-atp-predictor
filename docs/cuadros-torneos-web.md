@@ -153,6 +153,10 @@ intactas. El cálculo de posiciones, las conexiones ortogonales, las tarjetas,
 resultados, enlaces, resaltados y controles no se modifican. La vista móvil
 conserva la lista de la ronda seleccionada, por elección expresa del usuario;
 en tablet/escritorio las tres/cuatro columnas comparten el desplazamiento.
+Al ampliar, el desplazamiento hacia la selección espera al siguiente frame:
+el diálogo nativo debe estar abierto antes de medir/desplazar sus tarjetas.
+Esto evita que semifinales o final queden fuera del ancho visible en tablet
+al abrir la ampliación con una compilación de producción.
 
 Archivos de este cambio: `web/lib/tournaments/tournament-presentation.ts`,
 `web/lib/tournaments/tournament-presentation.test.ts`,
@@ -183,3 +187,11 @@ Las capturas y los scripts de verificación permanecen fuera del repositorio.
 La huella SHA-256 de los 271 archivos protegidos de datos/modelos/predicciones y
 salidas públicas coincide con la revisión anterior. No se ejecuta el pipeline.
 Otros motores de navegador y dispositivos físicos no se han probado.
+
+La revisión del primer despliegue detecta el desplazamiento anticipado del
+diálogo en producción: al abrir semifinales a 820 píxeles, su tarjeta termina
+en x=929 y la zona visible en x=819. Al cambiar de etapa sí se desplaza. Se
+conserva como regresión de navegador y se corrige esperando la apertura del
+diálogo antes del desplazamiento; no se altera la geometría del cuadro.
+La compilación final servida con `next start` supera el recorrido completo de
+57 selecciones, ambos modos y los estados adicionales, sin errores de consola.

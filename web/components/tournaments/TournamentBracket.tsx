@@ -244,10 +244,15 @@ function BracketCanvas({
   const selectedNodes = selectedPlayerId ? nodesForPlayer(selectedPlayerId, bracket.matchesByNode) : new Set<number>();
   const visibleDepthKey = visibleDepths.join(",");
 
-  useLayoutEffect(() => {
-    if (focusSelectedStage && canvasRef.current?.getBoundingClientRect().width) {
-      cardRefs.current.get(2 ** selectedDepth)?.scrollIntoView({ block: "nearest", inline: "nearest" });
-    }
+  useEffect(() => {
+    if (!focusSelectedStage) return;
+    // The parent opens its native dialog after layout; wait until it is visible.
+    const frame = window.requestAnimationFrame(() => {
+      if (canvasRef.current?.getBoundingClientRect().width) {
+        cardRefs.current.get(2 ** selectedDepth)?.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, [focusSelectedStage, selectedDepth, visibleDepthKey]);
 
   useLayoutEffect(() => {
