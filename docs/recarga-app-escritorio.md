@@ -40,6 +40,14 @@ el torneo. Puedes recuperarla desde la barra de tareas. Mantén el ordenador
 encendido y sin suspensión. La app diferencia éxito, fallo y otra recarga activa;
 el bloqueo compartido impide dos cargas del actualizador a la vez.
 
+Desde el 05/10/2026 también diferencia **Datos actualizados · predicciones
+pendientes**: resultados, rankings y web se han actualizado, pero las nuevas
+estadísticas ATP requieren un modelo compatible. Preparación, entrenamiento y
+predicciones aparecen omitidos o bloqueados por compatibilidad; la app no los
+marca como completados. El aviso también aparece al volver al inicio. El modelo
+y las predicciones guardadas se conservan, y otra mensual no elimina este bloqueo.
+Consulta [el comportamiento del contrato estadístico](recarga-automatica.md#estadísticas-corregidas-y-modelo-anterior-05102026).
+
 ## Diseño e implementación
 
 La app usa CustomTkinter 5.2.2 sobre Tkinter: superficies redondeadas, tipografía

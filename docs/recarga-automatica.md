@@ -65,6 +65,100 @@ la mensual cuando el modelo necesita actualizarse, pero el usuario decide el mod
   anterior. Un apagado forzoso puede dejar salidas parciales; la siguiente mensual
   vuelve a generarlas y nunca interpreta esa ejecución como un éxito.
 
+### Estadísticas corregidas y modelo anterior (05/10/2026)
+
+La diaria del 5 de octubre descargó los datos, pero se detuvo antes de predecir:
+72 encuentros de Chengdu, Hangzhou, Beijing y Tokyo incorporaban el contrato
+`atp-service-counts-v1`, incompatible con las rutas del modelo activo. No fue un
+fallo de descarga ni de nombres. Los avisos de estadísticas ATP vacías eran
+incidencias recuperables distintas del error final.
+
+El actualizador comprueba ese contrato antes de generar variables. Cuando encuentra
+la versión corregida, actualiza resultados, cuadros, jugadores, rankings y
+estadísticas de presentación sin construir entradas para el modelo ni ejecutar
+predicciones. El Elo mostrado se calcula directamente con ganadores, perdedores
+y superficies; no consume estadísticas al servicio ni variables antiguas.
+Las estadísticas de presentación tampoco se enriquecen con variables del modelo
+guardadas antes de la transición. No se borran versiones ni se reproduce el
+defecto estadístico para mantener la compatibilidad.
+
+Los artefactos de `models/atp`, `data/predictions` y las variables anteriores
+permanecen intactos. Las tablas web de predicción quedan vacías en esta modalidad
+para evitar presentar probabilidades anteriores como recién calculadas. El estado
+es `success_with_warnings`, con `prediction_status=blocked` y motivo explícito;
+la CLI devuelve **3**, que la app interpreta como **Datos actualizados · predicciones
+pendientes**. Un fallo real de consolidación, exportación, validación o compilación
+sigue siendo `failed`, con salida **1**.
+
+`last_data_success` registra la actualización de datos. `last_success` y
+`last_monthly_success` solo avanzan cuando también se han completado las fases
+correspondientes del modelo. La app no recomienda otra mensual para resolver este
+bloqueo: una mensual con este contrato también actualiza únicamente los datos y
+omite el entrenamiento. La transición estadística requiere preparación, entrenamiento
+compatible y activación expresa; esta corrección no activa V3.
+
+También se corrigió la compilación local en Windows: Control de aplicaciones
+bloquea el módulo nativo SWC de Next.js y Turbopack no puede usar la alternativa
+WebAssembly. El actualizador ejecuta `npm run build -- --webpack` en Windows,
+conservando la compilación y sus comprobaciones. No modifica las políticas de
+seguridad de Windows ni la configuración de compilación de Vercel.
+
+Para recuperar una ejecución cuya descarga ya terminó, sin volver a visitar ATP:
+
+```powershell
+python -m tennis_pipeline.auto_refresh --mode daily --skip-scrape
+```
+
+Este comando reemplaza los derivados de la recarga y la exportación web local;
+no modifica manualmente raw. El acceso de escritorio conserva su uso habitual.
+
+Archivos de implementación modificados en esta reparación (privados, respetando
+`.gitignore`):
+
+| Archivo | Cambio |
+| --- | --- |
+| `src/tennis_pipeline/validation.py` | Lectura previa del contrato de las fuentes; rechaza versiones desconocidas |
+| `src/tennis_pipeline/pipeline.py` | Ruta de consolidación sin variables ni predicciones incompatibles; manifiesto con bloqueo |
+| `src/tennis_pipeline/consolidation.py` | Resultados y Elo desde identidades/metadatos observados, excluyendo estadísticas del modelo y registros sin metadatos web necesarios |
+| `src/tennis_pipeline/auto_refresh.py` | Continuación de datos, estado con aviso, fechas de éxito separadas, mensual sin entrenamiento incompatible y reanudación sin scraping |
+| `src/tennis_pipeline/refresh_app.py` | Mensaje y etapas de compatibilidad; no muestra éxito de predicción o entrenamiento omitidos |
+| `scripts/prepare_match_statistics.py` | Opción para no incorporar contexto de variables anteriores |
+| `scripts/launch_refresh.ps1` | Reconoce el código 3 como actualización de datos con aviso, sin tratarlo como un fallo general |
+| `tests/test_refresh_statistics_compatibility.py` | Regresión de bloqueo previo, conservación de artefactos, fuentes de resultados y metadatos incompletos |
+| `tests/test_auto_refresh.py` | Reanudación y código de salida distinto para datos actualizados con predicción bloqueada |
+| `tests/test_auto_refresh_execution.py` | Orquestación diaria/mensual, fallos posteriores y modelo conservado |
+| `tests/test_refresh_app.py` | Estado visual de compatibilidad en ambos modos |
+
+Se actualizaron esta guía, `docs/recarga-app-escritorio.md` y la sección de
+compatibilidad de `docs/validacion-temporal-estricta.md`. Las 153 pruebas enfocadas
+de recarga, interfaz, contratos, extracción, estadísticas y consolidación pasan.
+La prueba de la nueva ruta falló antes de implementar la reparación. La salida
+aislada real tiene 66 torneos y ranking del 05/10/2026; la validación Node comprueba
+20 CSV y 2.807 estadísticas enlazadas, sin errores críticos. Las predicciones
+vacías son el resultado esperado del bloqueo, no un nuevo fallo de descarga.
+
+La recuperación operativa del 05/10 terminó a las **13:17:33** sin repetir el
+scraping ni entrenar. El estado quedó en `success_with_warnings`, sin error;
+`last_data_success` avanzó y las fechas de éxito completo/mensual conservaron el
+28/09/2026. Se verificaron por SHA-256 156 archivos protegidos, incluidos raw,
+modelos, variables y predicciones anteriores: ninguno cambió. Las salidas
+sustituidas tienen respaldo en `data/processed/refresh/backups/recovery-20261005-130442/`.
+
+La validación operativa revisó 21 CSV (incluido el diagnóstico opcional), sin
+errores críticos. En Chrome invisible se comprobaron ranking/búsqueda, estado
+vacío de predicciones, Table/Draw y enlaces de detalle de Beijing y Tokyo, en
+1440×1000 y 390×844. Los dos torneos tienen 40 resultados; el cuadro ampliado de
+ordenador conserva cuatro rondas y 14 conexiones rectas, y el móvil conserva
+la lista de la ronda seleccionada. No se encontraron errores de consola ni
+de ejecución. Se usó el Playwright ya instalado porque el plugin Browser no
+estaba disponible. Las siete pruebas de privacidad también pasan.
+
+Las 12 identidades pendientes del ranking más reciente siguen registradas en
+`ranking_identity_validation.csv` y se excluyen del ranking público hasta
+resolverlas; no fueron la causa del fallo de esta diaria. No se editó el catálogo
+de jugadores para esta reparación. Los avisos de ausencia de campeón en eventos
+por equipos y de tablas de predicciones vacías no bloquean la actualización.
+
 El scraping existente abre ventanas de Chrome y necesita Internet. El entrenamiento
 mensual consume más CPU y tarda más; se conserva `standard`, `notebook_legacy` y
 `cpu`. El acceso manual no impone un limite de tiempo al torneo.

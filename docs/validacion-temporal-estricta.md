@@ -609,8 +609,12 @@ no modifica `strict-pre-match-v3` ni certifica disponibilidad temporal.
 
 El modelo activo conserva sus 77 variables y su semántica heredada. Los porcentajes
 recientes de aces, dobles faltas, primeros/segundos servicios y sus ventanas pueden
-cambiar con las correcciones. **Una próxima recarga que obtenga estadísticas
-marcadas se detendrá antes de generar entradas incompatibles para el modelo.**
+cambiar con las correcciones. **Las rutas del modelo rechazan estadísticas
+marcadas antes de generar entradas incompatibles.** Desde la corrección del
+05/10/2026, el actualizador puede continuar con resultados, rankings y estadísticas
+de presentación, dejando explícitamente bloqueadas las predicciones y el
+entrenamiento. No reutiliza variables del modelo para enriquecer las estadísticas
+corregidas. Consulta [la recuperación de la recarga diaria](recarga-automatica.md#estadísticas-corregidas-y-modelo-anterior-05102026).
 Los datos heredados sin marcador conservan su ruta; eso no certifica su calidad.
 Incluso entrenar/evaluar/predicir en modo estricto con datos marcados permanece
 bloqueado hasta definir una transición compatible de artefactos. La auditoría de

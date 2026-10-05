@@ -2,8 +2,13 @@
   "version": 2,
   "source": "web_atp_rankings.csv",
   "label": "ranking snapshots",
-  "latest": "2026-09-28",
+  "latest": "2026-10-05",
   "entries": [
+    {
+      "key": "2026-10-05",
+      "file": "2026-10-05.csv",
+      "rows": 2308
+    },
     {
       "key": "2026-09-28",
       "file": "2026-09-28.csv",
@@ -148,11 +153,6 @@
       "key": "2026-01-12",
       "file": "2026-01-12.csv",
       "rows": 2225
-    },
-    {
-      "key": "2026-01-05",
-      "file": "2026-01-05.csv",
-      "rows": 2223
     }
   ]
 }

@@ -77,12 +77,12 @@
       "status": "frozen"
     },
     {
-      "key": "beijing-2025-hard",
-      "file": "beijing-2025-hard.csv",
-      "rows": 31,
-      "year": 2025,
-      "end_date": "2025-09-25",
-      "status": "frozen"
+      "key": "beijing-china-2026-hard",
+      "file": "beijing-china-2026-hard.csv",
+      "rows": 40,
+      "year": 2026,
+      "end_date": "2026-10-06",
+      "status": "active"
     },
     {
       "key": "brisbane-australia-2026-hard",
@@ -119,7 +119,7 @@
     {
       "key": "chengdu-china-2026-hard",
       "file": "chengdu-china-2026-hard.csv",
-      "rows": 38,
+      "rows": 39,
       "year": 2026,
       "end_date": "2026-09-29",
       "status": "frozen"
@@ -231,7 +231,7 @@
     {
       "key": "hangzhou-china-2026-hard",
       "file": "hangzhou-china-2026-hard.csv",
-      "rows": 38,
+      "rows": 39,
       "year": 2026,
       "end_date": "2026-09-29",
       "status": "frozen"
@@ -461,12 +461,12 @@
       "status": "frozen"
     },
     {
-      "key": "tokyo-2025-hard",
-      "file": "tokyo-2025-hard.csv",
-      "rows": 31,
-      "year": 2025,
-      "end_date": "2025-09-24",
-      "status": "frozen"
+      "key": "tokyo-japan-2026-hard",
+      "file": "tokyo-japan-2026-hard.csv",
+      "rows": 40,
+      "year": 2026,
+      "end_date": "2026-10-06",
+      "status": "active"
     },
     {
       "key": "tour-finals-2025-hard",
