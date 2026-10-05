@@ -80,3 +80,20 @@ entrenamiento. Las capturas se obtienen solo de la ventana de prueba y etiquetan
 las simulaciones. No se ha detenido la carga existente ni modificado `data/raw/`.
 
 Referencia de la biblioteca: [documentación oficial de CustomTkinter](https://customtkinter.tomschimansky.com/documentation/widgets/).
+
+## Modelo compatible y compilación Windows (05/10/2026)
+
+La transición aprobada al contrato estadístico corregido mantiene la selección
+automática: cada mensual vuelve a comparar los candidatos y la diaria utiliza
+su ganador registrado. El aviso de predicciones bloqueadas solo se mantiene
+si el modelo seleccionado o sus entradas no cumplen el contrato; la app reconoce
+como éxito la actualización completa con un modelo compatible.
+
+El paso de compilación anuncia `Next.js: compilador WebAssembly compatible con
+Windows.` y prepara también los procesos auxiliares para evitar cargar la DLL
+rechazada por Control de aplicaciones. Los errores reales de compilación siguen
+causando fallo; no se desactiva la protección de Windows.
+
+Consulta [la transición y sus controles](recarga-automatica.md#transición-estadística-aprobada-y-selección-mensual).
+Después de activar los artefactos validados, cierra y abre de nuevo la app para
+leer el estado y fecha del último modelo. El acceso y sus dos modos se conservan.

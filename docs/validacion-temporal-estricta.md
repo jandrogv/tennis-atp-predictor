@@ -708,3 +708,25 @@ adicionales. Modelo/predicciones siguen siendo los de la mensual del 28/09/2026.
 Código/pruebas/datos privados permanecen ignorados; se publica únicamente esta
 documentación y el plan. La comprobación del despliegue corresponde al mismo
 commit documental; los logs privados de Vercel no están disponibles.
+
+### Transición operativa estadística autorizada el 05/10/2026
+
+Una autorización posterior permite reconstruir variables, entrenar y evaluar
+candidatos aislados y activar el ganador compatible después de validar, sin
+modificar raw. El nuevo contrato de variables es
+`notebook-service-counts-v1`; mantiene el modo operativo y no es V3. Comprueba
+conteos/fracciones de servicio y excluye las filas incoherentes de las entradas
+del modelo. Conserva esas filas como resultados de presentación.
+
+La diaria consulta el ganador de la última mensual; la mensual mantiene su
+comparación dinámica y guarda ambos contratos en los artefactos. Los modelos
+anteriores no se certifican cambiándoles una etiqueta. Fuentes desconocidas,
+entradas sin el contrato correspondiente y mezclas con artefactos legacy siguen
+rechazadas. Los controles estrictos y sus requisitos UTC no se relajan.
+
+La coherencia estadística de las entradas y esta transición de artefactos no
+resuelven las carencias históricas de disponibilidad, orientación o fuga
+metodológica. Las métricas del candidato operativo no pueden presentarse como
+una mejora V3 ni compararse con las antiguas sin el mismo conjunto de evaluación.
+El procedimiento, los archivos y comprobaciones están en
+[la guía de recarga](recarga-automatica.md#transición-estadística-aprobada-y-selección-mensual).

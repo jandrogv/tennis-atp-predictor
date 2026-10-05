@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node scripts/next-cli.mjs dev",
+    "build": "node scripts/next-cli.mjs build",
+    "start": "node scripts/next-cli.mjs start",
     "test:seo": "node --test scripts/seo-metadata.test.mjs",
     "test:security": "node --test scripts/privacy-security.test.mjs",
     "test": "node --test scripts/*.test.mjs lib/**/*.test.ts"

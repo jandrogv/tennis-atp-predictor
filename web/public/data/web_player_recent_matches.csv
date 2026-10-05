@@ -15768,16 +15768,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 104920,2012-04-06,Davis Cup G2 R2: UKR vs CYP,Hard,RR,108749,Sergis Kyratzis,W,104920,Denys Molchanov,n/a,train
 104920,2012-02-10,Davis Cup G2 R1: UKR vs MON,Hard,RR,104112,Benjamin Balleret,W,104920,Denys Molchanov,n/a,train
 104921,2008-04-11,Davis Cup G1 R2: AUS vs THA,Hard,RR,103720,Lleyton Hewitt,L,103720,Lleyton Hewitt,n/a,train
+104925,2026-09-30,China Open,Hard,Semifinals,106421,Daniil Medvedev,W,104925,Novak Djokovic,n/a,test
 104925,2026-09-30,China Open,Hard,Quarterfinals,100644,Alexander Zverev,W,104925,Novak Djokovic,n/a,test
 104925,2026-09-30,China Open,Hard,Round of 16,207352,Bu Yunchaokete,W,104925,Novak Djokovic,n/a,test
 104925,2026-09-30,China Open,Hard,Round of 32,132686,Nuno Borges,W,104925,Novak Djokovic,n/a,test
+104925,2026-09-30,China Open,Hard,Semifinals,106421,Daniil Medvedev,W,104925,Novak Djokovic,7-5 5-3,web_tournament_matches
 104925,2026-09-30,China Open,Hard,Quarterfinals,100644,Alexander Zverev,W,104925,Novak Djokovic,4-6 6-4 6-4,web_tournament_matches
 104925,2026-09-30,China Open,Hard,Round of 16,207352,Bu Yunchaokete,W,104925,Novak Djokovic,4-6 7-6(2) 6-2,web_tournament_matches
 104925,2026-09-30,China Open,Hard,Round of 32,132686,Nuno Borges,W,104925,Novak Djokovic,6-3 7-6(2),web_tournament_matches
 104925,2026-08-30,US Open,Hard,Round of 128,208363,Mariano Navone,L,208363,Mariano Navone,7-6(5) 5-7 4-6 6-2 6-1,web_tournament_matches
 104925,2026-08-13,Cincinnati Open,Hard,Round of 64,202058,Thiago Agustin Tirante,L,202058,Thiago Agustin Tirante,n/a,test
-104925,2026-08-13,Cincinnati Open,Hard,Round of 64,202058,Thiago Agustin Tirante,L,202058,Thiago Agustin Tirante,2-6 6-4 6-4,web_tournament_matches
-104925,2026-07-12,Wimbledon,Grass,Round of 128,200059,Yibing Wu,W,104925,Novak Djokovic,6-4 5-7 6-4 6-4,web_tournament_matches
 104926,2025-06-30,Wimbledon,Grass,R128,207989,Carlos Alcaraz,L,207989,Carlos Alcaraz,n/a,train
 104926,2025-06-22,Mallorca,Grass,R32,127157,Daniel Altmaier,L,127157,Daniel Altmaier,n/a,train
 104926,2025-06-09,Stuttgart,Grass,R32,144895,Corentin Moutet,L,144895,Corentin Moutet,n/a,train
@@ -18945,16 +18945,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 106420,2017-11-06,NextGen Finals,Hard,RR,126094,Andrey Rublev,L,126094,Andrey Rublev,n/a,train
 106420,2017-04-10,Marrakech,Clay,R16,103893,Paolo Lorenzi,L,103893,Paolo Lorenzi,n/a,train
 106420,2017-04-10,Marrakech,Clay,R32,103908,Paul Henri Mathieu,W,106420,Gianluigi Quinzi,n/a,train
+106421,2026-09-30,China Open,Hard,Semifinals,104925,Novak Djokovic,L,104925,Novak Djokovic,n/a,test
 106421,2026-09-30,China Open,Hard,Quarterfinals,202103,Francisco Cerundolo,W,106421,Daniil Medvedev,n/a,test
 106421,2026-09-30,China Open,Hard,Round of 16,105526,Jan Lennard Struff,W,106421,Daniil Medvedev,n/a,test
 106421,2026-09-30,China Open,Hard,Round of 32,105807,Pablo Carreno Busta,W,106421,Daniil Medvedev,n/a,test
+106421,2026-09-30,China Open,Hard,Semifinals,104925,Novak Djokovic,L,104925,Novak Djokovic,7-5 5-3,web_tournament_matches
 106421,2026-09-30,China Open,Hard,Quarterfinals,202103,Francisco Cerundolo,W,106421,Daniil Medvedev,7-6(4) 6-3,web_tournament_matches
 106421,2026-09-30,China Open,Hard,Round of 16,105526,Jan Lennard Struff,W,106421,Daniil Medvedev,6-4 6-3,web_tournament_matches
 106421,2026-09-30,China Open,Hard,Round of 32,105807,Pablo Carreno Busta,W,106421,Daniil Medvedev,6-4 6-2,web_tournament_matches
 106421,2026-09-23,AITO Hangzhou Open,Hard,Final,126094,Andrey Rublev,W,106421,Daniil Medvedev,n/a,test
 106421,2026-09-23,AITO Hangzhou Open,Hard,Semifinals,126128,Roman Safiullin,W,106421,Daniil Medvedev,n/a,test
-106421,2026-09-23,AITO Hangzhou Open,Hard,Quarterfinals,209409,Coleman Wong,W,106421,Daniil Medvedev,n/a,test
-106421,2026-09-23,AITO Hangzhou Open,Hard,Round of 16,208316,Valentin Royer,W,106421,Daniil Medvedev,n/a,test
 106423,2026-08-13,Cincinnati Open,Hard,Round of 128,132686,Nuno Borges,L,132686,Nuno Borges,n/a,test
 106423,2026-08-13,Cincinnati Open,Hard,Round of 128,132686,Nuno Borges,L,132686,Nuno Borges,5-7 7-6(3) 7-6(4),web_tournament_matches
 106423,2026-08-02,Omnium Banque Nationale présenté par Rogers,Hard,1st Round Qualifying,200615,Alexei Popyrin,L,200615,Alexei Popyrin,n/a,test
@@ -23027,16 +23027,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 127760,2024-09-18,Chengdu,Hard,R16,111797,Nicolas Jarry,L,111797,Nicolas Jarry,n/a,train
 127760,2024-09-13,Davis Cup Finals RR: USA vs SVK,Hard,RR,111456,Mackenzie Mcdonald,L,111456,Mackenzie Mcdonald,n/a,train
 127760,2024-09-10,Davis Cup Finals RR: GER vs SVK,Hard,RR,109739,Maximilian Marterer,L,109739,Maximilian Marterer,n/a,train
+128034,2026-09-30,China Open,Hard,Semifinals,200282,Alex De Minaur,L,200282,Alex De Minaur,n/a,test
 128034,2026-09-30,China Open,Hard,Quarterfinals,111575,Karen Khachanov,W,128034,Hubert Hurkacz,n/a,test
 128034,2026-09-30,China Open,Hard,Round of 16,210338,Arthur Gea,W,128034,Hubert Hurkacz,n/a,test
 128034,2026-09-30,China Open,Hard,Round of 32,210530,Learner Tien,W,128034,Hubert Hurkacz,n/a,test
+128034,2026-09-30,China Open,Hard,Semifinals,200282,Alex De Minaur,L,200282,Alex De Minaur,6-4 3-2,web_tournament_matches
 128034,2026-09-30,China Open,Hard,Quarterfinals,111575,Karen Khachanov,W,128034,Hubert Hurkacz,7-6(2) 6-2,web_tournament_matches
 128034,2026-09-30,China Open,Hard,Round of 16,210338,Arthur Gea,W,128034,Hubert Hurkacz,7-6(5) 6-7(5) 6-2,web_tournament_matches
 128034,2026-09-30,China Open,Hard,Round of 32,210530,Learner Tien,W,128034,Hubert Hurkacz,5-7 6-3 6-4,web_tournament_matches
 128034,2026-09-23,Chengdu Open,Hard,Final,200221,Alejandro Davidovich Fokina,L,200221,Alejandro Davidovich Fokina,n/a,test
 128034,2026-09-23,Chengdu Open,Hard,Semifinals,133430,Denis Shapovalov,W,128034,Hubert Hurkacz,n/a,test
-128034,2026-09-23,Chengdu Open,Hard,Quarterfinals,144750,Lloyd Harris,W,128034,Hubert Hurkacz,n/a,test
-128034,2026-09-23,Chengdu Open,Hard,Round of 16,102093,Martin Damm,W,128034,Hubert Hurkacz,n/a,test
 129814,2026-07-12,Wimbledon,Grass,1st Round Qualifying,200436,Zsombor Piros,L,200436,Zsombor Piros,6-2 6-2,web_tournament_matches
 129814,2026-02-07,Davis Cup Qualifiers 1st Rd,Clay,Round Robin,209920,Raphael Collignon,L,209920,Raphael Collignon,6-2 6-2,web_tournament_matches
 129814,2025-11-02,Athens,Hard,R32,105870,Yannick Hanfmann,L,105870,Yannick Hanfmann,6-4 6-2,web_tournament_matches
@@ -23318,6 +23318,7 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 144707,2023-06-26,Eastbourne,Grass,R16,106281,Liam Broady,W,144707,Mikael Ymer,n/a,train
 144707,2023-06-26,Eastbourne,Grass,QF,111456,Mackenzie Mcdonald,L,111456,Mackenzie Mcdonald,n/a,train
 144707,2023-06-19,Halle,Grass,R32,206909,Brandon Nakashima,L,206909,Brandon Nakashima,n/a,train
+144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,207989,Carlos Alcaraz,L,207989,Carlos Alcaraz,n/a,test
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,208021,Kyrian Jacquet,W,144719,Jaume Munar,n/a,test
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,210262,Jaime Faria,W,144719,Jaume Munar,n/a,test
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,126203,Taylor Fritz,W,144719,Jaume Munar,n/a,test
@@ -23325,9 +23326,8 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,1st Round Qualifying,106218,Marcos Giron,W,144719,Jaume Munar,n/a,test
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,2nd Round Qualifying,206499,Aleksandar Kovacevic,W,144719,Jaume Munar,6-2 6-3,web_tournament_matches
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,1st Round Qualifying,106218,Marcos Giron,W,144719,Jaume Munar,5-7 6-1 6-4,web_tournament_matches
+144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,207989,Carlos Alcaraz,L,207989,Carlos Alcaraz,5-7 6-3 6-1,web_tournament_matches
 144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,208021,Kyrian Jacquet,W,144719,Jaume Munar,6-4 6-2,web_tournament_matches
-144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,210262,Jaime Faria,W,144719,Jaume Munar,6-1 6-1,web_tournament_matches
-144719,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,126203,Taylor Fritz,W,144719,Jaume Munar,6-7(7) 6-4 6-3,web_tournament_matches
 144747,2025-01-31,Davis Cup WG2 PO: ZIM vs MAR,Hard,RR,207220,Taha Baadi,L,207220,Taha Baadi,n/a,train
 144747,2024-02-03,Davis Cup WG2 PO: HKG vs ZIM,Hard,RR,209409,Coleman Wong,L,209409,Coleman Wong,n/a,train
 144747,2016-03-04,Davis Cup G2 R1: ZIM vs FIN,Hard,RR,105349,Harri Heliovaara,L,105349,Harri Heliovaara,n/a,train
@@ -23753,16 +23753,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 200279,2023-09-16,Davis Cup WG2 R1: ESA vs IRL,Clay,RR,105656,Marcelo Arevalo,L,105656,Marcelo Arevalo,n/a,train
 200279,2022-09-16,Davis Cup WG2 R1: BAR vs IRL,Hard,RR,209868,Kaipo Marshall,W,200279,Osgar Ohoisin,n/a,train
 200279,2022-09-16,Davis Cup WG2 R1: BAR vs IRL,Hard,RR,105985,Darian King,L,105985,Darian King,n/a,train
+200282,2026-09-30,China Open,Hard,Semifinals,128034,Hubert Hurkacz,W,200282,Alex De Minaur,n/a,test
 200282,2026-09-30,China Open,Hard,Quarterfinals,126094,Andrey Rublev,W,200282,Alex De Minaur,n/a,test
 200282,2026-09-30,China Open,Hard,Round of 16,111460,Quentin Halys,W,200282,Alex De Minaur,n/a,test
 200282,2026-09-30,China Open,Hard,Round of 32,208363,Mariano Navone,W,200282,Alex De Minaur,n/a,test
+200282,2026-09-30,China Open,Hard,Semifinals,128034,Hubert Hurkacz,W,200282,Alex De Minaur,6-4 3-2,web_tournament_matches
 200282,2026-09-30,China Open,Hard,Quarterfinals,126094,Andrey Rublev,W,200282,Alex De Minaur,1-6 6-2 6-3,web_tournament_matches
 200282,2026-09-30,China Open,Hard,Round of 16,111460,Quentin Halys,W,200282,Alex De Minaur,3-6 7-6(5) 7-5,web_tournament_matches
 200282,2026-09-30,China Open,Hard,Round of 32,208363,Mariano Navone,W,200282,Alex De Minaur,7-6(4) 6-2,web_tournament_matches
 200282,2026-09-25,Laver Cup,Hard,Round Robin Day 2,100644,Alexander Zverev,W,200282,Alex De Minaur,2-6 7-6(5) 11-9,web_tournament_matches
 200282,2026-08-30,US Open,Hard,Round of 64,122298,Botic Van De Zandschulp,L,122298,Botic Van De Zandschulp,6-4 7-5 6-2,web_tournament_matches
-200282,2026-08-30,US Open,Hard,Round of 128,200462,Andrea Guerrieri,W,200282,Alex De Minaur,6-2 6-2 6-4,web_tournament_matches
-200282,2026-08-13,Cincinnati Open,Hard,Round of 16,209950,Arthur Fils,L,209950,Arthur Fils,n/a,test
 200297,2026-02-06,Davis Cup Qualifiers 1st Rd,Hard,Round Robin,209983,Mika Brunold,L,209983,Mika Brunold,6-2 6-2,web_tournament_matches
 200297,2025-09-12,Davis Cup WG1 R1: SWE vs TUN,Hard,RR,209863,Leo Borg,L,209863,Leo Borg,n/a,train
 200297,2025-09-12,Davis Cup WG1 R1: SWE vs TUN,Hard,RR,209167,Olle Wallin,L,209167,Olle Wallin,n/a,train
@@ -23898,16 +23898,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 200462,2026-07-13,Plava Laguna Croatia Open Umag,Clay,1st Round Qualifying,208134,Luca Nardi,W,200462,Andrea Guerrieri,6-3 7-6(5),web_tournament_matches
 200462,2026-07-12,Wimbledon,Grass,1st Round Qualifying,105676,David Goffin,W,200462,Andrea Guerrieri,3-6 7-5 6-2,web_tournament_matches
 200462,2026-07-12,Wimbledon,Grass,2nd Round Qualifying,208021,Kyrian Jacquet,L,208021,Kyrian Jacquet,7-6(9) 6-4,web_tournament_matches
+200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,208103,Jiri Lehecka,L,208103,Jiri Lehecka,n/a,test
 200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,209950,Arthur Fils,W,200473,Valentin Vacherot,n/a,test
 200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,126774,Stefanos Tsitsipas,W,200473,Valentin Vacherot,n/a,test
 200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,210696,Alexander Blockx,W,200473,Valentin Vacherot,n/a,test
+200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,208103,Jiri Lehecka,L,208103,Jiri Lehecka,6-4 6-2,web_tournament_matches
 200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,209950,Arthur Fils,W,200473,Valentin Vacherot,7-5 4-6 6-4,web_tournament_matches
 200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,126774,Stefanos Tsitsipas,W,200473,Valentin Vacherot,4-6 7-6(5) 6-4,web_tournament_matches
 200473,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,210696,Alexander Blockx,W,200473,Valentin Vacherot,7-6(2) 7-6(4),web_tournament_matches
 200473,2026-09-23,Chengdu Open,Hard,Round of 16,144750,Lloyd Harris,L,144750,Lloyd Harris,n/a,test
 200473,2026-09-23,Chengdu Open,Hard,Round of 16,144750,Lloyd Harris,L,144750,Lloyd Harris,6-4 7-6(5),web_tournament_matches
-200473,2026-08-30,US Open,Hard,Round of 32,126207,Frances Tiafoe,L,126207,Frances Tiafoe,6-4 6-2 6-4,web_tournament_matches
-200473,2026-08-30,US Open,Hard,Round of 64,111794,Kamil Majchrzak,W,200473,Valentin Vacherot,6-4 4-6 7-6(3) 6-2,web_tournament_matches
 200483,2018-02-03,Davis Cup G2 R1: EGY vs NOR,Hard,RR,126174,Youssef Hossam,L,126174,Youssef Hossam,n/a,train
 200484,2024-07-15,Hamburg,Clay,R32,207686,Alexander Shevchenko,L,207686,Alexander Shevchenko,n/a,train
 200484,2024-04-15,Munich,Clay,R32,208859,Francesco Passaro,W,200484,Rudolf Molleker,n/a,train
@@ -24811,16 +24811,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 207985,2026-08-02,Omnium Banque Nationale présenté par Rogers,Hard,1st Round Qualifying,124116,Sebastian Ofner,W,207985,Jacob Fearnley,n/a,test
 207985,2026-08-02,Omnium Banque Nationale présenté par Rogers,Hard,Round of 64,210150,Jakub Mensik,L,210150,Jakub Mensik,n/a,test
 207985,2026-08-02,Omnium Banque Nationale présenté par Rogers,Hard,Round of 128,105173,Adrian Mannarino,W,207985,Jacob Fearnley,n/a,test
+207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,144719,Jaume Munar,W,207989,Carlos Alcaraz,n/a,test
 207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,133430,Denis Shapovalov,W,207989,Carlos Alcaraz,n/a,test
 207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,208286,Matteo Arnaldi,W,207989,Carlos Alcaraz,n/a,test
 207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,210506,Alex Michelsen,W,207989,Carlos Alcaraz,n/a,test
+207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,144719,Jaume Munar,W,207989,Carlos Alcaraz,5-7 6-3 6-1,web_tournament_matches
 207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,133430,Denis Shapovalov,W,207989,Carlos Alcaraz,7-6(3) 2-1,web_tournament_matches
 207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,208286,Matteo Arnaldi,W,207989,Carlos Alcaraz,7-6(6) 6-1,web_tournament_matches
 207989,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,210506,Alex Michelsen,W,207989,Carlos Alcaraz,7-6(1) 4-6 6-1,web_tournament_matches
 207989,2026-09-25,Laver Cup,Hard,Round Robin Day 2,126203,Taylor Fritz,W,207989,Carlos Alcaraz,6-3 4-6 13-11,web_tournament_matches
 207989,2026-09-08,US Open,Hard,Quarterfinals,210097,Ben Shelton,L,210097,Ben Shelton,6-7(5) 6-1 6-3 1-6 7-6(7),web_tournament_matches
-207989,2026-08-30,US Open,Hard,Round of 16,126205,Tommy Paul,W,207989,Carlos Alcaraz,6-4 6-3 6-4,web_tournament_matches
-207989,2026-08-30,US Open,Hard,Round of 32,200059,Yibing Wu,W,207989,Carlos Alcaraz,6-3 6-4 6-1,web_tournament_matches
 207993,2026-08-02,Omnium Banque Nationale présenté par Rogers,Hard,1st Round Qualifying,200443,Adam Walton,L,200443,Adam Walton,n/a,test
 207993,2026-08-02,Omnium Banque Nationale présenté par Rogers,Hard,1st Round Qualifying,200443,Adam Walton,L,200443,Adam Walton,7-5 7-6(4),web_tournament_matches
 208004,2026-07-12,Wimbledon,Grass,1st Round Qualifying,134457,Nicolas Moreno De Alboran,W,208004,Harold Mayot,6-2 6-2,web_tournament_matches
@@ -24914,16 +24914,16 @@ player_id,match_date,tournament_name,surface,round,opponent_id,opponent_name,res
 208071,2023-04-17,Barcelona,Clay,R64,200303,Pavel Kotov,L,200303,Pavel Kotov,n/a,train
 208071,2023-02-20,Doha,Hard,R32,106281,Liam Broady,L,106281,Liam Broady,n/a,train
 208071,2023-01-16,Australian Open,Hard,R128,106043,Diego Schwartzman,L,106043,Diego Schwartzman,n/a,train
+208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,200473,Valentin Vacherot,W,208103,Jiri Lehecka,n/a,test
 208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,209226,Adolfo Daniel Vallejo,W,208103,Jiri Lehecka,n/a,test
 208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,200005,Ugo Humbert,W,208103,Jiri Lehecka,n/a,test
 208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,200267,Zizou Bergs,W,208103,Jiri Lehecka,n/a,test
+208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Semifinals,200473,Valentin Vacherot,W,208103,Jiri Lehecka,6-4 6-2,web_tournament_matches
 208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Quarterfinals,209226,Adolfo Daniel Vallejo,W,208103,Jiri Lehecka,6-1 6-1,web_tournament_matches
 208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 16,200005,Ugo Humbert,W,208103,Jiri Lehecka,5-7 6-4 6-4,web_tournament_matches
 208103,2026-09-30,Kinoshita Group Japan Open Tennis Championships,Hard,Round of 32,200267,Zizou Bergs,W,208103,Jiri Lehecka,6-3 6-7(3) 6-3,web_tournament_matches
 208103,2026-09-18,Davis Cup Qualifiers 2nd Rd,Hard,Round Robin,210530,Learner Tien,W,208103,Jiri Lehecka,6-3 7-5,web_tournament_matches
 208103,2026-09-18,Davis Cup Qualifiers 2nd Rd,Hard,Round Robin,210097,Ben Shelton,W,208103,Jiri Lehecka,6-4 6-4,web_tournament_matches
-208103,2026-08-30,US Open,Hard,Round of 32,126774,Stefanos Tsitsipas,L,126774,Stefanos Tsitsipas,2-6 6-1 7-6(3) 6-1,web_tournament_matches
-208103,2026-08-30,US Open,Hard,Round of 64,210389,Toby Samuel,W,208103,Jiri Lehecka,6-4 6-2 6-4,web_tournament_matches
 208108,2020-02-10,New York,Hard,R32,111815,Cameron Norrie,L,111815,Cameron Norrie,n/a,train
 208117,2024-02-05,Dallas,Hard,R32,111442,Jordan Thompson,L,111442,Jordan Thompson,n/a,train
 208118,2026-06-07,Roland Garros,Clay,Round of 128,126207,Frances Tiafoe,L,126207,Frances Tiafoe,n/a,web_tournament_matches

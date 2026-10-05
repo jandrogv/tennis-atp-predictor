@@ -74,7 +74,8 @@ fallo de descarga ni de nombres. Los avisos de estadísticas ATP vacías eran
 incidencias recuperables distintas del error final.
 
 El actualizador comprueba ese contrato antes de generar variables. Cuando encuentra
-la versión corregida, actualiza resultados, cuadros, jugadores, rankings y
+la versión corregida y el modelo seleccionado todavía no es compatible, actualiza
+resultados, cuadros, jugadores, rankings y
 estadísticas de presentación sin construir entradas para el modelo ni ejecutar
 predicciones. El Elo mostrado se calcula directamente con ganadores, perdedores
 y superficies; no consume estadísticas al servicio ni variables antiguas.
@@ -92,16 +93,132 @@ sigue siendo `failed`, con salida **1**.
 
 `last_data_success` registra la actualización de datos. `last_success` y
 `last_monthly_success` solo avanzan cuando también se han completado las fases
-correspondientes del modelo. La app no recomienda otra mensual para resolver este
-bloqueo: una mensual con este contrato también actualiza únicamente los datos y
-omite el entrenamiento. La transición estadística requiere preparación, entrenamiento
-compatible y activación expresa; esta corrección no activa V3.
+correspondientes del modelo. Mientras el modelo seleccionado carezca de contrato
+compatible, una mensual también actualiza únicamente los datos y omite el
+entrenamiento. La transición aprobada que se describe a continuación habilita de
+nuevo entrenamiento y predicciones; no activa V3.
 
 También se corrigió la compilación local en Windows: Control de aplicaciones
 bloquea el módulo nativo SWC de Next.js y Turbopack no puede usar la alternativa
 WebAssembly. El actualizador ejecuta `npm run build -- --webpack` en Windows,
 conservando la compilación y sus comprobaciones. No modifica las políticas de
 seguridad de Windows ni la configuración de compilación de Vercel.
+
+### Transición estadística aprobada y selección mensual
+
+El constructor opcional `--statistics-contract atp-service-counts-v1` reconstruye
+los tres splits desde los anuales, sin reutilizar las variables antiguas. Conserva
+la metodología operativa `notebook_legacy` y sus 77 variables, pero registra
+`feature_contract_version=notebook-service-counts-v1` y el contrato estadístico
+en variables, manifiesto de entrenamiento, ganador y artefactos de candidatos.
+
+Antes de incorporar una fila comprueba que los conteos sean números finitos,
+enteros y no negativos, y que sean compatibles primeros/segundos servicios,
+puntos ganados, aces, dobles faltas y puntos de break. Las filas observadas
+incoherentes se excluyen de las entradas del modelo, con un recuento por fichero;
+no se inventan denominadores ni se reproducen los errores del extractor anterior.
+Los datos sin marcador se someten también a estos controles. La coherencia
+aritmética no certifica orientación histórica, procedencia ni disponibilidad UTC.
+La transición tampoco corrige manualmente raw ni realiza otra extracción.
+
+Los resultados completos de la web se leen por separado de esas entradas:
+un partido excluido del modelo por estadísticas incorrectas conserva su resultado
+y su posición en el torneo. Rankings, perfiles y cuadros siguen actualizándose.
+
+**La diaria utiliza el ganador del último entrenamiento mensual.** La mensual
+compara de nuevo los candidatos del perfil estándar sobre los mismos splits y
+elige el mejor con el criterio existente: compara ROC AUC y, entre candidatos a
+una distancia de hasta 0,005 del máximo, prioriza menor Brier y log loss; los desempates usan F1,
+accuracy y ROC AUC. Sin métricas de calibración, ordena por ROC AUC, F1 y accuracy. No fija
+una familia ni conserva el ganador anterior por conveniencia. El manifiesto
+selecciona el artefacto, y predicción/evaluación verifican su nombre y ambos
+contratos. Un modelo anterior o una versión desconocida siguen rechazados.
+
+La preparación aprobada usa un candidato aislado, evaluación y predicciones
+aisladas, con copia del modelo y derivados anteriores antes de activarlo. El
+registro privado de esta transición está en
+`data/processed/statistics-transition-20261005-165347/`; los candidatos se guardan
+en `models/statistics-transition-20261005-165347/`. La separación histórica/año
+actual y las limitaciones de fuga del modo operativo se conservan: no constituye
+una validación `strict-pre-match-v3` ni demuestra mejora frente al modelo previo.
+
+Comparación del 05/10/2026, con 98.015 filas de entrenamiento, 1.146 de evaluación
+y 77 variables en ambos candidatos:
+
+| Candidato | Accuracy | ROC AUC | Brier | Log loss |
+| --- | --- | --- | --- | --- |
+| `xgboost` — seleccionado | 0,8342 | 0,9191 | 0,1143 | 0,3624 |
+| `xgboost_calibrated_sigmoid` | 0,8255 | 0,9139 | 0,1202 | 0,3819 |
+
+Se excluyeron siete filas históricas y 1.617 del año actual por conteos
+incoherentes. Se conservaron los 3.442 resultados de torneos, sus ganadores y
+marcadores. El candidato produjo dos predicciones con probabilidades válidas;
+su nombre coincide con el ganador calculado a partir de las métricas.
+
+### Compilación Windows sin intentar la DLL bloqueada
+
+Los comandos npm de desarrollo, compilación e inicio pasan por
+`web/scripts/next-cli.mjs`. En Windows selecciona Webpack e inicializa el
+WebAssembly de la misma instalación de Next.js antes de cargar el compilador,
+incluidos los procesos auxiliares, mediante `NODE_OPTIONS --import`. Conserva
+las opciones Node preexistentes. En otras plataformas utiliza el comando y el
+compilador normales de Next.js; Vercel conserva su bundler predeterminado.
+
+`next-wasm.mjs` exige que el binding devuelto sea WebAssembly. Solo omite el aviso
+obsoleto de `experimental.useWasmBinary` que el SDK emite durante esa llamada;
+comprueba después el binding y conserva los fallos de carga y restantes errores.
+No edita `node_modules` ni usa variables de prueba de Next; tampoco cambia
+Control de aplicaciones ni incorpora nuevas dependencias. La versión de
+Next.js permanece fijada; las pruebas del runtime deben pasar al actualizarla.
+
+Archivos de esta transición:
+
+| Archivo | Finalidad |
+| --- | --- |
+| `src/tennis_pipeline/validation.py` | Coherencia de conteos y compatibilidad de entradas/modelos |
+| `src/tennis_pipeline/features.py` | Reconstrucción explícita, filtrado y contrato de variables |
+| `src/tennis_pipeline/training.py` | Comparación habitual y contratos del ganador/candidatos |
+| `src/tennis_pipeline/prediction.py`, `evaluation.py` | Verificación del contrato y ganador seleccionado |
+| `src/tennis_pipeline/pipeline.py`, `auto_refresh.py` | Transición explícita y reutilización diaria/mensual automática |
+| `src/tennis_pipeline/consolidation.py` | Resultados de presentación independientes del filtrado estadístico |
+| `web/package.json`, `web/scripts/next-cli.mjs`, `next-wasm.mjs` | Arranque del compilador y sus procesos en Windows |
+| `tests/test_statistics_transition.py`, `test_auto_refresh_execution.py` | Conteos, exclusiones, versiones, ganador dinámico, predicción y orquestación |
+| `web/scripts/next-runtime.test.mjs` | CLI instalada y binding WebAssembly en un proceso auxiliar real |
+
+Las protecciones originales de versiones desconocidas y V3 siguen vigentes.
+Se validan también los datos exportados, privacidad y la compilación completa.
+
+Activación y recuperación verificadas el 05/10/2026:
+
+- El entrenamiento terminó a las 17:24 y su ganador compatible quedó activo en
+  `models/atp`, con referencias operativas en todos sus manifiestos.
+- La diaria de comprobación terminó a las 18:59:52 con `success`,
+  `prediction_status=updated` y dos predicciones. Usó los datos ya descargados,
+  sin scraping; la huella del ganador fue idéntica antes y después de la diaria.
+- La exportación y la compilación completa pasan. El registro no contiene el
+  bloqueo de predicciones ni el intento de cargar el SWC nativo de Windows.
+- Las 102 pruebas Python enfocadas y las nueve pruebas Node de runtime/privacidad
+  pasan. La comprobación de privacidad se repitió sobre las salidas nuevas.
+- Las 130 huellas protegidas ajenas a la activación siguen iguales. Raw,
+  originales y muestras permanecen intactos; se verificaron también las huellas
+  del modelo anterior en su copia de reversión.
+
+Copia del modelo anterior: `models/atp-before-service-counts-20261005-185302/`.
+Copias de derivados y estado:
+`data/processed/statistics-transition-20261005-165347/activation-20261005-185302/backups/`.
+Registro: `data/processed/refresh/logs/20261005-185302-monthly-transition.log`.
+La evidencia privada de activación está en `activation-validation.json` dentro
+de la carpeta de esta transición. El estado registra este entrenamiento validado
+como la última mensual; las próximas mensuales vuelven a comparar candidatos.
+
+Revisión de la web local en Chrome sin ventanas visibles, a 1440×1000 y 390×844:
+14 comprobaciones de modelo, predicciones/filtros, dos detalles de predicción,
+rankings y los torneos de Beijing y Tokyo pasan sin errores de consola ni
+superposición de errores de Next.js. Las probabilidades coinciden con la nueva
+exportación; las tablas conservan 42 resultados en cada torneo. El cuadro
+ampliado de ordenador conserva cuatro rondas, 15 nodos y 14 conexiones rectas;
+en móvil se conserva la lista de la ronda seleccionada. El plugin Browser no
+estaba disponible, por lo que se utilizó Playwright ya instalado.
 
 Para recuperar una ejecución cuya descarga ya terminó, sin volver a visitar ATP:
 
